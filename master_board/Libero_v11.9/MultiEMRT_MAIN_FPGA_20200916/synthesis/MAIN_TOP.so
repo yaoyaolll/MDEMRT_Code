@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<SynplifyOutput>
-	<result>Success</result>
-	<design>MAIN_TOP</design>
-	<target_edif>C:\Users\Administrator\Desktop\MultiEMRT_MAIN_FPGA_20200804\synthesis\MAIN_TOP.edn</target_edif>
-</SynplifyOutput>

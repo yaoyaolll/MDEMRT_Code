@@ -1,1 +1,0 @@
-@W: MF511 |Found issues with constraints. Please check constraint checker report "D:\FPGA\2D_NMR_EC_FPGA_150205\synthesis\NMR_TOP_cck.rpt" .
