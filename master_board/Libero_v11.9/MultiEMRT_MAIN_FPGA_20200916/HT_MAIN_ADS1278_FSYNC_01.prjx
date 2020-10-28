@@ -1,0 +1,453 @@
+KEY LIBERO "11.9"
+KEY CAPTURE "11.9.5.5"
+KEY DEFAULT_IMPORT_LOC "E:\Myproject\HT_project\HT_MC_FPGA\EDIBandASSACQ222\constraint"
+KEY DEFAULT_OPEN_LOC ""
+KEY ProjectID "0"
+KEY HDLTechnology "VERILOG"
+KEY VERILOGMODE "VERILOG2001"
+KEY VHDLMODE "VHDL2008"
+KEY UseConstraintFlowTechnology "FALSE"
+KEY VendorTechnology_Family "ProASIC3"
+KEY VendorTechnology_Die "IS8X8M2"
+KEY VendorTechnology_Package "pq208"
+KEY VendorTechnology_Speed "STD"
+KEY VendorTechnology_DieVoltage "1.5"
+KEY VendorTechnology_PART_RANGE "COM"
+KEY VendorTechnology_DSW_VCCA_VOLTAGE_RAMP_RATE ""
+KEY VendorTechnology_IO_DEFT_STD "LVTTL"
+KEY VendorTechnology_OPCONR ""
+KEY VendorTechnology_PLL_SUPPLY ""
+KEY VendorTechnology_RAD_EXPOSURE ""
+KEY VendorTechnology_RESERVEMIGRATIONPINS "1"
+KEY VendorTechnology_RESTRICTPROBEPINS "1"
+KEY VendorTechnology_RESTRICTSPIPINS "0"
+KEY VendorTechnology_SYSTEM_CONTROLLER_SUSPEND_MODE ""
+KEY VendorTechnology_TARGETDEVICESFORMIGRATION "IS8X8M2"
+KEY VendorTechnology_TEMPR "COM"
+KEY VendorTechnology_UNUSED_MSS_IO_RESISTOR_PULL "None"
+KEY VendorTechnology_VCCI_1.5_VOLTR "COM"
+KEY VendorTechnology_VCCI_1.8_VOLTR "COM"
+KEY VendorTechnology_VCCI_2.5_VOLTR "COM"
+KEY VendorTechnology_VCCI_3.3_VOLTR "COM"
+KEY VendorTechnology_VOLTR "COM"
+KEY ProjectLocation "C:\Users\Administrator\Desktop\MultiEMRT_MAIN_FPGA_20200804"
+KEY ProjectDescription ""
+KEY Pa4PeripheralNewSeq "GOOD"
+KEY SimulationType "VERILOG"
+KEY Vendor "Actel"
+KEY ActiveRoot "MAIN_TOP::work"
+LIST REVISIONS
+VALUE="Impl1",NUM=1
+CURREV=1
+ENDLIST
+LIST FileManager
+VALUE "<project>\component\work\ADC_TOP\ADC_TOP.cxf,actgen_cxf"
+STATE="utd"
+TIME="1548211700"
+SIZE="4397"
+ENDFILE
+VALUE "<project>\component\work\ADC_TOP\ADC_TOP.v,hdl"
+STATE="utd"
+TIME="1548211699"
+SIZE="5507"
+PARENT="<project>\component\work\ADC_TOP\ADC_TOP.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\work\DESIGN_FIRMWARE\DESIGN_FIRMWARE.cxf,actgen_cxf"
+STATE="utd"
+TIME="1527673012"
+SIZE="437"
+ENDFILE
+VALUE "<project>\component\work\DESIGN_IO\DESIGN_IO.cxf,actgen_cxf"
+STATE="utd"
+TIME="1527673012"
+SIZE="413"
+ENDFILE
+VALUE "<project>\component\work\MAIN_TOP\MAIN_TOP.cxf,actgen_cxf"
+STATE="utd"
+TIME="1595916397"
+SIZE="9106"
+ENDFILE
+VALUE "<project>\component\work\MAIN_TOP\MAIN_TOP.v,hdl"
+STATE="utd"
+TIME="1595916395"
+SIZE="18142"
+PARENT="<project>\component\work\MAIN_TOP\MAIN_TOP.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\designer\impl1\MAIN_TOP.adb,adb"
+STATE="utd"
+TIME="1599786914"
+SIZE="1936384"
+ENDFILE
+VALUE "<project>\designer\impl1\MAIN_TOP.ide_des,ide_des"
+STATE="utd"
+TIME="1599786915"
+SIZE="1009"
+ENDFILE
+VALUE "<project>\designer\impl1\MAIN_TOP.pdb,pdb"
+STATE="utd"
+TIME="1599786910"
+SIZE="164260"
+ENDFILE
+VALUE "<project>\designer\impl1\MAIN_TOP_ba.sdf,ba_sdf"
+STATE="utd"
+TIME="1599786886"
+SIZE="1451495"
+ENDFILE
+VALUE "<project>\designer\impl1\MAIN_TOP_ba.v,ba_hdl"
+STATE="utd"
+TIME="1599786886"
+SIZE="642800"
+ENDFILE
+VALUE "<project>\designer\impl1\MAIN_TOP_compile_log.rpt,log"
+STATE="utd"
+TIME="1599786762"
+SIZE="10734"
+ENDFILE
+VALUE "<project>\designer\impl1\MAIN_TOP_fp\MAIN_TOP.pro,pro"
+STATE="utd"
+TIME="1600072572"
+SIZE="2446"
+ENDFILE
+VALUE "<project>\designer\impl1\MAIN_TOP_fp\projectData\MAIN_TOP.pdb,pdb"
+STATE="utd"
+TIME="1600072572"
+SIZE="164260"
+ENDFILE
+VALUE "<project>\designer\impl1\MAIN_TOP_placeroute_log.rpt,log"
+STATE="utd"
+TIME="1599786916"
+SIZE="2647"
+ENDFILE
+VALUE "<project>\hdl\adc_acq.v,hdl"
+STATE="utd"
+TIME="1595916385"
+SIZE="9022"
+ENDFILE
+VALUE "<project>\hdl\address_encoder.v,hdl"
+STATE="utd"
+TIME="1537194572"
+SIZE="7892"
+ENDFILE
+VALUE "<project>\hdl\cmd_decoder.v,hdl"
+STATE="utd"
+TIME="1599753232"
+SIZE="12979"
+ENDFILE
+VALUE "<project>\hdl\edib_ctrl_reg.v,hdl"
+STATE="utd"
+TIME="1263980988"
+SIZE="3779"
+ENDFILE
+VALUE "<project>\hdl\edib_m2m5m7_clkgen.v,hdl"
+STATE="utd"
+TIME="1263997922"
+SIZE="618"
+ENDFILE
+VALUE "<project>\hdl\edib_m5m7_clkgen.v,hdl"
+STATE="utd"
+TIME="1264054372"
+SIZE="605"
+ENDFILE
+VALUE "<project>\hdl\edib_mode2_clkgen.v,hdl"
+STATE="utd"
+TIME="1264044078"
+SIZE="601"
+ENDFILE
+VALUE "<project>\hdl\rdata_choice.v,hdl"
+STATE="utd"
+TIME="1548062171"
+SIZE="490"
+ENDFILE
+VALUE "<project>\hdl\trans_m2.v,hdl"
+STATE="utd"
+TIME="1599548753"
+SIZE="4665"
+ENDFILE
+VALUE "<project>\hdl\trans_m5m7.v,hdl"
+STATE="utd"
+TIME="1263993770"
+SIZE="5286"
+ENDFILE
+VALUE "<project>\hdl\trans_m7.v,hdl"
+STATE="utd"
+TIME="1263993776"
+SIZE="5291"
+ENDFILE
+VALUE "<project>\hdl\tri_state_ctrl.v,hdl"
+STATE="utd"
+TIME="1274857324"
+SIZE="276"
+ENDFILE
+VALUE "<project>\smartgen\MUX2\MUX2.cxf,actgen_cxf"
+STATE="utd"
+TIME="1528361286"
+SIZE="1555"
+ENDFILE
+VALUE "<project>\smartgen\MUX2\MUX2.gen,gen"
+STATE="utd"
+TIME="1528361284"
+SIZE="607"
+PARENT="<project>\smartgen\MUX2\MUX2.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\smartgen\MUX2\MUX2.log,log"
+STATE="utd"
+TIME="1528361286"
+SIZE="1717"
+PARENT="<project>\smartgen\MUX2\MUX2.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\smartgen\MUX2\MUX2.v,hdl"
+STATE="utd"
+TIME="1528361286"
+SIZE="3149"
+PARENT="<project>\smartgen\MUX2\MUX2.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\synthesis\MAIN_TOP.edn,syn_edn"
+STATE="utd"
+TIME="1599786752"
+SIZE="1114488"
+ENDFILE
+VALUE "<project>\synthesis\MAIN_TOP.so,so"
+STATE="utd"
+TIME="1599786752"
+SIZE="245"
+ENDFILE
+VALUE "<project>\synthesis\MAIN_TOP_sdc.sdc,syn_sdc"
+STATE="utd"
+TIME="1599786752"
+SIZE="502"
+ENDFILE
+VALUE "<project>\synthesis\MAIN_TOP_syn.prj,prj"
+STATE="utd"
+TIME="1599786752"
+SIZE="3189"
+ENDFILE
+ENDLIST
+LIST UsedFile
+ENDLIST
+LIST NewModulesInfo
+LIST "MAIN_TOP::work"
+FILE "<project>\component\work\MAIN_TOP\MAIN_TOP.v,hdl"
+LIST ProjectState5.1
+LIST Impl1
+LiberoState=Post_Layout
+ideSYNTHESIS(<project>\synthesis\MAIN_TOP.edn,syn_edn)=StateSuccess
+ideDESIGNER(<project>\designer\impl1\MAIN_TOP.adb,adb)=StateSuccess
+LIST FlowOptions
+UsePhySynth=FALSE
+UseSynth=TRUE
+UseFhbAutoInst=FALSE
+ENDLIST
+Used_File_List
+ENDUsed_File_List
+ENDLIST
+ENDLIST
+LIST PinReports
+VALUE "<project>\designer\impl1\MAIN_TOP_report_pin_byname.txt,log"
+VALUE "<project>\designer\impl1\MAIN_TOP_report_pin_bynumber.txt,log"
+ENDLIST
+ENDLIST
+ENDLIST
+LIST AssociatedStimulus
+ENDLIST
+LIST Other_Association
+ENDLIST
+LIST SimulationOptions
+UseAutomaticDoFile=true
+IncludeWaveDo=false
+Type=max
+RunTime=1000ns
+Resolution=1ps
+VsimOpt=
+EntityName=testbench
+TopInstanceName=<top>_0
+DoFileName=
+DoFileName2=wave.do
+DoFileParams=
+DisplayDUTWave=false
+LogAllSignals=false
+DisablePulseFiltering=false
+DumpVCD=false
+VCDFileName=power.vcd
+VHDL2008=false
+Verilog2001=false
+SystemVerilog=false
+TimeUnit=1
+TimeUnitBase=ns
+Precision=100
+PrecisionBase=ps
+ENDLIST
+LIST ModelSimLibPath
+UseCustomPath=FALSE
+LibraryPath=
+ENDLIST
+LIST GlobalFlowOptions
+GenerateHDLAfterSynthesis=FALSE
+GenerateHDLAfterPhySynthesis=FALSE
+RunDRCAfterSynthesis=FALSE
+AutoCheckConstraints=TRUE
+UpdateModelSimIni=TRUE
+NoIOMode=FALSE
+PeriInitStandalone=FALSE
+EnableViewDraw=FALSE
+UpdateViewDrawIni=TRUE
+GenerateHDLFromSchematic=TRUE
+VmNetlistFlowOn=FALSE
+EnableDesignSeparationOn=FALSE
+EnableSETMitigationOn=FALSE
+DisplayFanoutLimit=10
+AbortFlowOnPDCErrorsOn=TRUE
+AbortFlowOnSDCErrorsOn=TRUE
+InstantiateInSmartDesign=TRUE
+FlashProInputFile=pdb
+SmartGenCompileReport=T
+ENDLIST
+LIST PhySynthesisOptions
+ENDLIST
+LIST Profiles
+NAME="SoftConsole"
+FUNCTION="SoftwareIDE"
+TOOL="SoftConsole"
+LOCATION="eclipse.exe"
+PARAM=""
+BATCH=0
+LICENSE=""
+IS32BIT="1"
+EndProfile
+NAME="Synplify Pro ME"
+FUNCTION="Synthesis"
+TOOL="Synplify Pro ME"
+LOCATION="D:\Libero_SoC\SynplifyPro\bin\synplify_pro.exe"
+PARAM=""
+BATCH=0
+LICENSE=""
+IS32BIT="1"
+EndProfile
+NAME="ModelSim ME"
+FUNCTION="Simulation"
+TOOL="ModelSim"
+LOCATION="D:\Libero_SoC\Modelsim\win32acoem\modelsim.exe"
+PARAM=""
+BATCH=0
+LICENSE=""
+IS32BIT="1"
+EndProfile
+NAME="FPExpress"
+FUNCTION="Program"
+TOOL="FlashPro"
+LOCATION="D:\Libero_SoC\Designer\bin\FPExpress.exe"
+PARAM=""
+BATCH=0
+LICENSE=""
+IS32BIT="1"
+EndProfile
+NAME="Identify Debugger"
+FUNCTION="IdentifyDebugger"
+TOOL="Identify Debugger"
+LOCATION="D:\Libero_SoC\Identify\bin\identify_debugger.exe"
+PARAM=""
+BATCH=0
+LICENSE=""
+IS32BIT="1"
+EndProfile
+ENDLIST
+LIST ProjectState5.1
+LIST "MAIN_TOP::work"
+LIST Impl1
+LiberoState=Post_Layout
+ideSYNTHESIS(<project>\synthesis\MAIN_TOP.edn,syn_edn)=StateSuccess
+ideDESIGNER(<project>\designer\impl1\MAIN_TOP.adb,adb)=StateSuccess
+LIST FlowOptions
+UsePhySynth=FALSE
+UseSynth=TRUE
+UseFhbAutoInst=FALSE
+ENDLIST
+Used_File_List
+ENDUsed_File_List
+ENDLIST
+ENDLIST
+ENDLIST
+LIST ExcludePackageForSimulation
+ENDLIST
+LIST ExcludePackageForSynthesis
+ENDLIST
+LIST IncludeModuleForSimulation
+ENDLIST
+LIST CDBOrder
+ENDLIST
+LIST UserCustomizedFileList
+ENDLIST
+LIST OpenedFileList
+ORIENTATION;HORIZONTAL
+Reports;Reports;0
+ReportsCurrentItem;Place and Route:MAIN_TOP_placeroute_log.rpt
+SmartDesign;ADC_TOP;0
+SmartDesign;MAIN_TOP;0
+StartPage;StartPage;0
+ACTIVEVIEW;MAIN_TOP
+ENDLIST
+LIST ModuleSubBlockList
+LIST "ADC_TOP::work","component\work\ADC_TOP\ADC_TOP.v","TRUE","FALSE"
+SUBBLOCK "ads_trans_fsm::work","hdl\adc_acq.v","FALSE","FALSE"
+SUBBLOCK "rdata_choice::work","hdl\rdata_choice.v","FALSE","FALSE"
+ENDLIST
+LIST "address_encoder::work","hdl\address_encoder.v","FALSE","FALSE"
+ENDLIST
+LIST "ads_trans_fsm::work","hdl\adc_acq.v","FALSE","FALSE"
+ENDLIST
+LIST "cmd_decoder::work","hdl\cmd_decoder.v","FALSE","FALSE"
+ENDLIST
+LIST "DESIGN_FIRMWARE::work","component\work\DESIGN_FIRMWARE\DESIGN_FIRMWARE.cxf","TRUE","FALSE"
+ENDLIST
+LIST "DESIGN_IO::work","component\work\DESIGN_IO\DESIGN_IO.cxf","TRUE","FALSE"
+ENDLIST
+LIST "edib_ctrl_reg::work","hdl\edib_ctrl_reg.v","FALSE","FALSE"
+ENDLIST
+LIST "edib_m2m5m7_clkgen::work","hdl\edib_m2m5m7_clkgen.v","FALSE","FALSE"
+ENDLIST
+LIST "edib_m5m7_clkgen::work","hdl\edib_m5m7_clkgen.v","FALSE","FALSE"
+ENDLIST
+LIST "edib_mode2_clkgen::work","hdl\edib_mode2_clkgen.v","FALSE","FALSE"
+ENDLIST
+LIST "MAIN_TOP::work","component\work\MAIN_TOP\MAIN_TOP.v","TRUE","FALSE"
+SUBBLOCK "ADC_TOP::work","component\work\ADC_TOP\ADC_TOP.v","TRUE","FALSE"
+SUBBLOCK "MUX2::work","smartgen\MUX2\MUX2.v","TRUE","FALSE"
+SUBBLOCK "address_encoder::work","hdl\address_encoder.v","FALSE","FALSE"
+SUBBLOCK "cmd_decoder::work","hdl\cmd_decoder.v","FALSE","FALSE"
+SUBBLOCK "edib_ctrl_reg::work","hdl\edib_ctrl_reg.v","FALSE","FALSE"
+SUBBLOCK "edib_m2m5m7_clkgen::work","hdl\edib_m2m5m7_clkgen.v","FALSE","FALSE"
+SUBBLOCK "edib_m5m7_clkgen::work","hdl\edib_m5m7_clkgen.v","FALSE","FALSE"
+SUBBLOCK "edib_mode2_clkgen::work","hdl\edib_mode2_clkgen.v","FALSE","FALSE"
+SUBBLOCK "trans_m2::work","hdl\trans_m2.v","FALSE","FALSE"
+SUBBLOCK "trans_m5m7::work","hdl\trans_m5m7.v","FALSE","FALSE"
+SUBBLOCK "trans_m7::work","hdl\trans_m7.v","FALSE","FALSE"
+SUBBLOCK "tri_state_ctrl::work","hdl\tri_state_ctrl.v","FALSE","FALSE"
+ENDLIST
+LIST "MUX2::work","smartgen\MUX2\MUX2.v","TRUE","FALSE"
+ENDLIST
+LIST "rdata_choice::work","hdl\rdata_choice.v","FALSE","FALSE"
+ENDLIST
+LIST "trans_m2::work","hdl\trans_m2.v","FALSE","FALSE"
+ENDLIST
+LIST "trans_m5m7::work","hdl\trans_m5m7.v","FALSE","FALSE"
+ENDLIST
+LIST "trans_m7::work","hdl\trans_m7.v","FALSE","FALSE"
+ENDLIST
+LIST "tri_state_ctrl::work","hdl\tri_state_ctrl.v","FALSE","FALSE"
+ENDLIST
+ENDLIST
+LIST ActiveTestBenchList
+ENDLIST
+LIST IOTabList
+ENDLIST
+LIST FPTabList
+ENDLIST
+LIST TimingTabList
+VALUE "synthesis\AutoConstraint_MAIN_TOP.sdc"
+ENDLIST
+LIST FDCTabList
+ENDLIST

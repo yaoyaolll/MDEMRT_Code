@@ -1,0 +1,9 @@
+@W: BN137 :"c:\users\administrator\desktop\multiemrt_main_fpga_20200804\hdl\address_encoder.v":264:4:264:5|Found combinational loop during mapping at net address_encoder_0.m2_send_4
+@W: BN137 :|Found combinational loop during mapping at net address_encoder_0.N_64
+@W: MT420 |Found inferred clock MAIN_TOP|CLKA with period 1000.00ns. Please declare a user-defined clock on object "p:CLKA"
+@W: MT420 |Found inferred clock MAIN_TOP|dsp_clk with period 1000.00ns. Please declare a user-defined clock on object "p:dsp_clk"
+@W: MT420 |Found inferred clock edib_mode2_clkgen|clk_send_inferred_clock with period 1000.00ns. Please declare a user-defined clock on object "n:edib_mode2_clkgen_0.clk_send"
+@W: MT420 |Found inferred clock edib_m5m7_clkgen|clk_m5m7_inferred_clock with period 1000.00ns. Please declare a user-defined clock on object "n:edib_m5m7_clkgen_0.clk_m5m7"
+@W: MT420 |Found inferred clock edib_m2m5m7_clkgen|clk_m2_rcv_inferred_clock with period 1000.00ns. Please declare a user-defined clock on object "n:edib_m2m5m7_clkgen_0.clk_m2_rcv"
+@W: MT420 |Found inferred clock ads_trans_fsm|convert_over_out_inferred_clock with period 1000.00ns. Please declare a user-defined clock on object "n:ADC_TOP_0.ads_trans_fsm_0.convert_over_out"
+@W: MT420 |Found inferred clock ads_trans_fsm|sam_clk_5M_out_inferred_clock with period 1000.00ns. Please declare a user-defined clock on object "n:ADC_TOP_0.ads_trans_fsm_0.sam_clk_5M_out"

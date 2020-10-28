@@ -1,0 +1,11 @@
+Microsemi Corporation - Microsemi Libero Software Release v11.8 SP3 (Version 11.8.3.6)
+
+Date      :  Wed Jan 23 10:48:20 2019
+Project   :  C:\Users\WYJ-PC\Desktop\MultiEMRT_MAIN_FPGA_20190121_1
+Component :  ADC_TOP
+Family    :  ProASIC3
+
+
+HDL source files for all Synthesis and Simulation tools:
+    C:/Users/WYJ-PC/Desktop/MultiEMRT_MAIN_FPGA_20190121_1/component/work/ADC_TOP/ADC_TOP.v
+

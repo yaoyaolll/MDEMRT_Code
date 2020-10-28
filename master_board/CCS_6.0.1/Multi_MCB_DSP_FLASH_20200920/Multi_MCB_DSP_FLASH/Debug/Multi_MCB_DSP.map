@@ -1,0 +1,1146 @@
+******************************************************************************
+             TMS320C2000 Linker PC v6.2.7                      
+******************************************************************************
+>> Linked Fri Oct 23 15:55:26 2020
+
+OUTPUT FILE NAME:   <Multi_MCB_DSP.out>
+ENTRY POINT SYMBOL: "_c_int00"  address: 003f914f
+
+
+MEMORY CONFIGURATION
+
+         name            origin    length      used     unused   attr    fill
+----------------------  --------  ---------  --------  --------  ----  --------
+PAGE 0:
+  OTP                   003d7800   00000400  00000000  00000400  RWIX
+  FLASH_IJ              003d8000   00004000  00000000  00004000  RWIX
+  FLASH_GH              003dc000   00008000  00000000  00008000  RWIX
+  FLASH_EF              003e4000   00008000  00000000  00008000  RWIX
+  FLASH_CD              003ec000   00008000  00000000  00008000  RWIX
+  FLASH_AB              003f4000   00003f80  000013ea  00002b96  RWIX
+  CSM_RSVD              003f7f80   00000076  00000000  00000076  RWIX
+  BEGIN_FLASH           003f7ff6   00000002  00000002  00000000  RWIX
+  CSM_PWL               003f7ff8   00000008  00000000  00000008  RWIX
+  RAM_H0                003f8000   00002000  0000139d  00000c63  RWIX
+  ROM                   003ff000   00000fc0  00000000  00000fc0  RWIX
+  RESET                 003fffc0   00000002  00000000  00000002  RWIX
+  VECTORS               003fffc2   0000003e  00000000  0000003e  RWIX
+
+PAGE 1:
+  TABLEREGSRAM          00000040   00000028  00000026  00000002  RWIX
+  FORBIDZONE            00000068   000000c2  00000000  000000c2  RWIX
+  TABLEUPREGS           00000140   00000030  00000000  00000030  RWIX
+  RAMM0                 00000400   00000400  00000400  00000000  RWIX
+  DEV_EMU               00000880   00000180  000000d0  000000b0  RWIX
+  FLASH_REGS            00000a80   00000060  00000008  00000058  RWIX
+  CSM                   00000ae0   00000010  00000010  00000000  RWIX
+  XINTF                 00000b20   00000020  00000020  00000000  RWIX
+  CPU_TIMER0            00000c00   00000008  00000008  00000000  RWIX
+  PIE_CTRL              00000ce0   00000020  0000001a  00000006  RWIX
+  PIE_VECT              00000d00   00000100  00000100  00000000  RWIX
+  XINF_ZONE0            00002000   00002000  00000000  00002000  RWIX
+  XINF_ZONE1            00004000   00002000  00000000  00002000  RWIX
+  ECANA                 00006000   00000040  00000034  0000000c  RWIX
+  ECANA_LAM             00006040   00000040  00000040  00000000  RWIX
+  ECANA_MOTS            00006080   00000040  00000040  00000000  RWIX
+  ECANA_MOTO            000060c0   00000040  00000040  00000000  RWIX
+  ECANA_MBOX            00006100   00000100  00000100  00000000  RWIX
+  SYSTEM                00007010   00000020  00000020  00000000  RWIX
+  SPIA                  00007040   00000010  00000010  00000000  RWIX
+  SCIA                  00007050   00000010  00000010  00000000  RWIX
+  XINTRUPT              00007070   00000010  00000010  00000000  RWIX
+  GPIOMUX               000070c0   00000020  00000020  00000000  RWIX
+  GPIODAT               000070e0   00000020  00000020  00000000  RWIX
+  ADC                   00007100   00000020  0000001a  00000006  RWIX
+  EVA                   00007400   00000040  00000032  0000000e  RWIX
+  EVB                   00007500   00000040  00000032  0000000e  RWIX
+  SCIB                  00007750   00000010  00000010  00000000  RWIX
+  MCBSPA                00007800   00000040  00000025  0000001b  RWIX
+  RAMM1                 00009c00   00000400  0000012e  000002d2  RWIX
+  DatRcvZone1           00100000   00020000  00000000  00020000  RWIX
+  DatRcvZone2           00120000   00020000  00000000  00020000  RWIX
+  CSM_PWL               003f7ff8   00000008  00000008  00000000  RWIX
+
+
+SECTION ALLOCATION MAP
+
+ output                                  attributes/
+section   page    origin      length       input sections
+--------  ----  ----------  ----------   ----------------
+.text      0    003f4000    00001287     RUN ADDR = 003f8000
+                  003f4000    0000038b     EdibSend.obj (.text)
+                  003f438b    000002a4     Initial.obj (.text)
+                  003f462f    00000211     main.obj (.text)
+                  003f4840    00000159     McbspSendReceive.obj (.text)
+                  003f4999    00000155     AssistantAcq.obj (.text)
+                  003f4aee    0000014f     DSP281x_DefaultIsr.obj (.text:retain)
+                  003f4c3d    000000e4     EdibRcv.obj (.text:retain)
+                  003f4d21    000000a3     McbspSendReceive.obj (.text:retain)
+                  003f4dc4    0000008a     EdibRcv.obj (.text)
+                  003f4e4e    00000086     DSP281x_SysCtrl.obj (.text)
+                  003f4ed4    00000083     rts2800_ml.lib : fs_div.obj (.text)
+                  003f4f57    00000078                    : fs_add.obj (.text)
+                  003f4fcf    00000076     DSP281x_Xintf.obj (.text)
+                  003f5045    0000005e     DSP28_Mcbsp.obj (.text)
+                  003f50a3    0000005a     rts2800_ml.lib : fs_mpy.obj (.text)
+                  003f50fd    00000052     AssistantAcq.obj (.text:retain)
+                  003f514f    00000044     rts2800_ml.lib : boot.obj (.text)
+                  003f5193    00000028     DSP281x_PieCtrl.obj (.text)
+                  003f51bb    00000025     rts2800_ml.lib : fs_toi.obj (.text)
+                  003f51e0    00000020     DSP281x_PieVect.obj (.text)
+                  003f5200    0000001e     DSP281x_XIntrupt.obj (.text)
+                  003f521e    0000001a     rts2800_ml.lib : l_tofs.obj (.text)
+                  003f5238    00000019                    : args_main.obj (.text)
+                  003f5251    00000019                    : exit.obj (.text)
+                  003f526a    00000014     DSP281x_Gpio.obj (.text)
+                  003f527e    00000009     rts2800_ml.lib : _lock.obj (.text)
+
+.econst    0    003f5288    00000100     RUN ADDR = 003f9288
+                  003f5288    00000100     DSP281x_PieVect.obj (.econst)
+
+.cinit     0    003f5388    00000016     RUN ADDR = 003f9388
+                  003f5388    0000000a     rts2800_ml.lib : _lock.obj (.cinit)
+                  003f5392    0000000a                    : exit.obj (.cinit)
+                  003f539c    00000002     --HOLE-- [fill = 0]
+
+copysections 
+*          0    003f539e    00000045     
+                  003f539e    00000045     DSP281x_SectionCopy.obj (copysections)
+
+wddisable 
+*          0    003f53e3    00000008     
+                  003f53e3    00000008     DSP281x_CodeStartBranch.obj (wddisable)
+
+codestart 
+*          0    003f7ff6    00000002     
+                  003f7ff6    00000002     DSP281x_CodeStartBranch.obj (codestart)
+
+.const     0    003f8000    00000000     UNINITIALIZED
+
+.pinit     0    003f8000    00000000     UNINITIALIZED
+
+.switch    0    003f8000    00000000     UNINITIALIZED
+
+ramfuncs   0    003f8000    00000000     UNINITIALIZED
+
+.reset     0    003fffc0    00000002     DSECT
+                  003fffc0    00000002     rts2800_ml.lib : boot.obj (.reset)
+
+vectors    0    003fffc2    00000000     DSECT
+
+TableCacheRegsFile 
+*          1    00000040    00000026     UNINITIALIZED
+                  00000040    00000026     DSP281x_GlobalVariableDefs.obj (TableCacheRegsFile)
+
+.stack     1    00000400    00000400     UNINITIALIZED
+                  00000400    00000400     --HOLE--
+
+DevEmuRegsFile 
+*          1    00000880    000000d0     UNINITIALIZED
+                  00000880    000000d0     DSP281x_GlobalVariableDefs.obj (DevEmuRegsFile)
+
+FlashRegsFile 
+*          1    00000a80    00000008     UNINITIALIZED
+                  00000a80    00000008     DSP281x_GlobalVariableDefs.obj (FlashRegsFile)
+
+CsmRegsFile 
+*          1    00000ae0    00000010     UNINITIALIZED
+                  00000ae0    00000010     DSP281x_GlobalVariableDefs.obj (CsmRegsFile)
+
+XintfRegsFile 
+*          1    00000b20    00000020     UNINITIALIZED
+                  00000b20    00000020     DSP281x_GlobalVariableDefs.obj (XintfRegsFile)
+
+CpuTimer0RegsFile 
+*          1    00000c00    00000008     UNINITIALIZED
+                  00000c00    00000008     DSP281x_GlobalVariableDefs.obj (CpuTimer0RegsFile)
+
+PieCtrlRegsFile 
+*          1    00000ce0    0000001a     UNINITIALIZED
+                  00000ce0    0000001a     DSP281x_GlobalVariableDefs.obj (PieCtrlRegsFile)
+
+PieVectTableFile 
+*          1    00000d00    00000100     UNINITIALIZED
+                  00000d00    00000100     DSP281x_GlobalVariableDefs.obj (PieVectTableFile)
+
+ECanaRegsFile 
+*          1    00006000    00000034     UNINITIALIZED
+                  00006000    00000034     DSP281x_GlobalVariableDefs.obj (ECanaRegsFile)
+
+ECanaLAMRegsFile 
+*          1    00006040    00000040     UNINITIALIZED
+                  00006040    00000040     DSP281x_GlobalVariableDefs.obj (ECanaLAMRegsFile)
+
+ECanaMOTSRegsFile 
+*          1    00006080    00000040     UNINITIALIZED
+                  00006080    00000040     DSP281x_GlobalVariableDefs.obj (ECanaMOTSRegsFile)
+
+ECanaMOTORegsFile 
+*          1    000060c0    00000040     UNINITIALIZED
+                  000060c0    00000040     DSP281x_GlobalVariableDefs.obj (ECanaMOTORegsFile)
+
+ECanaMboxesFile 
+*          1    00006100    00000100     UNINITIALIZED
+                  00006100    00000100     DSP281x_GlobalVariableDefs.obj (ECanaMboxesFile)
+
+SysCtrlRegsFile 
+*          1    00007010    00000020     UNINITIALIZED
+                  00007010    00000020     DSP281x_GlobalVariableDefs.obj (SysCtrlRegsFile)
+
+SpiaRegsFile 
+*          1    00007040    00000010     UNINITIALIZED
+                  00007040    00000010     DSP281x_GlobalVariableDefs.obj (SpiaRegsFile)
+
+SciaRegsFile 
+*          1    00007050    00000010     UNINITIALIZED
+                  00007050    00000010     DSP281x_GlobalVariableDefs.obj (SciaRegsFile)
+
+XIntruptRegsFile 
+*          1    00007070    00000010     UNINITIALIZED
+                  00007070    00000010     DSP281x_GlobalVariableDefs.obj (XIntruptRegsFile)
+
+GpioMuxRegsFile 
+*          1    000070c0    00000020     UNINITIALIZED
+                  000070c0    00000020     DSP281x_GlobalVariableDefs.obj (GpioMuxRegsFile)
+
+GpioDataRegsFile 
+*          1    000070e0    00000020     UNINITIALIZED
+                  000070e0    00000020     DSP281x_GlobalVariableDefs.obj (GpioDataRegsFile)
+
+AdcRegsFile 
+*          1    00007100    0000001a     UNINITIALIZED
+                  00007100    0000001a     DSP281x_GlobalVariableDefs.obj (AdcRegsFile)
+
+EvaRegsFile 
+*          1    00007400    00000032     UNINITIALIZED
+                  00007400    00000032     DSP281x_GlobalVariableDefs.obj (EvaRegsFile)
+
+EvbRegsFile 
+*          1    00007500    00000032     UNINITIALIZED
+                  00007500    00000032     DSP281x_GlobalVariableDefs.obj (EvbRegsFile)
+
+ScibRegsFile 
+*          1    00007750    00000010     UNINITIALIZED
+                  00007750    00000010     DSP281x_GlobalVariableDefs.obj (ScibRegsFile)
+
+McbspaRegsFile 
+*          1    00007800    00000025     UNINITIALIZED
+                  00007800    00000025     DSP281x_GlobalVariableDefs.obj (McbspaRegsFile)
+
+.bss       1    00009c00    00000000     UNINITIALIZED
+
+.ebss      1    00009c00    00000116     UNINITIALIZED
+                  00009c00    000000f4     main.obj (.ebss)
+                  00009cf4    00000005     McbspSendReceive.obj (.ebss)
+                  00009cf9    00000001     Initial.obj (.ebss)
+                  00009cfa    00000004     rts2800_ml.lib : _lock.obj (.ebss)
+                  00009cfe    00000002     --HOLE--
+                  00009d00    00000011     AssistantAcq.obj (.ebss)
+                  00009d11    00000001     --HOLE--
+                  00009d12    00000004     rts2800_ml.lib : exit.obj (.ebss)
+
+my_rev2    1    00009d16    00000018     UNINITIALIZED
+                  00009d16    00000018     main.obj (my_rev2)
+
+CsmPwlFile 
+*          1    003f7ff8    00000008     UNINITIALIZED
+                  003f7ff8    00000008     DSP281x_GlobalVariableDefs.obj (CsmPwlFile)
+
+
+GLOBAL DATA SYMBOLS: SORTED BY DATA PAGE
+
+address     data page           name
+--------    ----------------    ----
+00000040       1 (00000040)     _TableRegs
+
+00000400      10 (00000400)     __stack
+
+00000880      22 (00000880)     _DevEmuRegs
+
+00000a80      2a (00000a80)     _FlashRegs
+
+00000ae0      2b (00000ac0)     _CsmRegs
+
+00000b20      2c (00000b00)     _XintfRegs
+
+00000c00      30 (00000c00)     _CpuTimer0Regs
+
+00000ce0      33 (00000cc0)     _PieCtrlRegs
+
+00000d00      34 (00000d00)     _PieVectTable
+
+00006000     180 (00006000)     _ECanaRegs
+
+00006040     181 (00006040)     _ECanaLAMRegs
+
+00006080     182 (00006080)     _ECanaMOTSRegs
+
+000060c0     183 (000060c0)     _ECanaMOTORegs
+
+00006100     184 (00006100)     _ECanaMboxes
+
+00007010     1c0 (00007000)     _SysCtrlRegs
+
+00007040     1c1 (00007040)     _SpiaRegs
+00007050     1c1 (00007040)     _SciaRegs
+00007070     1c1 (00007040)     _XIntruptRegs
+
+000070c0     1c3 (000070c0)     _GpioMuxRegs
+000070e0     1c3 (000070c0)     _GpioDataRegs
+
+00007100     1c4 (00007100)     _AdcRegs
+
+00007400     1d0 (00007400)     _EvaRegs
+
+00007500     1d4 (00007500)     _EvbRegs
+
+00007750     1dd (00007740)     _ScibRegs
+
+00007800     1e0 (00007800)     _McbspaRegs
+
+00009c00     270 (00009c00)     _HeatSNKTemp1
+00009c01     270 (00009c00)     _MagTemp1
+00009c02     270 (00009c00)     _EndothermicagentTemp1
+00009c03     270 (00009c00)     _ADC_ref
+00009c04     270 (00009c00)     _PoweramplifierTemp
+00009c05     270 (00009c00)     _ChargeVoltage1
+00009c06     270 (00009c00)     _PoweramplifierTemp1
+00009c07     270 (00009c00)     _EventTemp1
+00009c08     270 (00009c00)     _M5Sendat
+00009c09     270 (00009c00)     _PreamplifierTemp1
+00009c0a     270 (00009c00)     _VacuumFlaskTemp1
+00009c0b     270 (00009c00)     _ACQ_cnt
+00009c0c     270 (00009c00)     _LowerportTemp1
+00009c0d     270 (00009c00)     _SAssAcqCounter
+00009c0e     270 (00009c00)     _AssAcqFlag1
+00009c0f     270 (00009c00)     _MagTemp
+00009c10     270 (00009c00)     _AssVarReady
+00009c11     270 (00009c00)     _TranVarFlag
+00009c12     270 (00009c00)     _VacuumFlaskTemp
+00009c13     270 (00009c00)     _PreamplifierTemp
+00009c14     270 (00009c00)     _EndothermicagentTemp
+00009c15     270 (00009c00)     _EventTemp
+00009c16     270 (00009c00)     _HeatSNKTemp
+00009c17     270 (00009c00)     _AssAcqFlag
+00009c18     270 (00009c00)     _LowerportTemp
+00009c19     270 (00009c00)     _Start_Cmd_Counter
+00009c1a     270 (00009c00)     _high_byte_rcv
+00009c1b     270 (00009c00)     _UsbRcvDat_LowByte
+00009c1c     270 (00009c00)     _EcUpTabFlag
+00009c1d     270 (00009c00)     _M2CMDReg
+00009c1e     270 (00009c00)     _Start_Cmd_Flag
+00009c1f     270 (00009c00)     _HV_zero_bias
+00009c20     270 (00009c00)     _UsbSendFlag
+00009c21     270 (00009c00)     _HV_real
+00009c22     270 (00009c00)     _UsbRcvDat
+00009c23     270 (00009c00)     _counter
+00009c24     270 (00009c00)     _HV_now
+00009c25     270 (00009c00)     _UsbRcvReg
+00009c26     270 (00009c00)     _M5SendCounter
+00009c27     270 (00009c00)     _M2SendNum
+00009c28     270 (00009c00)     _M7SendCounter
+00009c29     270 (00009c00)     _M7Sendat
+00009c2a     270 (00009c00)     _ChargeVoltage
+00009c2b     270 (00009c00)     _M5SendNum
+00009c2c     270 (00009c00)     _M5Sendone
+00009c2d     270 (00009c00)     _M2Sendone
+00009c2e     270 (00009c00)     _M2RcvReg
+00009c2f     270 (00009c00)     _M7SendNum
+00009c30     270 (00009c00)     _M2SendCounter
+00009c31     270 (00009c00)     _M7Sendone
+00009c32     270 (00009c00)     _McbspSendFlag
+00009c33     270 (00009c00)     _BufferMcbsp
+00009c34     270 (00009c00)     _BackBuffer
+00009c35     270 (00009c00)     _CalSendUpCnt
+00009c36     270 (00009c00)     _HeadBuffer
+00009c37     270 (00009c00)     _CheckedState
+00009c38     270 (00009c00)     _LoggingSendUpCnt
+00009c39     270 (00009c00)     _M2_Send_Cmd
+00009c3a     270 (00009c00)     _TestData
+00009c3b     270 (00009c00)     _M7_Send_Cmd
+00009c3c     270 (00009c00)     _iTableDown
+00009c3d     270 (00009c00)     _TableModify
+00009c3e     270 (00009c00)     _M5_Send_Cmd
+00009c3f     270 (00009c00)     _rcv_test_cmd
+
+00009c40     271 (00009c40)     _ParaModify
+00009c41     271 (00009c40)     _rcv_flag
+00009c42     271 (00009c40)     _CollectionFlag
+00009c43     271 (00009c40)     _OrderFlag
+00009c44     271 (00009c40)     _i
+00009c45     271 (00009c40)     _FSweepSendUpCnt
+00009c46     271 (00009c40)     _TableSendUpCnt
+00009c47     271 (00009c40)     _EcState
+00009c48     271 (00009c40)     _TableRcvCnt
+00009c49     271 (00009c40)     _TableRcvFlag
+00009c4a     271 (00009c40)     _DatReady
+00009c4b     271 (00009c40)     _Mcbsp_ChState
+00009c4c     271 (00009c40)     _TableModifyCmd
+00009c4d     271 (00009c40)     _y
+00009c4e     271 (00009c40)     _TableUpDone
+00009c4f     271 (00009c40)     _ConvertFlag
+00009c50     271 (00009c40)     _TableModifyCounter
+00009c51     271 (00009c40)     _TableModifyClass
+00009c52     271 (00009c40)     _TableModifyNum
+00009c53     271 (00009c40)     _ModifyMark
+00009c54     271 (00009c40)     _TableModifyFlag
+00009c55     271 (00009c40)     _HeadSendone
+00009c56     271 (00009c40)     _SendCounter
+00009c57     271 (00009c40)     _CheckOddOrEven
+00009c58     271 (00009c40)     _buffer
+00009c59     271 (00009c40)     _SendUpFlag
+00009c5a     271 (00009c40)     _AcqCmdCounter
+00009c5b     271 (00009c40)     _ConvertDoneFlag
+00009c5c     271 (00009c40)     _CheckEcFlag
+00009c5d     271 (00009c40)     _OrderFlagBuffer
+00009c5e     271 (00009c40)     _M2DataBuffer
+00009c60     271 (00009c40)     _M7LoadoneRegPt
+00009c62     271 (00009c40)     _M5DataBuffer
+00009c64     271 (00009c40)     _M7_Data
+00009c66     271 (00009c40)     _M5LoadoneRegPt
+00009c68     271 (00009c40)     _M7_Ctrl_Pt
+00009c6a     271 (00009c40)     _M5_Ctrl_Pt
+00009c6c     271 (00009c40)     _M5_Data
+00009c6e     271 (00009c40)     _CorrectionFactor
+00009c70     271 (00009c40)     _MagTempMid
+00009c72     271 (00009c40)     _int0count
+00009c74     271 (00009c40)     _int1count
+00009c76     271 (00009c40)     _SendOneSpeedPt
+00009c78     271 (00009c40)     _M7DataBuffer
+00009c7a     271 (00009c40)     _HeatSNKTempMid
+00009c7c     271 (00009c40)     _SendFourSpeedPt
+00009c7e     271 (00009c40)     _UsbRcvRegPt
+
+00009c80     272 (00009c80)     _CheckWordPint
+00009c82     272 (00009c80)     _EcUpTabPint
+00009c84     272 (00009c80)     _EventMid
+00009c86     272 (00009c80)     _PoweramplifierMid
+00009c88     272 (00009c80)     _LowerportMid
+00009c8a     272 (00009c80)     _PintBuffer
+00009c8c     272 (00009c80)     _AdcRegPt
+00009c8e     272 (00009c80)     _TablePint
+00009c90     272 (00009c80)     _RcvBuffer
+00009c92     272 (00009c80)     _CmdRcvBufferPt
+00009c94     272 (00009c80)     _EDIB_Rst_Pt
+00009c96     272 (00009c80)     _M2_Data
+00009c98     272 (00009c80)     _M2SendoneRegPt
+00009c9a     272 (00009c80)     _EDIB_M2Send_Pt
+00009c9c     272 (00009c80)     _M2RcvRegPt
+00009c9e     272 (00009c80)     _EndothermicagentMid
+00009ca0     272 (00009c80)     _PreamplifierMid
+00009ca2     272 (00009c80)     _ChargeVoltageMid
+00009ca4     272 (00009c80)     _DataPint
+00009ca6     272 (00009c80)     _DataPint1
+
+00009cc0     273 (00009cc0)     _ECanaShadow
+00009cf4     273 (00009cc0)     _DownAry
+00009cf9     273 (00009cc0)     _McbspTableRcvFlag
+00009cfa     273 (00009cc0)     __unlock
+00009cfc     273 (00009cc0)     __lock
+
+00009d00     274 (00009d00)     _ADC_REF
+00009d02     274 (00009d00)     _ADCValue
+00009d05     274 (00009d00)     _ACQ_Value
+00009d12     274 (00009d00)     ___TI_cleanup_ptr
+00009d14     274 (00009d00)     ___TI_dtors_ptr
+00009d16     274 (00009d00)     _AssVar
+
+003f7ff8    fdff (003f7fc0)     _CsmPwl
+
+003f9288    fe4a (003f9280)     _PieVectTableInit
+
+
+GLOBAL SYMBOLS: SORTED ALPHABETICALLY BY Name 
+
+address    name
+--------   ----
+00009c00   .bss
+003f8000   .text
+003f9251   C$$EXIT
+003f8f5c   FS$$ADD
+003f8ed4   FS$$DIV
+003f90a3   FS$$MPY
+003f8f57   FS$$SUB
+003f91bb   FS$$TOI
+003f921e   L$$TOFS
+00009d05   _ACQ_Value
+00009c0b   _ACQ_cnt
+003f8b61   _ADCINT_ISR
+00009d02   _ADCValue
+00009d00   _ADC_REF
+00009c03   _ADC_ref
+00009c5a   _AcqCmdCounter
+003f90fd   _AdcRcvInt
+00009c8c   _AdcRegPt
+00007100   _AdcRegs
+003f8ad5   _AdcRst
+003f8999   _AssAcqDataProcess
+00009c17   _AssAcqFlag
+00009c0e   _AssAcqFlag1
+00009d16   _AssVar
+00009c10   _AssVarReady
+00009c34   _BackBuffer
+00009c33   _BufferMcbsp
+003f8ba7   _CAPINT1_ISR
+003f8bac   _CAPINT2_ISR
+003f8bb1   _CAPINT3_ISR
+003f8bed   _CAPINT4_ISR
+003f8bf2   _CAPINT5_ISR
+003f8bf7   _CAPINT6_ISR
+003f8b70   _CMP1INT_ISR
+003f8b75   _CMP2INT_ISR
+003f8b7a   _CMP3INT_ISR
+003f8bb6   _CMP4INT_ISR
+003f8bbb   _CMP5INT_ISR
+003f8bc0   _CMP6INT_ISR
+00009c35   _CalSendUpCnt
+00009c2a   _ChargeVoltage
+00009c05   _ChargeVoltage1
+00009ca2   _ChargeVoltageMid
+00009c5c   _CheckEcFlag
+00009c57   _CheckOddOrEven
+00009c80   _CheckWordPint
+00009c37   _CheckedState
+00009c92   _CmdRcvBufferPt
+00009c42   _CollectionFlag
+00009c5b   _ConvertDoneFlag
+00009c4f   _ConvertFlag
+00009c6e   _CorrectionFactor
+00000c00   _CpuTimer0Regs
+003f7ff8   _CsmPwl
+00000ae0   _CsmRegs
+003f8ea3   _CsmUnlock
+003f8af8   _DATALOG_ISR
+00009c4a   _DatReady
+003f85a3   _DatZone1ToZero
+003f85e9   _DatZone2ToZero
+00009ca4   _DataPint
+00009ca6   _DataPint1
+003f866e   _DataSdRcvControl
+003f8834   _Delay
+00000880   _DevEmuRegs
+003f8e60   _DisableDog
+00009cf4   _DownAry
+003f8c24   _ECAN0INTA_ISR
+003f8c29   _ECAN1INTA_ISR
+00006040   _ECanaLAMRegs
+000060c0   _ECanaMOTORegs
+00006080   _ECanaMOTSRegs
+00006100   _ECanaMboxes
+00006000   _ECanaRegs
+00009cc0   _ECanaShadow
+00009c9a   _EDIB_M2Send_Pt
+00009c94   _EDIB_Rst_Pt
+003f8c2e   _EMPTY_ISR
+003f8b02   _EMUINT_ISR
+00009c47   _EcState
+00009c1c   _EcUpTabFlag
+00009c82   _EcUpTabPint
+003f8035   _EdibSubset2Up
+003f8052   _EdibSubset3Up
+003f806f   _EdibSubset5Up
+003f808c   _EdibSubset6Up
+003f91b2   _EnableInterrupts
+00009c9e   _EndothermicagentMid
+00009c14   _EndothermicagentTemp
+00009c02   _EndothermicagentTemp1
+00007400   _EvaRegs
+00007500   _EvbRegs
+00009c84   _EventMid
+00009c15   _EventTemp
+00009c07   _EventTemp1
+00009c45   _FSweepSendUpCnt
+00000a80   _FlashRegs
+003f838b   _FpgaInitial
+003f8aaf   _GetADCValue
+000070e0   _GpioDataRegs
+000070c0   _GpioMuxRegs
+00009c24   _HV_now
+00009c21   _HV_real
+00009c1f   _HV_zero_bias
+00009c36   _HeadBuffer
+00009c55   _HeadSendone
+00009c16   _HeatSNKTemp
+00009c00   _HeatSNKTemp1
+00009c7a   _HeatSNKTempMid
+003f8b0c   _ILLEGAL_ISR
+003f8aee   _INT13_ISR
+003f8af3   _INT14_ISR
+003f926a   _InitGpio
+003f9045   _InitMcbsp
+003f8e89   _InitPeripheralClocks
+003f9193   _InitPieCtrl
+003f91e0   _InitPieVectTable
+003f8e68   _InitPll
+003f8e4e   _InitSysCtrl
+003f9200   _InitXIntrupt
+003f8fcf   _InitXintf
+003f8e56   _KickDog
+00009c38   _LoggingSendUpCnt
+00009c88   _LowerportMid
+00009c18   _LowerportTemp
+00009c0c   _LowerportTemp1
+00009c1d   _M2CMDReg
+00009c5e   _M2DataBuffer
+003f8c3d   _M2RcvInt
+00009c2e   _M2RcvReg
+00009c9c   _M2RcvRegPt
+00009c30   _M2SendCounter
+003f8292   _M2SendModule
+00009c27   _M2SendNum
+00009c2d   _M2Sendone
+00009c98   _M2SendoneRegPt
+00009c96   _M2_Data
+00009c39   _M2_Send_Cmd
+00009c62   _M5DataBuffer
+00009c66   _M5LoadoneRegPt
+00009c26   _M5SendCounter
+003f82d7   _M5SendModule
+00009c2b   _M5SendNum
+00009c08   _M5Sendat
+00009c2c   _M5Sendone
+00009c6a   _M5_Ctrl_Pt
+00009c6c   _M5_Data
+00009c3e   _M5_Send_Cmd
+00009c78   _M7DataBuffer
+00009c60   _M7LoadoneRegPt
+00009c28   _M7SendCounter
+003f8331   _M7SendModule
+00009c2f   _M7SendNum
+00009c29   _M7Sendat
+00009c31   _M7Sendone
+00009c68   _M7_Ctrl_Pt
+00009c64   _M7_Data
+00009c3b   _M7_Send_Cmd
+003f8c06   _MRINTA_ISR
+003f8d21   _MRINTA_ISR1
+003f8c0b   _MXINTA_ISR
+00009c0f   _MagTemp
+00009c01   _MagTemp1
+00009c70   _MagTempMid
+00009c32   _McbspSendFlag
+00009cf9   _McbspTableRcvFlag
+00009c4b   _Mcbsp_ChState
+003f9098   _Mcbsp_RxRdy
+003f908d   _Mcbsp_TxRdy
+00007800   _McbspaRegs
+00009c53   _ModifyMark
+003f8b07   _NMI_ISR
+00009c43   _OrderFlag
+00009c5d   _OrderFlagBuffer
+003f8b4d   _PDPINTA_ISR
+003f8b52   _PDPINTB_ISR
+003f8c33   _PIE_RESERVED
+00009c40   _ParaModify
+00000ce0   _PieCtrlRegs
+00000d00   _PieVectTable
+003f9288   _PieVectTableInit
+00009c8a   _PintBuffer
+00009c86   _PoweramplifierMid
+00009c04   _PoweramplifierTemp
+00009c06   _PoweramplifierTemp1
+00009ca0   _PreamplifierMid
+00009c13   _PreamplifierTemp
+00009c09   _PreamplifierTemp1
+003f8afd   _RTOSINT_ISR
+00009c90   _RcvBuffer
+00009c0d   _SAssAcqCounter
+003f8c10   _SCIRXINTA_ISR
+003f8c1a   _SCIRXINTB_ISR
+003f8c15   _SCITXINTA_ISR
+003f8c1f   _SCITXINTB_ISR
+003f8bfc   _SPIRXINTA_ISR
+003f8c01   _SPITXINTA_ISR
+00007050   _SciaRegs
+00007750   _ScibRegs
+003f8975   _SendCheckRelayCmd
+003f8905   _SendConnectRelayCmd
+00009c56   _SendCounter
+003f8929   _SendDisconnectRelayCmd
+00009c7c   _SendFourSpeedPt
+003f8000   _SendHead
+003f80cd   _SendOneSpeedCmd
+00009c76   _SendOneSpeedPt
+003f80d9   _SendQuadrupleSpeedCmd
+003f8840   _SendTableDown
+00009c59   _SendUpFlag
+003f88dd   _SendownAcqCmd
+003f894d   _SendownCheckCmd
+00007040   _SpiaRegs
+00009c19   _Start_Cmd_Counter
+00009c1e   _Start_Cmd_Flag
+00007010   _SysCtrlRegs
+003f8b84   _T1CINT_ISR
+003f8b8e   _T1OFINT_ISR
+003f8b7f   _T1PINT_ISR
+003f8b89   _T1UFINT_ISR
+003f8b98   _T2CINT_ISR
+003f8ba2   _T2OFINT_ISR
+003f8b93   _T2PINT_ISR
+003f8b9d   _T2UFINT_ISR
+003f8bca   _T3CINT_ISR
+003f8bd4   _T3OFINT_ISR
+003f8bc5   _T3PINT_ISR
+003f8bcf   _T3UFINT_ISR
+003f8bde   _T4CINT_ISR
+003f8be8   _T4OFINT_ISR
+003f8bd9   _T4PINT_ISR
+003f8be3   _T4UFINT_ISR
+003f8b66   _TINT0_ISR
+00009c3d   _TableModify
+003f8e4d   _TableModify1
+00009c51   _TableModifyClass
+00009c4c   _TableModifyCmd
+00009c50   _TableModifyCounter
+003f8892   _TableModifyDown
+00009c54   _TableModifyFlag
+00009c52   _TableModifyNum
+003f8e05   _TableModifyRcv
+00009c8e   _TablePint
+00009c48   _TableRcvCnt
+00009c49   _TableRcvFlag
+00000040   _TableRegs
+003f80a9   _TableSendUp
+00009c46   _TableSendUpCnt
+00009c4e   _TableUpDone
+00009c3a   _TestData
+003f80e5   _TestandInformation
+00009c11   _TranVarFlag
+003f8b3e   _USER10_ISR
+003f8b43   _USER11_ISR
+003f8b48   _USER12_ISR
+003f8b11   _USER1_ISR
+003f8b16   _USER2_ISR
+003f8b1b   _USER3_ISR
+003f8b20   _USER4_ISR
+003f8b25   _USER5_ISR
+003f8b2a   _USER6_ISR
+003f8b2f   _USER7_ISR
+003f8b34   _USER8_ISR
+003f8b39   _USER9_ISR
+003f88d4   _UpTableCmdDown
+00009c22   _UsbRcvDat
+00009c1b   _UsbRcvDat_LowByte
+00009c25   _UsbRcvReg
+00009c7e   _UsbRcvRegPt
+00009c20   _UsbSendFlag
+00009c12   _VacuumFlaskTemp
+00009c0a   _VacuumFlaskTemp1
+003f83d6   _VarInitial
+003f8b6b   _WAKEINT_ISR
+003f8b57   _XINT1_ISR
+003f8b5c   _XINT2_ISR
+00007070   _XIntruptRegs
+00000b20   _XintfRegs
+00000800   __STACK_END
+00000400   __STACK_SIZE
+00000001   __TI_args_main
+00009d12   ___TI_cleanup_ptr
+00009d14   ___TI_dtors_ptr
+ffffffff   ___binit__
+00009c00   ___bss__
+ffffffff   ___c_args__
+003f9388   ___cinit__
+00009c00   ___end__
+003f9287   ___etext__
+ffffffff   ___pinit__
+003f8000   ___text__
+003f9238   __args_main
+00009cfc   __lock
+003f9286   __nop
+003f9282   __register_lock
+003f927e   __register_unlock
+00000400   __stack
+00009cfa   __unlock
+003f9251   _abort
+00009c58   _buffer
+003f914f   _c_int00
+003f5388   _cinit_loadstart
+003f9388   _cinit_runstart
+00000016   _cinit_size
+003f8000   _const_loadstart
+003f8000   _const_runstart
+00000000   _const_size
+00009c23   _counter
+003f5288   _econst_loadstart
+003f9288   _econst_runstart
+00000100   _econst_size
+003f9253   _exit
+00009c1a   _high_byte_rcv
+00009c44   _i
+00009c3c   _iTableDown
+00009c72   _int0count
+00009c74   _int1count
+003f862f   _main
+003f8000   _pinit_loadstart
+003f8000   _pinit_runstart
+00000000   _pinit_size
+003f8000   _ramfuncs_loadstart
+003f8000   _ramfuncs_runstart
+00000000   _ramfuncs_size
+00009c41   _rcv_flag
+00009c3f   _rcv_test_cmd
+003f8c38   _rsvd_ISR
+003f8000   _switch_loadstart
+003f8000   _switch_runstart
+00000000   _switch_size
+003f4000   _text_loadstart
+003f8000   _text_runstart
+00001287   _text_size
+00009c4d   _y
+ffffffff   binit
+003f9388   cinit
+003f7ff6   code_start
+003f539e   copy_sections
+00009c00   end
+003f9287   etext
+ffffffff   pinit
+
+
+GLOBAL SYMBOLS: SORTED BY Symbol Address 
+
+address    name
+--------   ----
+00000000   _const_size
+00000000   _pinit_size
+00000000   _ramfuncs_size
+00000000   _switch_size
+00000001   __TI_args_main
+00000016   _cinit_size
+00000040   _TableRegs
+00000100   _econst_size
+00000400   __STACK_SIZE
+00000400   __stack
+00000800   __STACK_END
+00000880   _DevEmuRegs
+00000a80   _FlashRegs
+00000ae0   _CsmRegs
+00000b20   _XintfRegs
+00000c00   _CpuTimer0Regs
+00000ce0   _PieCtrlRegs
+00000d00   _PieVectTable
+00001287   _text_size
+00006000   _ECanaRegs
+00006040   _ECanaLAMRegs
+00006080   _ECanaMOTSRegs
+000060c0   _ECanaMOTORegs
+00006100   _ECanaMboxes
+00007010   _SysCtrlRegs
+00007040   _SpiaRegs
+00007050   _SciaRegs
+00007070   _XIntruptRegs
+000070c0   _GpioMuxRegs
+000070e0   _GpioDataRegs
+00007100   _AdcRegs
+00007400   _EvaRegs
+00007500   _EvbRegs
+00007750   _ScibRegs
+00007800   _McbspaRegs
+00009c00   .bss
+00009c00   _HeatSNKTemp1
+00009c00   ___bss__
+00009c00   ___end__
+00009c00   end
+00009c01   _MagTemp1
+00009c02   _EndothermicagentTemp1
+00009c03   _ADC_ref
+00009c04   _PoweramplifierTemp
+00009c05   _ChargeVoltage1
+00009c06   _PoweramplifierTemp1
+00009c07   _EventTemp1
+00009c08   _M5Sendat
+00009c09   _PreamplifierTemp1
+00009c0a   _VacuumFlaskTemp1
+00009c0b   _ACQ_cnt
+00009c0c   _LowerportTemp1
+00009c0d   _SAssAcqCounter
+00009c0e   _AssAcqFlag1
+00009c0f   _MagTemp
+00009c10   _AssVarReady
+00009c11   _TranVarFlag
+00009c12   _VacuumFlaskTemp
+00009c13   _PreamplifierTemp
+00009c14   _EndothermicagentTemp
+00009c15   _EventTemp
+00009c16   _HeatSNKTemp
+00009c17   _AssAcqFlag
+00009c18   _LowerportTemp
+00009c19   _Start_Cmd_Counter
+00009c1a   _high_byte_rcv
+00009c1b   _UsbRcvDat_LowByte
+00009c1c   _EcUpTabFlag
+00009c1d   _M2CMDReg
+00009c1e   _Start_Cmd_Flag
+00009c1f   _HV_zero_bias
+00009c20   _UsbSendFlag
+00009c21   _HV_real
+00009c22   _UsbRcvDat
+00009c23   _counter
+00009c24   _HV_now
+00009c25   _UsbRcvReg
+00009c26   _M5SendCounter
+00009c27   _M2SendNum
+00009c28   _M7SendCounter
+00009c29   _M7Sendat
+00009c2a   _ChargeVoltage
+00009c2b   _M5SendNum
+00009c2c   _M5Sendone
+00009c2d   _M2Sendone
+00009c2e   _M2RcvReg
+00009c2f   _M7SendNum
+00009c30   _M2SendCounter
+00009c31   _M7Sendone
+00009c32   _McbspSendFlag
+00009c33   _BufferMcbsp
+00009c34   _BackBuffer
+00009c35   _CalSendUpCnt
+00009c36   _HeadBuffer
+00009c37   _CheckedState
+00009c38   _LoggingSendUpCnt
+00009c39   _M2_Send_Cmd
+00009c3a   _TestData
+00009c3b   _M7_Send_Cmd
+00009c3c   _iTableDown
+00009c3d   _TableModify
+00009c3e   _M5_Send_Cmd
+00009c3f   _rcv_test_cmd
+00009c40   _ParaModify
+00009c41   _rcv_flag
+00009c42   _CollectionFlag
+00009c43   _OrderFlag
+00009c44   _i
+00009c45   _FSweepSendUpCnt
+00009c46   _TableSendUpCnt
+00009c47   _EcState
+00009c48   _TableRcvCnt
+00009c49   _TableRcvFlag
+00009c4a   _DatReady
+00009c4b   _Mcbsp_ChState
+00009c4c   _TableModifyCmd
+00009c4d   _y
+00009c4e   _TableUpDone
+00009c4f   _ConvertFlag
+00009c50   _TableModifyCounter
+00009c51   _TableModifyClass
+00009c52   _TableModifyNum
+00009c53   _ModifyMark
+00009c54   _TableModifyFlag
+00009c55   _HeadSendone
+00009c56   _SendCounter
+00009c57   _CheckOddOrEven
+00009c58   _buffer
+00009c59   _SendUpFlag
+00009c5a   _AcqCmdCounter
+00009c5b   _ConvertDoneFlag
+00009c5c   _CheckEcFlag
+00009c5d   _OrderFlagBuffer
+00009c5e   _M2DataBuffer
+00009c60   _M7LoadoneRegPt
+00009c62   _M5DataBuffer
+00009c64   _M7_Data
+00009c66   _M5LoadoneRegPt
+00009c68   _M7_Ctrl_Pt
+00009c6a   _M5_Ctrl_Pt
+00009c6c   _M5_Data
+00009c6e   _CorrectionFactor
+00009c70   _MagTempMid
+00009c72   _int0count
+00009c74   _int1count
+00009c76   _SendOneSpeedPt
+00009c78   _M7DataBuffer
+00009c7a   _HeatSNKTempMid
+00009c7c   _SendFourSpeedPt
+00009c7e   _UsbRcvRegPt
+00009c80   _CheckWordPint
+00009c82   _EcUpTabPint
+00009c84   _EventMid
+00009c86   _PoweramplifierMid
+00009c88   _LowerportMid
+00009c8a   _PintBuffer
+00009c8c   _AdcRegPt
+00009c8e   _TablePint
+00009c90   _RcvBuffer
+00009c92   _CmdRcvBufferPt
+00009c94   _EDIB_Rst_Pt
+00009c96   _M2_Data
+00009c98   _M2SendoneRegPt
+00009c9a   _EDIB_M2Send_Pt
+00009c9c   _M2RcvRegPt
+00009c9e   _EndothermicagentMid
+00009ca0   _PreamplifierMid
+00009ca2   _ChargeVoltageMid
+00009ca4   _DataPint
+00009ca6   _DataPint1
+00009cc0   _ECanaShadow
+00009cf4   _DownAry
+00009cf9   _McbspTableRcvFlag
+00009cfa   __unlock
+00009cfc   __lock
+00009d00   _ADC_REF
+00009d02   _ADCValue
+00009d05   _ACQ_Value
+00009d12   ___TI_cleanup_ptr
+00009d14   ___TI_dtors_ptr
+00009d16   _AssVar
+003f4000   _text_loadstart
+003f5288   _econst_loadstart
+003f5388   _cinit_loadstart
+003f539e   copy_sections
+003f7ff6   code_start
+003f7ff8   _CsmPwl
+003f8000   .text
+003f8000   _SendHead
+003f8000   ___text__
+003f8000   _const_loadstart
+003f8000   _const_runstart
+003f8000   _pinit_loadstart
+003f8000   _pinit_runstart
+003f8000   _ramfuncs_loadstart
+003f8000   _ramfuncs_runstart
+003f8000   _switch_loadstart
+003f8000   _switch_runstart
+003f8000   _text_runstart
+003f8035   _EdibSubset2Up
+003f8052   _EdibSubset3Up
+003f806f   _EdibSubset5Up
+003f808c   _EdibSubset6Up
+003f80a9   _TableSendUp
+003f80cd   _SendOneSpeedCmd
+003f80d9   _SendQuadrupleSpeedCmd
+003f80e5   _TestandInformation
+003f8292   _M2SendModule
+003f82d7   _M5SendModule
+003f8331   _M7SendModule
+003f838b   _FpgaInitial
+003f83d6   _VarInitial
+003f85a3   _DatZone1ToZero
+003f85e9   _DatZone2ToZero
+003f862f   _main
+003f866e   _DataSdRcvControl
+003f8834   _Delay
+003f8840   _SendTableDown
+003f8892   _TableModifyDown
+003f88d4   _UpTableCmdDown
+003f88dd   _SendownAcqCmd
+003f8905   _SendConnectRelayCmd
+003f8929   _SendDisconnectRelayCmd
+003f894d   _SendownCheckCmd
+003f8975   _SendCheckRelayCmd
+003f8999   _AssAcqDataProcess
+003f8aaf   _GetADCValue
+003f8ad5   _AdcRst
+003f8aee   _INT13_ISR
+003f8af3   _INT14_ISR
+003f8af8   _DATALOG_ISR
+003f8afd   _RTOSINT_ISR
+003f8b02   _EMUINT_ISR
+003f8b07   _NMI_ISR
+003f8b0c   _ILLEGAL_ISR
+003f8b11   _USER1_ISR
+003f8b16   _USER2_ISR
+003f8b1b   _USER3_ISR
+003f8b20   _USER4_ISR
+003f8b25   _USER5_ISR
+003f8b2a   _USER6_ISR
+003f8b2f   _USER7_ISR
+003f8b34   _USER8_ISR
+003f8b39   _USER9_ISR
+003f8b3e   _USER10_ISR
+003f8b43   _USER11_ISR
+003f8b48   _USER12_ISR
+003f8b4d   _PDPINTA_ISR
+003f8b52   _PDPINTB_ISR
+003f8b57   _XINT1_ISR
+003f8b5c   _XINT2_ISR
+003f8b61   _ADCINT_ISR
+003f8b66   _TINT0_ISR
+003f8b6b   _WAKEINT_ISR
+003f8b70   _CMP1INT_ISR
+003f8b75   _CMP2INT_ISR
+003f8b7a   _CMP3INT_ISR
+003f8b7f   _T1PINT_ISR
+003f8b84   _T1CINT_ISR
+003f8b89   _T1UFINT_ISR
+003f8b8e   _T1OFINT_ISR
+003f8b93   _T2PINT_ISR
+003f8b98   _T2CINT_ISR
+003f8b9d   _T2UFINT_ISR
+003f8ba2   _T2OFINT_ISR
+003f8ba7   _CAPINT1_ISR
+003f8bac   _CAPINT2_ISR
+003f8bb1   _CAPINT3_ISR
+003f8bb6   _CMP4INT_ISR
+003f8bbb   _CMP5INT_ISR
+003f8bc0   _CMP6INT_ISR
+003f8bc5   _T3PINT_ISR
+003f8bca   _T3CINT_ISR
+003f8bcf   _T3UFINT_ISR
+003f8bd4   _T3OFINT_ISR
+003f8bd9   _T4PINT_ISR
+003f8bde   _T4CINT_ISR
+003f8be3   _T4UFINT_ISR
+003f8be8   _T4OFINT_ISR
+003f8bed   _CAPINT4_ISR
+003f8bf2   _CAPINT5_ISR
+003f8bf7   _CAPINT6_ISR
+003f8bfc   _SPIRXINTA_ISR
+003f8c01   _SPITXINTA_ISR
+003f8c06   _MRINTA_ISR
+003f8c0b   _MXINTA_ISR
+003f8c10   _SCIRXINTA_ISR
+003f8c15   _SCITXINTA_ISR
+003f8c1a   _SCIRXINTB_ISR
+003f8c1f   _SCITXINTB_ISR
+003f8c24   _ECAN0INTA_ISR
+003f8c29   _ECAN1INTA_ISR
+003f8c2e   _EMPTY_ISR
+003f8c33   _PIE_RESERVED
+003f8c38   _rsvd_ISR
+003f8c3d   _M2RcvInt
+003f8d21   _MRINTA_ISR1
+003f8e05   _TableModifyRcv
+003f8e4d   _TableModify1
+003f8e4e   _InitSysCtrl
+003f8e56   _KickDog
+003f8e60   _DisableDog
+003f8e68   _InitPll
+003f8e89   _InitPeripheralClocks
+003f8ea3   _CsmUnlock
+003f8ed4   FS$$DIV
+003f8f57   FS$$SUB
+003f8f5c   FS$$ADD
+003f8fcf   _InitXintf
+003f9045   _InitMcbsp
+003f908d   _Mcbsp_TxRdy
+003f9098   _Mcbsp_RxRdy
+003f90a3   FS$$MPY
+003f90fd   _AdcRcvInt
+003f914f   _c_int00
+003f9193   _InitPieCtrl
+003f91b2   _EnableInterrupts
+003f91bb   FS$$TOI
+003f91e0   _InitPieVectTable
+003f9200   _InitXIntrupt
+003f921e   L$$TOFS
+003f9238   __args_main
+003f9251   C$$EXIT
+003f9251   _abort
+003f9253   _exit
+003f926a   _InitGpio
+003f927e   __register_unlock
+003f9282   __register_lock
+003f9286   __nop
+003f9287   ___etext__
+003f9287   etext
+003f9288   _PieVectTableInit
+003f9288   _econst_runstart
+003f9388   ___cinit__
+003f9388   _cinit_runstart
+003f9388   cinit
+ffffffff   ___binit__
+ffffffff   ___c_args__
+ffffffff   ___pinit__
+ffffffff   binit
+ffffffff   pinit
+
+[341 symbols]

@@ -1,0 +1,108 @@
+
+fsm_encoding {524702478} sequential
+
+fsm_state_encoding {524702478} IDLE {00}
+
+fsm_state_encoding {524702478} SAM_DATA {01}
+
+fsm_state_encoding {524702478} FINISH {10}
+
+fsm_registers {524702478} {curr_sta[1]}  {curr_sta[0]} 
+
+fsm_encoding {515501559} sequential
+
+fsm_state_encoding {515501559} 00 {00}
+
+fsm_state_encoding {515501559} 01 {01}
+
+fsm_state_encoding {515501559} 10 {10}
+
+fsm_registers {515501559} {cnt_step1[1]}  {cnt_step1[0]} 
+
+fsm_encoding {5140014010} sequential
+
+fsm_state_encoding {5140014010} 00 {00}
+
+fsm_state_encoding {5140014010} 01 {01}
+
+fsm_state_encoding {5140014010} 10 {10}
+
+fsm_registers {5140014010} {cnt_step[1]}  {cnt_step[0]} 
+
+fsm_encoding {929402947} sequential
+
+fsm_state_encoding {929402947} state1 {0}
+
+fsm_state_encoding {929402947} state2 {1}
+
+fsm_registers {929402947} {state[0]} 
+
+fsm_encoding {10790796} onehot
+
+fsm_state_encoding {10790796} idle {0000000001}
+
+fsm_state_encoding {10790796} heading {0000000010}
+
+fsm_state_encoding {10790796} starting {0000000100}
+
+fsm_state_encoding {10790796} receiving {0000001000}
+
+fsm_state_encoding {10790796} waiting {0000010000}
+
+fsm_state_encoding {10790796} waiting1 {0000100000}
+
+fsm_state_encoding {10790796} idle1 {0001000000}
+
+fsm_state_encoding {10790796} heading1 {0010000000}
+
+fsm_state_encoding {10790796} starting1 {0100000000}
+
+fsm_state_encoding {10790796} receiving1 {1000000000}
+
+fsm_registers {10790796} {state[9]}  {state[8]}  {state[7]}  {state[6]}  {state[5]}  {state[4]}  {state[3]}  {state[2]}  {state[1]}  {state[0]} 
+
+fsm_encoding {1041504155} sequential
+
+fsm_state_encoding {1041504155} state_1 {0}
+
+fsm_state_encoding {1041504155} state_2 {1}
+
+fsm_registers {1041504155} {state_ii[0]} 
+
+fsm_encoding {1046504654} sequential
+
+fsm_state_encoding {1046504654} 01 {0}
+
+fsm_state_encoding {1046504654} 10 {1}
+
+fsm_registers {1046504654} {state_iii[0]} 
+
+fsm_encoding {1513001303} sequential
+
+fsm_state_encoding {1513001303} idle {00}
+
+fsm_state_encoding {1513001303} data_sending {01}
+
+fsm_state_encoding {1513001303} waiting {10}
+
+fsm_registers {1513001303} {state[1]}  {state[0]} 
+
+fsm_encoding {16460462} sequential
+
+fsm_state_encoding {16460462} idle {00}
+
+fsm_state_encoding {16460462} sending_head {01}
+
+fsm_state_encoding {16460462} sending_data {10}
+
+fsm_registers {16460462} {state[1]}  {state[0]} 
+
+fsm_encoding {17460461} sequential
+
+fsm_state_encoding {17460461} idle {00}
+
+fsm_state_encoding {17460461} sending_head {01}
+
+fsm_state_encoding {17460461} sending_data {10}
+
+fsm_registers {17460461} {state[1]}  {state[0]} 

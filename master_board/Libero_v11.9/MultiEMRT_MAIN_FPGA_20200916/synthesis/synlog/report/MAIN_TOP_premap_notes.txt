@@ -1,0 +1,8 @@
+@N: MF248 |Running in 64-bit mode.
+@N: MF667 |Clock conversion disabled. (Command "set_option -fix_gated_and_generated_clocks 0" in the project file.)
+@N: BN362 :"c:\users\administrator\desktop\multiemrt_main_fpga_20200804\hdl\address_encoder.v":122:0:122:5|Removing sequential instance S2_Open (in view: work.address_encoder(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\administrator\desktop\multiemrt_main_fpga_20200804\hdl\address_encoder.v":122:0:122:5|Removing sequential instance S2_close (in view: work.address_encoder(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN225 |Writing default property annotation file C:\Users\Administrator\Desktop\MultiEMRT_MAIN_FPGA_20200804\synthesis\MAIN_TOP.sap.
+@N: MO225 :"c:\users\administrator\desktop\multiemrt_main_fpga_20200804\hdl\address_encoder.v":294:0:294:5|There are no possible illegal states for state machine state[1:0] (in view: work.address_encoder(verilog)); safe FSM implementation is not required.
+@N: MO225 :"c:\users\administrator\desktop\multiemrt_main_fpga_20200804\hdl\cmd_decoder.v":415:0:415:5|There are no possible illegal states for state machine state_ii[1:0] (in view: work.cmd_decoder(verilog)); safe FSM implementation is not required.
+@N: MO225 :"c:\users\administrator\desktop\multiemrt_main_fpga_20200804\hdl\cmd_decoder.v":465:0:465:5|There are no possible illegal states for state machine state_iii[1:0] (in view: work.cmd_decoder(verilog)); safe FSM implementation is not required.

@@ -1,0 +1,8 @@
+D:\Libero_SoC\SynplifyPro\bin64\syn_nfilter.exe  -link  -top  MAIN_TOP  -multisrs  C:\Users\Administrator\Desktop\MultiEMRT_MAIN_FPGA_20200804\synthesis\synwork\MAIN_TOP_comp.srs  -osyn  C:\Users\Administrator\Desktop\MultiEMRT_MAIN_FPGA_20200804\synthesis\synwork\MAIN_TOP_mult.srs  -log  C:\Users\Administrator\Desktop\MultiEMRT_MAIN_FPGA_20200804\synthesis\synlog\MAIN_TOP_multi_srs_gen.srr 
+relcom:D:\Libero_SoC\SynplifyPro\bin64\syn_nfilter.exe -link -top MAIN_TOP -multisrs ..\synwork\MAIN_TOP_comp.srs -osyn ..\synwork\MAIN_TOP_mult.srs -log ..\synlog\MAIN_TOP_multi_srs_gen.srr
+rc:0 success:1 runtime:0
+file:..\synwork\MAIN_TOP_comp.srs|io:i|time:1599786748|size:55047|exec:0|csum:E757C448206689D3EB16F9C1C15B40A8
+file:..\synwork\MAIN_TOP_mult.srs|io:o|time:1599786749|size:12219|exec:0|csum:
+file:..\synlog\MAIN_TOP_multi_srs_gen.srr|io:o|time:1599786749|size:533|exec:0|csum:
+file:D:\Libero_SoC\SynplifyPro\bin\syn_nfilter.exe|io:i|time:1508986612|size:3128832|exec:1|csum:962D613D77B03012E41E67FDFAA0D819
+file:D:\Libero_SoC\SynplifyPro\bin64\syn_nfilter.exe|io:i|time:1508986884|size:3947520|exec:1|csum:17B0DA4185D3A16356E0044EDC31C9F0

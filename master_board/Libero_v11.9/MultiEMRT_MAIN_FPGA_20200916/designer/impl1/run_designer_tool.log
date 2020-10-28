@@ -1,0 +1,114 @@
+Microsemi Libero Software
+Version: 11.8.3.6
+Release: v11.8 SP3
+
+'IDE_DESIGNERVIEW_ROOTDIR' set to
+'C:\Users\WYJ-PC\Desktop\MultiEMRT_MAIN_FPGA_20190121_1\designer'
+Info: The design MAIN_TOP.adb was last modified by software version 11.8.3.6.
+Opened an existing Libero design MAIN_TOP.adb.
+
+The Execute Script command succeeded ( 00:00:22 )
+While analyzing gated clock network, ambiguities have been found on gates
+address_encoder_0/state_RNISNSU1[0]:Y.
+The timing models of these gates have been simplified for Static Timing Analysis.
+Info: Combinational loops have been detected in the design.
+      To view the details, go to Tools->Reports->Timing->Combinational_Loops
+***** Layout Variables *********************************************
+
+Mode: TIMING_DRIVEN
+Power-driven Layout: OFF
+Incremental Placement: OFF
+Incremental Route: OFF
+
+
+
+Running I/O Bank Assigner.
+
+I/O Bank Assigner completed successfully.
+ 
+
+Planning global net placement...
+
+
+
+Global net placement completed successfully.
+
+                        o - o - o - o - o - o
+
+Timing-driven Placer Started: Wed Jan 23 10:57:39 2019
+
+Placer Finished: Wed Jan 23 10:58:11 2019
+Total Placer CPU Time:     00:00:32
+
+                        o - o - o - o - o - o
+
+While analyzing gated clock network, ambiguities have been found on gates
+address_encoder_0/state_RNISNSU1[0]:Y.
+The timing models of these gates have been simplified for Static Timing Analysis.
+
+Timing-driven Router 
+Design: MAIN_TOP                        Started: Wed Jan 23 10:58:16 2019
+
+While analyzing gated clock network, ambiguities have been found on gates
+address_encoder_0/state_RNISNSU1[0]:Y.
+The timing models of these gates have been simplified for Static Timing Analysis.
+ 
+While analyzing gated clock network, ambiguities have been found on gates
+address_encoder_0/state_RNISNSU1[0]:Y.
+The timing models of these gates have been simplified for Static Timing Analysis.
+Iterative improvement...
+While analyzing gated clock network, ambiguities have been found on gates
+address_encoder_0/state_RNISNSU1[0]:Y.
+The timing models of these gates have been simplified for Static Timing Analysis.
+
+Timing-driven Router completed successfully.
+
+Design: MAIN_TOP                        
+Finished: Wed Jan 23 10:59:14 2019
+Total CPU Time:     00:00:57            Total Elapsed Time: 00:00:58
+Total Memory Usage: 399.1 Mbytes
+                        o - o - o - o - o - o
+
+status 257
+status 257
+status 257
+status 257
+Loading the Timing data for the design.
+While analyzing gated clock network, ambiguities have been found on gates
+address_encoder_0/state_RNISNSU1[0]:Y.
+The timing models of these gates have been simplified for Static Timing Analysis.
+Info: Combinational loops have been detected in the design.
+      To view the details, go to Tools->Reports->Timing->Combinational_Loops
+Finished loading the Timing data.
+
+The Layout command succeeded ( 00:01:45 )
+Warning: The following files already exist:
+         
+         C:\Users\WYJ-PC\Desktop\MultiEMRT_MAIN_FPGA_20190121_1\designer\impl1\MAIN_TOP.pdb
+         
+         Do you want to replace the files? [YES]
+
+The Export-map command succeeded ( 00:00:27 )
+Warning: Overwriting the existing file:
+         C:\Users\WYJ-PC\Desktop\MultiEMRT_MAIN_FPGA_20190121_1\designer\impl1\MAIN_TOP.pdb.
+Wrote to the file:
+C:\Users\WYJ-PC\Desktop\MultiEMRT_MAIN_FPGA_20190121_1\designer\impl1\MAIN_TOP.pdb
+CHECKSUM: 9DF0
+
+The Generate programming file command succeeded ( 00:00:29 )
+Design saved to file
+C:\Users\WYJ-PC\Desktop\MultiEMRT_MAIN_FPGA_20190121_1\designer\impl1\MAIN_TOP.adb.
+Wrote pin report to file:
+C:\Users\WYJ-PC\Desktop\MultiEMRT_MAIN_FPGA_20190121_1\designer\impl1\MAIN_TOP_report_pin_bynam\
+e.txt
+
+The Report command succeeded ( 00:00:01 )
+Wrote pin report to file:
+C:\Users\WYJ-PC\Desktop\MultiEMRT_MAIN_FPGA_20190121_1\designer\impl1\MAIN_TOP_report_pin_bynum\
+ber.txt
+
+The Report command succeeded ( 00:00:01 )
+
+The Execute Script command succeeded ( 00:00:02 )
+Design closed.
+

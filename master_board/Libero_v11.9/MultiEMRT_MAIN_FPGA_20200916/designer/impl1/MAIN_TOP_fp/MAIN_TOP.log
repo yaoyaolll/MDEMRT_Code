@@ -1,0 +1,37 @@
+FlashPro
+Version: 11.9.5.5
+Release: v11.9 SP5
+
+Software Version: 11.9.5.5
+PDB file
+'C:\Users\Administrator\Desktop\MultiEMRT_MAIN_FPGA_20200804\designer\impl1\MAIN_TOP.pdb' has
+been loaded successfully.
+DESIGN : MAIN_TOP;  CHECKSUM : A203;  PDB_VERSION : 1.9
+Driver : 3.0.0 build 1
+programmer '81394' : FlashPro4
+Opened
+'C:\Users\Administrator\Desktop\MultiEMRT_MAIN_FPGA_20200804\designer\impl1\MAIN_TOP_fp\MAIN_TO\
+P.pro'
+Rescanning for Programmers...
+programmer '81394' : FlashPro4
+Rescanning for Programmers DONE.
+programmer '81394' : Scan Chain...
+Warning: programmer '81394' : Vpump has been selected on programmer AND an externally provided
+         Vpump has also been detected. Using externally provided Vpump voltage source.
+programmer '81394' : Scan Chain PASSED.
+programmer '81394' : Executing action PROGRAM
+programmer '81394' : EXPORT FSN[48] = 811b73305c64
+programmer '81394' : Erase ...
+programmer '81394' : Completed erase
+programmer '81394' : EXPORT CHECKSUM[16] = a203
+programmer '81394' : Programming FPGA Array
+programmer '81394' : Verifying FPGA Array
+programmer '81394' :         Verifying FPGA Array -- pass
+programmer '81394' : Finished: Wed Sep 16 09:02:59 2020 (Elapsed time 00:01:02)
+programmer '81394' : Executing action PROGRAM PASSED.
+
+                        o - o - o - o - o - o
+
+Warning: Project 'MAIN_TOP' has been modified. Do you want to save it? [YES]
+Project saved.
+Project closed.

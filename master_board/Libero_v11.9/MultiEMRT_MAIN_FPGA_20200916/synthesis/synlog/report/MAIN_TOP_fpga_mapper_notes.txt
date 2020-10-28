@@ -1,0 +1,20 @@
+@N: MF248 |Running in 64-bit mode.
+@N: MF667 |Clock conversion disabled. (Command "set_option -fix_gated_and_generated_clocks 0" in the project file.)
+@N: BN362 :"c:\users\administrator\desktop\multiemrt_main_fpga_20200804\hdl\address_encoder.v":122:0:122:5|Removing sequential instance edib_clk_source_rst (in view: work.address_encoder(verilog)) of type view:PrimLib.dffse(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\administrator\desktop\multiemrt_main_fpga_20200804\hdl\address_encoder.v":122:0:122:5|Removing sequential instance mux2_en_open (in view: work.address_encoder(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\administrator\desktop\multiemrt_main_fpga_20200804\hdl\address_encoder.v":122:0:122:5|Removing sequential instance mux1_en_open (in view: work.address_encoder(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: MO231 :"c:\users\administrator\desktop\multiemrt_main_fpga_20200804\hdl\adc_acq.v":279:0:279:5|Found counter in view:work.ads_trans_fsm(verilog) instance data_cnt[7:0] 
+@N: MO231 :"c:\users\administrator\desktop\multiemrt_main_fpga_20200804\hdl\adc_acq.v":113:0:113:5|Found counter in view:work.ads_trans_fsm(verilog) instance adc_en_cnt[4:0] 
+@N: MO225 :"c:\users\administrator\desktop\multiemrt_main_fpga_20200804\hdl\address_encoder.v":294:0:294:5|There are no possible illegal states for state machine state[1:0] (in view: work.address_encoder(verilog)); safe FSM implementation is not required.
+@N: MO225 :"c:\users\administrator\desktop\multiemrt_main_fpga_20200804\hdl\cmd_decoder.v":415:0:415:5|There are no possible illegal states for state machine state_ii[1:0] (in view: work.cmd_decoder(verilog)); safe FSM implementation is not required.
+@N: MO225 :"c:\users\administrator\desktop\multiemrt_main_fpga_20200804\hdl\cmd_decoder.v":465:0:465:5|There are no possible illegal states for state machine state_iii[1:0] (in view: work.cmd_decoder(verilog)); safe FSM implementation is not required.
+@N: MF238 :"c:\users\administrator\desktop\multiemrt_main_fpga_20200804\hdl\edib_m2m5m7_clkgen.v":29:25:29:34|Found 5-bit incrementor, 'un5_counter[4:0]'
+@N: MO231 :"c:\users\administrator\desktop\multiemrt_main_fpga_20200804\hdl\edib_m5m7_clkgen.v":14:4:14:9|Found counter in view:work.edib_m5m7_clkgen(verilog) instance counter[4:0] 
+@N: MF238 :"c:\users\administrator\desktop\multiemrt_main_fpga_20200804\hdl\edib_mode2_clkgen.v":24:26:24:36|Found 7-bit incrementor, 'un5_counter1[6:0]'
+@N: FP130 |Promoting Net address_encoder_0_edib_interface_rst on CLKINT  I_16 
+@N: FP130 |Promoting Net edib_m5m7_clkgen_0_clk_m5m7 on CLKINT  edib_m5m7_clkgen_0.clk_m5m7_inferred_clock 
+@N: FP130 |Promoting Net edib_m2m5m7_clkgen_0_clk_m2_rcv on CLKINT  edib_m2m5m7_clkgen_0.clk_m2_rcv_inferred_clock 
+@N: FP130 |Promoting Net edib_mode2_clkgen_0_clk_send on CLKINT  edib_mode2_clkgen_0.clk_send_inferred_clock 
+@N: FP130 |Promoting Net trans_m2_0.state[0] on CLKINT  I_17 
+@N: MT320 |This timing report is an estimate of place and route data. For final timing results, use the FPGA vendor place and route report.
+@N: MT322 |Clock constraints include only register-to-register paths associated with each individual clock.

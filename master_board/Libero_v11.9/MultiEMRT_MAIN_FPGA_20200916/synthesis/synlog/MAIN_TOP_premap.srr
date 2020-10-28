@@ -1,0 +1,139 @@
+# Fri Sep 11 09:12:29 2020
+
+Synopsys Microsemi Technology Pre-mapping, Version mapact, Build 2172R, Built Oct 30 2017 10:54:39
+Copyright (C) 1994-2017 Synopsys, Inc. This Synopsys software and all associated documentation are proprietary to Synopsys, Inc. and may only be used pursuant to the terms and conditions of a written license agreement with Synopsys, Inc. All other use, reproduction, modification, or distribution of the Synopsys software or the associated documentation is strictly prohibited.
+Product Version L-2016.09M-SP1-5
+
+Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 99MB peak: 99MB)
+
+@A: MF827 |No constraint file specified.
+@L: C:\Users\Administrator\Desktop\MultiEMRT_MAIN_FPGA_20200804\synthesis\MAIN_TOP_scck.rpt 
+Printing clock  summary report in "C:\Users\Administrator\Desktop\MultiEMRT_MAIN_FPGA_20200804\synthesis\MAIN_TOP_scck.rpt" file 
+@N: MF248 |Running in 64-bit mode.
+@N: MF667 |Clock conversion disabled. (Command "set_option -fix_gated_and_generated_clocks 0" in the project file.)
+
+Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 103MB peak: 106MB)
+
+
+Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 103MB peak: 106MB)
+
+@N: BN362 :"c:\users\administrator\desktop\multiemrt_main_fpga_20200804\hdl\address_encoder.v":122:0:122:5|Removing sequential instance S2_Open (in view: work.address_encoder(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\administrator\desktop\multiemrt_main_fpga_20200804\hdl\address_encoder.v":122:0:122:5|Removing sequential instance S2_close (in view: work.address_encoder(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+Warning: Found 1 combinational loops!
+@W: BN137 :"c:\users\administrator\desktop\multiemrt_main_fpga_20200804\hdl\address_encoder.v":272:4:272:7|Found combinational loop during mapping at net address_encoder_0.m2_send
+1) instance m2_send (in view: work.address_encoder(verilog)), output net m2_send (in view: work.address_encoder(verilog))
+    net        address_encoder_0.m2_send
+    input  pin address_encoder_0.m2_send_4/D2[1]
+    instance   address_encoder_0.m2_send_4 (cell pmux)
+    output pin address_encoder_0.m2_send_4/OUT[0]
+    net        address_encoder_0.m2_send_4
+    input  pin address_encoder_0.m2_send/A[0]
+    instance   address_encoder_0.m2_send (cell mux)
+    output pin address_encoder_0.m2_send/OUT[0]
+    net        address_encoder_0.m2_send
+End of loops
+
+Finished netlist restructuring (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 111MB peak: 112MB)
+
+
+
+Clock Summary
+*****************
+
+Start                                             Requested     Requested     Clock        Clock                   Clock
+Clock                                             Frequency     Period        Type         Group                   Load 
+------------------------------------------------------------------------------------------------------------------------
+MAIN_TOP|CLKA                                     1.0 MHz       1000.000      inferred     Inferred_clkgroup_3     20   
+MAIN_TOP|dsp_clk                                  1.0 MHz       1000.000      inferred     Inferred_clkgroup_0     122  
+System                                            1.0 MHz       1000.000      system       system_clkgroup         5    
+ads_trans_fsm|convert_over_out_inferred_clock     1.0 MHz       1000.000      inferred     Inferred_clkgroup_6     4    
+ads_trans_fsm|sam_clk_5M_out_inferred_clock       1.0 MHz       1000.000      inferred     Inferred_clkgroup_5     89   
+edib_m2m5m7_clkgen|clk_m2_rcv_inferred_clock      1.0 MHz       1000.000      inferred     Inferred_clkgroup_4     175  
+edib_m5m7_clkgen|clk_m5m7_inferred_clock          1.0 MHz       1000.000      inferred     Inferred_clkgroup_1     262  
+edib_mode2_clkgen|clk_send_inferred_clock         1.0 MHz       1000.000      inferred     Inferred_clkgroup_2     134  
+========================================================================================================================
+
+@W: MT532 :"c:\users\administrator\desktop\multiemrt_main_fpga_20200804\hdl\cmd_decoder.v":106:1:106:4|Found signal identified as System clock which controls 5 sequential elements including cmd_decoder_0.tst_state[1:0].  Using this clock, which has no specified timing constraint, can adversely impact design performance. 
+@W: MT530 :"c:\users\administrator\desktop\multiemrt_main_fpga_20200804\hdl\adc_acq.v":173:0:173:5|Found inferred clock MAIN_TOP|dsp_clk which controls 122 sequential elements including ADC_TOP_0.ads_trans_fsm_0.cnt_60_5[2:0]. This clock has no specified timing constraint which may adversely impact design performance. 
+@W: MT530 :"c:\users\administrator\desktop\multiemrt_main_fpga_20200804\hdl\trans_m5m7.v":160:0:160:5|Found inferred clock edib_m5m7_clkgen|clk_m5m7_inferred_clock which controls 262 sequential elements including trans_m5m7_0.m5_t_no_shiftreg[31:0]. This clock has no specified timing constraint which may adversely impact design performance. 
+@W: MT530 :"c:\users\administrator\desktop\multiemrt_main_fpga_20200804\hdl\address_encoder.v":294:0:294:5|Found inferred clock edib_mode2_clkgen|clk_send_inferred_clock which controls 134 sequential elements including address_encoder_0.state[1:0]. This clock has no specified timing constraint which may adversely impact design performance. 
+@W: MT530 :"c:\users\administrator\desktop\multiemrt_main_fpga_20200804\hdl\edib_m2m5m7_clkgen.v":14:4:14:9|Found inferred clock MAIN_TOP|CLKA which controls 20 sequential elements including edib_m2m5m7_clkgen_0.counter[4:0]. This clock has no specified timing constraint which may adversely impact design performance. 
+@W: MT530 :"c:\users\administrator\desktop\multiemrt_main_fpga_20200804\hdl\cmd_decoder.v":79:0:79:5|Found inferred clock edib_m2m5m7_clkgen|clk_m2_rcv_inferred_clock which controls 175 sequential elements including cmd_decoder_0.state[9:0]. This clock has no specified timing constraint which may adversely impact design performance. 
+@W: MT530 :"c:\users\administrator\desktop\multiemrt_main_fpga_20200804\hdl\adc_acq.v":247:0:247:5|Found inferred clock ads_trans_fsm|sam_clk_5M_out_inferred_clock which controls 89 sequential elements including ADC_TOP_0.ads_trans_fsm_0.curr_sta[2:0]. This clock has no specified timing constraint which may adversely impact design performance. 
+@W: MT530 :"c:\users\administrator\desktop\multiemrt_main_fpga_20200804\hdl\adc_acq.v":214:0:214:5|Found inferred clock ads_trans_fsm|convert_over_out_inferred_clock which controls 4 sequential elements including ADC_TOP_0.ads_trans_fsm_0.pt_MUX2_1[1:0]. This clock has no specified timing constraint which may adversely impact design performance. 
+
+Finished Pre Mapping Phase.
+@N: BN225 |Writing default property annotation file C:\Users\Administrator\Desktop\MultiEMRT_MAIN_FPGA_20200804\synthesis\MAIN_TOP.sap.
+
+Starting constraint checker (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 110MB peak: 112MB)
+
+Encoding state machine curr_sta[2:0] (in view: work.ads_trans_fsm(verilog))
+original code -> new code
+   00 -> 00
+   01 -> 01
+   10 -> 10
+Encoding state machine cnt_step1[2:0] (in view: work.ads_trans_fsm(verilog))
+original code -> new code
+   00 -> 00
+   01 -> 01
+   10 -> 10
+Encoding state machine cnt_step[2:0] (in view: work.ads_trans_fsm(verilog))
+original code -> new code
+   00 -> 00
+   01 -> 01
+   10 -> 10
+Encoding state machine state[1:0] (in view: work.address_encoder(verilog))
+original code -> new code
+   01 -> 0
+   10 -> 1
+@N: MO225 :"c:\users\administrator\desktop\multiemrt_main_fpga_20200804\hdl\address_encoder.v":294:0:294:5|There are no possible illegal states for state machine state[1:0] (in view: work.address_encoder(verilog)); safe FSM implementation is not required.
+Encoding state machine state[9:0] (in view: work.cmd_decoder(verilog))
+original code -> new code
+   0000000001 -> 0000000001
+   0000000010 -> 0000000010
+   0000000100 -> 0000000100
+   0000001000 -> 0000001000
+   0000010000 -> 0000010000
+   0000100000 -> 0000100000
+   0001000000 -> 0001000000
+   0010000000 -> 0010000000
+   0100000000 -> 0100000000
+   1000000000 -> 1000000000
+Encoding state machine state_ii[1:0] (in view: work.cmd_decoder(verilog))
+original code -> new code
+   01 -> 0
+   10 -> 1
+@N: MO225 :"c:\users\administrator\desktop\multiemrt_main_fpga_20200804\hdl\cmd_decoder.v":415:0:415:5|There are no possible illegal states for state machine state_ii[1:0] (in view: work.cmd_decoder(verilog)); safe FSM implementation is not required.
+Encoding state machine state_iii[1:0] (in view: work.cmd_decoder(verilog))
+original code -> new code
+   01 -> 0
+   10 -> 1
+@N: MO225 :"c:\users\administrator\desktop\multiemrt_main_fpga_20200804\hdl\cmd_decoder.v":465:0:465:5|There are no possible illegal states for state machine state_iii[1:0] (in view: work.cmd_decoder(verilog)); safe FSM implementation is not required.
+Encoding state machine state[2:0] (in view: work.trans_m2(verilog))
+original code -> new code
+   001 -> 00
+   010 -> 01
+   100 -> 10
+Encoding state machine state[2:0] (in view: work.trans_m5m7(verilog))
+original code -> new code
+   001 -> 00
+   010 -> 01
+   100 -> 10
+Encoding state machine state[2:0] (in view: work.trans_m7(verilog))
+original code -> new code
+   001 -> 00
+   010 -> 01
+   100 -> 10
+None
+None
+
+Finished constraint checker (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 112MB peak: 113MB)
+
+Pre-mapping successful!
+
+At Mapper Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 27MB peak: 113MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Fri Sep 11 09:12:30 2020
+
+###########################################################]
