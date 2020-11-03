@@ -1,0 +1,12 @@
+@W: CL177 :"C:\Users\Administrator\Desktop\MultiEMRT_MAIN_FPGA_20200804\hdl\adc_acq.v":214:0:214:5|Sharing sequential element pt_MUX1. Add a syn_preserve attribute to the element to prevent sharing.
+@W: CL207 :"C:\Users\Administrator\Desktop\MultiEMRT_MAIN_FPGA_20200804\hdl\adc_acq.v":194:0:194:5|All reachable assignments to adc_pwdn_out[3:0] assign 1, register removed by optimization.
+@W: CL169 :"C:\Users\Administrator\Desktop\MultiEMRT_MAIN_FPGA_20200804\hdl\adc_acq.v":73:0:73:5|Pruning unused register rst_20M_reg0. Make sure that there are no unused intermediate registers.
+@W: CL169 :"C:\Users\Administrator\Desktop\MultiEMRT_MAIN_FPGA_20200804\hdl\adc_acq.v":80:0:80:5|Pruning unused register rst_20M_reg. Make sure that there are no unused intermediate registers.
+@W: CG133 :"C:\Users\Administrator\Desktop\MultiEMRT_MAIN_FPGA_20200804\hdl\address_encoder.v":59:9:59:21|Object mux1_en_close is declared but not assigned. Either assign a value or remove the declaration.
+@W: CG133 :"C:\Users\Administrator\Desktop\MultiEMRT_MAIN_FPGA_20200804\hdl\address_encoder.v":60:9:60:21|Object mux2_en_close is declared but not assigned. Either assign a value or remove the declaration.
+@W: CL118 :"C:\Users\Administrator\Desktop\MultiEMRT_MAIN_FPGA_20200804\hdl\cmd_decoder.v":106:1:106:4|Latch generated from always block for signal tst_state[1:0]; possible missing assignment in an if or case statement.
+@W: CL279 :"C:\Users\Administrator\Desktop\MultiEMRT_MAIN_FPGA_20200804\hdl\edib_ctrl_reg.v":79:0:79:5|Pruning register bits 15 to 1 of m7_loadone_reg[15:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
+@W: CL279 :"C:\Users\Administrator\Desktop\MultiEMRT_MAIN_FPGA_20200804\hdl\edib_ctrl_reg.v":79:0:79:5|Pruning register bits 15 to 1 of m5_loadone_reg[15:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
+@W: CL279 :"C:\Users\Administrator\Desktop\MultiEMRT_MAIN_FPGA_20200804\hdl\edib_ctrl_reg.v":79:0:79:5|Pruning register bits 15 to 1 of m2_sendone_reg[15:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
+@W: FX105 :"C:\Users\Administrator\Desktop\MultiEMRT_MAIN_FPGA_20200804\hdl\address_encoder.v":272:4:272:7|Found combinational loop at m2_send
+

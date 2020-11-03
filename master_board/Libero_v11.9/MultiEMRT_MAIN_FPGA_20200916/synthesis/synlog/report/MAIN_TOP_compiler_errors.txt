@@ -1,0 +1,2 @@
+@E: CL172 :"E:\GaoWenXM\HT_MAIN_ADS1278_FSYNC_03\hdl\ads1278.v":72:13:72:29|Only one always block can assign a given variable convert_over_flag
+

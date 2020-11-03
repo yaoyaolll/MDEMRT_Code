@@ -1,0 +1,11 @@
+CKID0001:@|S:trans_m2_0.state_RNIDGHD[1]@|E:edib_ctrl_reg_0.m2_sendone_flag@|F:@syn_sample_clock_path==CKID0001@|M:ClockId0001 
+CKID0002:@|S:edib_m5m7_clkgen_0.clk_m5m7@|E:trans_m7_0.m7_t_no_shiftreg[31]@|F:@syn_sample_clock_path==CKID0002@|M:ClockId0002 
+CKID0003:@|S:edib_m2m5m7_clkgen_0.clk_m2_rcv@|E:cmd_decoder_0.sample_counter[23]@|F:@syn_sample_clock_path==CKID0003@|M:ClockId0003 
+CKID0004:@|S:edib_mode2_clkgen_0.clk_send@|E:trans_m2_0.counter[39]@|F:@syn_sample_clock_path==CKID0004@|M:ClockId0004 
+CKID0005:@|S:ADC_TOP_0.ads_trans_fsm_0.sam_clk_5M_out@|E:ADC_TOP_0.ads_trans_fsm_0.dout3_reg[23]@|F:@syn_sample_clock_path==CKID0005@|M:ClockId0005 
+CKID0006:@|S:ADC_TOP_0.ads_trans_fsm_0.convert_over_out@|E:ADC_TOP_0.ads_trans_fsm_0.pt_MUX2_1[1]@|F:@syn_sample_clock_path==CKID0006@|M:ClockId0006 
+CKID0007:@|S:cmd_decoder_0.bit_counter_RNILOK6P[3]@|E:cmd_decoder_0.tst_state[0]@|F:@syn_sample_clock_path==CKID0007@|M:ClockId0007 
+CKID0008:@|S:trans_m7_0.state_RNIGIIOC_2[0]@|E:edib_ctrl_reg_0.m7_loadone_flag@|F:@syn_sample_clock_path==CKID0008@|M:ClockId0008 
+CKID0009:@|S:trans_m5m7_0.state_RNI5PAG9_2[0]@|E:edib_ctrl_reg_0.m5_loadone_flag@|F:@syn_sample_clock_path==CKID0009@|M:ClockId0009 
+CKID0010:@|S:dsp_clk@|E:trans_m7_0.q7[15]@|F:@syn_sample_clock_path==CKID0010@|M:ClockId0010 
+CKID0011:@|S:CLKA@|E:edib_mode2_clkgen_0.counter1[6]@|F:@syn_sample_clock_path==CKID0011@|M:ClockId0011 

@@ -1,0 +1,12 @@
+Synopsys Netlist Linker, version comp2016q4p1, Build 512R, built Oct 26 2017
+@N|Running in 64-bit mode
+File C:\Users\Administrator\Desktop\MultiEMRT_MAIN_FPGA_20200804\synthesis\synwork\MAIN_TOP_comp.srs changed - recompiling
+
+At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 69MB peak: 70MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+
+Process completed successfully.
+# Fri Sep 11 09:12:29 2020
+
+###########################################################]

@@ -1,0 +1,1201 @@
+# Fri Sep 11 09:12:30 2020
+
+Synopsys Microsemi Technology Mapper, Version mapact, Build 2172R, Built Oct 30 2017 10:54:39
+Copyright (C) 1994-2017 Synopsys, Inc. This Synopsys software and all associated documentation are proprietary to Synopsys, Inc. and may only be used pursuant to the terms and conditions of a written license agreement with Synopsys, Inc. All other use, reproduction, modification, or distribution of the Synopsys software or the associated documentation is strictly prohibited.
+Product Version L-2016.09M-SP1-5
+
+Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 99MB peak: 99MB)
+
+@N: MF248 |Running in 64-bit mode.
+@N: MF667 |Clock conversion disabled. (Command "set_option -fix_gated_and_generated_clocks 0" in the project file.)
+
+Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 99MB peak: 101MB)
+
+
+Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 99MB peak: 101MB)
+
+
+
+Starting Optimization and Mapping (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 110MB peak: 110MB)
+
+
+Available hyper_sources - for debug and ip models
+	None Found
+
+Warning: Found 1 combinational loops!
+@W: BN137 :"c:\users\administrator\desktop\multiemrt_main_fpga_20200804\hdl\address_encoder.v":264:4:264:5|Found combinational loop during mapping at net address_encoder_0.m2_send_4
+1) instance m2_send_4 (in view: work.address_encoder(verilog)), output net m2_send_4 (in view: work.address_encoder(verilog))
+    net        address_encoder_0.m2_send_4
+    input  pin address_encoder_0.m2_send/A[0]
+    instance   address_encoder_0.m2_send (cell mux)
+    output pin address_encoder_0.m2_send/OUT[0]
+    net        address_encoder_0.m2_send
+    input  pin address_encoder_0.m2_send_4/D2[1]
+    instance   address_encoder_0.m2_send_4 (cell pmux)
+    output pin address_encoder_0.m2_send_4/OUT[0]
+    net        address_encoder_0.m2_send_4
+End of loops
+@N: BN362 :"c:\users\administrator\desktop\multiemrt_main_fpga_20200804\hdl\address_encoder.v":122:0:122:5|Removing sequential instance edib_clk_source_rst (in view: work.address_encoder(verilog)) of type view:PrimLib.dffse(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\administrator\desktop\multiemrt_main_fpga_20200804\hdl\address_encoder.v":122:0:122:5|Removing sequential instance mux2_en_open (in view: work.address_encoder(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\administrator\desktop\multiemrt_main_fpga_20200804\hdl\address_encoder.v":122:0:122:5|Removing sequential instance mux1_en_open (in view: work.address_encoder(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+
+Finished RTL optimizations (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 110MB peak: 112MB)
+
+@N: MO231 :"c:\users\administrator\desktop\multiemrt_main_fpga_20200804\hdl\adc_acq.v":279:0:279:5|Found counter in view:work.ads_trans_fsm(verilog) instance data_cnt[7:0] 
+@N: MO231 :"c:\users\administrator\desktop\multiemrt_main_fpga_20200804\hdl\adc_acq.v":113:0:113:5|Found counter in view:work.ads_trans_fsm(verilog) instance adc_en_cnt[4:0] 
+Encoding state machine curr_sta[2:0] (in view: work.ads_trans_fsm(verilog))
+original code -> new code
+   00 -> 00
+   01 -> 01
+   10 -> 10
+Encoding state machine cnt_step1[2:0] (in view: work.ads_trans_fsm(verilog))
+original code -> new code
+   00 -> 00
+   01 -> 01
+   10 -> 10
+Encoding state machine cnt_step[2:0] (in view: work.ads_trans_fsm(verilog))
+original code -> new code
+   00 -> 00
+   01 -> 01
+   10 -> 10
+Encoding state machine state[1:0] (in view: work.address_encoder(verilog))
+original code -> new code
+   01 -> 0
+   10 -> 1
+@N: MO225 :"c:\users\administrator\desktop\multiemrt_main_fpga_20200804\hdl\address_encoder.v":294:0:294:5|There are no possible illegal states for state machine state[1:0] (in view: work.address_encoder(verilog)); safe FSM implementation is not required.
+Encoding state machine state[9:0] (in view: work.cmd_decoder(verilog))
+original code -> new code
+   0000000001 -> 0000000001
+   0000000010 -> 0000000010
+   0000000100 -> 0000000100
+   0000001000 -> 0000001000
+   0000010000 -> 0000010000
+   0000100000 -> 0000100000
+   0001000000 -> 0001000000
+   0010000000 -> 0010000000
+   0100000000 -> 0100000000
+   1000000000 -> 1000000000
+Encoding state machine state_ii[1:0] (in view: work.cmd_decoder(verilog))
+original code -> new code
+   01 -> 0
+   10 -> 1
+@N: MO225 :"c:\users\administrator\desktop\multiemrt_main_fpga_20200804\hdl\cmd_decoder.v":415:0:415:5|There are no possible illegal states for state machine state_ii[1:0] (in view: work.cmd_decoder(verilog)); safe FSM implementation is not required.
+Encoding state machine state_iii[1:0] (in view: work.cmd_decoder(verilog))
+original code -> new code
+   01 -> 0
+   10 -> 1
+@N: MO225 :"c:\users\administrator\desktop\multiemrt_main_fpga_20200804\hdl\cmd_decoder.v":465:0:465:5|There are no possible illegal states for state machine state_iii[1:0] (in view: work.cmd_decoder(verilog)); safe FSM implementation is not required.
+@N: MF238 :"c:\users\administrator\desktop\multiemrt_main_fpga_20200804\hdl\edib_m2m5m7_clkgen.v":29:25:29:34|Found 5-bit incrementor, 'un5_counter[4:0]'
+@N: MO231 :"c:\users\administrator\desktop\multiemrt_main_fpga_20200804\hdl\edib_m5m7_clkgen.v":14:4:14:9|Found counter in view:work.edib_m5m7_clkgen(verilog) instance counter[4:0] 
+@N: MF238 :"c:\users\administrator\desktop\multiemrt_main_fpga_20200804\hdl\edib_mode2_clkgen.v":24:26:24:36|Found 7-bit incrementor, 'un5_counter1[6:0]'
+Encoding state machine state[2:0] (in view: work.trans_m2(verilog))
+original code -> new code
+   001 -> 00
+   010 -> 01
+   100 -> 10
+Encoding state machine state[2:0] (in view: work.trans_m5m7(verilog))
+original code -> new code
+   001 -> 00
+   010 -> 01
+   100 -> 10
+Encoding state machine state[2:0] (in view: work.trans_m7(verilog))
+original code -> new code
+   001 -> 00
+   010 -> 01
+   100 -> 10
+
+Starting factoring (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 113MB peak: 114MB)
+
+
+Finished factoring (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 120MB peak: 121MB)
+
+
+Starting gated-clock and generated-clock conversion (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 118MB peak: 121MB)
+
+
+Finished gated-clock and generated-clock conversion (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 118MB peak: 121MB)
+
+
+Finished generic timing optimizations - Pass 1 (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 121MB peak: 122MB)
+
+
+Starting Early Timing Optimization (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 122MB peak: 122MB)
+
+
+Finished Early Timing Optimization (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 122MB peak: 122MB)
+
+
+Finished generic timing optimizations - Pass 2 (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 121MB peak: 123MB)
+
+
+Finished preparing to map (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 121MB peak: 123MB)
+
+
+Finished technology mapping (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 121MB peak: 123MB)
+
+
+High Fanout Net Report
+**********************
+
+Driver Instance / Pin Name                                   Fanout, notes                   
+---------------------------------------------------------------------------------------------
+address_encoder_0.adc_data_choice[0] / Q                     48                              
+address_encoder_0.adc_data_choice[1] / Q                     48                              
+INBUF_0 / Y                                                  48 : 45 asynchronous set/reset  
+address_encoder_0.edib_interface_rst / Q                     610 : 604 asynchronous set/reset
+address_encoder_0.m5_send_en / Q                             37                              
+address_encoder_0.m7_send_en / Q                             37                              
+trans_m5m7_0.load_datadone_i_0 / Y                           55                              
+trans_m2_0.state[0] / Q                                      158                             
+trans_m2_0.state[1] / Q                                      84                              
+cmd_decoder_0.state_iii[0] / Q                               37                              
+cmd_decoder_0.load_0_a3_0_o2 / Y                             76                              
+DSP_XRW_pad / Y                                              33                              
+trans_m2_0.counter_1_sqmuxa_0_a3_0_a3 / Y                    40                              
+ADC_TOP_0.ads_trans_fsm_0.m43 / Y                            72                              
+cmd_decoder_0.rcv_shftreg_1_sqmuxa_i_0 / Y                   34                              
+cmd_decoder_0.N_330_i_0 / Y                                  35                              
+cmd_decoder_0.N_1057_i_0_o3 / Y                              41                              
+cmd_decoder_0.sample_counter_1_sqmuxa_i_a2_0_a4_0_a3 / Y     25                              
+edib_ctrl_reg_0.edib_zone_en_i_a3 / Y                        32                              
+cmd_decoder_0.rst_out_en_2_sqmuxa_0_a3_0_a2 / Y              37                              
+trans_m7_0.un1_load_head_shiftreg_1_sqmuxa_i_a3 / Y          32                              
+trans_m7_0.load_head_shiftreg_0_sqmuxa_0_a3 / Y              40                              
+trans_m7_0.G_2_0_o3 / Y                                      63                              
+trans_m7_0.bit_counter_clear.b0_i_a3 / Y                     76                              
+trans_m7_0.un1_m7_t_mc_reg103 / Y                            32                              
+trans_m5m7_0.un1_m5_t_mc_reg103 / Y                          32                              
+trans_m5m7_0.un1_load_head_shiftreg_1_sqmuxa_i_a3 / Y        32                              
+trans_m5m7_0.G_2_0_o3 / Y                                    63                              
+trans_m5m7_0.bit_counter_clear.b0_i_a3 / Y                   39                              
+trans_m5m7_0.load_head_shiftreg_0_sqmuxa_0_a3 / Y            40                              
+trans_m2_0.shift_reg_boo_2_sqmuxa_0_0 / Y                    80                              
+cmd_decoder_0.rst_out_en_2_sqmuxa_0_a3_0_a3_0 / Y            36                              
+ADC_TOP_0.ads_trans_fsm_0.rst_5M_reg / QN                    85 : 85 asynchronous set/reset  
+=============================================================================================
+
+@N: FP130 |Promoting Net address_encoder_0_edib_interface_rst on CLKINT  I_16 
+@N: FP130 |Promoting Net edib_m5m7_clkgen_0_clk_m5m7 on CLKINT  edib_m5m7_clkgen_0.clk_m5m7_inferred_clock 
+@N: FP130 |Promoting Net edib_m2m5m7_clkgen_0_clk_m2_rcv on CLKINT  edib_m2m5m7_clkgen_0.clk_m2_rcv_inferred_clock 
+@N: FP130 |Promoting Net edib_mode2_clkgen_0_clk_send on CLKINT  edib_mode2_clkgen_0.clk_send_inferred_clock 
+@N: FP130 |Promoting Net trans_m2_0.state[0] on CLKINT  I_17 
+
+Finished technology timing optimizations and critical path resynthesis (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 121MB peak: 123MB)
+
+Replicating Sequential Instance ADC_TOP_0.ads_trans_fsm_0.rst_5M_reg, fanout 85 segments 4
+Replicating Combinational Instance cmd_decoder_0.rst_out_en_2_sqmuxa_0_a3_0_a3_0, fanout 36 segments 2
+Replicating Combinational Instance trans_m2_0.shift_reg_boo_2_sqmuxa_0_0, fanout 80 segments 4
+Replicating Combinational Instance trans_m5m7_0.load_head_shiftreg_0_sqmuxa_0_a3, fanout 40 segments 2
+Replicating Combinational Instance trans_m5m7_0.bit_counter_clear.b0_i_a3, fanout 39 segments 2
+Replicating Combinational Instance trans_m5m7_0.G_2_0_o3, fanout 63 segments 3
+Replicating Combinational Instance trans_m5m7_0.un1_load_head_shiftreg_1_sqmuxa_i_a3, fanout 32 segments 2
+Replicating Combinational Instance trans_m5m7_0.un1_m5_t_mc_reg103, fanout 32 segments 2
+Replicating Combinational Instance trans_m7_0.un1_m7_t_mc_reg103, fanout 32 segments 2
+Replicating Combinational Instance trans_m7_0.bit_counter_clear.b0_i_a3, fanout 76 segments 4
+Replicating Combinational Instance trans_m7_0.G_2_0_o3, fanout 63 segments 3
+Replicating Combinational Instance trans_m7_0.load_head_shiftreg_0_sqmuxa_0_a3, fanout 40 segments 2
+Replicating Combinational Instance trans_m7_0.un1_load_head_shiftreg_1_sqmuxa_i_a3, fanout 32 segments 2
+Replicating Combinational Instance cmd_decoder_0.rst_out_en_2_sqmuxa_0_a3_0_a2, fanout 37 segments 2
+Replicating Combinational Instance edib_ctrl_reg_0.edib_zone_en_i_a3, fanout 32 segments 2
+Replicating Combinational Instance cmd_decoder_0.sample_counter_1_sqmuxa_i_a2_0_a4_0_a3, fanout 25 segments 2
+Replicating Combinational Instance cmd_decoder_0.N_1057_i_0_o3, fanout 41 segments 2
+Replicating Combinational Instance cmd_decoder_0.N_330_i_0, fanout 35 segments 2
+Replicating Combinational Instance cmd_decoder_0.rcv_shftreg_1_sqmuxa_i_0, fanout 34 segments 2
+Replicating Combinational Instance ADC_TOP_0.ads_trans_fsm_0.m43, fanout 72 segments 3
+Replicating Combinational Instance trans_m2_0.counter_1_sqmuxa_0_a3_0_a3, fanout 40 segments 2
+Buffering DSP_XRW_c, fanout 33 segments 2
+Replicating Combinational Instance cmd_decoder_0.load_0_a3_0_o2, fanout 78 segments 4
+Replicating Sequential Instance cmd_decoder_0.state_iii[0], fanout 37 segments 2
+Replicating Sequential Instance trans_m2_0.state[1], fanout 85 segments 4
+Replicating Sequential Instance address_encoder_0.m7_send_en, fanout 38 segments 2
+Replicating Sequential Instance address_encoder_0.m5_send_en, fanout 38 segments 2
+Buffering adc_rstn_test, fanout 53 segments 3
+Replicating Sequential Instance address_encoder_0.adc_data_choice[1], fanout 48 segments 2
+Replicating Sequential Instance address_encoder_0.adc_data_choice[0], fanout 48 segments 2
+
+Added 3 Buffers
+Added 41 Cells via replication
+	Added 11 Sequential Cells via replication
+	Added 30 Combinational Cells via replication
+
+Finished restoring hierarchy (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 122MB peak: 123MB)
+
+
+
+@S |Clock Optimization Summary
+
+
+#### START OF CLOCK OPTIMIZATION REPORT #####[
+
+Clock optimization not enabled
+2 non-gated/non-generated clock tree(s) driving 141 clock pin(s) of sequential element(s)
+9 gated/generated clock tree(s) driving 669 clock pin(s) of sequential element(s)
+0 instances converted, 669 sequential instances remain driven by gated/generated clocks
+
+=================================== Non-Gated/Non-Generated Clocks ====================================
+Clock Tree ID     Driving Element     Drive Element Type     Fanout     Sample Instance                
+-------------------------------------------------------------------------------------------------------
+@K:CKID0010       dsp_clk             port                   121        trans_m7_0.q7[15]              
+@K:CKID0011       CLKA                port                   20         edib_mode2_clkgen_0.counter1[6]
+=======================================================================================================
+=============================================================================================== Gated/Generated Clocks ================================================================================================
+Clock Tree ID     Driving Element                                Drive Element Type     Fanout     Sample Instance                             Explanation                                                             
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+@K:CKID0001       trans_m2_0.state_RNIDGHD[1]                    NOR2B                  1          edib_ctrl_reg_0.m2_sendone_flag             Clock conversion disabled                                               
+@K:CKID0002       edib_m5m7_clkgen_0.clk_m5m7                    DFN1                   260        trans_m7_0.m7_t_no_shiftreg[31]             No generated or derived clock directive on output of sequential instance
+@K:CKID0003       edib_m2m5m7_clkgen_0.clk_m2_rcv                DFN1                   174        cmd_decoder_0.sample_counter[23]            No generated or derived clock directive on output of sequential instance
+@K:CKID0004       edib_mode2_clkgen_0.clk_send                   DFN1                   135        trans_m2_0.counter[39]                      No generated or derived clock directive on output of sequential instance
+@K:CKID0005       ADC_TOP_0.ads_trans_fsm_0.sam_clk_5M_out       DFN1C0                 91         ADC_TOP_0.ads_trans_fsm_0.dout3_reg[23]     No generated or derived clock directive on output of sequential instance
+@K:CKID0006       ADC_TOP_0.ads_trans_fsm_0.convert_over_out     DFN1E0C0               4          ADC_TOP_0.ads_trans_fsm_0.pt_MUX2_1[1]      No generated or derived clock directive on output of sequential instance
+@K:CKID0007       cmd_decoder_0.bit_counter_RNILOK6P[3]          AO1                    2          cmd_decoder_0.tst_state[0]                  No clocks found on inputs                                               
+@K:CKID0008       trans_m7_0.state_RNIGIIOC_2[0]                 OR2A                   1          edib_ctrl_reg_0.m7_loadone_flag             No clocks found on inputs                                               
+@K:CKID0009       trans_m5m7_0.state_RNI5PAG9_2[0]               OR2A                   1          edib_ctrl_reg_0.m5_loadone_flag             No clocks found on inputs                                               
+=======================================================================================================================================================================================================================
+
+
+##### END OF CLOCK OPTIMIZATION REPORT ######]
+
+
+Start Writing Netlists (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 119MB peak: 123MB)
+
+Writing Analyst data base C:\Users\Administrator\Desktop\MultiEMRT_MAIN_FPGA_20200804\synthesis\synwork\MAIN_TOP_m.srm
+
+Finished Writing Netlist Databases (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:01s; Memory used current: 120MB peak: 123MB)
+
+Writing EDIF Netlist and constraint files
+L-2016.09M-SP1-5
+
+Finished Writing EDIF Netlist and constraint files (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:01s; Memory used current: 121MB peak: 123MB)
+
+
+Start final timing analysis (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:01s; Memory used current: 120MB peak: 123MB)
+
+Warning: Found 1 combinational loops!
+@W: BN137 :|Found combinational loop during mapping at net address_encoder_0.N_64
+1) instance state_RNISNSU1[0] (in view: work.address_encoder(netlist)), output net N_64 (in view: work.address_encoder(netlist))
+    net        address_encoder_0.N_64
+    input  pin address_encoder_0.m2_send_en_RNIV4JG/B
+    instance   address_encoder_0.m2_send_en_RNIV4JG (cell OA1C)
+    output pin address_encoder_0.m2_send_en_RNIV4JG/Y
+    net        address_encoder_0.N_89
+    input  pin address_encoder_0.state_RNISNSU1[0]/A
+    instance   address_encoder_0.state_RNISNSU1[0] (cell MX2)
+    output pin address_encoder_0.state_RNISNSU1[0]/Y
+    net        address_encoder_0.N_64
+End of loops
+@W: MT420 |Found inferred clock MAIN_TOP|CLKA with period 1000.00ns. Please declare a user-defined clock on object "p:CLKA"
+@W: MT420 |Found inferred clock MAIN_TOP|dsp_clk with period 1000.00ns. Please declare a user-defined clock on object "p:dsp_clk"
+@W: MT420 |Found inferred clock edib_mode2_clkgen|clk_send_inferred_clock with period 1000.00ns. Please declare a user-defined clock on object "n:edib_mode2_clkgen_0.clk_send"
+@W: MT420 |Found inferred clock edib_m5m7_clkgen|clk_m5m7_inferred_clock with period 1000.00ns. Please declare a user-defined clock on object "n:edib_m5m7_clkgen_0.clk_m5m7"
+@W: MT420 |Found inferred clock edib_m2m5m7_clkgen|clk_m2_rcv_inferred_clock with period 1000.00ns. Please declare a user-defined clock on object "n:edib_m2m5m7_clkgen_0.clk_m2_rcv"
+@W: MT420 |Found inferred clock ads_trans_fsm|convert_over_out_inferred_clock with period 1000.00ns. Please declare a user-defined clock on object "n:ADC_TOP_0.ads_trans_fsm_0.convert_over_out"
+@W: MT420 |Found inferred clock ads_trans_fsm|sam_clk_5M_out_inferred_clock with period 1000.00ns. Please declare a user-defined clock on object "n:ADC_TOP_0.ads_trans_fsm_0.sam_clk_5M_out"
+
+
+##### START OF TIMING REPORT #####[
+# Timing Report written on Fri Sep 11 09:12:32 2020
+#
+
+
+Top view:               MAIN_TOP
+Library name:           PA3
+Operating conditions:   COMWCSTD ( T = 70.0, V = 1.42, P = 1.74, tree_type = balanced_tree )
+Requested Frequency:    1.0 MHz
+Wire load mode:         top
+Wire load model:        proasic3
+Paths requested:        5
+Constraint File(s):    
+@N: MT320 |This timing report is an estimate of place and route data. For final timing results, use the FPGA vendor place and route report.
+
+@N: MT322 |Clock constraints include only register-to-register paths associated with each individual clock.
+
+
+
+Performance Summary
+*******************
+
+
+Worst slack in design: 494.004
+
+                                                  Requested     Estimated     Requested     Estimated                 Clock        Clock              
+Starting Clock                                    Frequency     Frequency     Period        Period        Slack       Type         Group              
+------------------------------------------------------------------------------------------------------------------------------------------------------
+MAIN_TOP|CLKA                                     1.0 MHz       159.1 MHz     1000.000      6.284         993.716     inferred     Inferred_clkgroup_3
+MAIN_TOP|dsp_clk                                  1.0 MHz       83.4 MHz      1000.000      11.991        494.004     inferred     Inferred_clkgroup_0
+ads_trans_fsm|convert_over_out_inferred_clock     1.0 MHz       343.5 MHz     1000.000      2.911         997.089     inferred     Inferred_clkgroup_6
+ads_trans_fsm|sam_clk_5M_out_inferred_clock       1.0 MHz       91.0 MHz      1000.000      10.994        494.503     inferred     Inferred_clkgroup_5
+edib_m2m5m7_clkgen|clk_m2_rcv_inferred_clock      1.0 MHz       61.8 MHz      1000.000      16.194        983.806     inferred     Inferred_clkgroup_4
+edib_m5m7_clkgen|clk_m5m7_inferred_clock          1.0 MHz       63.6 MHz      1000.000      15.716        984.284     inferred     Inferred_clkgroup_1
+edib_mode2_clkgen|clk_send_inferred_clock         1.0 MHz       80.1 MHz      1000.000      12.487        987.513     inferred     Inferred_clkgroup_2
+System                                            1.0 MHz       363.5 MHz     1000.000      2.751         997.249     system       system_clkgroup    
+======================================================================================================================================================
+
+
+
+
+
+Clock Relationships
+*******************
+
+Clocks                                                                                        |    rise  to  rise     |    fall  to  fall     |    rise  to  fall     |    fall  to  rise   
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Starting                                       Ending                                         |  constraint  slack    |  constraint  slack    |  constraint  slack    |  constraint  slack  
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+System                                         MAIN_TOP|dsp_clk                               |  No paths    -        |  1000.000    997.510  |  1000.000    997.249  |  No paths    -      
+MAIN_TOP|dsp_clk                               MAIN_TOP|dsp_clk                               |  1000.000    992.930  |  1000.000    996.999  |  500.000     496.243  |  500.000     494.004
+MAIN_TOP|dsp_clk                               edib_m5m7_clkgen|clk_m5m7_inferred_clock       |  No paths    -        |  Diff grp    -        |  Diff grp    -        |  No paths    -      
+MAIN_TOP|dsp_clk                               edib_mode2_clkgen|clk_send_inferred_clock      |  Diff grp    -        |  No paths    -        |  No paths    -        |  No paths    -      
+MAIN_TOP|dsp_clk                               edib_m2m5m7_clkgen|clk_m2_rcv_inferred_clock   |  Diff grp    -        |  No paths    -        |  No paths    -        |  No paths    -      
+MAIN_TOP|dsp_clk                               ads_trans_fsm|sam_clk_5M_out_inferred_clock    |  Diff grp    -        |  No paths    -        |  No paths    -        |  No paths    -      
+edib_m5m7_clkgen|clk_m5m7_inferred_clock       edib_m5m7_clkgen|clk_m5m7_inferred_clock       |  No paths    -        |  1000.000    984.284  |  No paths    -        |  No paths    -      
+edib_mode2_clkgen|clk_send_inferred_clock      edib_mode2_clkgen|clk_send_inferred_clock      |  1000.000    987.513  |  No paths    -        |  No paths    -        |  No paths    -      
+MAIN_TOP|CLKA                                  MAIN_TOP|CLKA                                  |  1000.000    993.716  |  No paths    -        |  No paths    -        |  No paths    -      
+edib_m2m5m7_clkgen|clk_m2_rcv_inferred_clock   System                                         |  No paths    -        |  No paths    -        |  1000.000    984.743  |  No paths    -      
+edib_m2m5m7_clkgen|clk_m2_rcv_inferred_clock   MAIN_TOP|dsp_clk                               |  No paths    -        |  No paths    -        |  Diff grp    -        |  No paths    -      
+edib_m2m5m7_clkgen|clk_m2_rcv_inferred_clock   edib_m2m5m7_clkgen|clk_m2_rcv_inferred_clock   |  1000.000    983.806  |  No paths    -        |  No paths    -        |  No paths    -      
+ads_trans_fsm|sam_clk_5M_out_inferred_clock    ads_trans_fsm|sam_clk_5M_out_inferred_clock    |  1000.000    990.588  |  No paths    -        |  500.000     494.503  |  No paths    -      
+ads_trans_fsm|convert_over_out_inferred_clock  ads_trans_fsm|convert_over_out_inferred_clock  |  1000.000    997.089  |  No paths    -        |  No paths    -        |  No paths    -      
+============================================================================================================================================================================================
+ Note: 'No paths' indicates there are no paths in the design for that pair of clock edges.
+       'Diff grp' indicates that paths exist but the starting clock and ending clock are in different clock groups.
+
+
+
+Interface Information 
+*********************
+
+No IO constraint found
+
+
+
+====================================
+Detailed Report for Clock: MAIN_TOP|CLKA
+====================================
+
+
+
+Starting Points with Worst Slack
+********************************
+
+                                    Starting                                           Arrival            
+Instance                            Reference         Type     Pin     Net             Time        Slack  
+                                    Clock                                                                 
+----------------------------------------------------------------------------------------------------------
+edib_mode2_clkgen_0.counter1[0]     MAIN_TOP|CLKA     DFN1     Q       counter1[0]     0.737       993.716
+edib_mode2_clkgen_0.counter1[1]     MAIN_TOP|CLKA     DFN1     Q       counter1[1]     0.737       993.717
+edib_mode2_clkgen_0.counter1[2]     MAIN_TOP|CLKA     DFN1     Q       counter1[2]     0.737       993.778
+edib_mode2_clkgen_0.counter1[3]     MAIN_TOP|CLKA     DFN1     Q       counter1[3]     0.737       993.995
+edib_mode2_clkgen_0.counter1[4]     MAIN_TOP|CLKA     DFN1     Q       counter1[4]     0.737       994.135
+edib_m5m7_clkgen_0.counter[0]       MAIN_TOP|CLKA     DFN1     Q       counter[0]      0.737       994.188
+edib_m2m5m7_clkgen_0.counter[0]     MAIN_TOP|CLKA     DFN1     Q       counter[0]      0.737       994.562
+edib_m5m7_clkgen_0.counter[1]       MAIN_TOP|CLKA     DFN1     Q       counter[1]      0.580       994.675
+edib_m2m5m7_clkgen_0.counter[1]     MAIN_TOP|CLKA     DFN1     Q       counter[1]      0.737       994.759
+edib_m2m5m7_clkgen_0.counter[2]     MAIN_TOP|CLKA     DFN1     Q       counter[2]      0.737       994.819
+==========================================================================================================
+
+
+Ending Points with Worst Slack
+******************************
+
+                                    Starting                                              Required            
+Instance                            Reference         Type     Pin     Net                Time         Slack  
+                                    Clock                                                                     
+--------------------------------------------------------------------------------------------------------------
+edib_mode2_clkgen_0.counter1[6]     MAIN_TOP|CLKA     DFN1     D       counter1_3[6]      999.461      993.716
+edib_mode2_clkgen_0.clk_send        MAIN_TOP|CLKA     DFN1     D       clk_send_RNO       999.461      993.792
+edib_mode2_clkgen_0.counter1[3]     MAIN_TOP|CLKA     DFN1     D       counter1_3[3]      999.461      993.829
+edib_m5m7_clkgen_0.clk_m5m7         MAIN_TOP|CLKA     DFN1     D       clk_m5m7_RNO       999.461      994.188
+edib_mode2_clkgen_0.counter1[4]     MAIN_TOP|CLKA     DFN1     D       I_12_0             999.461      994.272
+edib_mode2_clkgen_0.counter1[5]     MAIN_TOP|CLKA     DFN1     D       I_14               999.461      994.435
+edib_m2m5m7_clkgen_0.clk_m2_rcv     MAIN_TOP|CLKA     DFN1     D       clk_m2_rcv_RNO     999.461      994.562
+edib_m2m5m7_clkgen_0.counter[1]     MAIN_TOP|CLKA     DFN1     D       counter_3[1]       999.461      994.598
+edib_m2m5m7_clkgen_0.counter[2]     MAIN_TOP|CLKA     DFN1     D       counter_3[2]       999.461      994.598
+edib_m2m5m7_clkgen_0.counter[4]     MAIN_TOP|CLKA     DFN1     D       I_12               999.461      994.757
+==============================================================================================================
+
+
+
+Worst Path Information
+***********************
+
+
+Path information for path number 1: 
+      Requested Period:                      1000.000
+    - Setup time:                            0.539
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         999.461
+
+    - Propagation time:                      5.745
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (non-critical) :                 993.716
+
+    Number of logic level(s):                4
+    Starting point:                          edib_mode2_clkgen_0.counter1[0] / Q
+    Ending point:                            edib_mode2_clkgen_0.counter1[6] / D
+    The start point is clocked by            MAIN_TOP|CLKA [rising] on pin CLK
+    The end   point is clocked by            MAIN_TOP|CLKA [rising] on pin CLK
+
+Instance / Net                                      Pin      Pin               Arrival     No. of    
+Name                                      Type      Name     Dir     Delay     Time        Fan Out(s)
+-----------------------------------------------------------------------------------------------------
+edib_mode2_clkgen_0.counter1[0]           DFN1      Q        Out     0.737     0.737       -         
+counter1[0]                               Net       -        -       1.423     -           6         
+edib_mode2_clkgen_0.un5_counter1.I_10     AND3      A        In      -         2.160       -         
+edib_mode2_clkgen_0.un5_counter1.I_10     AND3      Y        Out     0.464     2.624       -         
+DWACT_FINC_E[0]                           Net       -        -       0.806     -           3         
+edib_mode2_clkgen_0.un5_counter1.I_16     AND3      A        In      -         3.431       -         
+edib_mode2_clkgen_0.un5_counter1.I_16     AND3      Y        Out     0.464     3.895       -         
+N_2                                       Net       -        -       0.322     -           1         
+edib_mode2_clkgen_0.un5_counter1.I_17     XOR2      A        In      -         4.216       -         
+edib_mode2_clkgen_0.un5_counter1.I_17     XOR2      Y        Out     0.488     4.705       -         
+I_17                                      Net       -        -       0.322     -           1         
+edib_mode2_clkgen_0.counter1_RNO[6]       AOI1B     C        In      -         5.026       -         
+edib_mode2_clkgen_0.counter1_RNO[6]       AOI1B     Y        Out     0.398     5.424       -         
+counter1_3[6]                             Net       -        -       0.322     -           1         
+edib_mode2_clkgen_0.counter1[6]           DFN1      D        In      -         5.745       -         
+=====================================================================================================
+Total path delay (propagation time + setup) of 6.284 is 3.090(49.2%) logic and 3.194(50.8%) route.
+Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
+
+
+
+
+====================================
+Detailed Report for Clock: MAIN_TOP|dsp_clk
+====================================
+
+
+
+Starting Points with Worst Slack
+********************************
+
+                                      Starting                                                                     Arrival            
+Instance                              Reference            Type         Pin     Net                                Time        Slack  
+                                      Clock                                                                                           
+--------------------------------------------------------------------------------------------------------------------------------------
+edib_ctrl_reg_0.m7_loadone_reg[0]     MAIN_TOP|dsp_clk     DFN0P0       Q       m7_loadone_reg[0]                  0.653       494.004
+edib_ctrl_reg_0.m5_loadone_reg[0]     MAIN_TOP|dsp_clk     DFN0P0       Q       m5_loadone_reg[0]                  0.653       494.011
+edib_ctrl_reg_0.m2_sendone_reg[0]     MAIN_TOP|dsp_clk     DFN0P0       Q       m2_sendone_reg[0]                  0.653       494.088
+address_encoder_0.m5_send_en_0        MAIN_TOP|dsp_clk     DFN1E0C0     Q       address_encoder_0_m5_send_en_0     0.737       496.243
+address_encoder_0.m7_send_en_0        MAIN_TOP|dsp_clk     DFN1E0C0     Q       m7_send_en_TEST_0                  0.737       496.243
+edib_ctrl_reg_0.rcv_reg[0]            MAIN_TOP|dsp_clk     DFN0E1C0     Q       rcv_reg[0]                         0.527       497.392
+edib_ctrl_reg_0.rcv_reg[1]            MAIN_TOP|dsp_clk     DFN0E1C0     Q       rcv_reg[1]                         0.527       497.392
+edib_ctrl_reg_0.rcv_reg[2]            MAIN_TOP|dsp_clk     DFN0E1C0     Q       rcv_reg[2]                         0.527       497.392
+edib_ctrl_reg_0.rcv_reg[3]            MAIN_TOP|dsp_clk     DFN0E1C0     Q       rcv_reg[3]                         0.527       497.392
+edib_ctrl_reg_0.rcv_reg[4]            MAIN_TOP|dsp_clk     DFN0E1C0     Q       rcv_reg[4]                         0.527       497.392
+======================================================================================================================================
+
+
+Ending Points with Worst Slack
+******************************
+
+                                  Starting                                           Required            
+Instance                          Reference            Type         Pin     Net      Time         Slack  
+                                  Clock                                                                  
+---------------------------------------------------------------------------------------------------------
+edib_ctrl_reg_0.databuffer[0]     MAIN_TOP|dsp_clk     DFN1E0C0     D       N_53     499.426      494.004
+edib_ctrl_reg_0.databuffer[1]     MAIN_TOP|dsp_clk     DFN1E0C0     D       N_51     499.426      494.004
+edib_ctrl_reg_0.databuffer[2]     MAIN_TOP|dsp_clk     DFN1E0C0     D       N_49     499.426      494.004
+edib_ctrl_reg_0.databuffer[3]     MAIN_TOP|dsp_clk     DFN1E0C0     D       N_47     499.426      494.004
+edib_ctrl_reg_0.databuffer[4]     MAIN_TOP|dsp_clk     DFN1E0C0     D       N_45     499.426      494.004
+edib_ctrl_reg_0.databuffer[5]     MAIN_TOP|dsp_clk     DFN1E0C0     D       N_43     499.426      494.004
+edib_ctrl_reg_0.databuffer[6]     MAIN_TOP|dsp_clk     DFN1E0C0     D       N_41     499.426      494.004
+edib_ctrl_reg_0.databuffer[7]     MAIN_TOP|dsp_clk     DFN1E0C0     D       N_39     499.426      494.004
+edib_ctrl_reg_0.databuffer[8]     MAIN_TOP|dsp_clk     DFN1E0C0     D       N_37     499.426      494.004
+edib_ctrl_reg_0.databuffer[9]     MAIN_TOP|dsp_clk     DFN1E0C0     D       N_19     499.426      494.004
+=========================================================================================================
+
+
+
+Worst Path Information
+***********************
+
+
+Path information for path number 1: 
+      Requested Period:                      500.000
+    - Setup time:                            0.574
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         499.426
+
+    - Propagation time:                      5.422
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (critical) :                     494.004
+
+    Number of logic level(s):                3
+    Starting point:                          edib_ctrl_reg_0.m7_loadone_reg[0] / Q
+    Ending point:                            edib_ctrl_reg_0.databuffer[0] / D
+    The start point is clocked by            MAIN_TOP|dsp_clk [falling] on pin CLK
+    The end   point is clocked by            MAIN_TOP|dsp_clk [rising] on pin CLK
+
+Instance / Net                                              Pin      Pin               Arrival     No. of    
+Name                                           Type         Name     Dir     Delay     Time        Fan Out(s)
+-------------------------------------------------------------------------------------------------------------
+edib_ctrl_reg_0.m7_loadone_reg[0]              DFN0P0       Q        Out     0.653     0.653       -         
+m7_loadone_reg[0]                              Net          -        -       0.322     -           1         
+edib_ctrl_reg_0.m7_loadone_reg_RNI0B3K[0]      MX2C         A        In      -         0.975       -         
+edib_ctrl_reg_0.m7_loadone_reg_RNI0B3K[0]      MX2C         Y        Out     0.579     1.554       -         
+N_55                                           Net          -        -       0.322     -           1         
+edib_ctrl_reg_0.m7_loadone_reg_RNIHNAB1[0]     AO1          B        In      -         1.875       -         
+edib_ctrl_reg_0.m7_loadone_reg_RNIHNAB1[0]     AO1          Y        Out     0.567     2.442       -         
+N_56                                           Net          -        -       2.172     -           16        
+edib_ctrl_reg_0.databuffer_RNO[0]              OA1C         C        In      -         4.614       -         
+edib_ctrl_reg_0.databuffer_RNO[0]              OA1C         Y        Out     0.487     5.101       -         
+N_53                                           Net          -        -       0.322     -           1         
+edib_ctrl_reg_0.databuffer[0]                  DFN1E0C0     D        In      -         5.422       -         
+=============================================================================================================
+Total path delay (propagation time + setup) of 5.996 is 2.859(47.7%) logic and 3.137(52.3%) route.
+Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
+
+
+
+
+====================================
+Detailed Report for Clock: ads_trans_fsm|convert_over_out_inferred_clock
+====================================
+
+
+
+Starting Points with Worst Slack
+********************************
+
+                                            Starting                                                                                Arrival            
+Instance                                    Reference                                         Type       Pin     Net                Time        Slack  
+                                            Clock                                                                                                      
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+ADC_TOP_0.ads_trans_fsm_0.pt_MUX2_1[1]      ads_trans_fsm|convert_over_out_inferred_clock     DFN1P0     Q       pt_MUX1_c_c[1]     0.737       997.089
+ADC_TOP_0.ads_trans_fsm_0.pt_MUX_cnt[0]     ads_trans_fsm|convert_over_out_inferred_clock     DFN1C0     Q       pt_MUX_cnt[0]      0.737       997.510
+ADC_TOP_0.ads_trans_fsm_0.pt_MUX_cnt[1]     ads_trans_fsm|convert_over_out_inferred_clock     DFN1C0     Q       pt_MUX_cnt[1]      0.737       998.368
+=======================================================================================================================================================
+
+
+Ending Points with Worst Slack
+******************************
+
+                                            Starting                                                                                  Required            
+Instance                                    Reference                                         Type       Pin     Net                  Time         Slack  
+                                            Clock                                                                                                         
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+ADC_TOP_0.ads_trans_fsm_0.pt_MUX_cnt[1]     ads_trans_fsm|convert_over_out_inferred_clock     DFN1C0     D       pt_MUX1_c_c_i[1]     999.461      997.089
+ADC_TOP_0.ads_trans_fsm_0.pt_MUX_cnt[0]     ads_trans_fsm|convert_over_out_inferred_clock     DFN1C0     D       pt_MUX_cnt_i[0]      999.461      997.510
+ADC_TOP_0.ads_trans_fsm_0.pt_MUX2_1[0]      ads_trans_fsm|convert_over_out_inferred_clock     DFN1P0     D       pt_MUX_cnt[0]        999.427      998.304
+ADC_TOP_0.ads_trans_fsm_0.pt_MUX2_1[1]      ads_trans_fsm|convert_over_out_inferred_clock     DFN1P0     D       pt_MUX_cnt[1]        999.427      998.368
+==========================================================================================================================================================
+
+
+
+Worst Path Information
+***********************
+
+
+Path information for path number 1: 
+      Requested Period:                      1000.000
+    - Setup time:                            0.539
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         999.461
+
+    - Propagation time:                      2.372
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (non-critical) :                 997.089
+
+    Number of logic level(s):                1
+    Starting point:                          ADC_TOP_0.ads_trans_fsm_0.pt_MUX2_1[1] / Q
+    Ending point:                            ADC_TOP_0.ads_trans_fsm_0.pt_MUX_cnt[1] / D
+    The start point is clocked by            ads_trans_fsm|convert_over_out_inferred_clock [rising] on pin CLK
+    The end   point is clocked by            ads_trans_fsm|convert_over_out_inferred_clock [rising] on pin CLK
+
+Instance / Net                                             Pin      Pin               Arrival     No. of    
+Name                                            Type       Name     Dir     Delay     Time        Fan Out(s)
+------------------------------------------------------------------------------------------------------------
+ADC_TOP_0.ads_trans_fsm_0.pt_MUX2_1[1]          DFN1P0     Q        Out     0.737     0.737       -         
+pt_MUX1_c_c[1]                                  Net        -        -       0.806     -           3         
+ADC_TOP_0.ads_trans_fsm_0.pt_MUX_cnt_RNO[1]     INV        A        In      -         1.543       -         
+ADC_TOP_0.ads_trans_fsm_0.pt_MUX_cnt_RNO[1]     INV        Y        Out     0.507     2.051       -         
+pt_MUX1_c_c_i[1]                                Net        -        -       0.322     -           1         
+ADC_TOP_0.ads_trans_fsm_0.pt_MUX_cnt[1]         DFN1C0     D        In      -         2.372       -         
+============================================================================================================
+Total path delay (propagation time + setup) of 2.911 is 1.783(61.3%) logic and 1.128(38.7%) route.
+Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
+
+
+
+
+====================================
+Detailed Report for Clock: ads_trans_fsm|sam_clk_5M_out_inferred_clock
+====================================
+
+
+
+Starting Points with Worst Slack
+********************************
+
+                                                     Starting                                                                                          Arrival            
+Instance                                             Reference                                       Type       Pin     Net                            Time        Slack  
+                                                     Clock                                                                                                                
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ADC_TOP_0.ads_trans_fsm_0.data_cnt[3]                ads_trans_fsm|sam_clk_5M_out_inferred_clock     DFN1C0     Q       data_cnt[3]                    0.737       494.503
+ADC_TOP_0.ads_trans_fsm_0.data_cnt[7]                ads_trans_fsm|sam_clk_5M_out_inferred_clock     DFN1C0     Q       data_cnt[7]                    0.737       494.546
+ADC_TOP_0.ads_trans_fsm_0.data_cnt[2]                ads_trans_fsm|sam_clk_5M_out_inferred_clock     DFN1C0     Q       data_cnt[2]                    0.737       494.656
+ADC_TOP_0.ads_trans_fsm_0.fpga_adc_en_reg_delay2     ads_trans_fsm|sam_clk_5M_out_inferred_clock     DFN1P0     Q       fpga_adc_en_reg_delay2_i_0     0.737       494.882
+ADC_TOP_0.ads_trans_fsm_0.fpga_adc_en_reg_delay      ads_trans_fsm|sam_clk_5M_out_inferred_clock     DFN1C0     Q       fpga_adc_en_reg_delay          0.737       494.931
+ADC_TOP_0.ads_trans_fsm_0.data_cnt[6]                ads_trans_fsm|sam_clk_5M_out_inferred_clock     DFN1C0     Q       data_cnt[6]                    0.737       495.141
+ADC_TOP_0.ads_trans_fsm_0.data_cnt[0]                ads_trans_fsm|sam_clk_5M_out_inferred_clock     DFN1C0     Q       data_cnt[0]                    0.580       495.242
+ADC_TOP_0.ads_trans_fsm_0.data_cnt[4]                ads_trans_fsm|sam_clk_5M_out_inferred_clock     DFN1C0     Q       data_cnt[4]                    0.737       495.353
+ADC_TOP_0.ads_trans_fsm_0.data_cnt[1]                ads_trans_fsm|sam_clk_5M_out_inferred_clock     DFN1C0     Q       data_cnt[1]                    0.737       495.438
+ADC_TOP_0.ads_trans_fsm_0.data_cnt[5]                ads_trans_fsm|sam_clk_5M_out_inferred_clock     DFN1C0     Q       data_cnt[5]                    0.737       495.615
+==========================================================================================================================================================================
+
+
+Ending Points with Worst Slack
+******************************
+
+                                            Starting                                                                                 Required            
+Instance                                    Reference                                       Type         Pin     Net                 Time         Slack  
+                                            Clock                                                                                                        
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+ADC_TOP_0.ads_trans_fsm_0.adc_fsync_out     ads_trans_fsm|sam_clk_5M_out_inferred_clock     DFN0         D       adc_fsync_out5      499.288      494.503
+ADC_TOP_0.ads_trans_fsm_0.data_cnt[6]       ads_trans_fsm|sam_clk_5M_out_inferred_clock     DFN1C0       D       data_cnt_RNO[6]     999.427      990.588
+ADC_TOP_0.ads_trans_fsm_0.data_cnt[7]       ads_trans_fsm|sam_clk_5M_out_inferred_clock     DFN1C0       D       data_cnt_RNO[7]     999.427      990.652
+ADC_TOP_0.ads_trans_fsm_0.dout1_reg[0]      ads_trans_fsm|sam_clk_5M_out_inferred_clock     DFN1E1C0     E       dout1_reg7          999.392      991.048
+ADC_TOP_0.ads_trans_fsm_0.dout1_reg[1]      ads_trans_fsm|sam_clk_5M_out_inferred_clock     DFN1E1C0     E       dout1_reg7          999.392      991.048
+ADC_TOP_0.ads_trans_fsm_0.dout1_reg[2]      ads_trans_fsm|sam_clk_5M_out_inferred_clock     DFN1E1C0     E       dout1_reg7          999.392      991.048
+ADC_TOP_0.ads_trans_fsm_0.dout1_reg[3]      ads_trans_fsm|sam_clk_5M_out_inferred_clock     DFN1E1C0     E       dout1_reg7          999.392      991.048
+ADC_TOP_0.ads_trans_fsm_0.dout1_reg[4]      ads_trans_fsm|sam_clk_5M_out_inferred_clock     DFN1E1C0     E       dout1_reg7          999.392      991.048
+ADC_TOP_0.ads_trans_fsm_0.dout1_reg[5]      ads_trans_fsm|sam_clk_5M_out_inferred_clock     DFN1E1C0     E       dout1_reg7          999.392      991.048
+ADC_TOP_0.ads_trans_fsm_0.dout1_reg[6]      ads_trans_fsm|sam_clk_5M_out_inferred_clock     DFN1E1C0     E       dout1_reg7          999.392      991.048
+=========================================================================================================================================================
+
+
+
+Worst Path Information
+***********************
+
+
+Path information for path number 1: 
+      Requested Period:                      500.000
+    - Setup time:                            0.712
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         499.288
+
+    - Propagation time:                      4.785
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (non-critical) :                 494.503
+
+    Number of logic level(s):                3
+    Starting point:                          ADC_TOP_0.ads_trans_fsm_0.data_cnt[3] / Q
+    Ending point:                            ADC_TOP_0.ads_trans_fsm_0.adc_fsync_out / D
+    The start point is clocked by            ads_trans_fsm|sam_clk_5M_out_inferred_clock [rising] on pin CLK
+    The end   point is clocked by            ads_trans_fsm|sam_clk_5M_out_inferred_clock [falling] on pin CLK
+
+Instance / Net                                               Pin      Pin               Arrival     No. of    
+Name                                              Type       Name     Dir     Delay     Time        Fan Out(s)
+--------------------------------------------------------------------------------------------------------------
+ADC_TOP_0.ads_trans_fsm_0.data_cnt[3]             DFN1C0     Q        Out     0.737     0.737       -         
+data_cnt[3]                                       Net        -        -       1.184     -           4         
+ADC_TOP_0.ads_trans_fsm_0.data_cnt_RNI60H8[3]     NOR2       B        In      -         1.921       -         
+ADC_TOP_0.ads_trans_fsm_0.data_cnt_RNI60H8[3]     NOR2       Y        Out     0.646     2.567       -         
+m7_0                                              Net        -        -       0.386     -           2         
+ADC_TOP_0.ads_trans_fsm_0.adc_fsync_out_RNO_0     NOR3A      A        In      -         2.953       -         
+ADC_TOP_0.ads_trans_fsm_0.adc_fsync_out_RNO_0     NOR3A      Y        Out     0.664     3.617       -         
+m50_3                                             Net        -        -       0.322     -           1         
+ADC_TOP_0.ads_trans_fsm_0.adc_fsync_out_RNO       NOR3C      A        In      -         3.938       -         
+ADC_TOP_0.ads_trans_fsm_0.adc_fsync_out_RNO       NOR3C      Y        Out     0.525     4.463       -         
+adc_fsync_out5                                    Net        -        -       0.322     -           1         
+ADC_TOP_0.ads_trans_fsm_0.adc_fsync_out           DFN0       D        In      -         4.785       -         
+==============================================================================================================
+Total path delay (propagation time + setup) of 5.497 is 3.285(59.8%) logic and 2.212(40.2%) route.
+Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
+
+
+
+
+====================================
+Detailed Report for Clock: edib_m2m5m7_clkgen|clk_m2_rcv_inferred_clock
+====================================
+
+
+
+Starting Points with Worst Slack
+********************************
+
+                                     Starting                                                                                     Arrival            
+Instance                             Reference                                        Type         Pin     Net                    Time        Slack  
+                                     Clock                                                                                                           
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+cmd_decoder_0.sample_counter[12]     edib_m2m5m7_clkgen|clk_m2_rcv_inferred_clock     DFN1E1C0     Q       sample_counter[12]     0.737       983.806
+cmd_decoder_0.sample_counter[14]     edib_m2m5m7_clkgen|clk_m2_rcv_inferred_clock     DFN1E1C0     Q       sample_counter[14]     0.737       983.842
+cmd_decoder_0.sample_counter[16]     edib_m2m5m7_clkgen|clk_m2_rcv_inferred_clock     DFN1E1C0     Q       sample_counter[16]     0.737       983.842
+cmd_decoder_0.sample_counter[11]     edib_m2m5m7_clkgen|clk_m2_rcv_inferred_clock     DFN1E1C0     Q       sample_counter[11]     0.737       983.945
+cmd_decoder_0.sample_counter[0]      edib_m2m5m7_clkgen|clk_m2_rcv_inferred_clock     DFN1E1P0     Q       sample_counter[0]      0.737       983.982
+cmd_decoder_0.sample_counter[13]     edib_m2m5m7_clkgen|clk_m2_rcv_inferred_clock     DFN1E1C0     Q       sample_counter[13]     0.737       983.982
+cmd_decoder_0.sample_counter[22]     edib_m2m5m7_clkgen|clk_m2_rcv_inferred_clock     DFN1E1C0     Q       sample_counter[22]     0.737       984.032
+cmd_decoder_0.sample_counter[2]      edib_m2m5m7_clkgen|clk_m2_rcv_inferred_clock     DFN1E1C0     Q       sample_counter[2]      0.737       984.068
+cmd_decoder_0.sample_counter[15]     edib_m2m5m7_clkgen|clk_m2_rcv_inferred_clock     DFN1E1C0     Q       sample_counter[15]     0.737       984.068
+cmd_decoder_0.sample_counter[21]     edib_m2m5m7_clkgen|clk_m2_rcv_inferred_clock     DFN1E1C0     Q       sample_counter[21]     0.737       984.171
+=====================================================================================================================================================
+
+
+Ending Points with Worst Slack
+******************************
+
+                                 Starting                                                                                   Required            
+Instance                         Reference                                        Type       Pin     Net                    Time         Slack  
+                                 Clock                                                                                                          
+------------------------------------------------------------------------------------------------------------------------------------------------
+cmd_decoder_0.state_ii[0]        edib_m2m5m7_clkgen|clk_m2_rcv_inferred_clock     DFN1C0     D       state_ii_ns[0]         999.461      983.806
+cmd_decoder_0.tst_state[0]       edib_m2m5m7_clkgen|clk_m2_rcv_inferred_clock     DLN0       D       N_160                  999.247      984.743
+cmd_decoder_0.rst_counter[0]     edib_m2m5m7_clkgen|clk_m2_rcv_inferred_clock     DFN1       D       rst_counter_RNO[0]     999.427      984.875
+cmd_decoder_0.state_iii[0]       edib_m2m5m7_clkgen|clk_m2_rcv_inferred_clock     DFN1       D       state_iii_srst[0]      999.461      984.899
+cmd_decoder_0.state_iii_0[0]     edib_m2m5m7_clkgen|clk_m2_rcv_inferred_clock     DFN1       D       state_iii_srst[0]      999.461      984.899
+cmd_decoder_0.rst_counter[1]     edib_m2m5m7_clkgen|clk_m2_rcv_inferred_clock     DFN1       D       rst_counter_RNO[1]     999.461      984.910
+cmd_decoder_0.rst_counter[2]     edib_m2m5m7_clkgen|clk_m2_rcv_inferred_clock     DFN1       D       rst_counter_RNO[2]     999.461      984.910
+cmd_decoder_0.rst_counter[3]     edib_m2m5m7_clkgen|clk_m2_rcv_inferred_clock     DFN1       D       rst_counter_RNO[3]     999.461      984.910
+cmd_decoder_0.rst_counter[4]     edib_m2m5m7_clkgen|clk_m2_rcv_inferred_clock     DFN1       D       rst_counter_RNO[4]     999.461      984.910
+cmd_decoder_0.rst_counter[5]     edib_m2m5m7_clkgen|clk_m2_rcv_inferred_clock     DFN1       D       rst_counter_RNO[5]     999.461      984.910
+================================================================================================================================================
+
+
+
+Worst Path Information
+***********************
+
+
+Path information for path number 1: 
+      Requested Period:                      1000.000
+    - Setup time:                            0.539
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         999.461
+
+    - Propagation time:                      15.655
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (non-critical) :                 983.806
+
+    Number of logic level(s):                9
+    Starting point:                          cmd_decoder_0.sample_counter[12] / Q
+    Ending point:                            cmd_decoder_0.state_ii[0] / D
+    The start point is clocked by            edib_m2m5m7_clkgen|clk_m2_rcv_inferred_clock [rising] on pin CLK
+    The end   point is clocked by            edib_m2m5m7_clkgen|clk_m2_rcv_inferred_clock [rising] on pin CLK
+
+Instance / Net                                               Pin      Pin               Arrival     No. of    
+Name                                            Type         Name     Dir     Delay     Time        Fan Out(s)
+--------------------------------------------------------------------------------------------------------------
+cmd_decoder_0.sample_counter[12]                DFN1E1C0     Q        Out     0.737     0.737       -         
+sample_counter[12]                              Net          -        -       0.386     -           2         
+cmd_decoder_0.sample_counter_RNI3HIQ[11]        OR2          B        In      -         1.123       -         
+cmd_decoder_0.sample_counter_RNI3HIQ[11]        OR2          Y        Out     0.646     1.769       -         
+N_1057_i_0_o2_10                                Net          -        -       0.322     -           1         
+cmd_decoder_0.sample_counter_RNIBCLV1[1]        OR3          C        In      -         2.091       -         
+cmd_decoder_0.sample_counter_RNIBCLV1[1]        OR3          Y        Out     0.751     2.841       -         
+N_1057_i_0_o2_16                                Net          -        -       0.322     -           1         
+cmd_decoder_0.sample_counter_RNIMUR94[4]        OR3          C        In      -         3.163       -         
+cmd_decoder_0.sample_counter_RNIMUR94[4]        OR3          Y        Out     0.751     3.914       -         
+N_1057_i_0_o2_19                                Net          -        -       0.806     -           3         
+cmd_decoder_0.sample_counter_RNIQROE7_0[23]     OR3          B        In      -         4.720       -         
+cmd_decoder_0.sample_counter_RNIQROE7_0[23]     OR3          Y        Out     0.714     5.434       -         
+N_352                                           Net          -        -       2.353     -           20        
+cmd_decoder_0.bit_counter_RNIC1AGA[28]          NOR2A        B        In      -         7.788       -         
+cmd_decoder_0.bit_counter_RNIC1AGA[28]          NOR2A        Y        Out     0.407     8.194       -         
+N_610_61                                        Net          -        -       0.386     -           2         
+cmd_decoder_0.bit_counter_RNICNLCM_0[3]         NOR2B        B        In      -         8.580       -         
+cmd_decoder_0.bit_counter_RNICNLCM_0[3]         NOR2B        Y        Out     0.516     9.096       -         
+N_546                                           Net          -        -       1.776     -           11        
+cmd_decoder_0.state_RNIC3T7N[3]                 NOR3C        A        In      -         10.873      -         
+cmd_decoder_0.state_RNIC3T7N[3]                 NOR3C        Y        Out     0.525     11.397      -         
+N_656_0                                         Net          -        -       2.308     -           19        
+cmd_decoder_0.state_ii_RNO_2[0]                 NOR3B        B        In      -         13.705      -         
+cmd_decoder_0.state_ii_RNO_2[0]                 NOR3B        Y        Out     0.624     14.329      -         
+N_1275                                          Net          -        -       0.322     -           1         
+cmd_decoder_0.state_ii_RNO[0]                   OR3          C        In      -         14.651      -         
+cmd_decoder_0.state_ii_RNO[0]                   OR3          Y        Out     0.683     15.334      -         
+state_ii_ns[0]                                  Net          -        -       0.322     -           1         
+cmd_decoder_0.state_ii[0]                       DFN1C0       D        In      -         15.655      -         
+==============================================================================================================
+Total path delay (propagation time + setup) of 16.194 is 6.892(42.6%) logic and 9.302(57.4%) route.
+Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
+
+
+
+
+====================================
+Detailed Report for Clock: edib_m5m7_clkgen|clk_m5m7_inferred_clock
+====================================
+
+
+
+Starting Points with Worst Slack
+********************************
+
+                               Starting                                                                            Arrival            
+Instance                       Reference                                    Type         Pin     Net               Time        Slack  
+                               Clock                                                                                                  
+--------------------------------------------------------------------------------------------------------------------------------------
+trans_m5m7_0.bit_count[2]      edib_m5m7_clkgen|clk_m5m7_inferred_clock     DFN0E0C0     Q       bit_count[2]      0.653       984.284
+trans_m5m7_0.bit_count[1]      edib_m5m7_clkgen|clk_m5m7_inferred_clock     DFN0E0C0     Q       bit_count[1]      0.653       984.423
+trans_m5m7_0.bit_count[30]     edib_m5m7_clkgen|clk_m5m7_inferred_clock     DFN0E0C0     Q       bit_count[30]     0.653       984.612
+trans_m5m7_0.bit_count[29]     edib_m5m7_clkgen|clk_m5m7_inferred_clock     DFN0E0C0     Q       bit_count[29]     0.653       984.752
+trans_m5m7_0.bit_count[3]      edib_m5m7_clkgen|clk_m5m7_inferred_clock     DFN0E0C0     Q       bit_count[3]      0.653       985.200
+trans_m5m7_0.bit_count[8]      edib_m5m7_clkgen|clk_m5m7_inferred_clock     DFN0E0C0     Q       bit_count[8]      0.653       985.311
+trans_m5m7_0.bit_count[13]     edib_m5m7_clkgen|clk_m5m7_inferred_clock     DFN0E0C0     Q       bit_count[13]     0.653       985.313
+trans_m5m7_0.bit_count[6]      edib_m5m7_clkgen|clk_m5m7_inferred_clock     DFN0E0C0     Q       bit_count[6]      0.653       985.410
+trans_m5m7_0.bit_count[10]     edib_m5m7_clkgen|clk_m5m7_inferred_clock     DFN0E0C0     Q       bit_count[10]     0.653       985.412
+trans_m5m7_0.bit_count[4]      edib_m5m7_clkgen|clk_m5m7_inferred_clock     DFN0E0C0     Q       bit_count[4]      0.653       985.428
+======================================================================================================================================
+
+
+Ending Points with Worst Slack
+******************************
+
+                                      Starting                                                                                   Required            
+Instance                              Reference                                    Type       Pin     Net                        Time         Slack  
+                                      Clock                                                                                                          
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+trans_m5m7_0.m5_t_mc_shiftreg[0]      edib_m5m7_clkgen|clk_m5m7_inferred_clock     DFN0C0     D       m5_t_mc_shiftreg_7[0]      999.288      984.284
+trans_m5m7_0.m5_t_mc_shiftreg[2]      edib_m5m7_clkgen|clk_m5m7_inferred_clock     DFN0C0     D       m5_t_mc_shiftreg_7[2]      999.288      984.451
+trans_m5m7_0.m5_t_mc_shiftreg[7]      edib_m5m7_clkgen|clk_m5m7_inferred_clock     DFN0C0     D       m5_t_mc_shiftreg_7[7]      999.288      984.451
+trans_m5m7_0.m5_t_mc_shiftreg[9]      edib_m5m7_clkgen|clk_m5m7_inferred_clock     DFN0C0     D       m5_t_mc_shiftreg_7[9]      999.288      984.451
+trans_m5m7_0.m5_t_mc_shiftreg[11]     edib_m5m7_clkgen|clk_m5m7_inferred_clock     DFN0C0     D       m5_t_mc_shiftreg_7[11]     999.288      984.451
+trans_m5m7_0.m5_t_mc_shiftreg[13]     edib_m5m7_clkgen|clk_m5m7_inferred_clock     DFN0C0     D       m5_t_mc_shiftreg_7[13]     999.288      984.451
+trans_m5m7_0.m5_t_mc_shiftreg[15]     edib_m5m7_clkgen|clk_m5m7_inferred_clock     DFN0C0     D       m5_t_mc_shiftreg_7[15]     999.288      984.451
+trans_m5m7_0.m5_t_mc_shiftreg[17]     edib_m5m7_clkgen|clk_m5m7_inferred_clock     DFN0C0     D       m5_t_mc_shiftreg_7[17]     999.288      984.451
+trans_m5m7_0.m5_t_mc_shiftreg[19]     edib_m5m7_clkgen|clk_m5m7_inferred_clock     DFN0C0     D       m5_t_mc_shiftreg_7[19]     999.288      984.451
+trans_m5m7_0.m5_t_mc_shiftreg[21]     edib_m5m7_clkgen|clk_m5m7_inferred_clock     DFN0C0     D       m5_t_mc_shiftreg_7[21]     999.288      984.451
+=====================================================================================================================================================
+
+
+
+Worst Path Information
+***********************
+
+
+Path information for path number 1: 
+      Requested Period:                      1000.000
+    - Setup time:                            0.712
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         999.288
+
+    - Propagation time:                      15.004
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (non-critical) :                 984.284
+
+    Number of logic level(s):                9
+    Starting point:                          trans_m5m7_0.bit_count[2] / Q
+    Ending point:                            trans_m5m7_0.m5_t_mc_shiftreg[0] / D
+    The start point is clocked by            edib_m5m7_clkgen|clk_m5m7_inferred_clock [falling] on pin CLK
+    The end   point is clocked by            edib_m5m7_clkgen|clk_m5m7_inferred_clock [falling] on pin CLK
+
+Instance / Net                                          Pin      Pin               Arrival     No. of    
+Name                                       Type         Name     Dir     Delay     Time        Fan Out(s)
+---------------------------------------------------------------------------------------------------------
+trans_m5m7_0.bit_count[2]                  DFN0E0C0     Q        Out     0.653     0.653       -         
+bit_count[2]                               Net          -        -       0.806     -           3         
+trans_m5m7_0.bit_count_RNILSL1[1]          NOR2         B        In      -         1.460       -         
+trans_m5m7_0.bit_count_RNILSL1[1]          NOR2         Y        Out     0.646     2.106       -         
+un1_bit_count_2_8                          Net          -        -       0.322     -           1         
+trans_m5m7_0.bit_count_RNIETB3[3]          NOR3A        A        In      -         2.428       -         
+trans_m5m7_0.bit_count_RNIETB3[3]          NOR3A        Y        Out     0.664     3.092       -         
+un1_bit_count_2_13                         Net          -        -       0.322     -           1         
+trans_m5m7_0.bit_count_RNICBO6[3]          NOR3C        C        In      -         3.413       -         
+trans_m5m7_0.bit_count_RNICBO6[3]          NOR3C        Y        Out     0.666     4.079       -         
+un1_bit_count_2_16                         Net          -        -       0.322     -           1         
+trans_m5m7_0.bit_count_RNI9TNP2[11]        NOR3C        C        In      -         4.400       -         
+trans_m5m7_0.bit_count_RNI9TNP2[11]        NOR3C        Y        Out     0.666     5.066       -         
+un1_bit_count_2_18                         Net          -        -       0.322     -           1         
+trans_m5m7_0.bit_count_RNICN2B8[11]        NOR2B        A        In      -         5.387       -         
+trans_m5m7_0.bit_count_RNICN2B8[11]        NOR2B        Y        Out     0.488     5.876       -         
+un1_bit_count_2                            Net          -        -       1.639     -           8         
+trans_m5m7_0.state_RNIUM6V8[0]             OR2A         A        In      -         7.515       -         
+trans_m5m7_0.state_RNIUM6V8[0]             OR2A         Y        Out     0.537     8.052       -         
+N_522                                      Net          -        -       1.184     -           4         
+trans_m5m7_0.state_RNI5PAG9_2[0]           OR2A         B        In      -         9.235       -         
+trans_m5m7_0.state_RNI5PAG9_2[0]           OR2A         Y        Out     0.646     9.882       -         
+load_data_shift_m5_i_1                     Net          -        -       3.264     -           55        
+trans_m5m7_0.m5_t_mc_shiftreg_RNO_0[0]     NOR2         B        In      -         13.146      -         
+trans_m5m7_0.m5_t_mc_shiftreg_RNO_0[0]     NOR2         Y        Out     0.646     13.792      -         
+N_221                                      Net          -        -       0.322     -           1         
+trans_m5m7_0.m5_t_mc_shiftreg_RNO[0]       MX2          A        In      -         14.114      -         
+trans_m5m7_0.m5_t_mc_shiftreg_RNO[0]       MX2          Y        Out     0.568     14.682      -         
+m5_t_mc_shiftreg_7[0]                      Net          -        -       0.322     -           1         
+trans_m5m7_0.m5_t_mc_shiftreg[0]           DFN0C0       D        In      -         15.004      -         
+=========================================================================================================
+Total path delay (propagation time + setup) of 15.716 is 6.894(43.9%) logic and 8.822(56.1%) route.
+Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
+
+
+
+
+====================================
+Detailed Report for Clock: edib_mode2_clkgen|clk_send_inferred_clock
+====================================
+
+
+
+Starting Points with Worst Slack
+********************************
+
+                                               Starting                                                                                        Arrival            
+Instance                                       Reference                                     Type         Pin     Net                          Time        Slack  
+                                               Clock                                                                                                              
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+address_encoder_0.m2start_pulse_counter[4]     edib_mode2_clkgen|clk_send_inferred_clock     DFN1E0C0     Q       m2start_pulse_counter[4]     0.737       987.513
+address_encoder_0.m2start_pulse_counter[8]     edib_mode2_clkgen|clk_send_inferred_clock     DFN1E0C0     Q       m2start_pulse_counter[8]     0.737       987.713
+address_encoder_0.m2start_pulse_counter[6]     edib_mode2_clkgen|clk_send_inferred_clock     DFN1E0C0     Q       m2start_pulse_counter[6]     0.737       987.741
+address_encoder_0.m2start_pulse_counter[3]     edib_mode2_clkgen|clk_send_inferred_clock     DFN1E0C0     Q       m2start_pulse_counter[3]     0.737       988.498
+address_encoder_0.m2start_pulse_counter[7]     edib_mode2_clkgen|clk_send_inferred_clock     DFN1E0C0     Q       m2start_pulse_counter[7]     0.737       988.610
+address_encoder_0.m2start_pulse_counter[0]     edib_mode2_clkgen|clk_send_inferred_clock     DFN1E0P0     Q       m2start_pulse_counter[0]     0.737       988.709
+address_encoder_0.m2start_pulse_counter[5]     edib_mode2_clkgen|clk_send_inferred_clock     DFN1E0C0     Q       m2start_pulse_counter[5]     0.737       988.726
+address_encoder_0.m2start_pulse_counter[2]     edib_mode2_clkgen|clk_send_inferred_clock     DFN1E0C0     Q       m2start_pulse_counter[2]     0.737       988.749
+address_encoder_0.m2start_pulse_counter[1]     edib_mode2_clkgen|clk_send_inferred_clock     DFN1E0C0     Q       m2start_pulse_counter[1]     0.737       988.848
+address_encoder_0.state[0]                     edib_mode2_clkgen|clk_send_inferred_clock     DFN1C0       Q       state[0]                     0.737       989.831
+==================================================================================================================================================================
+
+
+Ending Points with Worst Slack
+******************************
+
+                                Starting                                                                                      Required            
+Instance                        Reference                                     Type         Pin     Net                        Time         Slack  
+                                Clock                                                                                                             
+--------------------------------------------------------------------------------------------------------------------------------------------------
+trans_m2_0.shift_reg_boo[0]     edib_mode2_clkgen|clk_send_inferred_clock     DFN1E0C0     E       shift_reg_boo_2_sqmuxa     999.392      987.513
+trans_m2_0.shift_reg_boo[1]     edib_mode2_clkgen|clk_send_inferred_clock     DFN1E0C0     E       shift_reg_boo_2_sqmuxa     999.392      987.513
+trans_m2_0.shift_reg_boo[2]     edib_mode2_clkgen|clk_send_inferred_clock     DFN1E0C0     E       shift_reg_boo_2_sqmuxa     999.392      987.513
+trans_m2_0.shift_reg_boo[3]     edib_mode2_clkgen|clk_send_inferred_clock     DFN1E0C0     E       shift_reg_boo_2_sqmuxa     999.392      987.513
+trans_m2_0.shift_reg_boo[4]     edib_mode2_clkgen|clk_send_inferred_clock     DFN1E0C0     E       shift_reg_boo_2_sqmuxa     999.392      987.513
+trans_m2_0.shift_reg_boo[5]     edib_mode2_clkgen|clk_send_inferred_clock     DFN1E0C0     E       shift_reg_boo_2_sqmuxa     999.392      987.513
+trans_m2_0.shift_reg_boo[6]     edib_mode2_clkgen|clk_send_inferred_clock     DFN1E0C0     E       shift_reg_boo_2_sqmuxa     999.392      987.513
+trans_m2_0.shift_reg_boo[7]     edib_mode2_clkgen|clk_send_inferred_clock     DFN1E0C0     E       shift_reg_boo_2_sqmuxa     999.392      987.513
+trans_m2_0.shift_reg_boo[8]     edib_mode2_clkgen|clk_send_inferred_clock     DFN1E0C0     E       shift_reg_boo_2_sqmuxa     999.392      987.513
+trans_m2_0.shift_reg_boo[9]     edib_mode2_clkgen|clk_send_inferred_clock     DFN1E0C0     E       shift_reg_boo_2_sqmuxa     999.392      987.513
+==================================================================================================================================================
+
+
+
+Worst Path Information
+***********************
+
+
+Path information for path number 1: 
+      Requested Period:                      1000.000
+    - Setup time:                            0.608
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         999.392
+
+    - Propagation time:                      11.879
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (non-critical) :                 987.513
+
+    Number of logic level(s):                7
+    Starting point:                          address_encoder_0.m2start_pulse_counter[4] / Q
+    Ending point:                            trans_m2_0.shift_reg_bzo[20] / E
+    The start point is clocked by            edib_mode2_clkgen|clk_send_inferred_clock [rising] on pin CLK
+    The end   point is clocked by            edib_mode2_clkgen|clk_send_inferred_clock [rising] on pin CLK
+
+Instance / Net                                                       Pin      Pin               Arrival     No. of    
+Name                                                    Type         Name     Dir     Delay     Time        Fan Out(s)
+----------------------------------------------------------------------------------------------------------------------
+address_encoder_0.m2start_pulse_counter[4]              DFN1E0C0     Q        Out     0.737     0.737       -         
+m2start_pulse_counter[4]                                Net          -        -       0.386     -           2         
+address_encoder_0.m2start_pulse_counter_RNICR9F[8]      NOR3A        C        In      -         1.123       -         
+address_encoder_0.m2start_pulse_counter_RNICR9F[8]      NOR3A        Y        Out     0.716     1.839       -         
+m10_4                                                   Net          -        -       0.322     -           1         
+address_encoder_0.m2start_pulse_counter_RNIG9GP[3]      NOR3A        A        In      -         2.160       -         
+address_encoder_0.m2start_pulse_counter_RNIG9GP[3]      NOR3A        Y        Out     0.664     2.824       -         
+m10_6                                                   Net          -        -       0.322     -           1         
+address_encoder_0.m2start_pulse_counter_RNIIVSD1[0]     NOR3C        C        In      -         3.146       -         
+address_encoder_0.m2start_pulse_counter_RNIIVSD1[0]     NOR3C        Y        Out     0.666     3.811       -         
+N_19_mux                                                Net          -        -       0.322     -           1         
+address_encoder_0.state_RNISNSU1[0]                     MX2          B        In      -         4.133       -         
+address_encoder_0.state_RNISNSU1[0]                     MX2          Y        Out     0.586     4.718       -         
+N_64                                                    Net          -        -       1.776     -           11        
+trans_m2_0.state_RNIPV2R[1]                             MX2B         S        In      -         6.495       -         
+trans_m2_0.state_RNIPV2R[1]                             MX2B         Y        Out     0.396     6.891       -         
+N_322                                                   Net          -        -       0.322     -           1         
+trans_m2_0.state_RNI1AGCA[1]                            NOR3C        C        In      -         7.212       -         
+trans_m2_0.state_RNI1AGCA[1]                            NOR3C        Y        Out     0.641     7.854       -         
+N_464                                                   Net          -        -       1.184     -           4         
+trans_m2_0.state_2_RNIL68DB[1]                          OR3          A        In      -         9.037       -         
+trans_m2_0.state_2_RNIL68DB[1]                          OR3          Y        Out     0.488     9.525       -         
+shift_reg_boo_2_sqmuxa_2                                Net          -        -       2.353     -           20        
+trans_m2_0.shift_reg_bzo[20]                            DFN1E0C0     E        In      -         11.879      -         
+======================================================================================================================
+Total path delay (propagation time + setup) of 12.487 is 5.502(44.1%) logic and 6.985(55.9%) route.
+Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
+
+
+
+
+====================================
+Detailed Report for Clock: System
+====================================
+
+
+
+Starting Points with Worst Slack
+********************************
+
+                                    Starting                                               Arrival            
+Instance                            Reference     Type         Pin     Net                 Time        Slack  
+                                    Clock                                                                     
+--------------------------------------------------------------------------------------------------------------
+edib_ctrl_reg_0.m5_loadone_flag     System        DFN1P1C1     Q       m5_loadone_flag     1.717       997.249
+edib_ctrl_reg_0.m7_loadone_flag     System        DFN1P1C1     Q       m7_loadone_flag     1.717       997.249
+edib_ctrl_reg_0.m2_sendone_flag     System        DFN0P1C1     Q       m2_sendone_flag     1.456       997.510
+==============================================================================================================
+
+
+Ending Points with Worst Slack
+******************************
+
+                                      Starting                                             Required            
+Instance                              Reference     Type       Pin     Net                 Time         Slack  
+                                      Clock                                                                    
+---------------------------------------------------------------------------------------------------------------
+edib_ctrl_reg_0.m5_loadone_reg[0]     System        DFN0P0     D       m5_loadone_flag     999.288      997.249
+edib_ctrl_reg_0.m7_loadone_reg[0]     System        DFN0P0     D       m7_loadone_flag     999.288      997.249
+edib_ctrl_reg_0.m2_sendone_reg[0]     System        DFN0P0     D       m2_sendone_flag     999.288      997.510
+===============================================================================================================
+
+
+
+Worst Path Information
+***********************
+
+
+Path information for path number 1: 
+      Requested Period:                      1000.000
+    - Setup time:                            0.712
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         999.288
+
+    - Propagation time:                      2.039
+    - Clock delay at starting point:         0.000 (ideal)
+    - Estimated clock delay at start point:  -0.000
+    = Slack (non-critical) :                 997.249
+
+    Number of logic level(s):                0
+    Starting point:                          edib_ctrl_reg_0.m5_loadone_flag / Q
+    Ending point:                            edib_ctrl_reg_0.m5_loadone_reg[0] / D
+    The start point is clocked by            System [rising] on pin CLK
+    The end   point is clocked by            MAIN_TOP|dsp_clk [falling] on pin CLK
+
+Instance / Net                                     Pin      Pin               Arrival     No. of    
+Name                                  Type         Name     Dir     Delay     Time        Fan Out(s)
+----------------------------------------------------------------------------------------------------
+edib_ctrl_reg_0.m5_loadone_flag       DFN1P1C1     Q        Out     1.717     1.717       -         
+m5_loadone_flag                       Net          -        -       0.322     -           1         
+edib_ctrl_reg_0.m5_loadone_reg[0]     DFN0P0       D        In      -         2.039       -         
+====================================================================================================
+Total path delay (propagation time + setup) of 2.751 is 2.430(88.3%) logic and 0.322(11.7%) route.
+Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
+
+
+
+##### END OF TIMING REPORT #####]
+
+Timing exceptions that could not be applied
+None
+
+Finished final timing analysis (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 120MB peak: 123MB)
+
+
+Finished timing report (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 120MB peak: 123MB)
+
+--------------------------------------------------------------------------------
+Target Part: A3P1000_FBGA144_STD
+Report for cell MAIN_TOP.verilog
+  Core Cell usage:
+              cell count     area count*area
+              AND2     2      1.0        2.0
+              AND3     6      1.0        6.0
+               AO1    18      1.0       18.0
+              AO1A    30      1.0       30.0
+              AO1B    10      1.0       10.0
+              AO1C     3      1.0        3.0
+              AO1D    18      1.0       18.0
+             AOI1B     6      1.0        6.0
+               AX1     1      1.0        1.0
+              AX1C     5      1.0        5.0
+              AX1D     2      1.0        2.0
+             AXOI4     3      1.0        3.0
+             AXOI5     1      1.0        1.0
+              BUFF     6      1.0        6.0
+            CLKINT     5      0.0        0.0
+               GND    15      0.0        0.0
+               INV    11      1.0       11.0
+               MX2   233      1.0      233.0
+              MX2A    41      1.0       41.0
+              MX2B    30      1.0       30.0
+              MX2C     2      1.0        2.0
+              NOR2    72      1.0       72.0
+             NOR2A   205      1.0      205.0
+             NOR2B    89      1.0       89.0
+              NOR3     9      1.0        9.0
+             NOR3A    70      1.0       70.0
+             NOR3B    99      1.0       99.0
+             NOR3C    75      1.0       75.0
+               OA1    37      1.0       37.0
+              OA1A     1      1.0        1.0
+              OA1B     3      1.0        3.0
+              OA1C    91      1.0       91.0
+               OR2    48      1.0       48.0
+              OR2A    22      1.0       22.0
+              OR2B     4      1.0        4.0
+               OR3    53      1.0       53.0
+              OR3A     4      1.0        4.0
+              OR3B     3      1.0        3.0
+              OR3C     3      1.0        3.0
+               VCC    15      0.0        0.0
+               XA1     7      1.0        7.0
+              XAI1     1      1.0        1.0
+             XNOR2     3      1.0        3.0
+             XNOR3     1      1.0        1.0
+              XOR2    21      1.0       21.0
+              XOR3     4      1.0        4.0
+
+
+            DFI1C0     1      1.0        1.0
+            DFI1P0     4      1.0        4.0
+              DFN0     1      1.0        1.0
+            DFN0C0   132      1.0      132.0
+          DFN0E0C0    62      1.0       62.0
+          DFN0E0P0     2      1.0        2.0
+          DFN0E1C0    80      1.0       80.0
+            DFN0P0     7      1.0        7.0
+          DFN0P1C1     1      1.0        1.0
+              DFN1    58      1.0       58.0
+            DFN1C0    34      1.0       34.0
+          DFN1E0C0   154      1.0      154.0
+          DFN1E0P0     5      1.0        5.0
+            DFN1E1     4      1.0        4.0
+          DFN1E1C0   252      1.0      252.0
+          DFN1E1P0     2      1.0        2.0
+            DFN1P0     7      1.0        7.0
+          DFN1P1C1     2      1.0        2.0
+              DLN0     2      1.0        2.0
+                   -----          ----------
+             TOTAL  2198              2163.0
+
+
+  IO Cell usage:
+              cell count
+             BIBUF    16
+            CLKBUF     1
+             INBUF    30
+            OUTBUF    31
+                   -----
+             TOTAL    78
+
+
+Core Cells         : 2163 of 24576 (9%)
+IO Cells           : 78
+
+  RAM/ROM Usage Summary
+Block Rams : 0 of 32 (0%)
+
+Mapper successful!
+
+At Mapper Exit (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 31MB peak: 123MB)
+
+Process took 0h:00m:02s realtime, 0h:00m:02s cputime
+# Fri Sep 11 09:12:32 2020
+
+###########################################################]

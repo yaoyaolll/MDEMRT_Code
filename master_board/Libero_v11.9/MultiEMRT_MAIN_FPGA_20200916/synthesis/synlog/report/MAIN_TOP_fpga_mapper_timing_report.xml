@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- *************************************************************************************
+FILE DESCRIPTION
+Max Top 5 critical clocks will be reported. For rest user needs to refer to Detailed report
+*******************************************************************************************-->
+<report_table display_priority="2" name="Timing Summary">
+<report_link name="Detailed report">
+<data>C:\Users\Administrator\Desktop\MultiEMRT_MAIN_FPGA_20200804\synthesis\synlog\MAIN_TOP_fpga_mapper.srr</data>
+<title>START OF TIMING REPORT</title>
+</report_link>
+<row>
+<data tcl_name="clock_name">Clock Name</data>
+<data tcl_name="req_freq">Req Freq</data>
+<data tcl_name="est_freq">Est Freq</data>
+<data tcl_name="slack">Slack</data>
+</row>
+<row>
+<data>MAIN_TOP|CLKA</data>
+<data>1.0 MHz</data>
+<data>159.1 MHz</data>
+<data>993.716</data>
+</row>
+<row>
+<data>MAIN_TOP|dsp_clk</data>
+<data>1.0 MHz</data>
+<data>83.4 MHz</data>
+<data>494.004</data>
+</row>
+<row>
+<data>ads_trans_fsm|convert_over_out_inferred_clock</data>
+<data>1.0 MHz</data>
+<data>343.5 MHz</data>
+<data>997.089</data>
+</row>
+<row>
+<data>ads_trans_fsm|sam_clk_5M_out_inferred_clock</data>
+<data>1.0 MHz</data>
+<data>91.0 MHz</data>
+<data>494.503</data>
+</row>
+<row>
+<data>edib_m2m5m7_clkgen|clk_m2_rcv_inferred_clock</data>
+<data>1.0 MHz</data>
+<data>61.8 MHz</data>
+<data>983.806</data>
+</row>
+<row>
+<data>edib_m5m7_clkgen|clk_m5m7_inferred_clock</data>
+<data>1.0 MHz</data>
+<data>63.6 MHz</data>
+<data>984.284</data>
+</row>
+<row>
+<data>edib_mode2_clkgen|clk_send_inferred_clock</data>
+<data>1.0 MHz</data>
+<data>80.1 MHz</data>
+<data>987.513</data>
+</row>
+<row>
+<data>System</data>
+<data>1.0 MHz</data>
+<data>363.5 MHz</data>
+<data>997.249</data>
+</row>
+</report_table>

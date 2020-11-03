@@ -1,0 +1,243 @@
+Microsemi Libero Software
+Version: 11.9.5.5
+Release: v11.9 SP5
+
+Info: The design MAIN_TOP.adb was last modified by software version 11.9.5.5.
+Opened an existing Libero design MAIN_TOP.adb.
+'BA_NAME' set to 'MAIN_TOP_ba'
+'IDE_DESIGNERVIEW_NAME' set to 'Impl1'
+'IDE_DESIGNERVIEW_COUNT' set to '1'
+'IDE_DESIGNERVIEW_REV0' set to 'Impl1'
+'IDE_DESIGNERVIEW_REVNUM0' set to '1'
+'IDE_DESIGNERVIEW_ROOTDIR' set to
+'C:\Users\Administrator\Desktop\MultiEMRT_MAIN_FPGA_20200804\designer'
+'IDE_DESIGNERVIEW_LASTREV' set to '1'
+
+ Netlist Reading Time = 0.0 seconds
+Imported the file:
+   C:\Users\Administrator\Desktop\MultiEMRT_MAIN_FPGA_20200804\synthesis\MAIN_TOP.edn
+
+The Import command succeeded ( 00:00:01 )
+=====================================================================
+Parameters used to run compile:
+===============================
+
+Family      : ProASIC3
+Device      : A3P1000
+Package     : 208 PQFP
+Source      : C:\Users\Administrator\Desktop\MultiEMRT_MAIN_FPGA_20200804\synthesis\MAIN_TOP.edn
+Format      : EDIF
+Topcell     : MAIN_TOP
+Speed grade : STD
+Temp        : 0:25:70
+Voltage     : 1.58:1.50:1.42
+
+Keep Existing Physical Constraints : Yes
+Keep Existing Timing Constraints   : Yes
+
+pdc_abort_on_error                 : Yes
+pdc_eco_display_unmatched_objects  : No
+pdc_eco_max_warnings               : 10000
+
+demote_globals                     : No
+promote_globals                    : No
+localclock_max_shared_instances    : 12
+localclock_buffer_tree_max_fanout  : 12
+
+combine_register                   : No
+delete_buffer_tree                 : No
+
+report_high_fanout_nets_limit      : 10
+
+=====================================================================
+Compile starts ...
+
+
+Netlist Optimization Report
+===========================
+
+Optimized macros:
+  - Dangling net drivers:   0
+  - Buffers:                0
+  - Inverters:              1
+  - Tieoff:                 0
+  - Logic combining:        10
+
+    Total macros optimized  11
+
+Warning: CMP503: Remapped 104 enable flip-flop(s) to a 2-tile implementation because the CLR/PRE
+         pin on the enable flip-flop is not being driven by a global net.
+
+There were 0 error(s) and 1 warning(s) in this design.
+=====================================================================
+
+Reading previous post-compile physical placement constraints.
+
+
+There were 0 error(s) and 0 warning(s).
+
+=====================================================================
+Compile report:
+===============
+
+    CORE                       Used:   2265  Total:  24576   (9.22%)
+    IO (W/ clocks)             Used:     78  Total:    154   (50.65%)
+    Differential IO            Used:      0  Total:     35   (0.00%)
+    GLOBAL (Chip+Quadrant)     Used:      6  Total:     18   (33.33%)
+    PLL                        Used:      0  Total:      1   (0.00%)
+    RAM/FIFO                   Used:      0  Total:     32   (0.00%)
+    Low Static ICC             Used:      0  Total:      1   (0.00%)
+    FlashROM                   Used:      0  Total:      1   (0.00%)
+    User JTAG                  Used:      0  Total:      1   (0.00%)
+
+Global Information:
+
+    Type            | Used   | Total
+    ----------------|--------|--------------
+    Chip global     | 5      | 6  (83.33%)*
+    Quadrant global | 1      | 12 (8.33%)
+
+    (*) Chip globals may be assigned to Quadrant globals using the Multi-View Navigator (MVN)
+        or Physical Design Constraints (PDC).
+        They may also be assigned to Quadrant globals automatically during Layout.
+
+Core Information:
+
+    Type    | Instances    | Core tiles
+    --------|--------------|-----------
+    COMB    | 1446         | 1446
+    SEQ     | 810          | 819
+
+I/O Function:
+
+    Type                                  | w/o register  | w/ register  | w/ DDR register
+    --------------------------------------|---------------|--------------|----------------
+    Input I/O                             | 31            | 0            | 0
+    Output I/O                            | 31            | 0            | 0
+    Bidirectional I/O                     | 16            | 0            | 0
+    Differential Input I/O Pairs          | 0             | 0            | 0
+    Differential Output I/O Pairs         | 0             | 0            | 0
+
+I/O Technology:
+
+                                    |   Voltages    |             I/Os
+    --------------------------------|-------|-------|-------|--------|--------------
+    I/O Standard(s)                 | Vcci  | Vref  | Input | Output | Bidirectional
+    --------------------------------|-------|-------|-------|--------|--------------
+    LVTTL                           | 3.30v | N/A   | 31    | 31     | 16
+
+I/O Placement:
+
+    Locked  :  78 ( 100.00% )
+    Placed  :   0
+    UnPlaced:   0
+
+Net information report:
+=======================
+
+The following nets drive enable flip-flops that have been remapped to a 2-tile implementation:
+    EffCnt  Type          Name
+    --------------------------
+    22      SET/RESET_NET Net   : ADC_TOP_0/ads_trans_fsm_0/rst_5M_reg_i_0_i_2
+                          Driver: ADC_TOP_0/ads_trans_fsm_0/rst_5M_reg_2
+    22      SET/RESET_NET Net   : ADC_TOP_0/ads_trans_fsm_0/rst_5M_reg_i_0_i_1
+                          Driver: ADC_TOP_0/ads_trans_fsm_0/rst_5M_reg_1
+    22      SET/RESET_NET Net   : ADC_TOP_0/ads_trans_fsm_0/rst_5M_reg_i_0_i_0
+                          Driver: ADC_TOP_0/ads_trans_fsm_0/rst_5M_reg_0
+    16      SET/RESET_NET Net   : adc_rstn_test_1
+                          Driver: INBUF_0_RNI3ULF
+    15      SET/RESET_NET Net   : adc_rstn_test_0
+                          Driver: INBUF_0_RNI3ULF_0
+    7       SET/RESET_NET Net   : ADC_TOP_0/ads_trans_fsm_0/rst_5M_reg_i_0_i
+                          Driver: ADC_TOP_0/ads_trans_fsm_0/rst_5M_reg
+
+The following nets have been assigned to a chip global resource:
+    Fanout  Type          Name
+    --------------------------
+    618     SET/RESET_NET Net   : address_encoder_0_edib_interface_rst
+                          Driver: address_encoder_0/edib_interface_rst_RNIUVLB
+                          Source: NETLIST
+    260     CLK_NET       Net   : edib_m5m7_clkgen_0_clk_m5m7
+                          Driver: edib_m5m7_clkgen_0/clk_m5m7_RNI8FT6
+                          Source: NETLIST
+    174     CLK_NET       Net   : edib_m2m5m7_clkgen_0_clk_m2_rcv
+                          Driver: edib_m2m5m7_clkgen_0/clk_m2_rcv_RNIAAHA
+                          Source: NETLIST
+    159     INT_NET       Net   : trans_m2_0/state[0]
+                          Driver: trans_m2_0/state_RNICFHD[0]
+                          Source: NETLIST
+    135     CLK_NET       Net   : edib_mode2_clkgen_0_clk_send
+                          Driver: edib_mode2_clkgen_0/clk_send_RNITUM9
+                          Source: NETLIST
+
+The following nets have been assigned to a quadrant global resource:
+    Fanout  Type          Name
+    --------------------------
+    121     CLK_NET       Net   : DSP_CLK_TEST
+                          Driver: CLKBUF_0
+                          Region: quadrant_UR
+
+High fanout nets in the post compile netlist:
+    Fanout  Type          Name
+    --------------------------
+    94      CLK_NET       Net   : sam_clk_5M_out
+                          Driver: ADC_TOP_0/ads_trans_fsm_0/sam_clk_5M_out
+    56      INT_NET       Net   : edib_ctrl_reg_0.load_data_shift_m5_i_1
+                          Driver: trans_m5m7_0/state_RNI5PAG9_2[0]
+    24      INT_NET       Net   : address_encoder_0_adc_data_choice[0]
+                          Driver: address_encoder_0/adc_data_choice[0]
+    24      INT_NET       Net   : address_encoder_0_adc_data_choice[1]
+                          Driver: address_encoder_0/adc_data_choice[1]
+    24      INT_NET       Net   : address_encoder_0_adc_data_choice_0[1]
+                          Driver: address_encoder_0/adc_data_choice_0[1]
+    24      INT_NET       Net   : address_encoder_0_adc_data_choice_0[0]
+                          Driver: address_encoder_0/adc_data_choice_0[0]
+    24      INT_NET       Net   : ADC_TOP_0/ads_trans_fsm_0/dout1_reg7_1
+                          Driver: ADC_TOP_0/ads_trans_fsm_0/data_cnt_RNIGO321_1[7]
+    24      INT_NET       Net   : ADC_TOP_0/ads_trans_fsm_0/dout1_reg7_0
+                          Driver: ADC_TOP_0/ads_trans_fsm_0/data_cnt_RNIGO321[7]
+    24      INT_NET       Net   : ADC_TOP_0/ads_trans_fsm_0/dout1_reg7
+                          Driver: ADC_TOP_0/ads_trans_fsm_0/data_cnt_RNIGO321_0[7]
+    22      INT_NET       Net   : trans_m2_0/state_2[1]
+                          Driver: trans_m2_0/state_2[1]
+
+Nets that are candidates for clock assignment and the resulting fanout:
+    Fanout  Type          Name
+    --------------------------
+    94      CLK_NET       Net   : sam_clk_5M_out
+                          Driver: ADC_TOP_0/ads_trans_fsm_0/sam_clk_5M_out
+    56      INT_NET       Net   : edib_ctrl_reg_0.load_data_shift_m5_i_1
+                          Driver: trans_m5m7_0/state_RNI5PAG9_2[0]
+    53      SET/RESET_NET Net   : adc_rstn_test
+                          Driver: INBUF_0
+    33      INT_NET       Net   : DSP_XRW_c
+                          Driver: DSP_XRW_pad
+    30      INT_NET       Net   : xzcs0and1_c
+                          Driver: xzcs0and1_pad
+    24      INT_NET       Net   : address_encoder_0_adc_data_choice[0]
+                          Driver: address_encoder_0/adc_data_choice[0]
+    24      INT_NET       Net   : address_encoder_0_adc_data_choice[1]
+                          Driver: address_encoder_0/adc_data_choice[1]
+    24      INT_NET       Net   : address_encoder_0_adc_data_choice_0[1]
+                          Driver: address_encoder_0/adc_data_choice_0[1]
+    24      INT_NET       Net   : address_encoder_0_adc_data_choice_0[0]
+                          Driver: address_encoder_0/adc_data_choice_0[0]
+    24      INT_NET       Net   : ADC_TOP_0/ads_trans_fsm_0/dout1_reg7_1
+                          Driver: ADC_TOP_0/ads_trans_fsm_0/data_cnt_RNIGO321_1[7]
+
+The Compile command succeeded ( 00:00:01 )
+Wrote status report to file: MAIN_TOP_compile_report.txt
+
+The Report command succeeded ( 00:00:00 )
+Wrote pin report to file: MAIN_TOP_report_pin_byname.txt
+
+The Report command succeeded ( 00:00:01 )
+Wrote pin report to file: MAIN_TOP_report_pin_bynumber.txt
+
+The Report command succeeded ( 00:00:00 )
+Design saved to file
+C:\Users\Administrator\Desktop\MultiEMRT_MAIN_FPGA_20200804\designer\impl1\MAIN_TOP.adb.
+
+The Execute Script command succeeded ( 00:00:06 )
+Design closed.
+
