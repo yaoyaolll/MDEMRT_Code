@@ -10,7 +10,7 @@ void main()
 
 	while(1)
 	{
-		//PulseAcqFlag = SET;
+		//ScanModeFlag = SET;
 		if(SendTableFlag==SET)
 		{
 			CheckReadTable();
@@ -141,15 +141,6 @@ void main()
 			CheckReadTable();
 			HRT1T22FModeTop();
 			HRT1T22FFlag	= CLEAR;
-			// test code
-			/*int i=0;
-			TableTempPt = (Uint16 *)MINITABLE_START;
-			for(i=0;i<84;i++)
-			{
-				PulseGainAry[i] = *TableTempPt;
-				TableTempPt++;
-			}
-			TableTempPt++;*/
 		}
 		else if (DFT1T2DFlag==SET)
 		{

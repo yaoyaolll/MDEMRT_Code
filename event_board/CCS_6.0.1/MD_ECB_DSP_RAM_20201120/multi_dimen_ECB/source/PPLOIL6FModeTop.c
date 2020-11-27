@@ -191,7 +191,6 @@ void PPLOIL6FModeTop(void)
 		}
 	}
 
-
 	//PPLOIL6F__2D
 	StartS1msModule(PPLOIL6FTw24D*FPGA_BC-MINI_TEST);
 

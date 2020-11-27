@@ -19,7 +19,7 @@ void DFT1T2DModeTop(void)
     ScaleMn = 1;
     ScaleM = 0;
     EchoNum = 2 * (DFT1T2D_NREPT_CBW * 2 + 26); // 148个回波串
-    //2n
+    //2n 63152
     DataTotalNum = 4 * (DFT1T2D_NE_A1B1 * 2 + DFT1T2D_NE_A2B2 * 2 + DFT1T2D_NREPT_A8B8 * DFT1T2D_NE_A8B8 * 2 + DFT1T2D_NREPT_A9B9 * DFT1T2D_NE_A9B9 * 2 + DFT1T2D_NE_DE * 10 + DFT1T2D_NREPT_A10B10 * DFT1T2D_NE_A10B10 * 2 + DFT1T2D_NE_CBW * DFT1T2D_NREPT_CBW * 2);
 
     MiniStorAddr1 = MINITABLE_START + 1;
@@ -30,9 +30,9 @@ void DFT1T2DModeTop(void)
     Delay(120);
     RELAY_ON_CLOSE = 0x0000;
 
-    Tes = DFT1T2D_TES_DE_T2_T1 * (Uint32)100 * FPGA_COUNT; // 所有TES都是0.5ms
+    Tes = DFT1T2D_TES_DE_T2_T1 * (Uint32)100 * FPGA_COUNT; // 所有TES都是0.5ms 5
     Tel = Tes;
-    Ne = DFT1T2D_NE_A1B1;
+    Ne = DFT1T2D_NE_A1B1;  //1002
     Pulse90StoreAddr = DFT1T2DTABLE_START + (Uint32)DataTotalNum + 36;
     PulseF180StoreAddr = Pulse90StoreAddr + EchoNum;
     PulseL180StoreAddr = PulseF180StoreAddr + EchoNum;
@@ -52,11 +52,11 @@ void DFT1T2DModeTop(void)
 
     // A11+- CBW 24次
 	PhaseFlag		= POSITIVE;
-	Tes	= (Uint32)100 * DFT1T2D_TE_CBW *  FPGA_COUNT;
+	Tes	= (Uint32)100 * DFT1T2D_TE_CBW *  FPGA_COUNT; // 5
 	Tel	= Tes;
-	Ne	= DFT1T2D_NE_CBW;
+	Ne	= DFT1T2D_NE_CBW; //25
 
-	for (DFT1T2D_cnt=0;DFT1T2D_cnt<2*DFT1T2D_NREPT_CBW;DFT1T2D_cnt++)
+	for (DFT1T2D_cnt=0;DFT1T2D_cnt<2*DFT1T2D_NREPT_CBW;DFT1T2D_cnt++)  // DFT1T2D_NREPT_CBW=24
 	{
 		if (DFT1T2D_cnt==0)
 		{
@@ -81,22 +81,22 @@ void DFT1T2DModeTop(void)
 		}
 	}
 
-    RELAY_ON_CLOSE = RelayAry[T2DFreqSelAry[1]] << 8;
+    RELAY_ON_CLOSE = RelayAry[DFT1T2DFreqSelAry[1]] << 8;
     Delay(120);
     RELAY_ON_CLOSE = 0x0000;
 
     // B1+ T2
     StartS1msModule(7395-MINI_TEST);
 
-    RELAY_ON_CLOSE = RelayAry[T2DFreqSelAry[2]];
+    RELAY_ON_CLOSE = RelayAry[DFT1T2DFreqSelAry[2]];
     Delay(120);
     RELAY_ON_CLOSE = 0x0000;
 
     PhaseFlag = POSITIVE;
 
-    Tes = DFT1T2D_TES_DE_T2_T1 * (Uint32)100 * FPGA_COUNT;
+    Tes = DFT1T2D_TES_DE_T2_T1 * (Uint32)100 * FPGA_COUNT;  // 5
     Tel = Tes;
-    Ne = DFT1T2D_NE_A1B1;
+    Ne = DFT1T2D_NE_A1B1;  // 1002
 
     MiniScan(FreqAry[DFT1T2DFreqSelAry[2]], MiniStorAddr2 + 9, MiniStorAddr2);
     MiniStorAddr2 += 12;
@@ -111,11 +111,11 @@ void DFT1T2DModeTop(void)
 
     // B11+- CBW
 	PhaseFlag		= POSITIVE;
-	Tes	= (Uint32)100 * DFT1T2D_TE_CBW *  FPGA_COUNT;
+	Tes	= (Uint32)100 * DFT1T2D_TE_CBW *  FPGA_COUNT;  // 5
 	Tel	= Tes;
-	Ne	= DFT1T2D_NE_CBW;
+	Ne	= DFT1T2D_NE_CBW;  // 25
 
-	for (DFT1T2D_cnt=0;DFT1T2D_cnt<2*DFT1T2D_NREPT_CBW;DFT1T2D_cnt++)
+	for (DFT1T2D_cnt=0;DFT1T2D_cnt<2*DFT1T2D_NREPT_CBW;DFT1T2D_cnt++)   // DFT1T2D_NREPT_CBW = 24
 	{
 		if (DFT1T2D_cnt==0)
 		{
@@ -140,7 +140,7 @@ void DFT1T2DModeTop(void)
 		}
 	}
 
-    RELAY_ON_CLOSE = RelayAry[T2DFreqSelAry[2]] << 8;
+    RELAY_ON_CLOSE = RelayAry[DFT1T2DFreqSelAry[2]] << 8;
     Delay(120);
     RELAY_ON_CLOSE = 0x0000;
 
@@ -154,7 +154,7 @@ void DFT1T2DModeTop(void)
 
     Tes = DFT1T2D_TES_DE_T2_T1 * (Uint32)100 * FPGA_COUNT; // 所有TES都是0.5ms
     Tel = Tes;
-    Ne = DFT1T2D_NE_A1B1;
+    Ne = DFT1T2D_NE_A1B1;  //1002
 
     MiniScan(FreqAry[DFT1T2DFreqSelAry[1]], MiniStorAddr1 + 9, MiniStorAddr1);
     MiniStorAddr1 += 12;
@@ -169,7 +169,7 @@ void DFT1T2DModeTop(void)
     PhaseFlag		= POSITIVE;
     Tes = DFT1T2D_TES_DE_T2_T1 * (Uint32)100 * FPGA_COUNT; // 所有TES都是0.5ms
     Tel = Tes;
-    Ne = DFT1T2D_NE_A10B10;
+    Ne = DFT1T2D_NE_A10B10;  //64
 
     for (DFT1T2D_cnt = 0; DFT1T2D_cnt < 2; DFT1T2D_cnt++)
     {
@@ -190,7 +190,7 @@ void DFT1T2DModeTop(void)
     PhaseFlag		= POSITIVE;
     Tes = DFT1T2D_TES_DE_T2_T1 * (Uint32)100 * FPGA_COUNT; // 所有TES都是0.5ms
     Tel = Tes;
-    Ne = DFT1T2D_NE_A8B8;
+    Ne = DFT1T2D_NE_A8B8;  //650
 
     for (DFT1T2D_cnt = 0; DFT1T2D_cnt < 2; DFT1T2D_cnt++)
     {
@@ -211,7 +211,7 @@ void DFT1T2DModeTop(void)
     PhaseFlag		= POSITIVE;
     Tes = DFT1T2D_TES_DE_T2_T1 * (Uint32)100 * FPGA_COUNT; // 所有TES都是0.5ms
     Tel = Tes;
-    Ne = DFT1T2D_NE_A9B9;
+    Ne = DFT1T2D_NE_A9B9;  // 176
 
     StartS1msModule(DFT1T2D_TW_A9B9*FPGA_BC-MINI_TEST);
 
@@ -229,7 +229,7 @@ void DFT1T2DModeTop(void)
     PhaseFlag		= POSITIVE;
     Tes = DFT1T2D_TES_DE_T2_T1 * (Uint32)100 * FPGA_COUNT; // 所有TES都是0.5ms
     Tel = Tes;
-    Ne = DFT1T2D_NE_A10B10;
+    Ne = DFT1T2D_NE_A10B10;  // 64
 
     for (DFT1T2D_cnt = 0; DFT1T2D_cnt < 2; DFT1T2D_cnt++)
     {
@@ -250,7 +250,7 @@ void DFT1T2DModeTop(void)
     PhaseFlag		= POSITIVE;
     Tes = DFT1T2D_TES_DE_T2_T1 * (Uint32)100 * FPGA_COUNT; // 所有TES都是0.5ms
     Tel = Tes;
-    Ne = DFT1T2D_NE_A8B8;
+    Ne = DFT1T2D_NE_A8B8;  // 650
 
     StartS1msModule(DFT1T2D_TW_A8B8*FPGA_BC-MINI_TEST);
     MiniScan(FreqAry[DFT1T2DFreqSelAry[1]], MiniStorAddr1 + 9, MiniStorAddr1);
@@ -267,7 +267,7 @@ void DFT1T2DModeTop(void)
     PhaseFlag = NEGATIVE;
     Tes = DFT1T2D_TES_DE_T2_T1 * (Uint32)100 * FPGA_COUNT; // 所有TES都是0.5ms
     Tel = Tes;
-    Ne = DFT1T2D_NE_A9B9;
+    Ne = DFT1T2D_NE_A9B9;  // 176
 
     for (DFT1T2D_cnt = 0; DFT1T2D_cnt < 2; DFT1T2D_cnt++)
     {
@@ -288,7 +288,7 @@ void DFT1T2DModeTop(void)
     PhaseFlag = NEGATIVE;
     Tes = DFT1T2D_TES_DE_T2_T1 * (Uint32)100 * FPGA_COUNT; // 所有TES都是0.5ms
     Tel = Tes;
-    Ne = DFT1T2D_NE_A8B8;
+    Ne = DFT1T2D_NE_A8B8;  //650
 
     StartS1msModule(DFT1T2D_TW_A8B8*FPGA_BC-MINI_TEST);
     MiniScan(FreqAry[DFT1T2DFreqSelAry[1]], MiniStorAddr1 + 9, MiniStorAddr1);
@@ -305,7 +305,7 @@ void DFT1T2DModeTop(void)
     PhaseFlag = NEGATIVE;
     Tes = DFT1T2D_TES_DE_T2_T1 * (Uint32)100 * FPGA_COUNT; // 所有TES都是0.5ms
     Tel = Tes;
-    Ne = DFT1T2D_NE_A9B9;
+    Ne = DFT1T2D_NE_A9B9;  // 176
 
     StartS1msModule(DFT1T2D_TW_A9B9*FPGA_BC-MINI_TEST);
     MiniScan(FreqAry[DFT1T2DFreqSelAry[1]], MiniStorAddr1 + 9, MiniStorAddr1);
@@ -322,7 +322,7 @@ void DFT1T2DModeTop(void)
     PhaseFlag = POSITIVE;
     Tes = DFT1T2D_TES_DE_T2_T1 * (Uint32)100 * FPGA_COUNT; // 所有TES都是0.5ms
     Tel = Tes;
-    Ne = DFT1T2D_NE_A2B2;
+    Ne = DFT1T2D_NE_A2B2;  // 752
 
     StartS1msModule(DFT1T2D_TW_A2B2*FPGA_BC-MINI_TEST);
     MiniScan(FreqAry[DFT1T2DFreqSelAry[1]], MiniStorAddr1 + 9, MiniStorAddr1);
@@ -349,7 +349,7 @@ void DFT1T2DModeTop(void)
     PhaseFlag = NEGATIVE;
     Tes = DFT1T2D_TES_DE_T2_T1 * (Uint32)100 * FPGA_COUNT; // 所有TES都是0.5ms
     Tel = Tes;
-    Ne = DFT1T2D_NE_A1B1;
+    Ne = DFT1T2D_NE_A1B1;  // 1002
 
     MiniScan(FreqAry[DFT1T2DFreqSelAry[2]], MiniStorAddr2 + 9, MiniStorAddr2);
     MiniStorAddr2 += 12;
@@ -365,7 +365,7 @@ void DFT1T2DModeTop(void)
     PhaseFlag = POSITIVE;
     Tes = DFT1T2D_TES_DE_T2_T1 * (Uint32)100 * FPGA_COUNT; // 所有TES都是0.5ms
     Tel = Tes;
-    Ne = DFT1T2D_NE_A10B10;
+    Ne = DFT1T2D_NE_A10B10; // 64
 
     for (DFT1T2D_cnt = 0; DFT1T2D_cnt < 2; DFT1T2D_cnt++)
     {
@@ -387,7 +387,7 @@ void DFT1T2DModeTop(void)
 
     Tes = DFT1T2D_TES_DE_T2_T1 * (Uint32)100 * FPGA_COUNT; // 所有TES都是0.5ms
     Tel = Tes;
-    Ne = DFT1T2D_NE_A8B8;
+    Ne = DFT1T2D_NE_A8B8;  // 650
 
     StartS1msModule(DFT1T2D_TW_A8B8*FPGA_BC-MINI_TEST);
     MiniScan(FreqAry[DFT1T2DFreqSelAry[2]], MiniStorAddr2 + 9, MiniStorAddr2);
@@ -414,17 +414,17 @@ void DFT1T2DModeTop(void)
     PhaseFlag = NEGATIVE;
     Tes = DFT1T2D_TES_DE_T2_T1 * (Uint32)100 * FPGA_COUNT; // 所有TES都是0.5ms
     Tel = Tes;
-    Ne = DFT1T2D_NE_A8B8;
+    Ne = DFT1T2D_NE_A2B2;  // 752
 
     MiniScan(FreqAry[DFT1T2DFreqSelAry[1]], MiniStorAddr1 + 9, MiniStorAddr1);
     MiniStorAddr1 += 12;
 
+    InverseTurnFlag = SET; // -90脉冲
     DCWorkOnce(DFT1T2DFreqSelAry[1]);
 
     Pulse90StoreAddr++;
     PulseF180StoreAddr++;
     PulseL180StoreAddr++;
-    InverseTurnFlag = SET; // -90脉冲
     EchoStorAddr += 2 * Ne;
 
     RELAY_ON_CLOSE = RelayAry[DFT1T2DFreqSelAry[1]] << 8;
@@ -441,7 +441,7 @@ void DFT1T2DModeTop(void)
     PhaseFlag = NEGATIVE;
     Tes = DFT1T2D_TES_DE_T2_T1 * (Uint32)100 * FPGA_COUNT; // 所有TES都是0.5ms
     Tel = Tes;
-    Ne = DFT1T2D_NE_A8B8;
+    Ne = DFT1T2D_NE_A8B8;  // 650
 
     MiniScan(FreqAry[DFT1T2DFreqSelAry[2]], MiniStorAddr2 + 9, MiniStorAddr2);
     MiniStorAddr2 += 12;
@@ -457,7 +457,7 @@ void DFT1T2DModeTop(void)
     PhaseFlag = POSITIVE;
     Tes = DFT1T2D_TES_DE_T2_T1 * (Uint32)100 * FPGA_COUNT; // 所有TES都是0.5ms
     Tel = Tes;
-    Ne = DFT1T2D_NE_A9B9;
+    Ne = DFT1T2D_NE_A9B9;  // 176
 
     StartS1msModule(DFT1T2D_TW_A9B9*FPGA_BC-MINI_TEST);
     MiniScan(FreqAry[DFT1T2DFreqSelAry[2]], MiniStorAddr2 + 9, MiniStorAddr2);
@@ -474,7 +474,7 @@ void DFT1T2DModeTop(void)
     PhaseFlag = POSITIVE;
     Tes = DFT1T2D_TES_DE_T2_T1 * (Uint32)100 * FPGA_COUNT; // 所有TES都是0.5ms
     Tel = Tes;
-    Ne = DFT1T2D_NE_A10B10;
+    Ne = DFT1T2D_NE_A10B10; // 64
 
     for (DFT1T2D_cnt = 0; DFT1T2D_cnt < 2; DFT1T2D_cnt++)
     {
@@ -504,17 +504,18 @@ void DFT1T2DModeTop(void)
     PhaseFlag = POSITIVE;
 
     Tes = DFT1T2D_TES_DE_T2_T1 * (Uint32)100 * FPGA_COUNT; // 所有TES都是0.5ms
-    Tel = DFT1T2D_TEL1_DE;
-    Ne = DFT1T2D_NE_DE;
+    Tel = DFT1T2D_TEL1_DE;  // 20
+    Ne = DFT1T2D_NE_DE;  // 752
 
     MiniScan(FreqAry[DFT1T2DFreqSelAry[1]], MiniStorAddr1 + 9, MiniStorAddr1);
     MiniStorAddr1 += 12;
 
+    InverseTurnFlag = SET; // -90脉冲
     DCWorkOnce(DFT1T2DFreqSelAry[1]);
+
     Pulse90StoreAddr++;
     PulseF180StoreAddr++;
     PulseL180StoreAddr++;
-    InverseTurnFlag = SET; // -90脉冲
     EchoStorAddr += 2 * Ne;
 
     RELAY_ON_CLOSE = RelayAry[DFT1T2DFreqSelAry[1]] << 8;
@@ -531,7 +532,7 @@ void DFT1T2DModeTop(void)
     PhaseFlag = POSITIVE;
     Tes = DFT1T2D_TES_DE_T2_T1 * (Uint32)100 * FPGA_COUNT; // 所有TES都是0.5ms
     Tel = Tes;
-    Ne = DFT1T2D_NE_A8B8;
+    Ne = DFT1T2D_NE_A8B8;  // 650
 
     MiniScan(FreqAry[DFT1T2DFreqSelAry[2]], MiniStorAddr2 + 9, MiniStorAddr2);
     MiniStorAddr2 += 12;
@@ -547,7 +548,7 @@ void DFT1T2DModeTop(void)
     PhaseFlag = NEGATIVE;
     Tes = DFT1T2D_TES_DE_T2_T1 * (Uint32)100 * FPGA_COUNT; // 所有TES都是0.5ms
     Tel = Tes;
-    Ne = DFT1T2D_NE_A9B9;
+    Ne = DFT1T2D_NE_A9B9;  // 176
 
     for (DFT1T2D_cnt = 0; DFT1T2D_cnt < 2; DFT1T2D_cnt++)
     {
@@ -576,18 +577,18 @@ void DFT1T2DModeTop(void)
 
     PhaseFlag = NEGATIVE;
     Tes = DFT1T2D_TES_DE_T2_T1 * (Uint32)100 * FPGA_COUNT; // 所有TES都是0.5ms
-    Tel = DFT1T2D_TEL1_DE;
-    Ne = DFT1T2D_NE_DE;
+    Tel = DFT1T2D_TEL1_DE;  // 20
+    Ne = DFT1T2D_NE_DE;  // 752
 
     MiniScan(FreqAry[DFT1T2DFreqSelAry[1]], MiniStorAddr1 + 9, MiniStorAddr1);
     MiniStorAddr1 += 12;
 
+    InverseTurnFlag = SET; // -90脉冲
     DCWorkOnce(DFT1T2DFreqSelAry[1]);
 
     Pulse90StoreAddr++;
     PulseF180StoreAddr++;
     PulseL180StoreAddr++;
-    InverseTurnFlag = SET; // -90脉冲
     EchoStorAddr += 2 * Ne;
 
     RELAY_ON_CLOSE = RelayAry[DFT1T2DFreqSelAry[1]] << 8;
@@ -604,7 +605,7 @@ void DFT1T2DModeTop(void)
     PhaseFlag = NEGATIVE;
     Tes = DFT1T2D_TES_DE_T2_T1 * (Uint32)100 * FPGA_COUNT; // 所有TES都是0.5ms
     Tel = Tes;
-    Ne = DFT1T2D_NE_A8B8;
+    Ne = DFT1T2D_NE_A8B8;  // 650
 
     MiniScan(FreqAry[DFT1T2DFreqSelAry[2]], MiniStorAddr2 + 9, MiniStorAddr2);
     MiniStorAddr2 += 12;
@@ -620,7 +621,7 @@ void DFT1T2DModeTop(void)
     PhaseFlag = NEGATIVE;
     Tes = DFT1T2D_TES_DE_T2_T1 * (Uint32)100 * FPGA_COUNT; // 所有TES都是0.5ms
     Tel = Tes;
-    Ne = DFT1T2D_NE_A9B9;
+    Ne = DFT1T2D_NE_A9B9; // 176
 
     StartS1msModule(DFT1T2D_TW_A9B9*FPGA_BC-MINI_TEST);
     MiniScan(FreqAry[DFT1T2DFreqSelAry[2]], MiniStorAddr2 + 9, MiniStorAddr2);
@@ -646,8 +647,8 @@ void DFT1T2DModeTop(void)
 
     PhaseFlag = POSITIVE;
     Tes = DFT1T2D_TES_DE_T2_T1 * (Uint32)100 * FPGA_COUNT; // 所有TES都是0.5ms
-    Tel = DFT1T2D_TEL2_DE;
-    Ne = DFT1T2D_NE_DE;
+    Tel = DFT1T2D_TEL2_DE;  // 30
+    Ne = DFT1T2D_NE_DE;  // 752
 
     for (DFT1T2D_cnt = 0; DFT1T2D_cnt < 2; DFT1T2D_cnt++)
     {
@@ -659,6 +660,7 @@ void DFT1T2DModeTop(void)
         MiniScan(FreqAry[DFT1T2DFreqSelAry[1]], MiniStorAddr1 + 9, MiniStorAddr1);
         MiniStorAddr1 += 12;
 
+        InverseTurnFlag = SET; // -90脉冲
         DCWorkOnce(DFT1T2DFreqSelAry[1]);
 
         ChangePhase();
@@ -682,7 +684,7 @@ void DFT1T2DModeTop(void)
     PhaseFlag = POSITIVE;
     Tes = DFT1T2D_TES_DE_T2_T1 * (Uint32)100 * FPGA_COUNT; // 所有TES都是0.5ms
     Tel = Tes;
-    Ne = DFT1T2D_NE_A2B2;
+    Ne = DFT1T2D_NE_A2B2;  // 752
 
     MiniScan(FreqAry[DFT1T2DFreqSelAry[2]], MiniStorAddr2 + 9, MiniStorAddr2);
     MiniStorAddr2 += 12;
@@ -700,15 +702,14 @@ void DFT1T2DModeTop(void)
 
     // A5+- DE -90脉冲
     StartS1msModule(336-MINI_TEST);
-
     RELAY_ON_CLOSE = RelayAry[DFT1T2DFreqSelAry[1]];
     Delay(120);
     RELAY_ON_CLOSE = 0x0000;
 
     PhaseFlag = POSITIVE;
     Tes = DFT1T2D_TES_DE_T2_T1 * (Uint32)100 * FPGA_COUNT; // 所有TES都是0.5ms
-    Tel = DFT1T2D_TEL3_DE;
-    Ne = DFT1T2D_NE_DE;
+    Tel = DFT1T2D_TEL3_DE;  // 50
+    Ne = DFT1T2D_NE_DE;  // 752
 
     for (DFT1T2D_cnt = 0; DFT1T2D_cnt < 2; DFT1T2D_cnt++)
     {
@@ -719,8 +720,10 @@ void DFT1T2DModeTop(void)
         MiniScan(FreqAry[DFT1T2DFreqSelAry[1]], MiniStorAddr1 + 9, MiniStorAddr1);
         MiniStorAddr1 += 12;
 
+        InverseTurnFlag = SET; // -90脉冲
         DCWorkOnce(DFT1T2DFreqSelAry[1]);
 
+        ChangePhase();
         Pulse90StoreAddr++;
         PulseF180StoreAddr++;
         PulseL180StoreAddr++;
@@ -740,18 +743,18 @@ void DFT1T2DModeTop(void)
 
     Tes = DFT1T2D_TES_DE_T2_T1 * (Uint32)100 * FPGA_COUNT; // 所有TES都是0.5ms
     Tel = Tes;
-    Ne = DFT1T2D_NE_A2B2;
+    Ne = DFT1T2D_NE_A2B2;  // 752
 
     PhaseFlag = NEGATIVE;
     MiniScan(FreqAry[DFT1T2DFreqSelAry[2]], MiniStorAddr2 + 9, MiniStorAddr2);
     MiniStorAddr2 += 12;
 
+    InverseTurnFlag = SET; //-90脉冲
     DCWorkOnce(DFT1T2DFreqSelAry[2]);
 
     Pulse90StoreAddr++;
     PulseF180StoreAddr++;
     PulseL180StoreAddr++;
-    InverseTurnFlag = SET; //-90脉冲
     EchoStorAddr += 2 * Ne;
 
     RELAY_ON_CLOSE = RelayAry[DFT1T2DFreqSelAry[2]] << 8;
@@ -767,18 +770,18 @@ void DFT1T2DModeTop(void)
 
     PhaseFlag = POSITIVE;
     Tes = DFT1T2D_TES_DE_T2_T1 * (Uint32)100 * FPGA_COUNT; // 所有TES都是0.5ms
-    Tel = DFT1T2D_TEL4_DE;
-    Ne = DFT1T2D_NE_DE;
+    Tel = DFT1T2D_TEL4_DE;  // 80
+    Ne = DFT1T2D_NE_DE;  // 752
 
     MiniScan(FreqAry[DFT1T2DFreqSelAry[1]], MiniStorAddr1 + 9, MiniStorAddr1);\
     MiniStorAddr1 += 12;
 
+    InverseTurnFlag = SET; //-90脉冲
     DCWorkOnce(DFT1T2DFreqSelAry[1]);
 
     Pulse90StoreAddr++;
     PulseF180StoreAddr++;
     PulseL180StoreAddr++;
-    InverseTurnFlag = SET; //-90脉冲
     EchoStorAddr += 2 * Ne;
 
     RELAY_ON_CLOSE = RelayAry[DFT1T2DFreqSelAry[1]] << 8;
@@ -793,20 +796,20 @@ void DFT1T2DModeTop(void)
     RELAY_ON_CLOSE = 0x0000;
 
     Tes = DFT1T2D_TES_DE_T2_T1 * (Uint32)100 * FPGA_COUNT; // 所有TES都是0.5ms
-    Tel = DFT1T2D_TEL1_DE;
-    Ne = DFT1T2D_NE_DE;
+    Tel = DFT1T2D_TEL1_DE;  // 20
+    Ne = DFT1T2D_NE_DE;  // 752
 
     PhaseFlag = POSITIVE;
 
     MiniScan(FreqAry[DFT1T2DFreqSelAry[2]], MiniStorAddr2 + 9, MiniStorAddr2);
     MiniStorAddr2 += 12;
 
+    InverseTurnFlag = SET; //-90脉冲
     DCWorkOnce(DFT1T2DFreqSelAry[2]);
 
     Pulse90StoreAddr++;
     PulseF180StoreAddr++;
     PulseL180StoreAddr++;
-    InverseTurnFlag = SET; //-90脉冲
     EchoStorAddr += 2 * Ne;
 
     RELAY_ON_CLOSE = RelayAry[DFT1T2DFreqSelAry[2]] << 8;
@@ -821,19 +824,19 @@ void DFT1T2DModeTop(void)
     RELAY_ON_CLOSE = 0x0000;
 
     Tes = DFT1T2D_TES_DE_T2_T1 * (Uint32)100 * FPGA_COUNT; // 所有TES都是0.5ms
-    Tel = DFT1T2D_TEL4_DE;
-    Ne = DFT1T2D_NE_DE;
+    Tel = DFT1T2D_TEL4_DE;  // 80
+    Ne = DFT1T2D_NE_DE;  // 752
 
     PhaseFlag = NEGATIVE;
     MiniScan(FreqAry[DFT1T2DFreqSelAry[1]], MiniStorAddr1 + 9, MiniStorAddr1);
     MiniStorAddr1 += 12;
 
+    InverseTurnFlag = SET; //-90脉冲
     DCWorkOnce(DFT1T2DFreqSelAry[1]);
 
     Pulse90StoreAddr++;
     PulseF180StoreAddr++;
     PulseL180StoreAddr++;
-    InverseTurnFlag = SET; //-90脉冲
     EchoStorAddr += 2 * Ne;
 
     RELAY_ON_CLOSE = RelayAry[DFT1T2DFreqSelAry[1]] << 8;
@@ -848,19 +851,19 @@ void DFT1T2DModeTop(void)
     RELAY_ON_CLOSE = 0x0000;
 
     Tes = DFT1T2D_TES_DE_T2_T1 * (Uint32)100 * FPGA_COUNT; // 所有TES都是0.5ms
-    Tel = DFT1T2D_TEL1_DE;
-    Ne = DFT1T2D_NE_DE;
+    Tel = DFT1T2D_TEL1_DE;  // 20
+    Ne = DFT1T2D_NE_DE;   // 752
 
     PhaseFlag = NEGATIVE;
     MiniScan(FreqAry[DFT1T2DFreqSelAry[2]], MiniStorAddr2 + 9, MiniStorAddr2);\
     MiniStorAddr2 += 12;
 
+    InverseTurnFlag = SET; //-90脉冲
     DCWorkOnce(DFT1T2DFreqSelAry[2]);
 
     Pulse90StoreAddr++;
     PulseF180StoreAddr++;
     PulseL180StoreAddr++;
-    InverseTurnFlag = SET; //-90脉冲
     EchoStorAddr += 2 * Ne;
 
     RELAY_ON_CLOSE = RelayAry[DFT1T2DFreqSelAry[2]] << 8;
@@ -875,19 +878,19 @@ void DFT1T2DModeTop(void)
     RELAY_ON_CLOSE = 0x0000;
 
     Tes = DFT1T2D_TES_DE_T2_T1 * (Uint32)100 * FPGA_COUNT; // 所有TES都是0.5ms
-    Tel = DFT1T2D_TEL5_DE;
-    Ne = DFT1T2D_NE_DE;
+    Tel = DFT1T2D_TEL5_DE;  // 120
+    Ne = DFT1T2D_NE_DE;  // 752
 
     PhaseFlag = POSITIVE;
     MiniScan(FreqAry[DFT1T2DFreqSelAry[1]], MiniStorAddr1 + 9, MiniStorAddr1);
     MiniStorAddr1 += 12;
 
+    InverseTurnFlag = SET; //-90脉冲
     DCWorkOnce(DFT1T2DFreqSelAry[1]);
 
     Pulse90StoreAddr++;
     PulseF180StoreAddr++;
     PulseL180StoreAddr++;
-    InverseTurnFlag = SET; //-90脉冲
     EchoStorAddr += 2 * Ne;
 
     RELAY_ON_CLOSE = RelayAry[DFT1T2DFreqSelAry[1]] << 8;
@@ -902,20 +905,20 @@ void DFT1T2DModeTop(void)
     RELAY_ON_CLOSE = 0x0000;
 
     Tes = DFT1T2D_TES_DE_T2_T1 * (Uint32)100 * FPGA_COUNT; // 所有TES都是0.5ms
-    Tel = DFT1T2D_TEL2_DE;
-    Ne = DFT1T2D_NE_DE;
+    Tel = DFT1T2D_TEL2_DE;  // 30
+    Ne = DFT1T2D_NE_DE;  // 752
 
     PhaseFlag = POSITIVE;
 
     MiniScan(FreqAry[DFT1T2DFreqSelAry[2]], MiniStorAddr2 + 9, MiniStorAddr2);
     MiniStorAddr2 += 12;
 
+    InverseTurnFlag = SET; //-90脉冲
     DCWorkOnce(DFT1T2DFreqSelAry[2]);
 
     Pulse90StoreAddr++;
     PulseF180StoreAddr++;
     PulseL180StoreAddr++;
-    InverseTurnFlag = SET; //-90脉冲
     EchoStorAddr += 2 * Ne;
 
     RELAY_ON_CLOSE = RelayAry[DFT1T2DFreqSelAry[2]] << 8;
@@ -930,8 +933,8 @@ void DFT1T2DModeTop(void)
     RELAY_ON_CLOSE = 0x0000;
 
     Tes = DFT1T2D_TES_DE_T2_T1 * (Uint32)100 * FPGA_COUNT; // 所有TES都是0.5ms
-    Tel = DFT1T2D_TEL5_DE;
-    Ne = DFT1T2D_NE_DE;
+    Tel = DFT1T2D_TEL5_DE;  // 120
+    Ne = DFT1T2D_NE_DE;  // 752
 
     PhaseFlag = NEGATIVE;
 
@@ -939,12 +942,12 @@ void DFT1T2DModeTop(void)
     MiniScan(FreqAry[DFT1T2DFreqSelAry[1]], MiniStorAddr1 + 9, MiniStorAddr1);
     MiniStorAddr1 += 12;
 
+    InverseTurnFlag = SET; //-90脉冲
     DCWorkOnce(DFT1T2DFreqSelAry[1]);
 
     Pulse90StoreAddr++;
     PulseF180StoreAddr++;
     PulseL180StoreAddr++;
-    InverseTurnFlag = SET; //-90脉冲
     EchoStorAddr += 2 * Ne;
 
     RELAY_ON_CLOSE = RelayAry[DFT1T2DFreqSelAry[1]] << 8;
@@ -959,27 +962,27 @@ void DFT1T2DModeTop(void)
     RELAY_ON_CLOSE = 0x0000;
 
     Tes = DFT1T2D_TES_DE_T2_T1 * (Uint32)100 * FPGA_COUNT; // 所有TES都是0.5ms
-    Tel = DFT1T2D_TEL2_DE;
-    Ne = DFT1T2D_NE_DE;
+    Tel = DFT1T2D_TEL2_DE; // 30
+    Ne = DFT1T2D_NE_DE;  // 752
 
     PhaseFlag = NEGATIVE;
 
     MiniScan(FreqAry[DFT1T2DFreqSelAry[2]], MiniStorAddr2 + 9, MiniStorAddr2);
     MiniStorAddr2 += 12;
 
+    InverseTurnFlag = SET; //-90脉冲
     DCWorkOnce(DFT1T2DFreqSelAry[2]);
 
     Pulse90StoreAddr++;
     PulseF180StoreAddr++;
     PulseL180StoreAddr++;
-    InverseTurnFlag = SET; //-90脉冲
     EchoStorAddr += 2 * Ne;
 
     // B5+- DE -90脉冲
     PhaseFlag = POSITIVE;
     Tes = DFT1T2D_TES_DE_T2_T1 * (Uint32)100 * FPGA_COUNT; // 所有TES都是0.5ms
-    Tel = DFT1T2D_TEL3_DE;
-    Ne = DFT1T2D_NE_DE;
+    Tel = DFT1T2D_TEL3_DE;  // 50
+    Ne = DFT1T2D_NE_DE;  // 752
 
     for (DFT1T2D_cnt = 0; DFT1T2D_cnt < 2; DFT1T2D_cnt++)
     {
@@ -987,21 +990,21 @@ void DFT1T2DModeTop(void)
         MiniScan(FreqAry[DFT1T2DFreqSelAry[2]], MiniStorAddr2 + 9, MiniStorAddr2);
         MiniStorAddr2 += 12;
 
+        InverseTurnFlag = SET;
         DCWorkOnce(DFT1T2DFreqSelAry[2]);
 
         ChangePhase();
         Pulse90StoreAddr++;
         PulseF180StoreAddr++;
         PulseL180StoreAddr++;
-        InverseTurnFlag = SET;
         EchoStorAddr += 2 * Ne;
     }
 
     // B6+- DE -90脉冲
     PhaseFlag = POSITIVE;
     Tes = DFT1T2D_TES_DE_T2_T1 * (Uint32)100 * FPGA_COUNT; // 所有TES都是0.5ms
-    Tel = DFT1T2D_TEL4_DE;
-    Ne = DFT1T2D_NE_DE;
+    Tel = DFT1T2D_TEL4_DE;  // 80
+    Ne = DFT1T2D_NE_DE;    // 752
 
     for (DFT1T2D_cnt = 0; DFT1T2D_cnt < 2; DFT1T2D_cnt++)
     {
@@ -1009,21 +1012,21 @@ void DFT1T2DModeTop(void)
         MiniScan(FreqAry[DFT1T2DFreqSelAry[2]], MiniStorAddr2 + 9, MiniStorAddr2);
         MiniStorAddr2 += 12;
 
+        InverseTurnFlag = SET;
         DCWorkOnce(DFT1T2DFreqSelAry[2]);
 
         ChangePhase();
         Pulse90StoreAddr++;
         PulseF180StoreAddr++;
         PulseL180StoreAddr++;
-        InverseTurnFlag = SET;
         EchoStorAddr += 2 * Ne;
     }
 
     // B7+- DE -90脉冲
     PhaseFlag = POSITIVE;
     Tes = DFT1T2D_TES_DE_T2_T1 * (Uint32)100 * FPGA_COUNT; // 所有TES都是0.5ms
-    Tel = DFT1T2D_TEL5_DE;
-    Ne = DFT1T2D_NE_DE;
+    Tel = DFT1T2D_TEL5_DE;  // 120
+    Ne = DFT1T2D_NE_DE;  // 752
 
     for (DFT1T2D_cnt = 0; DFT1T2D_cnt < 2; DFT1T2D_cnt++)
     {
@@ -1031,13 +1034,13 @@ void DFT1T2DModeTop(void)
         MiniScan(FreqAry[DFT1T2DFreqSelAry[2]], MiniStorAddr2 + 9, MiniStorAddr2);
         MiniStorAddr2 += 12;
 
+        InverseTurnFlag = SET;
         DCWorkOnce(DFT1T2DFreqSelAry[2]);
 
         ChangePhase();
         Pulse90StoreAddr++;
         PulseF180StoreAddr++;
         PulseL180StoreAddr++;
-        InverseTurnFlag = SET;
         EchoStorAddr += 2 * Ne;
     }
 

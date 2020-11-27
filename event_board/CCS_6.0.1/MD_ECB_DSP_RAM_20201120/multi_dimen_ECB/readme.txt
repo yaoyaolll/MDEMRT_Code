@@ -2,6 +2,10 @@ Description	Resource	Path	Location	Type
 #16002-D build attribute vendor section TI missing in "../lib/IQmath.lib<IQ10atan2.obj>": compatibility cannot be determined	multi_dimen_ECB		 	C/C++ Problem
 此warning是旧版本编译lib，与6.0不兼容，将warning index屏蔽
 
+备注：
+1.模式采集数据时，电流偏大一般是继电器代码存在问题。
+2.一对正反序列，回波数据基本为水平线可能是没有做反向。
+
 多维事件板RAM程序
 程序修改：B3频EchoStorAddr增加数量有问题，第100行，已删去。
 文件位置：HRT1T22FModeTop.c
@@ -29,6 +33,11 @@ Description	Resource	Path	Location	Type
 时间：2020年11月18日
 
 程序修改：PPHOIL6F_2模式中部分变量参数缺失，已修复
-文件位置：PPHOIL6FModeTop.c
+文件位置：PPHOIL6F_2ModeTop.c
 修改人：刘垚
 时间：2020年11月20日
+
+程序修改：ST2DModeTop、DFT1T2DModeTop模式中存在部分变量赋值错误，已修复
+文件位置：DFT1T2DModeTop.c、T2DModeTop.c
+修改人：刘垚
+时间：2020年11月27日

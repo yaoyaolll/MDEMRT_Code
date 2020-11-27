@@ -35,19 +35,19 @@ void ST2DModeTop(void)
 {
 	ScaleMn	= 1;	
 	ScaleM	= 0;
-	EchoNum	= 2*(1+T2DCBWNreptA+T2DDEmn);
-	DataTotalNum	= 4*(T2DCPMGNeA+T2DDENeA*T2DDEmn+T2DCBWNeA*T2DCBWNreptA);
+	EchoNum	= 2*(1+T2DCBWNreptA+T2DDEmn);  //62
+	DataTotalNum	= 4*(T2DCPMGNeA+T2DDENeA*T2DDEmn+T2DCBWNeA*T2DCBWNreptA);  // 30456
 	MiniStorAddr1	= MINITABLE_START+1;	
 	PhaseFlag		= POSITIVE;	   
 //A1+
-	RELAY_ON_CLOSE = RelayAry[T2DFreqSel];   //¼ÌµçÆ÷±ÕºÏ
+	RELAY_ON_CLOSE = RelayAry[T2DFreqSel];   //ï¿½Ìµï¿½ï¿½ï¿½ï¿½Õºï¿½
 	Delay(120);                       
 	RELAY_ON_CLOSE = 0x0000;
 
-	Tes	= (Uint32)100 * T2DDCTesA *  FPGA_COUNT;
+	Tes	= (Uint32)100 * T2DDCTesA *  FPGA_COUNT;  // 5
 	Tel	= Tes;  
-	Ne	= T2DCPMGNeA;
-	Pulse90StoreAddr	= T2D_STORE_START+(Uint32)DataTotalNum+26;
+	Ne	= T2DCPMGNeA;  // 1002
+	Pulse90StoreAddr	= T2D_STORE_START+(Uint32)DataTotalNum+24;   //0x127712 30482
 	PulseF180StoreAddr	= Pulse90StoreAddr+EchoNum;
 	PulseL180StoreAddr	= PulseF180StoreAddr+EchoNum;
 	EchoStorAddr		= T2D_STORE_START+(Uint32)12;
@@ -59,10 +59,10 @@ void ST2DModeTop(void)
 	PulseL180StoreAddr+=2;		
 	EchoStorAddr += 4*T2DCPMGNeA;						  	
 //A8+-
-	Tes	= (Uint32)100 * T2DCBWTeAB *  FPGA_COUNT;
+	Tes	= (Uint32)100 * T2DCBWTeAB *  FPGA_COUNT;  // 4
 	Tel	= Tes;  
-	Ne	= T2DCBWNeA;
-	for (T2DCnt=0;T2DCnt<2*T2DCBWNreptA;T2DCnt++)
+	Ne	= T2DCBWNeA;  // 25
+	for (T2DCnt=0;T2DCnt<2*T2DCBWNreptA;T2DCnt++)  // T2DCBWNreptA = 24
 	{		
 		if (T2DCnt==0)
 		{
@@ -85,13 +85,13 @@ void ST2DModeTop(void)
 		}							
 	}
 //A1-
-	Tes	= (Uint32)100 * T2DDCTesA *  FPGA_COUNT;
+	Tes	= (Uint32)100 * T2DDCTesA *  FPGA_COUNT;  // 5
 	Tel	= Tes;  
-	Ne	= T2DCPMGNeA;
+	Ne	= T2DCPMGNeA;  // 1002
 	Pulse90StoreAddr	-= 2*T2DCBWNreptA+1;
 	PulseF180StoreAddr	-= 2*T2DCBWNreptA+1;
 	PulseL180StoreAddr	-= 2*T2DCBWNreptA+1;
-	EchoStorAddr 		-= 4*(Uint32)T2DCBWNeA*T2DCBWNreptA+2*T2DCPMGNeA;
+	EchoStorAddr 		-= 4*(Uint32)T2DCBWNeA*T2DCBWNreptA+2*T2DCPMGNeA;  // 25 24 1002
 	StartS1msModule(T2DCPMGTwA*FPGA_BC+T2D_REPAIR1-MINI_TEST);
 	MiniScan(FreqAry[T2DFreqSel],MiniStorAddr1+9,MiniStorAddr1);
 	MiniStorAddr1+= 24;
@@ -104,9 +104,9 @@ void ST2DModeTop(void)
 	ChangePhase();
 
 //A2-A7+-
-	Tes	= (Uint32)100 * T2DDCTesA *  FPGA_COUNT;
-	Ne	= T2DDENeA;
-	ScaleM	= T2DDEm;
+	Tes	= (Uint32)100 * T2DDCTesA *  FPGA_COUNT; // 5
+	Ne	= T2DDENeA;  // 1002
+	ScaleM	= T2DDEm;  // 2
 	for (T2DCnt=2;T2DCnt<2*T2DDEmn+2;T2DCnt++)
 	{
 		StartS1msModule(T2DDETwA*FPGA_BC+T2D_REPAIR1-MINI_TEST);
@@ -120,7 +120,7 @@ void ST2DModeTop(void)
 		Pulse90StoreAddr++;
 		PulseF180StoreAddr++;
 		PulseL180StoreAddr++;
-		EchoStorAddr += 2*T2DDENeA;	
+		EchoStorAddr += 2*T2DDENeA;	 // 0x127704
 	}	  
 	
 	RELAY_ON_CLOSE = RelayAry[T2DFreqSel]<<8;   
@@ -137,13 +137,13 @@ void ST2DModeTop(void)
 	SaveNTempPt++;
 	*SaveNTempPt	= 0x55AA;
 
-	SaveNTempPt	= (int *)(T2D_STORE_START+DataTotalNum+21);
-	SaveSTempPt	= (Uint16 *)(T2D_STORE_START+DataTotalNum+12);
-	ST2DMiniNum	= 3+2*T2DDEmn;
+	SaveNTempPt	= (int *)(T2D_STORE_START+DataTotalNum+21); // 30477  noise
+	SaveSTempPt	= (Uint16 *)(T2D_STORE_START+DataTotalNum+12); // 30468  scan frequency value
+	ST2DMiniNum	= 3+2*T2DDEmn;  // 15
 	StoreMiniAryPt	= &ST2DMiniNum;
 	StoreMini(1,SaveNTempPt,SaveSTempPt); 
 
-	McbspSendData(T2D_STORE_START,DataTotalNum+3*EchoNum+26);
+	McbspSendData(T2D_STORE_START,DataTotalNum+3*EchoNum+26);  // 30668
 	asm(" NOP");
 	asm(" NOP");
 	asm(" NOP");
@@ -171,7 +171,7 @@ void DT2DModeTop(void)
 
 	PhaseFlag	= POSITIVE;	   
 //A1+
-	RELAY_ON_CLOSE = RelayAry[T2DFreqSelAry[1]];   //¼ÌµçÆ÷±ÕºÏ
+	RELAY_ON_CLOSE = RelayAry[T2DFreqSelAry[1]];   //ï¿½Ìµï¿½ï¿½ï¿½ï¿½Õºï¿½
 	Delay(120);                       
 	RELAY_ON_CLOSE = 0x0000;
 
@@ -216,13 +216,13 @@ void DT2DModeTop(void)
 		
 	}
 	ChangePhase();
-	RELAY_ON_CLOSE = RelayAry[T2DFreqSelAry[1]]<<8;   //¼ÌµçÆ÷¶Ï¿ª
+	RELAY_ON_CLOSE = RelayAry[T2DFreqSelAry[1]]<<8;   //ï¿½Ìµï¿½ï¿½ï¿½ï¿½Ï¿ï¿½
 	Delay(120);                       
 	RELAY_ON_CLOSE = 0x0000;
 //B1+
 	StartS1msModule(T2DTwMid2*FPGA_BC+1-MINI_TEST);//the time parameter should be adjusted
 		
-	RELAY_ON_CLOSE = RelayAry[T2DFreqSelAry[2]];   //¼ÌµçÆ÷±ÕºÏ
+	RELAY_ON_CLOSE = RelayAry[T2DFreqSelAry[2]];   //ï¿½Ìµï¿½ï¿½ï¿½ï¿½Õºï¿½
 	Delay(120);                       
 	RELAY_ON_CLOSE = 0x0000;
 
@@ -262,13 +262,13 @@ void DT2DModeTop(void)
 			ChangePhase();
 		}									
 	}
-	RELAY_ON_CLOSE = RelayAry[T2DFreqSelAry[2]]<<8;   //¼ÌµçÆ÷¶Ï¿ª
+	RELAY_ON_CLOSE = RelayAry[T2DFreqSelAry[2]]<<8;   //ï¿½Ìµï¿½ï¿½ï¿½ï¿½Ï¿ï¿½
 	Delay(120);                       
 	RELAY_ON_CLOSE = 0x0000;
 //A1-
 	StartS1msModule(T2DTwMid1*FPGA_BC+1-MINI_TEST);
 
-	RELAY_ON_CLOSE = RelayAry[T2DFreqSelAry[1]];   //¼ÌµçÆ÷±ÕºÏ
+	RELAY_ON_CLOSE = RelayAry[T2DFreqSelAry[1]];   //ï¿½Ìµï¿½ï¿½ï¿½ï¿½Õºï¿½
 	Delay(120);                       
 	RELAY_ON_CLOSE = 0x0000;
 
@@ -305,13 +305,13 @@ void DT2DModeTop(void)
 	DCWorkOnce(T2DFreqSelAry[1]);
 	EchoStorAddr += 2*T2DDENeA;	
 
-	RELAY_ON_CLOSE = RelayAry[T2DFreqSelAry[1]]<<8;   //¼ÌµçÆ÷¶Ï¿ª
+	RELAY_ON_CLOSE = RelayAry[T2DFreqSelAry[1]]<<8;   //ï¿½Ìµï¿½ï¿½ï¿½ï¿½Ï¿ï¿½
 	Delay(120);                       
 	RELAY_ON_CLOSE = 0x0000;
 //B1-
 	StartS1msModule(1455-MINI_TEST);
 
-	RELAY_ON_CLOSE = RelayAry[T2DFreqSelAry[2]];   //¼ÌµçÆ÷±ÕºÏ
+	RELAY_ON_CLOSE = RelayAry[T2DFreqSelAry[2]];   //ï¿½Ìµï¿½ï¿½ï¿½ï¿½Õºï¿½
 	Delay(120);                       
 	RELAY_ON_CLOSE = 0x0000;
 
@@ -331,13 +331,13 @@ void DT2DModeTop(void)
 	DCWorkOnce(T2DFreqSelAry[2]);
 	EchoStorAddr += 2*T2DCPMGNeB;	
 	//Delay(30);
-	RELAY_ON_CLOSE = RelayAry[T2DFreqSelAry[2]]<<8;   //¼ÌµçÆ÷¶Ï¿ª
+	RELAY_ON_CLOSE = RelayAry[T2DFreqSelAry[2]]<<8;   //ï¿½Ìµï¿½ï¿½ï¿½ï¿½Ï¿ï¿½
 	Delay(120);                       
 	RELAY_ON_CLOSE = 0x0000;
 //A2-
 	StartS1msModule(2039-MINI_TEST);
 
-	RELAY_ON_CLOSE = RelayAry[T2DFreqSelAry[1]];   //¼ÌµçÆ÷±ÕºÏ
+	RELAY_ON_CLOSE = RelayAry[T2DFreqSelAry[1]];   //ï¿½Ìµï¿½ï¿½ï¿½ï¿½Õºï¿½
 	Delay(120);                       
 	RELAY_ON_CLOSE = 0x0000;
 
@@ -355,13 +355,13 @@ void DT2DModeTop(void)
 	DCWorkOnce(T2DFreqSelAry[1]);
 	EchoStorAddr += 2*T2DDENeA;	
 	//Delay(30);
-	RELAY_ON_CLOSE = RelayAry[T2DFreqSelAry[1]]<<8;   //¼ÌµçÆ÷¶Ï¿ª
+	RELAY_ON_CLOSE = RelayAry[T2DFreqSelAry[1]]<<8;   //ï¿½Ìµï¿½ï¿½ï¿½ï¿½Ï¿ï¿½
 	Delay(120);                       
 	RELAY_ON_CLOSE = 0x0000;
 //B2+
 	StartS1msModule(1440-MINI_TEST);
 
-	RELAY_ON_CLOSE = RelayAry[T2DFreqSelAry[2]];   //¼ÌµçÆ÷¶Ï¿ª
+	RELAY_ON_CLOSE = RelayAry[T2DFreqSelAry[2]];   //ï¿½Ìµï¿½ï¿½ï¿½ï¿½Ï¿ï¿½
 	Delay(120);                       
 	RELAY_ON_CLOSE = 0x0000;
 
@@ -381,13 +381,13 @@ void DT2DModeTop(void)
 	EchoStorAddr += 2*T2DDENeB;	
 	//Delay(30);
 
-	RELAY_ON_CLOSE = RelayAry[T2DFreqSelAry[2]]<<8;   //¼ÌµçÆ÷¶Ï¿ª
+	RELAY_ON_CLOSE = RelayAry[T2DFreqSelAry[2]]<<8;   //ï¿½Ìµï¿½ï¿½ï¿½ï¿½Ï¿ï¿½
 	Delay(120);                       
 	RELAY_ON_CLOSE = 0x0000;
 //A3+
 	StartS1msModule(2039-MINI_TEST);
 
-	RELAY_ON_CLOSE = RelayAry[T2DFreqSelAry[1]];   //¼ÌµçÆ÷¶Ï¿ª
+	RELAY_ON_CLOSE = RelayAry[T2DFreqSelAry[1]];   //ï¿½Ìµï¿½ï¿½ï¿½ï¿½Ï¿ï¿½
 	Delay(120);                       
 	RELAY_ON_CLOSE = 0x0000;
 
@@ -405,13 +405,13 @@ void DT2DModeTop(void)
 	EchoStorAddr += 2*T2DDENeA;	
 	//Delay(30);
 
-	RELAY_ON_CLOSE = RelayAry[T2DFreqSelAry[1]]<<8;   //¼ÌµçÆ÷¶Ï¿ª
+	RELAY_ON_CLOSE = RelayAry[T2DFreqSelAry[1]]<<8;   //ï¿½Ìµï¿½ï¿½ï¿½ï¿½Ï¿ï¿½
 	Delay(120);                       
 	RELAY_ON_CLOSE = 0x0000;
 //B2-
 	StartS1msModule(1430-MINI_TEST);
 
-	RELAY_ON_CLOSE = RelayAry[T2DFreqSelAry[2]];   //¼ÌµçÆ÷¶Ï¿ª
+	RELAY_ON_CLOSE = RelayAry[T2DFreqSelAry[2]];   //ï¿½Ìµï¿½ï¿½ï¿½ï¿½Ï¿ï¿½
 	Delay(120);                       
 	RELAY_ON_CLOSE = 0x0000;
 
@@ -431,13 +431,13 @@ void DT2DModeTop(void)
 	EchoStorAddr += 2*T2DDENeB;	
 	//Delay(30);
 
-	RELAY_ON_CLOSE = RelayAry[T2DFreqSelAry[2]]<<8;   //¼ÌµçÆ÷¶Ï¿ª
+	RELAY_ON_CLOSE = RelayAry[T2DFreqSelAry[2]]<<8;   //ï¿½Ìµï¿½ï¿½ï¿½ï¿½Ï¿ï¿½
 	Delay(120);                       
 	RELAY_ON_CLOSE = 0x0000;
 //A3-
 	StartS1msModule(2049-MINI_TEST);
 
-	RELAY_ON_CLOSE = RelayAry[T2DFreqSelAry[1]];   //¼ÌµçÆ÷¶Ï¿ª
+	RELAY_ON_CLOSE = RelayAry[T2DFreqSelAry[1]];   //ï¿½Ìµï¿½ï¿½ï¿½ï¿½Ï¿ï¿½
 	Delay(120);                       
 	RELAY_ON_CLOSE = 0x0000;
 
@@ -455,13 +455,13 @@ void DT2DModeTop(void)
 	EchoStorAddr += 2*T2DDENeA;	
 	//Delay(30);
 
-	RELAY_ON_CLOSE = RelayAry[T2DFreqSelAry[1]]<<8;   //¼ÌµçÆ÷¶Ï¿ª
+	RELAY_ON_CLOSE = RelayAry[T2DFreqSelAry[1]]<<8;   //ï¿½Ìµï¿½ï¿½ï¿½ï¿½Ï¿ï¿½
 	Delay(120);                       
 	RELAY_ON_CLOSE = 0x0000;
 //B3+
 	StartS1msModule(1420-MINI_TEST);
 
-	RELAY_ON_CLOSE = RelayAry[T2DFreqSelAry[2]];   //¼ÌµçÆ÷¶Ï¿ª
+	RELAY_ON_CLOSE = RelayAry[T2DFreqSelAry[2]];   //ï¿½Ìµï¿½ï¿½ï¿½ï¿½Ï¿ï¿½
 	Delay(120);                       
 	RELAY_ON_CLOSE = 0x0000;
 
@@ -481,13 +481,13 @@ void DT2DModeTop(void)
 	EchoStorAddr += 2*T2DDENeB;	
 	//Delay(30);
 
-	RELAY_ON_CLOSE = RelayAry[T2DFreqSelAry[2]]<<8;   //¼ÌµçÆ÷¶Ï¿ª
+	RELAY_ON_CLOSE = RelayAry[T2DFreqSelAry[2]]<<8;   //ï¿½Ìµï¿½ï¿½ï¿½ï¿½Ï¿ï¿½
 	Delay(120);                       
 	RELAY_ON_CLOSE = 0x0000;
 //A4+
 	StartS1msModule(2049-MINI_TEST);
 
-	RELAY_ON_CLOSE = RelayAry[T2DFreqSelAry[1]];   //¼ÌµçÆ÷¶Ï¿ª
+	RELAY_ON_CLOSE = RelayAry[T2DFreqSelAry[1]];   //ï¿½Ìµï¿½ï¿½ï¿½ï¿½Ï¿ï¿½
 	Delay(120);                       
 	RELAY_ON_CLOSE = 0x0000;
 
@@ -505,13 +505,13 @@ void DT2DModeTop(void)
 	EchoStorAddr += 2*T2DDENeA;	
 	//Delay(30);
 
-	RELAY_ON_CLOSE = RelayAry[T2DFreqSelAry[1]]<<8;   //¼ÌµçÆ÷¶Ï¿ª
+	RELAY_ON_CLOSE = RelayAry[T2DFreqSelAry[1]]<<8;   //ï¿½Ìµï¿½ï¿½ï¿½ï¿½Ï¿ï¿½
 	Delay(120);                       
 	RELAY_ON_CLOSE = 0x0000;
 //B3-
 	StartS1msModule(1400-MINI_TEST);
 
-	RELAY_ON_CLOSE = RelayAry[T2DFreqSelAry[2]];   //¼ÌµçÆ÷¶Ï¿ª
+	RELAY_ON_CLOSE = RelayAry[T2DFreqSelAry[2]];   //ï¿½Ìµï¿½ï¿½ï¿½ï¿½Ï¿ï¿½
 	Delay(120);                       
 	RELAY_ON_CLOSE = 0x0000;
 
@@ -530,13 +530,13 @@ void DT2DModeTop(void)
 	DCWorkOnce(T2DFreqSelAry[2]);
 	EchoStorAddr += 2*T2DDENeB;	
 	//Delay(30);
-	RELAY_ON_CLOSE = RelayAry[T2DFreqSelAry[2]]<<8;   //¼ÌµçÆ÷¶Ï¿ª
+	RELAY_ON_CLOSE = RelayAry[T2DFreqSelAry[2]]<<8;   //ï¿½Ìµï¿½ï¿½ï¿½ï¿½Ï¿ï¿½
 	Delay(120);                       
 	RELAY_ON_CLOSE = 0x0000;
 //A4-
 	StartS1msModule(2069-MINI_TEST);
 
-	RELAY_ON_CLOSE = RelayAry[T2DFreqSelAry[1]];   //¼ÌµçÆ÷¶Ï¿ª
+	RELAY_ON_CLOSE = RelayAry[T2DFreqSelAry[1]];   //ï¿½Ìµï¿½ï¿½ï¿½ï¿½Ï¿ï¿½
 	Delay(120);                       
 	RELAY_ON_CLOSE = 0x0000;
 
@@ -554,13 +554,13 @@ void DT2DModeTop(void)
 	EchoStorAddr += 2*T2DDENeA;	
 	//Delay(30);
 
-	RELAY_ON_CLOSE = RelayAry[T2DFreqSelAry[1]]<<8;   //¼ÌµçÆ÷¶Ï¿ª
+	RELAY_ON_CLOSE = RelayAry[T2DFreqSelAry[1]]<<8;   //ï¿½Ìµï¿½ï¿½ï¿½ï¿½Ï¿ï¿½
 	Delay(120);                       
 	RELAY_ON_CLOSE = 0x0000;
 //B4+
 	StartS1msModule(1380-MINI_TEST);
 
-	RELAY_ON_CLOSE = RelayAry[T2DFreqSelAry[2]];   //¼ÌµçÆ÷¶Ï¿ª
+	RELAY_ON_CLOSE = RelayAry[T2DFreqSelAry[2]];   //ï¿½Ìµï¿½ï¿½ï¿½ï¿½Ï¿ï¿½
 	Delay(120);                       
 	RELAY_ON_CLOSE = 0x0000;
 
@@ -579,13 +579,13 @@ void DT2DModeTop(void)
 	DCWorkOnce(T2DFreqSelAry[2]);
 	EchoStorAddr += 2*T2DDENeB;	
 	//Delay(30);
-	RELAY_ON_CLOSE = RelayAry[T2DFreqSelAry[2]]<<8;   //¼ÌµçÆ÷¶Ï¿ª
+	RELAY_ON_CLOSE = RelayAry[T2DFreqSelAry[2]]<<8;   //ï¿½Ìµï¿½ï¿½ï¿½ï¿½Ï¿ï¿½
 	Delay(120);                       
 	RELAY_ON_CLOSE = 0x0000;
 //A5+
 	StartS1msModule(2069-MINI_TEST);
 
-	RELAY_ON_CLOSE = RelayAry[T2DFreqSelAry[1]];   //¼ÌµçÆ÷¶Ï¿ª
+	RELAY_ON_CLOSE = RelayAry[T2DFreqSelAry[1]];   //ï¿½Ìµï¿½ï¿½ï¿½ï¿½Ï¿ï¿½
 	Delay(120);                       
 	RELAY_ON_CLOSE = 0x0000;
 
@@ -603,13 +603,13 @@ void DT2DModeTop(void)
 	EchoStorAddr += 2*T2DDENeA;	
 	//Delay(30);
 
-	RELAY_ON_CLOSE = RelayAry[T2DFreqSelAry[1]]<<8;   //¼ÌµçÆ÷¶Ï¿ª
+	RELAY_ON_CLOSE = RelayAry[T2DFreqSelAry[1]]<<8;   //ï¿½Ìµï¿½ï¿½ï¿½ï¿½Ï¿ï¿½
 	Delay(120);                       
 	RELAY_ON_CLOSE = 0x0000;
 //B4-
 	StartS1msModule(1350-MINI_TEST);
 
-	RELAY_ON_CLOSE = RelayAry[T2DFreqSelAry[2]];   //¼ÌµçÆ÷¶Ï¿ª
+	RELAY_ON_CLOSE = RelayAry[T2DFreqSelAry[2]];   //ï¿½Ìµï¿½ï¿½ï¿½ï¿½Ï¿ï¿½
 	Delay(120);                       
 	RELAY_ON_CLOSE = 0x0000;
 
@@ -628,13 +628,13 @@ void DT2DModeTop(void)
 	DCWorkOnce(T2DFreqSelAry[2]);
 	EchoStorAddr += 2*T2DDENeB;	
 	//Delay(30);
-	RELAY_ON_CLOSE = RelayAry[T2DFreqSelAry[2]]<<8;   //¼ÌµçÆ÷¶Ï¿ª
+	RELAY_ON_CLOSE = RelayAry[T2DFreqSelAry[2]]<<8;   //ï¿½Ìµï¿½ï¿½ï¿½ï¿½Ï¿ï¿½
 	Delay(120);                       
 	RELAY_ON_CLOSE = 0x0000;
 //A5-
 	StartS1msModule(2099-MINI_TEST);
 
-	RELAY_ON_CLOSE = RelayAry[T2DFreqSelAry[1]];   //¼ÌµçÆ÷¶Ï¿ª
+	RELAY_ON_CLOSE = RelayAry[T2DFreqSelAry[1]];   //ï¿½Ìµï¿½ï¿½ï¿½ï¿½Ï¿ï¿½
 	Delay(120);                       
 	RELAY_ON_CLOSE = 0x0000;
 
@@ -652,13 +652,13 @@ void DT2DModeTop(void)
 	EchoStorAddr += 2*T2DDENeA;	
 	//Delay(30);
 
-	RELAY_ON_CLOSE = RelayAry[T2DFreqSelAry[1]]<<8;   //¼ÌµçÆ÷¶Ï¿ª
+	RELAY_ON_CLOSE = RelayAry[T2DFreqSelAry[1]]<<8;   //ï¿½Ìµï¿½ï¿½ï¿½ï¿½Ï¿ï¿½
 	Delay(120);                       
 	RELAY_ON_CLOSE = 0x0000;
 //B5+
 	StartS1msModule(1320-MINI_TEST);
 
-	RELAY_ON_CLOSE = RelayAry[T2DFreqSelAry[2]];   //¼ÌµçÆ÷¶Ï¿ª
+	RELAY_ON_CLOSE = RelayAry[T2DFreqSelAry[2]];   //ï¿½Ìµï¿½ï¿½ï¿½ï¿½Ï¿ï¿½
 	Delay(120);                       
 	RELAY_ON_CLOSE = 0x0000;
 
@@ -677,13 +677,13 @@ void DT2DModeTop(void)
 	DCWorkOnce(T2DFreqSelAry[2]);
 	EchoStorAddr += 2*T2DDENeB;	
 	//Delay(30);
-	RELAY_ON_CLOSE = RelayAry[T2DFreqSelAry[2]]<<8;   //¼ÌµçÆ÷¶Ï¿ª
+	RELAY_ON_CLOSE = RelayAry[T2DFreqSelAry[2]]<<8;   //ï¿½Ìµï¿½ï¿½ï¿½ï¿½Ï¿ï¿½
 	Delay(120);                       
 	RELAY_ON_CLOSE = 0x0000;
 //A6+
 	StartS1msModule(2099-MINI_TEST);
 
-	RELAY_ON_CLOSE = RelayAry[T2DFreqSelAry[1]];   //¼ÌµçÆ÷¶Ï¿ª
+	RELAY_ON_CLOSE = RelayAry[T2DFreqSelAry[1]];   //ï¿½Ìµï¿½ï¿½ï¿½ï¿½Ï¿ï¿½
 	Delay(120);                       
 	RELAY_ON_CLOSE = 0x0000;
 
@@ -701,13 +701,13 @@ void DT2DModeTop(void)
 	EchoStorAddr += 2*T2DDENeA;	
 	//Delay(30);
 
-	RELAY_ON_CLOSE = RelayAry[T2DFreqSelAry[1]]<<8;   //¼ÌµçÆ÷¶Ï¿ª
+	RELAY_ON_CLOSE = RelayAry[T2DFreqSelAry[1]]<<8;   //ï¿½Ìµï¿½ï¿½ï¿½ï¿½Ï¿ï¿½
 	Delay(120);                       
 	RELAY_ON_CLOSE = 0x0000;
 //B5-
 	StartS1msModule(1280-MINI_TEST);
 
-	RELAY_ON_CLOSE = RelayAry[T2DFreqSelAry[2]];   //¼ÌµçÆ÷¶Ï¿ª
+	RELAY_ON_CLOSE = RelayAry[T2DFreqSelAry[2]];   //ï¿½Ìµï¿½ï¿½ï¿½ï¿½Ï¿ï¿½
 	Delay(120);                       
 	RELAY_ON_CLOSE = 0x0000;
 				 
@@ -726,13 +726,13 @@ void DT2DModeTop(void)
 	DCWorkOnce(T2DFreqSelAry[2]);
 	EchoStorAddr += 2*T2DDENeB;	
 	//Delay(30);
-	RELAY_ON_CLOSE = RelayAry[T2DFreqSelAry[2]]<<8;   //¼ÌµçÆ÷¶Ï¿ª
+	RELAY_ON_CLOSE = RelayAry[T2DFreqSelAry[2]]<<8;   //ï¿½Ìµï¿½ï¿½ï¿½ï¿½Ï¿ï¿½
 	Delay(120);                       
 	RELAY_ON_CLOSE = 0x0000;
 //A6-
 	StartS1msModule(2139-MINI_TEST);
 
-	RELAY_ON_CLOSE = RelayAry[T2DFreqSelAry[1]];   //¼ÌµçÆ÷¶Ï¿ª
+	RELAY_ON_CLOSE = RelayAry[T2DFreqSelAry[1]];   //ï¿½Ìµï¿½ï¿½ï¿½ï¿½Ï¿ï¿½
 	Delay(120);                       
 	RELAY_ON_CLOSE = 0x0000;
 
@@ -750,13 +750,13 @@ void DT2DModeTop(void)
 	EchoStorAddr += 2*T2DDENeA;	
 	//Delay(30);
 
-	RELAY_ON_CLOSE = RelayAry[T2DFreqSelAry[1]]<<8;   //¼ÌµçÆ÷¶Ï¿ª
+	RELAY_ON_CLOSE = RelayAry[T2DFreqSelAry[1]]<<8;   //ï¿½Ìµï¿½ï¿½ï¿½ï¿½Ï¿ï¿½
 	Delay(120);                       
 	RELAY_ON_CLOSE = 0x0000;
 //B6+
 	StartS1msModule(1240-MINI_TEST);
 
-	RELAY_ON_CLOSE = RelayAry[T2DFreqSelAry[2]];   //¼ÌµçÆ÷¶Ï¿ª
+	RELAY_ON_CLOSE = RelayAry[T2DFreqSelAry[2]];   //ï¿½Ìµï¿½ï¿½ï¿½ï¿½Ï¿ï¿½
 	Delay(120);                       
 	RELAY_ON_CLOSE = 0x0000;
 
@@ -775,13 +775,13 @@ void DT2DModeTop(void)
 	DCWorkOnce(T2DFreqSelAry[2]);
 	EchoStorAddr += 2*T2DDENeB;	
 	//Delay(30);
-	RELAY_ON_CLOSE = RelayAry[T2DFreqSelAry[2]]<<8;   //¼ÌµçÆ÷¶Ï¿ª
+	RELAY_ON_CLOSE = RelayAry[T2DFreqSelAry[2]]<<8;   //ï¿½Ìµï¿½ï¿½ï¿½ï¿½Ï¿ï¿½
 	Delay(120);                       
 	RELAY_ON_CLOSE = 0x0000;
 //A7+
 	StartS1msModule(2139-MINI_TEST);
 
-	RELAY_ON_CLOSE = RelayAry[T2DFreqSelAry[1]];   //¼ÌµçÆ÷¶Ï¿ª
+	RELAY_ON_CLOSE = RelayAry[T2DFreqSelAry[1]];   //ï¿½Ìµï¿½ï¿½ï¿½ï¿½Ï¿ï¿½
 	Delay(120);                       
 	RELAY_ON_CLOSE = 0x0000;
 
@@ -799,13 +799,13 @@ void DT2DModeTop(void)
 	EchoStorAddr += 2*T2DDENeA;	
 	//Delay(30);
 
-	RELAY_ON_CLOSE = RelayAry[T2DFreqSelAry[1]]<<8;   //¼ÌµçÆ÷¶Ï¿ª
+	RELAY_ON_CLOSE = RelayAry[T2DFreqSelAry[1]]<<8;   //ï¿½Ìµï¿½ï¿½ï¿½ï¿½Ï¿ï¿½
 	Delay(120);                       
 	RELAY_ON_CLOSE = 0x0000;
 //B6-
 	StartS1msModule(1120-MINI_TEST);
 
-	RELAY_ON_CLOSE = RelayAry[T2DFreqSelAry[2]];   //¼ÌµçÆ÷¶Ï¿ª
+	RELAY_ON_CLOSE = RelayAry[T2DFreqSelAry[2]];   //ï¿½Ìµï¿½ï¿½ï¿½ï¿½Ï¿ï¿½
 	Delay(120);                       
 	RELAY_ON_CLOSE = 0x0000;
 
@@ -824,13 +824,13 @@ void DT2DModeTop(void)
 	DCWorkOnce(T2DFreqSelAry[2]);
 	EchoStorAddr += 2*T2DDENeB;	
 	//Delay(30);
-	RELAY_ON_CLOSE = RelayAry[T2DFreqSelAry[2]]<<8;   //¼ÌµçÆ÷¶Ï¿ª
+	RELAY_ON_CLOSE = RelayAry[T2DFreqSelAry[2]]<<8;   //ï¿½Ìµï¿½ï¿½ï¿½ï¿½Ï¿ï¿½
 	Delay(120);                       
 	RELAY_ON_CLOSE = 0x0000;
 //A7-
 	StartS1msModule(2259-MINI_TEST);
 
-	RELAY_ON_CLOSE = RelayAry[T2DFreqSelAry[1]];   //¼ÌµçÆ÷¶Ï¿ª
+	RELAY_ON_CLOSE = RelayAry[T2DFreqSelAry[1]];   //ï¿½Ìµï¿½ï¿½ï¿½ï¿½Ï¿ï¿½
 	Delay(120);                       
 	RELAY_ON_CLOSE = 0x0000;
 
@@ -848,13 +848,13 @@ void DT2DModeTop(void)
 	EchoStorAddr += 2*T2DDENeA;	
 	//Delay(30);
 
-	RELAY_ON_CLOSE = RelayAry[T2DFreqSelAry[1]]<<8;   //¼ÌµçÆ÷¶Ï¿ª
+	RELAY_ON_CLOSE = RelayAry[T2DFreqSelAry[1]]<<8;   //ï¿½Ìµï¿½ï¿½ï¿½ï¿½Ï¿ï¿½
 	Delay(120);                       
 	RELAY_ON_CLOSE = 0x0000;
 //B7+-
 	StartS1msModule(1001-MINI_TEST);
 
-	RELAY_ON_CLOSE = RelayAry[T2DFreqSelAry[2]];   //¼ÌµçÆ÷¶Ï¿ª
+	RELAY_ON_CLOSE = RelayAry[T2DFreqSelAry[2]];   //ï¿½Ìµï¿½ï¿½ï¿½ï¿½Ï¿ï¿½
 	Delay(120);                       
 	RELAY_ON_CLOSE = 0x0000;
 
@@ -888,7 +888,7 @@ void DT2DModeTop(void)
 	InverseTurnFlag	= SET;
 	DCWorkOnce(T2DFreqSelAry[2]);	
 	//Delay(30);
-	RELAY_ON_CLOSE = RelayAry[T2DFreqSelAry[2]]<<8;   //¼ÌµçÆ÷¶Ï¿ª
+	RELAY_ON_CLOSE = RelayAry[T2DFreqSelAry[2]]<<8;   //ï¿½Ìµï¿½ï¿½ï¿½ï¿½Ï¿ï¿½
 	Delay(120);                       
 	RELAY_ON_CLOSE = 0x0000;
 //store data
@@ -1240,6 +1240,7 @@ void MT2DModeTop(void)
 	asm(" NOP"); 
 	return;	
 }
+
 /*
 void MT2DModeTop(void)
 {
@@ -1262,7 +1263,7 @@ void MT2DModeTop(void)
 	for (T2DCnt=0;T2DCnt<2;T2DCnt++)
 	{
 //A1+-
-		RELAY_ON_CLOSE = RelayAry[T2DFreqSelAry[1]];   //¼ÌµçÆ÷±ÕºÏ
+		RELAY_ON_CLOSE = RelayAry[T2DFreqSelAry[1]];   //ï¿½Ìµï¿½ï¿½ï¿½ï¿½Õºï¿½
 		Delay(120);                       
 		RELAY_ON_CLOSE = 0x0000;
 
@@ -1295,12 +1296,12 @@ void MT2DModeTop(void)
 			MiniStorAddr1 += 12;
 			MiniScan(FreqAry[T2DFreqSelAry[1]],MiniStorAddr1+9,MiniStorAddr1);			
 		}
-		RELAY_ON_CLOSE = RelayAry[T2DFreqSelAry[1]]<<8;   //¼ÌµçÆ÷¶Ï¿ª
+		RELAY_ON_CLOSE = RelayAry[T2DFreqSelAry[1]]<<8;   //ï¿½Ìµï¿½ï¿½ï¿½ï¿½Ï¿ï¿½
 		Delay(120);                       
 		RELAY_ON_CLOSE = 0x0000;
 //B1+-
 		StartS1msModule(2000-MINI_TEST);//the time parameter should be adjusted
-		RELAY_ON_CLOSE = RelayAry[T2DFreqSelAry[2]];   //¼ÌµçÆ÷±ÕºÏ
+		RELAY_ON_CLOSE = RelayAry[T2DFreqSelAry[2]];   //ï¿½Ìµï¿½ï¿½ï¿½ï¿½Õºï¿½
 		Delay(120);                       
 		RELAY_ON_CLOSE = 0x0000;
 
@@ -1317,12 +1318,12 @@ void MT2DModeTop(void)
 		MiniStorAddr2	+= 12;
 		MiniScan(FreqAry[T2DFreqSelAry[2]],MiniStorAddr2+9,MiniStorAddr2);
 
-		RELAY_ON_CLOSE = RelayAry[T2DFreqSelAry[2]]<<8;   //¼ÌµçÆ÷±ÕºÏ
+		RELAY_ON_CLOSE = RelayAry[T2DFreqSelAry[2]]<<8;   //ï¿½Ìµï¿½ï¿½ï¿½ï¿½Õºï¿½
 		Delay(120);                       
 		RELAY_ON_CLOSE = 0x0000;
 //C1+-
 		StartS1msModule(2000-MINI_TEST);//the time parameter should be adjusted
-		RELAY_ON_CLOSE = RelayAry[T2DFreqSelAry[3]];   //¼ÌµçÆ÷±ÕºÏ
+		RELAY_ON_CLOSE = RelayAry[T2DFreqSelAry[3]];   //ï¿½Ìµï¿½ï¿½ï¿½ï¿½Õºï¿½
 		Delay(120);                       
 		RELAY_ON_CLOSE = 0x0000;
 
@@ -1338,12 +1339,12 @@ void MT2DModeTop(void)
 		MiniStorAddr3	+= 12;
 		MiniScan(FreqAry[T2DFreqSelAry[2]],MiniStorAddr3+9,MiniStorAddr3);
 
-		RELAY_ON_CLOSE = RelayAry[T2DFreqSelAry[3]]<<8;   //¼ÌµçÆ÷±ÕºÏ
+		RELAY_ON_CLOSE = RelayAry[T2DFreqSelAry[3]]<<8;   //ï¿½Ìµï¿½ï¿½ï¿½ï¿½Õºï¿½
 		Delay(120);                       
 		RELAY_ON_CLOSE = 0x0000;
 //B2+-
 		StartS1msModule(4938-MINI_TEST);//the time parameter should be adjusted
-		RELAY_ON_CLOSE = RelayAry[T2DFreqSelAry[2]];   //¼ÌµçÆ÷±ÕºÏ
+		RELAY_ON_CLOSE = RelayAry[T2DFreqSelAry[2]];   //ï¿½Ìµï¿½ï¿½ï¿½ï¿½Õºï¿½
 		Delay(120);                       
 		RELAY_ON_CLOSE = 0x0000;
 
@@ -1359,12 +1360,12 @@ void MT2DModeTop(void)
 		MiniStorAddr2	+= 12;
 		MiniScan(FreqAry[T2DFreqSelAry[2]],MiniStorAddr2+9,MiniStorAddr2);
 
-		RELAY_ON_CLOSE = RelayAry[T2DFreqSelAry[2]]<<8;   //¼ÌµçÆ÷±ÕºÏ
+		RELAY_ON_CLOSE = RelayAry[T2DFreqSelAry[2]]<<8;   //ï¿½Ìµï¿½ï¿½ï¿½ï¿½Õºï¿½
 		Delay(120);                       
 		RELAY_ON_CLOSE = 0x0000;
 //C2+-
 		StartS1msModule(2000-MINI_TEST);//the time parameter should be adjusted
-		RELAY_ON_CLOSE = RelayAry[T2DFreqSelAry[3]];   //¼ÌµçÆ÷±ÕºÏ
+		RELAY_ON_CLOSE = RelayAry[T2DFreqSelAry[3]];   //ï¿½Ìµï¿½ï¿½ï¿½ï¿½Õºï¿½
 		Delay(120);                       
 		RELAY_ON_CLOSE = 0x0000;
 
@@ -1380,12 +1381,12 @@ void MT2DModeTop(void)
 		MiniStorAddr3	+= 12;
 		MiniScan(FreqAry[T2DFreqSelAry[2]],MiniStorAddr3+9,MiniStorAddr3);
 
-		RELAY_ON_CLOSE = RelayAry[T2DFreqSelAry[3]]<<8;   //¼ÌµçÆ÷±ÕºÏ
+		RELAY_ON_CLOSE = RelayAry[T2DFreqSelAry[3]]<<8;   //ï¿½Ìµï¿½ï¿½ï¿½ï¿½Õºï¿½
 		Delay(120);                       
 		RELAY_ON_CLOSE = 0x0000;
 //B3+-
 		StartS1msModule(4898-MINI_TEST);//the time parameter should be adjusted
-		RELAY_ON_CLOSE = RelayAry[T2DFreqSelAry[2]];   //¼ÌµçÆ÷±ÕºÏ
+		RELAY_ON_CLOSE = RelayAry[T2DFreqSelAry[2]];   //ï¿½Ìµï¿½ï¿½ï¿½ï¿½Õºï¿½
 		Delay(120);                       
 		RELAY_ON_CLOSE = 0x0000;
 
@@ -1401,12 +1402,12 @@ void MT2DModeTop(void)
 		MiniStorAddr2	+= 12;
 		MiniScan(FreqAry[T2DFreqSelAry[2]],MiniStorAddr2+9,MiniStorAddr2);
 
-		RELAY_ON_CLOSE = RelayAry[T2DFreqSelAry[2]]<<8;   //¼ÌµçÆ÷±ÕºÏ
+		RELAY_ON_CLOSE = RelayAry[T2DFreqSelAry[2]]<<8;   //ï¿½Ìµï¿½ï¿½ï¿½ï¿½Õºï¿½
 		Delay(120);                       
 		RELAY_ON_CLOSE = 0x0000;
 //C3+-
 		StartS1msModule(2000-MINI_TEST);//the time parameter should be adjusted
-		RELAY_ON_CLOSE = RelayAry[T2DFreqSelAry[3]];   //¼ÌµçÆ÷±ÕºÏ
+		RELAY_ON_CLOSE = RelayAry[T2DFreqSelAry[3]];   //ï¿½Ìµï¿½ï¿½ï¿½ï¿½Õºï¿½
 		Delay(120);                       
 		RELAY_ON_CLOSE = 0x0000;
 
@@ -1421,7 +1422,7 @@ void MT2DModeTop(void)
 		MiniStorAddr3	+= 12;
 		MiniScan(FreqAry[T2DFreqSelAry[2]],MiniStorAddr3+9,MiniStorAddr3);
 
-		RELAY_ON_CLOSE = RelayAry[T2DFreqSelAry[3]]<<8;   //¼ÌµçÆ÷±ÕºÏ
+		RELAY_ON_CLOSE = RelayAry[T2DFreqSelAry[3]]<<8;   //ï¿½Ìµï¿½ï¿½ï¿½ï¿½Õºï¿½
 		Delay(120);                       
 		RELAY_ON_CLOSE = 0x0000;
 	

@@ -516,14 +516,8 @@ Uint16 PPHOIL6FNe5B;
 Uint16 PPHOIL6FNe6B;
 */
 Uint16 PPHOIL6FNe6C;
-Uint16 PPHOIL6F_TE_1B;
 Uint16 PPHOIL6F_TE_123456C;
 Uint16 PPHOIL6F_TE_246A;
-Uint16 PPHOIL6F_TE_3B;
-Uint16 PPHOIL6F_TE_2B;
-Uint16 PPHOIL6F_TE_5B;
-Uint16 PPHOIL6F_TE_4B;
-Uint16 PPHOIL6F_TE_6B;
 Uint16 PPHOIL6FTw123456C;
 Uint16 PPHOIL6FFlag;
 Uint16 PPHOIL6FCnt;
@@ -1194,14 +1188,8 @@ Uint16 WorkModeChoice[MODE_CHOICE];
 #pragma DATA_SECTION(PPHOIL6FNe6B               ,"MyVariablesZone");
 */
 #pragma DATA_SECTION(PPHOIL6FNe6C               ,"MyVariablesZone");
-#pragma DATA_SECTION(PPHOIL6F_TE_1B             ,"MyVariablesZone");
 #pragma DATA_SECTION(PPHOIL6F_TE_123456C        ,"MyVariablesZone");
 #pragma DATA_SECTION(PPHOIL6F_TE_246A           ,"MyVariablesZone");
-#pragma DATA_SECTION(PPHOIL6F_TE_3B             ,"MyVariablesZone");
-#pragma DATA_SECTION(PPHOIL6F_TE_2B             ,"MyVariablesZone");
-#pragma DATA_SECTION(PPHOIL6F_TE_5B             ,"MyVariablesZone");
-#pragma DATA_SECTION(PPHOIL6F_TE_4B             ,"MyVariablesZone");
-#pragma DATA_SECTION(PPHOIL6F_TE_6B             ,"MyVariablesZone");
 #pragma DATA_SECTION(PPHOIL6FTw123456C          ,"MyVariablesZone");
 #pragma DATA_SECTION(PPHOIL6FFlag               ,"MyVariablesZone");
 #pragma DATA_SECTION(PPHOIL6FCnt                ,"MyVariablesZone");
@@ -1225,14 +1213,7 @@ Uint16 WorkModeChoice[MODE_CHOICE];
 #pragma DATA_SECTION(PPHOIL6F_2NRept123456C     ,"MyVariablesZone");
 #pragma DATA_SECTION(PPHOIL6F_2Ne12346C         ,"MyVariablesZone");
 #pragma DATA_SECTION(PPHOIL6F_2Ne246A           ,"MyVariablesZone");
-/*
-#pragma DATA_SECTION(PPHOIL6F_2Ne1B             ,"MyVariablesZone");
-#pragma DATA_SECTION(PPHOIL6F_2Ne2B             ,"MyVariablesZone");
-#pragma DATA_SECTION(PPHOIL6F_2Ne3B             ,"MyVariablesZone");
-#pragma DATA_SECTION(PPHOIL6F_2Ne4B             ,"MyVariablesZone");
-#pragma DATA_SECTION(PPHOIL6F_2Ne5B             ,"MyVariablesZone");
-#pragma DATA_SECTION(PPHOIL6F_2Ne6B             ,"MyVariablesZone");
-*/
+
 #pragma DATA_SECTION(PPHOIL6F_2Ne5C             ,"MyVariablesZone");
 #pragma DATA_SECTION(PPHOIL6F_2_TE_123456C      ,"MyVariablesZone");
 #pragma DATA_SECTION(PPHOIL6F_2_TE_246A         ,"MyVariablesZone");

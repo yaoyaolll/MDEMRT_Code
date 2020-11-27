@@ -512,14 +512,8 @@ extern Uint16 PPHOIL6FNe5B;
 extern Uint16 PPHOIL6FNe6B;
 */
 extern Uint16 PPHOIL6FNe6C;
-extern Uint16 PPHOIL6F_TE_1B;
 extern Uint16 PPHOIL6F_TE_123456C;
 extern Uint16 PPHOIL6F_TE_246A;
-extern Uint16 PPHOIL6F_TE_3B;
-extern Uint16 PPHOIL6F_TE_2B;
-extern Uint16 PPHOIL6F_TE_5B;
-extern Uint16 PPHOIL6F_TE_4B;
-extern Uint16 PPHOIL6F_TE_6B;
 extern Uint16 PPHOIL6FTw123456C;
 extern Uint16 PPHOIL6FFlag;
 extern Uint16 PPHOIL6FCnt;

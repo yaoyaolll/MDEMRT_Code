@@ -47,7 +47,7 @@ void ST2DModeTop(void)
 	Tes	= (Uint32)100 * T2DDCTesA *  FPGA_COUNT;
 	Tel	= Tes;  
 	Ne	= T2DCPMGNeA;
-	Pulse90StoreAddr	= T2D_STORE_START+(Uint32)DataTotalNum+26;
+	Pulse90StoreAddr	= T2D_STORE_START+(Uint32)DataTotalNum+24;
 	PulseF180StoreAddr	= Pulse90StoreAddr+EchoNum;
 	PulseL180StoreAddr	= PulseF180StoreAddr+EchoNum;
 	EchoStorAddr		= T2D_STORE_START+(Uint32)12;

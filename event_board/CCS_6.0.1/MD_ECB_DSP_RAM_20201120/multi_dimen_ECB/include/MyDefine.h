@@ -108,6 +108,7 @@
 #define PPgas_REPAIR3		9
 #define PP6_REPAIR1			3		//此时间需要根据做实验调整
 #define PP6_REPAIR2			9
+
 #define T2D_REPAIR1			11		//this parameters should be adjusted
 #define T2D_REPAIR2			4		//this parameters should be adjusted
 #define T1T2_REPAIR1		10		//this parameters should be adjusted
@@ -133,12 +134,12 @@
 #define Gas6_2_TE_123456A 	6
 #define Gas6_2_TE_1234B 	6
 
-#define PPHOIL6F_2_TE_1B 100
-#define PPHOIL6F_2_TE_2B 50
-#define PPHOIL6F_2_TE_3B 70
-#define PPHOIL6F_2_TE_4B 8
-#define PPHOIL6F_2_TE_5B 36
-#define PPHOIL6F_2_TE_6B 15
+#define PPHOIL6F_TE_1B 100
+#define PPHOIL6F_TE_2B 50
+#define PPHOIL6F_TE_3B 70
+#define PPHOIL6F_TE_4B 8
+#define PPHOIL6F_TE_5B 36
+#define PPHOIL6F_TE_6B 12
 
 #define PPHOIL6FNe1B 	8
 #define PPHOIL6FNe2B 	16
@@ -146,6 +147,13 @@
 #define PPHOIL6FNe4B 	220
 #define PPHOIL6FNe5B 	33
 #define PPHOIL6FNe6B 	100
+
+#define PPHOIL6F_2_TE_1B 100
+#define PPHOIL6F_2_TE_2B 50
+#define PPHOIL6F_2_TE_3B 70
+#define PPHOIL6F_2_TE_4B 8
+#define PPHOIL6F_2_TE_5B 36
+#define PPHOIL6F_2_TE_6B 15
 
 #define PPHOIL6F_2Ne1B 	8
 #define PPHOIL6F_2Ne2B 	16
