@@ -1,12 +1,12 @@
 <project name="NMR_TOP_1" version="1.1">
     <ProjectDirectory>
-        D:\FPGA\2D_NMR_EC_FPGA_150205\designer\impl3\NMR_TOP_1_fp
+        E:\git_repository\MDEMRT_Code\event_board\Libero_v11.9\2D_NMR_EC_FPGA_150205\designer\impl3\NMR_TOP_1_fp
     </ProjectDirectory>
     <View>
         SingleSTAPLView
     </View>
     <LogFile>
-        D:\FPGA\2D_NMR_EC_FPGA_150205\designer\impl3\NMR_TOP_1_fp\NMR_TOP_1.log
+        E:\git_repository\MDEMRT_Code\event_board\Libero_v11.9\2D_NMR_EC_FPGA_150205\designer\impl3\NMR_TOP_1_fp\NMR_TOP_1.log
     </LogFile>
     <SerializationOption>
         Skip
@@ -59,7 +59,7 @@
         </Hardware>
         <Algo type="PDB">
             <filename>
-                D:\FPGA\2D_NMR_EC_FPGA_150205\designer\impl3\NMR_TOP_1.pdb
+                E:\git_repository\MDEMRT_Code\event_board\Libero_v11.9\2D_NMR_EC_FPGA_150205\designer\impl3\NMR_TOP_1.pdb
             </filename>
             <local>
                 projectData\NMR_TOP_1.pdb

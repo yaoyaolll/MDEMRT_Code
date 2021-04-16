@@ -143,7 +143,7 @@ void ST2DModeTop(void)
 	StoreMiniAryPt	= &ST2DMiniNum;
 	StoreMini(1,SaveNTempPt,SaveSTempPt); 
 
-	McbspSendData(T2D_STORE_START,DataTotalNum+3*EchoNum+26);  // 30668
+	McbspSendData(T2D_STORE_START,DataTotalNum+3*EchoNum+24);  // 30668
 	asm(" NOP");
 	asm(" NOP");
 	asm(" NOP");
