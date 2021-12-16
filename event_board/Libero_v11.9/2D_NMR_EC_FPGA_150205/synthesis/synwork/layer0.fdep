@@ -1,180 +1,180 @@
-#OPTIONS:"|-layerid|0|-orig_srs|D:\\FPGA\\2D_NMR_EC_FPGA_150205\\synthesis\\synwork\\NMR_TOP_comp.srs|-top|NMR_TOP|-prodtype|synplify_pro|-nram|-fixsmult|-divnmod|-I|D:\\FPGA\\2D_NMR_EC_FPGA_150205\\synthesis\\|-I|D:\\Microsemi\\Libero_SoC_v11.9\\SynplifyPro\\lib|-v2001|-devicelib|D:\\Microsemi\\Libero_SoC_v11.9\\SynplifyPro\\lib\\proasic\\proasic3.v|-encrypt|-pro|-ui|-fid2|-ram|-sharing|on|-ll|2000|-autosm|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work"
-#CUR:"D:\\Microsemi\\Libero_SoC_v11.9\\SynplifyPro\\bin64\\c_ver.exe":1509315136
-#CUR:"D:\\Microsemi\\Libero_SoC_v11.9\\SynplifyPro\\lib\\proasic\\proasic3.v":1508984288
-#CUR:"D:\\Microsemi\\Libero_SoC_v11.9\\SynplifyPro\\lib\\vlog\\hypermods.v":1508986328
-#CUR:"D:\\Microsemi\\Libero_SoC_v11.9\\SynplifyPro\\lib\\vlog\\umr_capim.v":1508986328
-#CUR:"D:\\Microsemi\\Libero_SoC_v11.9\\SynplifyPro\\lib\\vlog\\scemi_objects.v":1508986328
-#CUR:"D:\\Microsemi\\Libero_SoC_v11.9\\SynplifyPro\\lib\\vlog\\scemi_pipes.svh":1508986328
-#CUR:"D:\\FPGA\\2D_NMR_EC_FPGA_150205\\hdl\\cal_div.v":1400489338
-#CUR:"D:\\FPGA\\2D_NMR_EC_FPGA_150205\\hdl\\cal_load.v":1400489338
-#CUR:"D:\\FPGA\\2D_NMR_EC_FPGA_150205\\component\\work\\CAL\\CAL.v":1400489338
-#CUR:"D:\\FPGA\\2D_NMR_EC_FPGA_150205\\hdl\\clk_10k.v":1420803882
-#CUR:"D:\\FPGA\\2D_NMR_EC_FPGA_150205\\hdl\\clk_div500.v":1401072708
-#CUR:"D:\\FPGA\\2D_NMR_EC_FPGA_150205\\hdl\\long_timer.v":1400586418
-#CUR:"D:\\FPGA\\2D_NMR_EC_FPGA_150205\\smartgen\\pllclk\\pllclk.v":1400489340
-#CUR:"D:\\FPGA\\2D_NMR_EC_FPGA_150205\\component\\work\\ClockManagement\\ClockManagement.v":1421111344
-#CUR:"D:\\FPGA\\2D_NMR_EC_FPGA_150205\\hdl\\dds_coder.v":1400489338
-#CUR:"D:\\FPGA\\2D_NMR_EC_FPGA_150205\\hdl\\dds_state.v":1400489338
-#CUR:"D:\\FPGA\\2D_NMR_EC_FPGA_150205\\hdl\\dds_timer.v":1400489338
-#CUR:"D:\\FPGA\\2D_NMR_EC_FPGA_150205\\component\\work\\DDS\\DDS.v":1400489338
-#CUR:"D:\\FPGA\\2D_NMR_EC_FPGA_150205\\smartgen\\cmp_constant_4b\\cmp_constant_4b.v":1421815056
-#CUR:"D:\\FPGA\\2D_NMR_EC_FPGA_150205\\hdl\\dump_sustain_timer.v":1421851852
-#CUR:"D:\\FPGA\\2D_NMR_EC_FPGA_150205\\component\\work\\DSTimer\\DSTimer.v":1421858316
-#CUR:"D:\\FPGA\\2D_NMR_EC_FPGA_150205\\hdl\\dump_coder.v":1400489338
-#CUR:"D:\\FPGA\\2D_NMR_EC_FPGA_150205\\hdl\\dump_state.v":1400489338
-#CUR:"D:\\FPGA\\2D_NMR_EC_FPGA_150205\\hdl\\dump_timer.v":1400489338
-#CUR:"D:\\FPGA\\2D_NMR_EC_FPGA_150205\\hdl\\off_on_coder.v":1400489338
-#CUR:"D:\\FPGA\\2D_NMR_EC_FPGA_150205\\hdl\\off_on_state.v":1400489338
-#CUR:"D:\\FPGA\\2D_NMR_EC_FPGA_150205\\hdl\\off_on_timer.v":1400489338
-#CUR:"D:\\FPGA\\2D_NMR_EC_FPGA_150205\\component\\work\\DUMP\\DUMP.v":1400489338
-#CUR:"D:\\FPGA\\2D_NMR_EC_FPGA_150205\\component\\work\\DUMP_OFF\\DUMP_OFF.v":1400489338
-#CUR:"D:\\FPGA\\2D_NMR_EC_FPGA_150205\\component\\work\\DUMP_ON\\DUMP_ON.v":1400489338
-#CUR:"D:\\FPGA\\2D_NMR_EC_FPGA_150205\\hdl\\reset_module.v":1400489338
-#CUR:"D:\\FPGA\\2D_NMR_EC_FPGA_150205\\hdl\\tri_state.v":1400489338
-#CUR:"D:\\FPGA\\2D_NMR_EC_FPGA_150205\\hdl\\xwe_xzcs2_syn.v":1422760792
-#CUR:"D:\\FPGA\\2D_NMR_EC_FPGA_150205\\component\\work\\GPMI\\GPMI.v":1400489338
-#CUR:"D:\\FPGA\\2D_NMR_EC_FPGA_150205\\hdl\\bri_coder.v":1422713572
-#CUR:"D:\\FPGA\\2D_NMR_EC_FPGA_150205\\hdl\\para_load.v":1400489338
-#CUR:"D:\\FPGA\\2D_NMR_EC_FPGA_150205\\hdl\\bri_state.v":1422715294
-#CUR:"D:\\FPGA\\2D_NMR_EC_FPGA_150205\\hdl\\bri_timer.v":1400489338
-#CUR:"D:\\FPGA\\2D_NMR_EC_FPGA_150205\\hdl\\qq_coder.v":1400489338
-#CUR:"D:\\FPGA\\2D_NMR_EC_FPGA_150205\\hdl\\qq_state.v":1400489338
-#CUR:"D:\\FPGA\\2D_NMR_EC_FPGA_150205\\hdl\\qq_timer.v":1400489338
-#CUR:"D:\\FPGA\\2D_NMR_EC_FPGA_150205\\component\\work\\PLUSE\\PLUSE.v":1422713636
-#CUR:"D:\\FPGA\\2D_NMR_EC_FPGA_150205\\hdl\\n_s_change.v":1400489338
-#CUR:"D:\\FPGA\\2D_NMR_EC_FPGA_150205\\smartgen\\RAM\\RAM.v":1400489340
-#CUR:"D:\\FPGA\\2D_NMR_EC_FPGA_150205\\hdl\\link.v":1400489338
-#CUR:"D:\\FPGA\\2D_NMR_EC_FPGA_150205\\hdl\\n_rdclk_syn.v":1400489338
-#CUR:"D:\\FPGA\\2D_NMR_EC_FPGA_150205\\hdl\\noise_addr.v":1400489338
-#CUR:"D:\\FPGA\\2D_NMR_EC_FPGA_150205\\hdl\\noiseclk.v":1400489338
-#CUR:"D:\\FPGA\\2D_NMR_EC_FPGA_150205\\hdl\\noiseclkctrl.v":1400489338
-#CUR:"D:\\FPGA\\2D_NMR_EC_FPGA_150205\\component\\work\\noise_acq\\noise_acq.v":1400489338
-#CUR:"D:\\FPGA\\2D_NMR_EC_FPGA_150205\\hdl\\add_reg.v":1400489338
-#CUR:"D:\\FPGA\\2D_NMR_EC_FPGA_150205\\hdl\\ctrl_addr.v":1400489338
-#CUR:"D:\\FPGA\\2D_NMR_EC_FPGA_150205\\hdl\\readata_choice.v":1400489338
-#CUR:"D:\\FPGA\\2D_NMR_EC_FPGA_150205\\hdl\\s_clk_div.v":1400489338
-#CUR:"D:\\FPGA\\2D_NMR_EC_FPGA_150205\\hdl\\signalclkctrl.v":1400489338
-#CUR:"D:\\FPGA\\2D_NMR_EC_FPGA_150205\\hdl\\ten_choice_one.v":1400489338
-#CUR:"D:\\FPGA\\2D_NMR_EC_FPGA_150205\\component\\work\\signal_acq\\signal_acq.v":1400489338
-#CUR:"D:\\FPGA\\2D_NMR_EC_FPGA_150205\\component\\work\\Signal_Noise_Acq\\Signal_Noise_Acq.v":1400489338
-#CUR:"D:\\FPGA\\2D_NMR_EC_FPGA_150205\\hdl\\bri_dump_sw.v":1422713940
-#CUR:"D:\\FPGA\\2D_NMR_EC_FPGA_150205\\hdl\\bridge_div.v":1400489338
-#CUR:"D:\\FPGA\\2D_NMR_EC_FPGA_150205\\hdl\\dds_change.v":1400489338
-#CUR:"D:\\FPGA\\2D_NMR_EC_FPGA_150205\\hdl\\n_pluse_acq.v":1400489338
-#CUR:"D:\\FPGA\\2D_NMR_EC_FPGA_150205\\hdl\\noisestate.v":1400489338
-#CUR:"D:\\FPGA\\2D_NMR_EC_FPGA_150205\\hdl\\nsctrl_choice.v":1400489338
-#CUR:"D:\\FPGA\\2D_NMR_EC_FPGA_150205\\hdl\\pd_pluse_coder.v":1422710734
-#CUR:"D:\\FPGA\\2D_NMR_EC_FPGA_150205\\hdl\\pd_pluse_state.v":1422710752
-#CUR:"D:\\FPGA\\2D_NMR_EC_FPGA_150205\\smartgen\\pd_pluse_inc\\pd_pluse_inc.v":1400489340
-#CUR:"D:\\FPGA\\2D_NMR_EC_FPGA_150205\\hdl\\pd_pluse_timer.v":1400489338
-#CUR:"D:\\FPGA\\2D_NMR_EC_FPGA_150205\\component\\work\\pd_pluse_top\\pd_pluse_top.v":1422710844
-#CUR:"D:\\FPGA\\2D_NMR_EC_FPGA_150205\\hdl\\plusestate.v":1400489338
-#CUR:"D:\\FPGA\\2D_NMR_EC_FPGA_150205\\hdl\\s_acq_change.v":1400489338
-#CUR:"D:\\FPGA\\2D_NMR_EC_FPGA_150205\\smartgen\\necount_cmp\\necount_cmp.v":1422702108
-#CUR:"D:\\FPGA\\2D_NMR_EC_FPGA_150205\\smartgen\\necount_inc\\necount_inc.v":1400489340
-#CUR:"D:\\FPGA\\2D_NMR_EC_FPGA_150205\\hdl\\scalestate.v":1423127180
-#CUR:"D:\\FPGA\\2D_NMR_EC_FPGA_150205\\hdl\\scan_scale_sw.v":1400489338
-#CUR:"D:\\FPGA\\2D_NMR_EC_FPGA_150205\\hdl\\scanstate.v":1400489338
-#CUR:"D:\\FPGA\\2D_NMR_EC_FPGA_150205\\hdl\\sd_acq_coder.v":1411351040
-#CUR:"D:\\FPGA\\2D_NMR_EC_FPGA_150205\\hdl\\sd_acq_state.v":1413028962
-#CUR:"D:\\FPGA\\2D_NMR_EC_FPGA_150205\\smartgen\\sd_sacq_inc\\sd_sacq_inc.v":1400489340
-#CUR:"D:\\FPGA\\2D_NMR_EC_FPGA_150205\\hdl\\sd_acq_timer.v":1400489338
-#CUR:"D:\\FPGA\\2D_NMR_EC_FPGA_150205\\component\\work\\sd_acq_top\\sd_acq_top.v":1411371284
-#CUR:"D:\\FPGA\\2D_NMR_EC_FPGA_150205\\hdl\\1ms_dump_choice.v":1400489338
-#CUR:"D:\\FPGA\\2D_NMR_EC_FPGA_150205\\hdl\\state_1ms.v":1400489338
-#CUR:"D:\\FPGA\\2D_NMR_EC_FPGA_150205\\hdl\\state_switch.v":1400489338
-#CUR:"D:\\FPGA\\2D_NMR_EC_FPGA_150205\\smartgen\\Timer_Cmp\\Timer_Cmp.v":1400489340
-#CUR:"D:\\FPGA\\2D_NMR_EC_FPGA_150205\\hdl\\timer.v":1400489338
-#CUR:"D:\\FPGA\\2D_NMR_EC_FPGA_150205\\component\\work\\timer_top\\timer_top.v":1400489338
-#CUR:"D:\\FPGA\\2D_NMR_EC_FPGA_150205\\hdl\\top_code.v":1422698458
-#CUR:"D:\\FPGA\\2D_NMR_EC_FPGA_150205\\hdl\\topctrlchange.v":1400489338
-#CUR:"D:\\FPGA\\2D_NMR_EC_FPGA_150205\\component\\work\\NMR_TOP\\NMR_TOP.v":1423127186
+#OPTIONS:"|-layerid|0|-orig_srs|E:\\git_repository\\MDEMRT_Code\\event_board\\Libero_v11.9\\2D_NMR_EC_FPGA_150205\\synthesis\\synwork\\NMR_TOP_comp.srs|-top|NMR_TOP|-prodtype|synplify_pro|-nram|-fixsmult|-divnmod|-I|E:\\git_repository\\MDEMRT_Code\\event_board\\Libero_v11.9\\2D_NMR_EC_FPGA_150205\\synthesis\\|-I|D:\\Libero_Soc11.9\\SynplifyPro\\lib|-v2001|-devicelib|D:\\Libero_Soc11.9\\SynplifyPro\\lib\\proasic\\proasic3.v|-encrypt|-pro|-ui|-fid2|-ram|-sharing|on|-ll|2000|-autosm|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work"
+#CUR:"D:\\Libero_Soc11.9\\SynplifyPro\\bin64\\c_ver.exe":1509315136
+#CUR:"D:\\Libero_Soc11.9\\SynplifyPro\\lib\\proasic\\proasic3.v":1508984288
+#CUR:"D:\\Libero_Soc11.9\\SynplifyPro\\lib\\vlog\\hypermods.v":1508986328
+#CUR:"D:\\Libero_Soc11.9\\SynplifyPro\\lib\\vlog\\umr_capim.v":1508986328
+#CUR:"D:\\Libero_Soc11.9\\SynplifyPro\\lib\\vlog\\scemi_objects.v":1508986328
+#CUR:"D:\\Libero_Soc11.9\\SynplifyPro\\lib\\vlog\\scemi_pipes.svh":1508986328
+#CUR:"E:\\git_repository\\MDEMRT_Code\\event_board\\Libero_v11.9\\2D_NMR_EC_FPGA_150205\\hdl\\cal_div.v":1604369357
+#CUR:"E:\\git_repository\\MDEMRT_Code\\event_board\\Libero_v11.9\\2D_NMR_EC_FPGA_150205\\hdl\\cal_load.v":1604369357
+#CUR:"E:\\git_repository\\MDEMRT_Code\\event_board\\Libero_v11.9\\2D_NMR_EC_FPGA_150205\\component\\work\\CAL\\CAL.v":1604369354
+#CUR:"E:\\git_repository\\MDEMRT_Code\\event_board\\Libero_v11.9\\2D_NMR_EC_FPGA_150205\\hdl\\clk_10k.v":1604369357
+#CUR:"E:\\git_repository\\MDEMRT_Code\\event_board\\Libero_v11.9\\2D_NMR_EC_FPGA_150205\\hdl\\clk_div500.v":1604369357
+#CUR:"E:\\git_repository\\MDEMRT_Code\\event_board\\Libero_v11.9\\2D_NMR_EC_FPGA_150205\\hdl\\long_timer.v":1604369357
+#CUR:"E:\\git_repository\\MDEMRT_Code\\event_board\\Libero_v11.9\\2D_NMR_EC_FPGA_150205\\smartgen\\pllclk\\pllclk.v":1604369363
+#CUR:"E:\\git_repository\\MDEMRT_Code\\event_board\\Libero_v11.9\\2D_NMR_EC_FPGA_150205\\component\\work\\ClockManagement\\ClockManagement.v":1604369354
+#CUR:"E:\\git_repository\\MDEMRT_Code\\event_board\\Libero_v11.9\\2D_NMR_EC_FPGA_150205\\hdl\\dds_coder.v":1604369357
+#CUR:"E:\\git_repository\\MDEMRT_Code\\event_board\\Libero_v11.9\\2D_NMR_EC_FPGA_150205\\hdl\\dds_state.v":1604369357
+#CUR:"E:\\git_repository\\MDEMRT_Code\\event_board\\Libero_v11.9\\2D_NMR_EC_FPGA_150205\\hdl\\dds_timer.v":1604369357
+#CUR:"E:\\git_repository\\MDEMRT_Code\\event_board\\Libero_v11.9\\2D_NMR_EC_FPGA_150205\\component\\work\\DDS\\DDS.v":1604369354
+#CUR:"E:\\git_repository\\MDEMRT_Code\\event_board\\Libero_v11.9\\2D_NMR_EC_FPGA_150205\\smartgen\\cmp_constant_4b\\cmp_constant_4b.v":1604369363
+#CUR:"E:\\git_repository\\MDEMRT_Code\\event_board\\Libero_v11.9\\2D_NMR_EC_FPGA_150205\\hdl\\dump_sustain_timer.v":1604369357
+#CUR:"E:\\git_repository\\MDEMRT_Code\\event_board\\Libero_v11.9\\2D_NMR_EC_FPGA_150205\\component\\work\\DSTimer\\DSTimer.v":1604369354
+#CUR:"E:\\git_repository\\MDEMRT_Code\\event_board\\Libero_v11.9\\2D_NMR_EC_FPGA_150205\\hdl\\dump_coder.v":1604369357
+#CUR:"E:\\git_repository\\MDEMRT_Code\\event_board\\Libero_v11.9\\2D_NMR_EC_FPGA_150205\\hdl\\dump_state.v":1604369357
+#CUR:"E:\\git_repository\\MDEMRT_Code\\event_board\\Libero_v11.9\\2D_NMR_EC_FPGA_150205\\hdl\\dump_timer.v":1604369357
+#CUR:"E:\\git_repository\\MDEMRT_Code\\event_board\\Libero_v11.9\\2D_NMR_EC_FPGA_150205\\hdl\\off_on_coder.v":1604369357
+#CUR:"E:\\git_repository\\MDEMRT_Code\\event_board\\Libero_v11.9\\2D_NMR_EC_FPGA_150205\\hdl\\off_on_state.v":1604369357
+#CUR:"E:\\git_repository\\MDEMRT_Code\\event_board\\Libero_v11.9\\2D_NMR_EC_FPGA_150205\\hdl\\off_on_timer.v":1604369357
+#CUR:"E:\\git_repository\\MDEMRT_Code\\event_board\\Libero_v11.9\\2D_NMR_EC_FPGA_150205\\component\\work\\DUMP\\DUMP.v":1604369354
+#CUR:"E:\\git_repository\\MDEMRT_Code\\event_board\\Libero_v11.9\\2D_NMR_EC_FPGA_150205\\component\\work\\DUMP_OFF\\DUMP_OFF.v":1604369354
+#CUR:"E:\\git_repository\\MDEMRT_Code\\event_board\\Libero_v11.9\\2D_NMR_EC_FPGA_150205\\component\\work\\DUMP_ON\\DUMP_ON.v":1604369354
+#CUR:"E:\\git_repository\\MDEMRT_Code\\event_board\\Libero_v11.9\\2D_NMR_EC_FPGA_150205\\hdl\\reset_module.v":1604369357
+#CUR:"E:\\git_repository\\MDEMRT_Code\\event_board\\Libero_v11.9\\2D_NMR_EC_FPGA_150205\\hdl\\tri_state.v":1604369357
+#CUR:"E:\\git_repository\\MDEMRT_Code\\event_board\\Libero_v11.9\\2D_NMR_EC_FPGA_150205\\hdl\\xwe_xzcs2_syn.v":1604369357
+#CUR:"E:\\git_repository\\MDEMRT_Code\\event_board\\Libero_v11.9\\2D_NMR_EC_FPGA_150205\\component\\work\\GPMI\\GPMI.v":1604369354
+#CUR:"E:\\git_repository\\MDEMRT_Code\\event_board\\Libero_v11.9\\2D_NMR_EC_FPGA_150205\\hdl\\bri_coder.v":1604369357
+#CUR:"E:\\git_repository\\MDEMRT_Code\\event_board\\Libero_v11.9\\2D_NMR_EC_FPGA_150205\\hdl\\para_load.v":1604369357
+#CUR:"E:\\git_repository\\MDEMRT_Code\\event_board\\Libero_v11.9\\2D_NMR_EC_FPGA_150205\\hdl\\bri_state.v":1604369357
+#CUR:"E:\\git_repository\\MDEMRT_Code\\event_board\\Libero_v11.9\\2D_NMR_EC_FPGA_150205\\hdl\\bri_timer.v":1604369357
+#CUR:"E:\\git_repository\\MDEMRT_Code\\event_board\\Libero_v11.9\\2D_NMR_EC_FPGA_150205\\hdl\\qq_coder.v":1604369357
+#CUR:"E:\\git_repository\\MDEMRT_Code\\event_board\\Libero_v11.9\\2D_NMR_EC_FPGA_150205\\hdl\\qq_state.v":1604369357
+#CUR:"E:\\git_repository\\MDEMRT_Code\\event_board\\Libero_v11.9\\2D_NMR_EC_FPGA_150205\\hdl\\qq_timer.v":1604369357
+#CUR:"E:\\git_repository\\MDEMRT_Code\\event_board\\Libero_v11.9\\2D_NMR_EC_FPGA_150205\\component\\work\\PLUSE\\PLUSE.v":1604369354
+#CUR:"E:\\git_repository\\MDEMRT_Code\\event_board\\Libero_v11.9\\2D_NMR_EC_FPGA_150205\\hdl\\n_s_change.v":1604369357
+#CUR:"E:\\git_repository\\MDEMRT_Code\\event_board\\Libero_v11.9\\2D_NMR_EC_FPGA_150205\\smartgen\\RAM\\RAM.v":1604369363
+#CUR:"E:\\git_repository\\MDEMRT_Code\\event_board\\Libero_v11.9\\2D_NMR_EC_FPGA_150205\\hdl\\link.v":1604369357
+#CUR:"E:\\git_repository\\MDEMRT_Code\\event_board\\Libero_v11.9\\2D_NMR_EC_FPGA_150205\\hdl\\n_rdclk_syn.v":1604369357
+#CUR:"E:\\git_repository\\MDEMRT_Code\\event_board\\Libero_v11.9\\2D_NMR_EC_FPGA_150205\\hdl\\noise_addr.v":1604369357
+#CUR:"E:\\git_repository\\MDEMRT_Code\\event_board\\Libero_v11.9\\2D_NMR_EC_FPGA_150205\\hdl\\noiseclk.v":1604369357
+#CUR:"E:\\git_repository\\MDEMRT_Code\\event_board\\Libero_v11.9\\2D_NMR_EC_FPGA_150205\\hdl\\noiseclkctrl.v":1604369357
+#CUR:"E:\\git_repository\\MDEMRT_Code\\event_board\\Libero_v11.9\\2D_NMR_EC_FPGA_150205\\component\\work\\noise_acq\\noise_acq.v":1604369354
+#CUR:"E:\\git_repository\\MDEMRT_Code\\event_board\\Libero_v11.9\\2D_NMR_EC_FPGA_150205\\hdl\\add_reg.v":1604369357
+#CUR:"E:\\git_repository\\MDEMRT_Code\\event_board\\Libero_v11.9\\2D_NMR_EC_FPGA_150205\\hdl\\ctrl_addr.v":1604369357
+#CUR:"E:\\git_repository\\MDEMRT_Code\\event_board\\Libero_v11.9\\2D_NMR_EC_FPGA_150205\\hdl\\readata_choice.v":1604369357
+#CUR:"E:\\git_repository\\MDEMRT_Code\\event_board\\Libero_v11.9\\2D_NMR_EC_FPGA_150205\\hdl\\s_clk_div.v":1604369357
+#CUR:"E:\\git_repository\\MDEMRT_Code\\event_board\\Libero_v11.9\\2D_NMR_EC_FPGA_150205\\hdl\\signalclkctrl.v":1604369357
+#CUR:"E:\\git_repository\\MDEMRT_Code\\event_board\\Libero_v11.9\\2D_NMR_EC_FPGA_150205\\hdl\\ten_choice_one.v":1604369357
+#CUR:"E:\\git_repository\\MDEMRT_Code\\event_board\\Libero_v11.9\\2D_NMR_EC_FPGA_150205\\component\\work\\signal_acq\\signal_acq.v":1604369354
+#CUR:"E:\\git_repository\\MDEMRT_Code\\event_board\\Libero_v11.9\\2D_NMR_EC_FPGA_150205\\component\\work\\Signal_Noise_Acq\\Signal_Noise_Acq.v":1604369354
+#CUR:"E:\\git_repository\\MDEMRT_Code\\event_board\\Libero_v11.9\\2D_NMR_EC_FPGA_150205\\hdl\\bri_dump_sw.v":1604369357
+#CUR:"E:\\git_repository\\MDEMRT_Code\\event_board\\Libero_v11.9\\2D_NMR_EC_FPGA_150205\\hdl\\bridge_div.v":1604369357
+#CUR:"E:\\git_repository\\MDEMRT_Code\\event_board\\Libero_v11.9\\2D_NMR_EC_FPGA_150205\\hdl\\dds_change.v":1604369357
+#CUR:"E:\\git_repository\\MDEMRT_Code\\event_board\\Libero_v11.9\\2D_NMR_EC_FPGA_150205\\hdl\\n_pluse_acq.v":1604369357
+#CUR:"E:\\git_repository\\MDEMRT_Code\\event_board\\Libero_v11.9\\2D_NMR_EC_FPGA_150205\\hdl\\noisestate.v":1604369357
+#CUR:"E:\\git_repository\\MDEMRT_Code\\event_board\\Libero_v11.9\\2D_NMR_EC_FPGA_150205\\hdl\\nsctrl_choice.v":1604369357
+#CUR:"E:\\git_repository\\MDEMRT_Code\\event_board\\Libero_v11.9\\2D_NMR_EC_FPGA_150205\\hdl\\pd_pluse_coder.v":1604369357
+#CUR:"E:\\git_repository\\MDEMRT_Code\\event_board\\Libero_v11.9\\2D_NMR_EC_FPGA_150205\\hdl\\pd_pluse_state.v":1604369357
+#CUR:"E:\\git_repository\\MDEMRT_Code\\event_board\\Libero_v11.9\\2D_NMR_EC_FPGA_150205\\smartgen\\pd_pluse_inc\\pd_pluse_inc.v":1604369363
+#CUR:"E:\\git_repository\\MDEMRT_Code\\event_board\\Libero_v11.9\\2D_NMR_EC_FPGA_150205\\hdl\\pd_pluse_timer.v":1604369357
+#CUR:"E:\\git_repository\\MDEMRT_Code\\event_board\\Libero_v11.9\\2D_NMR_EC_FPGA_150205\\component\\work\\pd_pluse_top\\pd_pluse_top.v":1604369354
+#CUR:"E:\\git_repository\\MDEMRT_Code\\event_board\\Libero_v11.9\\2D_NMR_EC_FPGA_150205\\hdl\\plusestate.v":1604369357
+#CUR:"E:\\git_repository\\MDEMRT_Code\\event_board\\Libero_v11.9\\2D_NMR_EC_FPGA_150205\\hdl\\s_acq_change.v":1604369357
+#CUR:"E:\\git_repository\\MDEMRT_Code\\event_board\\Libero_v11.9\\2D_NMR_EC_FPGA_150205\\smartgen\\necount_cmp\\necount_cmp.v":1604369363
+#CUR:"E:\\git_repository\\MDEMRT_Code\\event_board\\Libero_v11.9\\2D_NMR_EC_FPGA_150205\\smartgen\\necount_inc\\necount_inc.v":1604369363
+#CUR:"E:\\git_repository\\MDEMRT_Code\\event_board\\Libero_v11.9\\2D_NMR_EC_FPGA_150205\\hdl\\scalestate.v":1604369357
+#CUR:"E:\\git_repository\\MDEMRT_Code\\event_board\\Libero_v11.9\\2D_NMR_EC_FPGA_150205\\hdl\\scan_scale_sw.v":1604369357
+#CUR:"E:\\git_repository\\MDEMRT_Code\\event_board\\Libero_v11.9\\2D_NMR_EC_FPGA_150205\\hdl\\scanstate.v":1604369357
+#CUR:"E:\\git_repository\\MDEMRT_Code\\event_board\\Libero_v11.9\\2D_NMR_EC_FPGA_150205\\hdl\\sd_acq_coder.v":1604369357
+#CUR:"E:\\git_repository\\MDEMRT_Code\\event_board\\Libero_v11.9\\2D_NMR_EC_FPGA_150205\\hdl\\sd_acq_state.v":1604369357
+#CUR:"E:\\git_repository\\MDEMRT_Code\\event_board\\Libero_v11.9\\2D_NMR_EC_FPGA_150205\\smartgen\\sd_sacq_inc\\sd_sacq_inc.v":1604369363
+#CUR:"E:\\git_repository\\MDEMRT_Code\\event_board\\Libero_v11.9\\2D_NMR_EC_FPGA_150205\\hdl\\sd_acq_timer.v":1604369357
+#CUR:"E:\\git_repository\\MDEMRT_Code\\event_board\\Libero_v11.9\\2D_NMR_EC_FPGA_150205\\component\\work\\sd_acq_top\\sd_acq_top.v":1604369354
+#CUR:"E:\\git_repository\\MDEMRT_Code\\event_board\\Libero_v11.9\\2D_NMR_EC_FPGA_150205\\hdl\\1ms_dump_choice.v":1604369357
+#CUR:"E:\\git_repository\\MDEMRT_Code\\event_board\\Libero_v11.9\\2D_NMR_EC_FPGA_150205\\hdl\\state_1ms.v":1604369357
+#CUR:"E:\\git_repository\\MDEMRT_Code\\event_board\\Libero_v11.9\\2D_NMR_EC_FPGA_150205\\hdl\\state_switch.v":1604369357
+#CUR:"E:\\git_repository\\MDEMRT_Code\\event_board\\Libero_v11.9\\2D_NMR_EC_FPGA_150205\\smartgen\\Timer_Cmp\\Timer_Cmp.v":1604369363
+#CUR:"E:\\git_repository\\MDEMRT_Code\\event_board\\Libero_v11.9\\2D_NMR_EC_FPGA_150205\\hdl\\timer.v":1604369357
+#CUR:"E:\\git_repository\\MDEMRT_Code\\event_board\\Libero_v11.9\\2D_NMR_EC_FPGA_150205\\component\\work\\timer_top\\timer_top.v":1604369354
+#CUR:"E:\\git_repository\\MDEMRT_Code\\event_board\\Libero_v11.9\\2D_NMR_EC_FPGA_150205\\hdl\\top_code.v":1604369357
+#CUR:"E:\\git_repository\\MDEMRT_Code\\event_board\\Libero_v11.9\\2D_NMR_EC_FPGA_150205\\hdl\\topctrlchange.v":1604369357
+#CUR:"E:\\git_repository\\MDEMRT_Code\\event_board\\Libero_v11.9\\2D_NMR_EC_FPGA_150205\\component\\work\\NMR_TOP\\NMR_TOP.v":1604369354
 #numinternalfiles:5
 #defaultlanguage:verilog
-0			"D:\FPGA\2D_NMR_EC_FPGA_150205\hdl\cal_div.v" verilog
-1			"D:\FPGA\2D_NMR_EC_FPGA_150205\hdl\cal_load.v" verilog
-2			"D:\FPGA\2D_NMR_EC_FPGA_150205\component\work\CAL\CAL.v" verilog
-3			"D:\FPGA\2D_NMR_EC_FPGA_150205\hdl\clk_10k.v" verilog
-4			"D:\FPGA\2D_NMR_EC_FPGA_150205\hdl\clk_div500.v" verilog
-5			"D:\FPGA\2D_NMR_EC_FPGA_150205\hdl\long_timer.v" verilog
-6			"D:\FPGA\2D_NMR_EC_FPGA_150205\smartgen\pllclk\pllclk.v" verilog
-7			"D:\FPGA\2D_NMR_EC_FPGA_150205\component\work\ClockManagement\ClockManagement.v" verilog
-8			"D:\FPGA\2D_NMR_EC_FPGA_150205\hdl\dds_coder.v" verilog
-9			"D:\FPGA\2D_NMR_EC_FPGA_150205\hdl\dds_state.v" verilog
-10			"D:\FPGA\2D_NMR_EC_FPGA_150205\hdl\dds_timer.v" verilog
-11			"D:\FPGA\2D_NMR_EC_FPGA_150205\component\work\DDS\DDS.v" verilog
-12			"D:\FPGA\2D_NMR_EC_FPGA_150205\smartgen\cmp_constant_4b\cmp_constant_4b.v" verilog
-13			"D:\FPGA\2D_NMR_EC_FPGA_150205\hdl\dump_sustain_timer.v" verilog
-14			"D:\FPGA\2D_NMR_EC_FPGA_150205\component\work\DSTimer\DSTimer.v" verilog
-15			"D:\FPGA\2D_NMR_EC_FPGA_150205\hdl\dump_coder.v" verilog
-16			"D:\FPGA\2D_NMR_EC_FPGA_150205\hdl\dump_state.v" verilog
-17			"D:\FPGA\2D_NMR_EC_FPGA_150205\hdl\dump_timer.v" verilog
-18			"D:\FPGA\2D_NMR_EC_FPGA_150205\hdl\off_on_coder.v" verilog
-19			"D:\FPGA\2D_NMR_EC_FPGA_150205\hdl\off_on_state.v" verilog
-20			"D:\FPGA\2D_NMR_EC_FPGA_150205\hdl\off_on_timer.v" verilog
-21			"D:\FPGA\2D_NMR_EC_FPGA_150205\component\work\DUMP\DUMP.v" verilog
-22			"D:\FPGA\2D_NMR_EC_FPGA_150205\component\work\DUMP_OFF\DUMP_OFF.v" verilog
-23			"D:\FPGA\2D_NMR_EC_FPGA_150205\component\work\DUMP_ON\DUMP_ON.v" verilog
-24			"D:\FPGA\2D_NMR_EC_FPGA_150205\hdl\reset_module.v" verilog
-25			"D:\FPGA\2D_NMR_EC_FPGA_150205\hdl\tri_state.v" verilog
-26			"D:\FPGA\2D_NMR_EC_FPGA_150205\hdl\xwe_xzcs2_syn.v" verilog
-27			"D:\FPGA\2D_NMR_EC_FPGA_150205\component\work\GPMI\GPMI.v" verilog
-28			"D:\FPGA\2D_NMR_EC_FPGA_150205\hdl\bri_coder.v" verilog
-29			"D:\FPGA\2D_NMR_EC_FPGA_150205\hdl\para_load.v" verilog
-30			"D:\FPGA\2D_NMR_EC_FPGA_150205\hdl\bri_state.v" verilog
-31			"D:\FPGA\2D_NMR_EC_FPGA_150205\hdl\bri_timer.v" verilog
-32			"D:\FPGA\2D_NMR_EC_FPGA_150205\hdl\qq_coder.v" verilog
-33			"D:\FPGA\2D_NMR_EC_FPGA_150205\hdl\qq_state.v" verilog
-34			"D:\FPGA\2D_NMR_EC_FPGA_150205\hdl\qq_timer.v" verilog
-35			"D:\FPGA\2D_NMR_EC_FPGA_150205\component\work\PLUSE\PLUSE.v" verilog
-36			"D:\FPGA\2D_NMR_EC_FPGA_150205\hdl\n_s_change.v" verilog
-37			"D:\FPGA\2D_NMR_EC_FPGA_150205\smartgen\RAM\RAM.v" verilog
-38			"D:\FPGA\2D_NMR_EC_FPGA_150205\hdl\link.v" verilog
-39			"D:\FPGA\2D_NMR_EC_FPGA_150205\hdl\n_rdclk_syn.v" verilog
-40			"D:\FPGA\2D_NMR_EC_FPGA_150205\hdl\noise_addr.v" verilog
-41			"D:\FPGA\2D_NMR_EC_FPGA_150205\hdl\noiseclk.v" verilog
-42			"D:\FPGA\2D_NMR_EC_FPGA_150205\hdl\noiseclkctrl.v" verilog
-43			"D:\FPGA\2D_NMR_EC_FPGA_150205\component\work\noise_acq\noise_acq.v" verilog
-44			"D:\FPGA\2D_NMR_EC_FPGA_150205\hdl\add_reg.v" verilog
-45			"D:\FPGA\2D_NMR_EC_FPGA_150205\hdl\ctrl_addr.v" verilog
-46			"D:\FPGA\2D_NMR_EC_FPGA_150205\hdl\readata_choice.v" verilog
-47			"D:\FPGA\2D_NMR_EC_FPGA_150205\hdl\s_clk_div.v" verilog
-48			"D:\FPGA\2D_NMR_EC_FPGA_150205\hdl\signalclkctrl.v" verilog
-49			"D:\FPGA\2D_NMR_EC_FPGA_150205\hdl\ten_choice_one.v" verilog
-50			"D:\FPGA\2D_NMR_EC_FPGA_150205\component\work\signal_acq\signal_acq.v" verilog
-51			"D:\FPGA\2D_NMR_EC_FPGA_150205\component\work\Signal_Noise_Acq\Signal_Noise_Acq.v" verilog
-52			"D:\FPGA\2D_NMR_EC_FPGA_150205\hdl\bri_dump_sw.v" verilog
-53			"D:\FPGA\2D_NMR_EC_FPGA_150205\hdl\bridge_div.v" verilog
-54			"D:\FPGA\2D_NMR_EC_FPGA_150205\hdl\dds_change.v" verilog
-55			"D:\FPGA\2D_NMR_EC_FPGA_150205\hdl\n_pluse_acq.v" verilog
-56			"D:\FPGA\2D_NMR_EC_FPGA_150205\hdl\noisestate.v" verilog
-57			"D:\FPGA\2D_NMR_EC_FPGA_150205\hdl\nsctrl_choice.v" verilog
-58			"D:\FPGA\2D_NMR_EC_FPGA_150205\hdl\pd_pluse_coder.v" verilog
-59			"D:\FPGA\2D_NMR_EC_FPGA_150205\hdl\pd_pluse_state.v" verilog
-60			"D:\FPGA\2D_NMR_EC_FPGA_150205\smartgen\pd_pluse_inc\pd_pluse_inc.v" verilog
-61			"D:\FPGA\2D_NMR_EC_FPGA_150205\hdl\pd_pluse_timer.v" verilog
-62			"D:\FPGA\2D_NMR_EC_FPGA_150205\component\work\pd_pluse_top\pd_pluse_top.v" verilog
-63			"D:\FPGA\2D_NMR_EC_FPGA_150205\hdl\plusestate.v" verilog
-64			"D:\FPGA\2D_NMR_EC_FPGA_150205\hdl\s_acq_change.v" verilog
-65			"D:\FPGA\2D_NMR_EC_FPGA_150205\smartgen\necount_cmp\necount_cmp.v" verilog
-66			"D:\FPGA\2D_NMR_EC_FPGA_150205\smartgen\necount_inc\necount_inc.v" verilog
-67			"D:\FPGA\2D_NMR_EC_FPGA_150205\hdl\scalestate.v" verilog
-68			"D:\FPGA\2D_NMR_EC_FPGA_150205\hdl\scan_scale_sw.v" verilog
-69			"D:\FPGA\2D_NMR_EC_FPGA_150205\hdl\scanstate.v" verilog
-70			"D:\FPGA\2D_NMR_EC_FPGA_150205\hdl\sd_acq_coder.v" verilog
-71			"D:\FPGA\2D_NMR_EC_FPGA_150205\hdl\sd_acq_state.v" verilog
-72			"D:\FPGA\2D_NMR_EC_FPGA_150205\smartgen\sd_sacq_inc\sd_sacq_inc.v" verilog
-73			"D:\FPGA\2D_NMR_EC_FPGA_150205\hdl\sd_acq_timer.v" verilog
-74			"D:\FPGA\2D_NMR_EC_FPGA_150205\component\work\sd_acq_top\sd_acq_top.v" verilog
-75			"D:\FPGA\2D_NMR_EC_FPGA_150205\hdl\1ms_dump_choice.v" verilog
-76			"D:\FPGA\2D_NMR_EC_FPGA_150205\hdl\state_1ms.v" verilog
-77			"D:\FPGA\2D_NMR_EC_FPGA_150205\hdl\state_switch.v" verilog
-78			"D:\FPGA\2D_NMR_EC_FPGA_150205\smartgen\Timer_Cmp\Timer_Cmp.v" verilog
-79			"D:\FPGA\2D_NMR_EC_FPGA_150205\hdl\timer.v" verilog
-80			"D:\FPGA\2D_NMR_EC_FPGA_150205\component\work\timer_top\timer_top.v" verilog
-81			"D:\FPGA\2D_NMR_EC_FPGA_150205\hdl\top_code.v" verilog
-82			"D:\FPGA\2D_NMR_EC_FPGA_150205\hdl\topctrlchange.v" verilog
-83			"D:\FPGA\2D_NMR_EC_FPGA_150205\component\work\NMR_TOP\NMR_TOP.v" verilog
+0			"E:\git_repository\MDEMRT_Code\event_board\Libero_v11.9\2D_NMR_EC_FPGA_150205\hdl\cal_div.v" verilog
+1			"E:\git_repository\MDEMRT_Code\event_board\Libero_v11.9\2D_NMR_EC_FPGA_150205\hdl\cal_load.v" verilog
+2			"E:\git_repository\MDEMRT_Code\event_board\Libero_v11.9\2D_NMR_EC_FPGA_150205\component\work\CAL\CAL.v" verilog
+3			"E:\git_repository\MDEMRT_Code\event_board\Libero_v11.9\2D_NMR_EC_FPGA_150205\hdl\clk_10k.v" verilog
+4			"E:\git_repository\MDEMRT_Code\event_board\Libero_v11.9\2D_NMR_EC_FPGA_150205\hdl\clk_div500.v" verilog
+5			"E:\git_repository\MDEMRT_Code\event_board\Libero_v11.9\2D_NMR_EC_FPGA_150205\hdl\long_timer.v" verilog
+6			"E:\git_repository\MDEMRT_Code\event_board\Libero_v11.9\2D_NMR_EC_FPGA_150205\smartgen\pllclk\pllclk.v" verilog
+7			"E:\git_repository\MDEMRT_Code\event_board\Libero_v11.9\2D_NMR_EC_FPGA_150205\component\work\ClockManagement\ClockManagement.v" verilog
+8			"E:\git_repository\MDEMRT_Code\event_board\Libero_v11.9\2D_NMR_EC_FPGA_150205\hdl\dds_coder.v" verilog
+9			"E:\git_repository\MDEMRT_Code\event_board\Libero_v11.9\2D_NMR_EC_FPGA_150205\hdl\dds_state.v" verilog
+10			"E:\git_repository\MDEMRT_Code\event_board\Libero_v11.9\2D_NMR_EC_FPGA_150205\hdl\dds_timer.v" verilog
+11			"E:\git_repository\MDEMRT_Code\event_board\Libero_v11.9\2D_NMR_EC_FPGA_150205\component\work\DDS\DDS.v" verilog
+12			"E:\git_repository\MDEMRT_Code\event_board\Libero_v11.9\2D_NMR_EC_FPGA_150205\smartgen\cmp_constant_4b\cmp_constant_4b.v" verilog
+13			"E:\git_repository\MDEMRT_Code\event_board\Libero_v11.9\2D_NMR_EC_FPGA_150205\hdl\dump_sustain_timer.v" verilog
+14			"E:\git_repository\MDEMRT_Code\event_board\Libero_v11.9\2D_NMR_EC_FPGA_150205\component\work\DSTimer\DSTimer.v" verilog
+15			"E:\git_repository\MDEMRT_Code\event_board\Libero_v11.9\2D_NMR_EC_FPGA_150205\hdl\dump_coder.v" verilog
+16			"E:\git_repository\MDEMRT_Code\event_board\Libero_v11.9\2D_NMR_EC_FPGA_150205\hdl\dump_state.v" verilog
+17			"E:\git_repository\MDEMRT_Code\event_board\Libero_v11.9\2D_NMR_EC_FPGA_150205\hdl\dump_timer.v" verilog
+18			"E:\git_repository\MDEMRT_Code\event_board\Libero_v11.9\2D_NMR_EC_FPGA_150205\hdl\off_on_coder.v" verilog
+19			"E:\git_repository\MDEMRT_Code\event_board\Libero_v11.9\2D_NMR_EC_FPGA_150205\hdl\off_on_state.v" verilog
+20			"E:\git_repository\MDEMRT_Code\event_board\Libero_v11.9\2D_NMR_EC_FPGA_150205\hdl\off_on_timer.v" verilog
+21			"E:\git_repository\MDEMRT_Code\event_board\Libero_v11.9\2D_NMR_EC_FPGA_150205\component\work\DUMP\DUMP.v" verilog
+22			"E:\git_repository\MDEMRT_Code\event_board\Libero_v11.9\2D_NMR_EC_FPGA_150205\component\work\DUMP_OFF\DUMP_OFF.v" verilog
+23			"E:\git_repository\MDEMRT_Code\event_board\Libero_v11.9\2D_NMR_EC_FPGA_150205\component\work\DUMP_ON\DUMP_ON.v" verilog
+24			"E:\git_repository\MDEMRT_Code\event_board\Libero_v11.9\2D_NMR_EC_FPGA_150205\hdl\reset_module.v" verilog
+25			"E:\git_repository\MDEMRT_Code\event_board\Libero_v11.9\2D_NMR_EC_FPGA_150205\hdl\tri_state.v" verilog
+26			"E:\git_repository\MDEMRT_Code\event_board\Libero_v11.9\2D_NMR_EC_FPGA_150205\hdl\xwe_xzcs2_syn.v" verilog
+27			"E:\git_repository\MDEMRT_Code\event_board\Libero_v11.9\2D_NMR_EC_FPGA_150205\component\work\GPMI\GPMI.v" verilog
+28			"E:\git_repository\MDEMRT_Code\event_board\Libero_v11.9\2D_NMR_EC_FPGA_150205\hdl\bri_coder.v" verilog
+29			"E:\git_repository\MDEMRT_Code\event_board\Libero_v11.9\2D_NMR_EC_FPGA_150205\hdl\para_load.v" verilog
+30			"E:\git_repository\MDEMRT_Code\event_board\Libero_v11.9\2D_NMR_EC_FPGA_150205\hdl\bri_state.v" verilog
+31			"E:\git_repository\MDEMRT_Code\event_board\Libero_v11.9\2D_NMR_EC_FPGA_150205\hdl\bri_timer.v" verilog
+32			"E:\git_repository\MDEMRT_Code\event_board\Libero_v11.9\2D_NMR_EC_FPGA_150205\hdl\qq_coder.v" verilog
+33			"E:\git_repository\MDEMRT_Code\event_board\Libero_v11.9\2D_NMR_EC_FPGA_150205\hdl\qq_state.v" verilog
+34			"E:\git_repository\MDEMRT_Code\event_board\Libero_v11.9\2D_NMR_EC_FPGA_150205\hdl\qq_timer.v" verilog
+35			"E:\git_repository\MDEMRT_Code\event_board\Libero_v11.9\2D_NMR_EC_FPGA_150205\component\work\PLUSE\PLUSE.v" verilog
+36			"E:\git_repository\MDEMRT_Code\event_board\Libero_v11.9\2D_NMR_EC_FPGA_150205\hdl\n_s_change.v" verilog
+37			"E:\git_repository\MDEMRT_Code\event_board\Libero_v11.9\2D_NMR_EC_FPGA_150205\smartgen\RAM\RAM.v" verilog
+38			"E:\git_repository\MDEMRT_Code\event_board\Libero_v11.9\2D_NMR_EC_FPGA_150205\hdl\link.v" verilog
+39			"E:\git_repository\MDEMRT_Code\event_board\Libero_v11.9\2D_NMR_EC_FPGA_150205\hdl\n_rdclk_syn.v" verilog
+40			"E:\git_repository\MDEMRT_Code\event_board\Libero_v11.9\2D_NMR_EC_FPGA_150205\hdl\noise_addr.v" verilog
+41			"E:\git_repository\MDEMRT_Code\event_board\Libero_v11.9\2D_NMR_EC_FPGA_150205\hdl\noiseclk.v" verilog
+42			"E:\git_repository\MDEMRT_Code\event_board\Libero_v11.9\2D_NMR_EC_FPGA_150205\hdl\noiseclkctrl.v" verilog
+43			"E:\git_repository\MDEMRT_Code\event_board\Libero_v11.9\2D_NMR_EC_FPGA_150205\component\work\noise_acq\noise_acq.v" verilog
+44			"E:\git_repository\MDEMRT_Code\event_board\Libero_v11.9\2D_NMR_EC_FPGA_150205\hdl\add_reg.v" verilog
+45			"E:\git_repository\MDEMRT_Code\event_board\Libero_v11.9\2D_NMR_EC_FPGA_150205\hdl\ctrl_addr.v" verilog
+46			"E:\git_repository\MDEMRT_Code\event_board\Libero_v11.9\2D_NMR_EC_FPGA_150205\hdl\readata_choice.v" verilog
+47			"E:\git_repository\MDEMRT_Code\event_board\Libero_v11.9\2D_NMR_EC_FPGA_150205\hdl\s_clk_div.v" verilog
+48			"E:\git_repository\MDEMRT_Code\event_board\Libero_v11.9\2D_NMR_EC_FPGA_150205\hdl\signalclkctrl.v" verilog
+49			"E:\git_repository\MDEMRT_Code\event_board\Libero_v11.9\2D_NMR_EC_FPGA_150205\hdl\ten_choice_one.v" verilog
+50			"E:\git_repository\MDEMRT_Code\event_board\Libero_v11.9\2D_NMR_EC_FPGA_150205\component\work\signal_acq\signal_acq.v" verilog
+51			"E:\git_repository\MDEMRT_Code\event_board\Libero_v11.9\2D_NMR_EC_FPGA_150205\component\work\Signal_Noise_Acq\Signal_Noise_Acq.v" verilog
+52			"E:\git_repository\MDEMRT_Code\event_board\Libero_v11.9\2D_NMR_EC_FPGA_150205\hdl\bri_dump_sw.v" verilog
+53			"E:\git_repository\MDEMRT_Code\event_board\Libero_v11.9\2D_NMR_EC_FPGA_150205\hdl\bridge_div.v" verilog
+54			"E:\git_repository\MDEMRT_Code\event_board\Libero_v11.9\2D_NMR_EC_FPGA_150205\hdl\dds_change.v" verilog
+55			"E:\git_repository\MDEMRT_Code\event_board\Libero_v11.9\2D_NMR_EC_FPGA_150205\hdl\n_pluse_acq.v" verilog
+56			"E:\git_repository\MDEMRT_Code\event_board\Libero_v11.9\2D_NMR_EC_FPGA_150205\hdl\noisestate.v" verilog
+57			"E:\git_repository\MDEMRT_Code\event_board\Libero_v11.9\2D_NMR_EC_FPGA_150205\hdl\nsctrl_choice.v" verilog
+58			"E:\git_repository\MDEMRT_Code\event_board\Libero_v11.9\2D_NMR_EC_FPGA_150205\hdl\pd_pluse_coder.v" verilog
+59			"E:\git_repository\MDEMRT_Code\event_board\Libero_v11.9\2D_NMR_EC_FPGA_150205\hdl\pd_pluse_state.v" verilog
+60			"E:\git_repository\MDEMRT_Code\event_board\Libero_v11.9\2D_NMR_EC_FPGA_150205\smartgen\pd_pluse_inc\pd_pluse_inc.v" verilog
+61			"E:\git_repository\MDEMRT_Code\event_board\Libero_v11.9\2D_NMR_EC_FPGA_150205\hdl\pd_pluse_timer.v" verilog
+62			"E:\git_repository\MDEMRT_Code\event_board\Libero_v11.9\2D_NMR_EC_FPGA_150205\component\work\pd_pluse_top\pd_pluse_top.v" verilog
+63			"E:\git_repository\MDEMRT_Code\event_board\Libero_v11.9\2D_NMR_EC_FPGA_150205\hdl\plusestate.v" verilog
+64			"E:\git_repository\MDEMRT_Code\event_board\Libero_v11.9\2D_NMR_EC_FPGA_150205\hdl\s_acq_change.v" verilog
+65			"E:\git_repository\MDEMRT_Code\event_board\Libero_v11.9\2D_NMR_EC_FPGA_150205\smartgen\necount_cmp\necount_cmp.v" verilog
+66			"E:\git_repository\MDEMRT_Code\event_board\Libero_v11.9\2D_NMR_EC_FPGA_150205\smartgen\necount_inc\necount_inc.v" verilog
+67			"E:\git_repository\MDEMRT_Code\event_board\Libero_v11.9\2D_NMR_EC_FPGA_150205\hdl\scalestate.v" verilog
+68			"E:\git_repository\MDEMRT_Code\event_board\Libero_v11.9\2D_NMR_EC_FPGA_150205\hdl\scan_scale_sw.v" verilog
+69			"E:\git_repository\MDEMRT_Code\event_board\Libero_v11.9\2D_NMR_EC_FPGA_150205\hdl\scanstate.v" verilog
+70			"E:\git_repository\MDEMRT_Code\event_board\Libero_v11.9\2D_NMR_EC_FPGA_150205\hdl\sd_acq_coder.v" verilog
+71			"E:\git_repository\MDEMRT_Code\event_board\Libero_v11.9\2D_NMR_EC_FPGA_150205\hdl\sd_acq_state.v" verilog
+72			"E:\git_repository\MDEMRT_Code\event_board\Libero_v11.9\2D_NMR_EC_FPGA_150205\smartgen\sd_sacq_inc\sd_sacq_inc.v" verilog
+73			"E:\git_repository\MDEMRT_Code\event_board\Libero_v11.9\2D_NMR_EC_FPGA_150205\hdl\sd_acq_timer.v" verilog
+74			"E:\git_repository\MDEMRT_Code\event_board\Libero_v11.9\2D_NMR_EC_FPGA_150205\component\work\sd_acq_top\sd_acq_top.v" verilog
+75			"E:\git_repository\MDEMRT_Code\event_board\Libero_v11.9\2D_NMR_EC_FPGA_150205\hdl\1ms_dump_choice.v" verilog
+76			"E:\git_repository\MDEMRT_Code\event_board\Libero_v11.9\2D_NMR_EC_FPGA_150205\hdl\state_1ms.v" verilog
+77			"E:\git_repository\MDEMRT_Code\event_board\Libero_v11.9\2D_NMR_EC_FPGA_150205\hdl\state_switch.v" verilog
+78			"E:\git_repository\MDEMRT_Code\event_board\Libero_v11.9\2D_NMR_EC_FPGA_150205\smartgen\Timer_Cmp\Timer_Cmp.v" verilog
+79			"E:\git_repository\MDEMRT_Code\event_board\Libero_v11.9\2D_NMR_EC_FPGA_150205\hdl\timer.v" verilog
+80			"E:\git_repository\MDEMRT_Code\event_board\Libero_v11.9\2D_NMR_EC_FPGA_150205\component\work\timer_top\timer_top.v" verilog
+81			"E:\git_repository\MDEMRT_Code\event_board\Libero_v11.9\2D_NMR_EC_FPGA_150205\hdl\top_code.v" verilog
+82			"E:\git_repository\MDEMRT_Code\event_board\Libero_v11.9\2D_NMR_EC_FPGA_150205\hdl\topctrlchange.v" verilog
+83			"E:\git_repository\MDEMRT_Code\event_board\Libero_v11.9\2D_NMR_EC_FPGA_150205\component\work\NMR_TOP\NMR_TOP.v" verilog
 #Dependency Lists(Uses List)
 0 -1
 1 -1

@@ -1588,7 +1588,7 @@ else if (WorkMode==0x0006)//FBW2
 		//if (WorkMode==0x0010)
 
 		T2DFreqSel	= *(Uint16 *)0x800A;
-		if (T2DFreqSel<1||T2DFreqSel>6)
+		if (T2DFreqSel<1||T2DFreqSel>8)//ooc
 		{
 			T2DFreqSel	= 6;
 			*(Uint16 *)0x800A	= 6;
@@ -1724,7 +1724,7 @@ else if (WorkMode==0x0006)//FBW2
 		T2DFreqSel		= *(Uint16 *)0x800A;
 		T2DFreqSelAry[1]= (T2DFreqSel&0x00F0)>>4;
 		T2DFreqSelAry[2]= T2DFreqSel&0x000F;
-		if  (T2DFreqSel>0x00FF||T2DFreqSelAry[1]<1||T2DFreqSelAry[1]>6||T2DFreqSelAry[2]<1||T2DFreqSelAry[2]>6)
+		if  (T2DFreqSel>0x00FF||T2DFreqSelAry[1]<1||T2DFreqSelAry[1]>8||T2DFreqSelAry[2]<1||T2DFreqSelAry[2]>8)//ooc
 		{
 			T2DFreqSel		= 0x0063;
 			*(Uint16 *)0x800A	= 0x0063;
@@ -1958,7 +1958,7 @@ else if (WorkMode==0x0006)//FBW2
 		T2DFreqSelAry[1]= (T2DFreqSel&0x0F00)>>8;
 		T2DFreqSelAry[2]= (T2DFreqSel&0x00F0)>>4;
 		T2DFreqSelAry[3]= T2DFreqSel&0x000F;
-		if (T2DFreqSel>0x0FFF||T2DFreqSelAry[1]<1||T2DFreqSelAry[1]>6||T2DFreqSelAry[2]<1||T2DFreqSelAry[2]>6||T2DFreqSelAry[3]<1||T2DFreqSelAry[3]>6)
+		if (T2DFreqSel>0x0FFF||T2DFreqSelAry[1]<1||T2DFreqSelAry[1]>8||T2DFreqSelAry[2]<1||T2DFreqSelAry[2]>8||T2DFreqSelAry[3]<1||T2DFreqSelAry[3]>8)//ooc
 		{
 			T2DFreqSel		= 0x0852;
 			*(Uint16 *)0x800A	= 0x0852;
@@ -2093,7 +2093,7 @@ else if (WorkMode==0x0006)//FBW2
 	else if(WorkMode==0x0040)
 	{
 		T1T2FreqSel	= *(Uint16 *)0x800A;
-		if (T1T2FreqSel<1||T1T2FreqSel>6)
+		if (T1T2FreqSel<1||T1T2FreqSel>8)//ooc
 		{
 			T1T2FreqSel	= 6;
 			*(Uint16 *)0x800A	= 6;

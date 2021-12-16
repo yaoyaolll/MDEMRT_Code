@@ -1,5 +1,5 @@
-# Created by Microsemi Libero Software 11.9.5.5
-# Mon Jun 29 11:38:23 2020
+# Created by Microsemi Libero Software 11.9.6.7
+# Wed Jun 02 17:38:15 2021
 
 # (OPEN DESIGN)
 
@@ -11,16 +11,12 @@ set_defvar "IDE_DESIGNERVIEW_NAME" {Impl3}
 set_defvar "IDE_DESIGNERVIEW_COUNT" "1"
 set_defvar "IDE_DESIGNERVIEW_REV0" {Impl3}
 set_defvar "IDE_DESIGNERVIEW_REVNUM0" "3"
-set_defvar "IDE_DESIGNERVIEW_ROOTDIR" {D:\FPGA\2D_NMR_EC_FPGA_150205\designer}
+set_defvar "IDE_DESIGNERVIEW_ROOTDIR" {E:\git_repository\MDEMRT_Code\event_board\Libero_v11.9\2D_NMR_EC_FPGA_150205\designer}
 set_defvar "IDE_DESIGNERVIEW_LASTREV" "3"
 
-
-layout -timing_driven
-report -type "status" {NMR_TOP_place_and_route_report.txt}
-report -type "globalnet" {NMR_TOP_globalnet_report.txt}
-report -type "globalusage" {NMR_TOP_globalusage_report.txt}
-report -type "iobank" {NMR_TOP_iobank_report.txt}
-report -type "pin" -listby "name" {NMR_TOP_report_pin_byname.txt}
-report -type "pin" -listby "number" {NMR_TOP_report_pin_bynumber.txt}
+report -type "timing" -format "TEXT" -analysis "max" -print_summary "yes" -use_slack_threshold "no"                             -print_paths "yes" -max_paths 5 -max_expanded_paths 1                             -max_parallel_paths 1 -include_user_sets "no"                             -include_pin_to_pin "yes" -include_clock_domains "yes"                             -select_clock_domains "no" {NMR_TOP_maxdelay_timing_report.txt}
+report -type "timing" -format "TEXT" -analysis "min" -print_summary "yes" -use_slack_threshold "no"                             -print_paths "yes" -max_paths 5 -max_expanded_paths 1                             -max_parallel_paths 1 -include_user_sets "no"                             -include_pin_to_pin "yes" -include_clock_domains "yes"                             -select_clock_domains "no" {NMR_TOP_mindelay_timing_report.txt}
+report -type "timing_violations" -format "TEXT" -analysis "max" -use_slack_threshold "yes" -slack_threshold 0.00                               -limit_max_paths "yes" -max_paths 100 -max_expanded_paths 0                               -max_parallel_paths 1 {NMR_TOP_maxdelay_timingviolations_report.txt}
+report -type "timing_violations" -format "TEXT" -analysis "min" -use_slack_threshold "yes" -slack_threshold 0.00                               -limit_max_paths "yes" -max_paths 100 -max_expanded_paths 0                               -max_parallel_paths 1 {NMR_TOP_mindelay_timingviolations_report.txt}
 
 save_design

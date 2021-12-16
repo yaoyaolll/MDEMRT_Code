@@ -5,7 +5,7 @@ The file contains the job information from mapper to be displayed as part of the
 *******************************************************************************************-->
 <job_run_status name="Mapper">
 <report_link name="Detailed report">
-<data>D:\FPGA\2D_NMR_EC_FPGA_150205\synthesis\synlog\NMR_TOP_fpga_mapper.srr</data>
+<data>E:\git_repository\MDEMRT_Code\event_board\Libero_v11.9\2D_NMR_EC_FPGA_150205\synthesis\synlog\NMR_TOP_fpga_mapper.srr</data>
 <title>Synopsys Microsemi Technology Mapper</title>
 </report_link>
 <job_status>
@@ -15,32 +15,32 @@ The file contains the job information from mapper to be displayed as part of the
 <info name="Notes">
 <data>41</data>
 <report_link name="more">
-<data>D:\FPGA\2D_NMR_EC_FPGA_150205\synthesis\synlog\report\NMR_TOP_fpga_mapper_notes.txt</data>
+<data>E:\git_repository\MDEMRT_Code\event_board\Libero_v11.9\2D_NMR_EC_FPGA_150205\synthesis\synlog\report\NMR_TOP_fpga_mapper_notes.txt</data>
 </report_link>
 </info>
 <info name="Warnings">
 <data>10</data>
 <report_link name="more">
-<data>D:\FPGA\2D_NMR_EC_FPGA_150205\synthesis\synlog\report\NMR_TOP_fpga_mapper_warnings.txt</data>
+<data>E:\git_repository\MDEMRT_Code\event_board\Libero_v11.9\2D_NMR_EC_FPGA_150205\synthesis\synlog\report\NMR_TOP_fpga_mapper_warnings.txt</data>
 </report_link>
 </info>
 <info name="Errors">
 <data>0</data>
 <report_link name="more">
-<data>D:\FPGA\2D_NMR_EC_FPGA_150205\synthesis\synlog\report\NMR_TOP_fpga_mapper_errors.txt</data>
+<data>E:\git_repository\MDEMRT_Code\event_board\Libero_v11.9\2D_NMR_EC_FPGA_150205\synthesis\synlog\report\NMR_TOP_fpga_mapper_errors.txt</data>
 </report_link>
 </info>
 <info name="CPU Time">
-<data>0h:00m:08s</data>
+<data>0h:00m:09s</data>
 </info>
 <info name="Real Time">
-<data>0h:00m:08s</data>
+<data>0h:00m:10s</data>
 </info>
 <info name="Peak Memory">
-<data>179MB</data>
+<data>180MB</data>
 </info>
 <info name="Date &amp; Time">
-<data type="timestamp">1593401878</data>
+<data type="timestamp">1622626475</data>
 </info>
 </job_info>
 </job_run_status>

@@ -385,6 +385,11 @@ STATE="utd"
 TIME="1604369354"
 SIZE="7651"
 ENDFILE
+VALUE "<project>\designer\impl1\NMR_TOP_prgdata_log.rpt,log"
+STATE="utd"
+TIME="1622599204"
+SIZE="1034"
+ENDFILE
 VALUE "<project>\designer\impl3\NMR_TOP.adb,adb"
 STATE="ood"
 TIME="1604369355"
@@ -397,18 +402,18 @@ SIZE="333824"
 ENDFILE
 VALUE "<project>\designer\impl3\NMR_TOP_1.adb,adb"
 STATE="utd"
-TIME="1604369355"
+TIME="1622599203"
 SIZE="6417920"
 ENDFILE
 VALUE "<project>\designer\impl3\NMR_TOP_1.ide_des,ide_des"
 STATE="utd"
-TIME="1604369355"
-SIZE="1323"
+TIME="1622599204"
+SIZE="1651"
 ENDFILE
 VALUE "<project>\designer\impl3\NMR_TOP_1.pdb,pdb"
-STATE="ood"
-TIME="1604369355"
-SIZE="293636"
+STATE="utd"
+TIME="1622626734"
+SIZE="293761"
 ENDFILE
 VALUE "<project>\designer\impl3\NMR_TOP_1_ba.sdf,ba_sdf"
 STATE="ood"
@@ -422,18 +427,43 @@ SIZE="1968091"
 ENDFILE
 VALUE "<project>\designer\impl3\NMR_TOP_1_fp\NMR_TOP_1.pro,pro"
 STATE="utd"
-TIME="1604369356"
-SIZE="1954"
+TIME="1622601401"
+SIZE="2477"
+ENDFILE
+VALUE "<project>\designer\impl3\NMR_TOP_1_fp\projectData\NMR_TOP_1.pdb,pdb"
+STATE="utd"
+TIME="1622601401"
+SIZE="293761"
 ENDFILE
 VALUE "<project>\designer\impl3\NMR_TOP_ba.sdf,ba_sdf"
 STATE="ood"
 TIME="1604369356"
 SIZE="3836172"
 ENDFILE
+VALUE "<project>\designer\impl3\NMR_TOP_compile_log.rpt,log"
+STATE="utd"
+TIME="1622626516"
+SIZE="20577"
+ENDFILE
 VALUE "<project>\designer\impl3\NMR_TOP_fp\NMR_TOP.pro,pro"
 STATE="utd"
-TIME="1604369356"
+TIME="1608687113"
 SIZE="0"
+ENDFILE
+VALUE "<project>\designer\impl3\NMR_TOP_fp\projectData\NMR_TOP.pdb,pdb"
+STATE="utd"
+TIME="1604369356"
+SIZE="335872"
+ENDFILE
+VALUE "<project>\designer\impl3\NMR_TOP_placeroute_log.rpt,log"
+STATE="utd"
+TIME="1622626694"
+SIZE="2724"
+ENDFILE
+VALUE "<project>\designer\impl3\NMR_TOP_verifytiming_log.rpt,log"
+STATE="utd"
+TIME="1622626707"
+SIZE="1233"
 ENDFILE
 VALUE "<project>\hdl\1ms_dump_choice.v,hdl"
 STATE="utd"
@@ -1084,13 +1114,13 @@ SIZE="15596"
 ENDFILE
 VALUE "<project>\synthesis\NMR_TOP.edn,syn_edn"
 STATE="utd"
-TIME="1604369363"
-SIZE="3551856"
+TIME="1622598968"
+SIZE="3551853"
 ENDFILE
 VALUE "<project>\synthesis\NMR_TOP.so,so"
 STATE="utd"
-TIME="1604369363"
-SIZE="213"
+TIME="1622598968"
+SIZE="260"
 ENDFILE
 VALUE "<project>\synthesis\NMR_TOP.v,syn_hdl"
 STATE="ood"
@@ -1099,13 +1129,13 @@ SIZE="1152396"
 ENDFILE
 VALUE "<project>\synthesis\NMR_TOP_sdc.sdc,syn_sdc"
 STATE="utd"
-TIME="1604369363"
+TIME="1622598967"
 SIZE="1414"
 ENDFILE
 VALUE "<project>\synthesis\NMR_TOP_syn.prj,prj"
 STATE="utd"
-TIME="1604369363"
-SIZE="8105"
+TIME="1622598968"
+SIZE="12147"
 ENDFILE
 VALUE "<project>\viewdraw\sym\add_code.1,sym"
 STATE="utd"
@@ -1519,6 +1549,10 @@ VALUE "<project>\designer\impl3\NMR_TOP_1_fp\NMR_TOP_1.pro,pro"
 ENDUsed_File_List
 ENDLIST
 ENDLIST
+LIST PinReports
+VALUE "<project>\designer\impl3\NMR_TOP_report_pin_byname.txt,log"
+VALUE "<project>\designer\impl3\NMR_TOP_report_pin_bynumber.txt,log"
+ENDLIST
 ENDLIST
 LIST "noise_acq::work"
 FILE "<project>\component\work\noise_acq\noise_acq.v,hdl"
@@ -1862,8 +1896,8 @@ NAME="Synplify Pro ME"
 FUNCTION="Synthesis"
 TOOL="Synplify Pro ME"
 LOCATION="D:\Libero_Soc11.9\SynplifyPro\bin\synplify_pro.exe"
-PARAM=""
-BATCH=0
+PARAM="-licensetype synplifypro_actel -batch -log synplify.log"
+BATCH=1
 LICENSE=""
 IS32BIT="1"
 EndProfile

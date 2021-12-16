@@ -5,6 +5,9 @@
     <View>
         SingleSTAPLView
     </View>
+    <LiberoTargetDevice>
+        
+    </LiberoTargetDevice>
     <LogFile>
         E:\git_repository\MDEMRT_Code\event_board\Libero_v11.9\2D_NMR_EC_FPGA_150205\designer\impl3\NMR_TOP_1_fp\NMR_TOP_1.log
     </LogFile>
@@ -56,6 +59,17 @@
                     FreeRunningClk
                 </ClkMode>
             </FlashPro4>
+            <FlashPro5>
+                <TCK>
+                    4000000
+                </TCK>
+                <ClkMode>
+                    FreeRunningClk
+                </ClkMode>
+                <ProgrammingMode>
+                    JTAGMode
+                </ProgrammingMode>
+            </FlashPro5>
         </Hardware>
         <Algo type="PDB">
             <filename>

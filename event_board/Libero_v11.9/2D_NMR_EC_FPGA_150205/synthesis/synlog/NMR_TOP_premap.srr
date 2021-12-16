@@ -1,22 +1,22 @@
-# Mon Jun 29 11:37:48 2020
+# Wed Jun 02 17:34:22 2021
 
 Synopsys Microsemi Technology Pre-mapping, Version mapact, Build 2172R, Built Oct 30 2017 10:54:39
 Copyright (C) 1994-2017 Synopsys, Inc. This Synopsys software and all associated documentation are proprietary to Synopsys, Inc. and may only be used pursuant to the terms and conditions of a written license agreement with Synopsys, Inc. All other use, reproduction, modification, or distribution of the Synopsys software or the associated documentation is strictly prohibited.
 Product Version L-2016.09M-SP1-5
 
-Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 99MB peak: 99MB)
+Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 99MB peak: 100MB)
 
-Reading constraint file: D:\FPGA\2D_NMR_EC_FPGA_150205\constraint\NMR_TOP_syn.sdc
+Reading constraint file: E:\git_repository\MDEMRT_Code\event_board\Libero_v11.9\2D_NMR_EC_FPGA_150205\constraint\NMR_TOP_syn.sdc
 Adding property syn_global_buffer, value 9 to view:work.NMR_TOP(verilog)
-@L: D:\FPGA\2D_NMR_EC_FPGA_150205\synthesis\NMR_TOP_scck.rpt 
-Printing clock  summary report in "D:\FPGA\2D_NMR_EC_FPGA_150205\synthesis\NMR_TOP_scck.rpt" file 
+@L: E:\git_repository\MDEMRT_Code\event_board\Libero_v11.9\2D_NMR_EC_FPGA_150205\synthesis\NMR_TOP_scck.rpt 
+Printing clock  summary report in "E:\git_repository\MDEMRT_Code\event_board\Libero_v11.9\2D_NMR_EC_FPGA_150205\synthesis\NMR_TOP_scck.rpt" file 
 @N: MF248 |Running in 64-bit mode.
 @N: MF667 |Clock conversion disabled. (Command "set_option -fix_gated_and_generated_clocks 0" in the project file.)
 
-Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 111MB peak: 117MB)
+Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 112MB peak: 117MB)
 
 
-Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 111MB peak: 117MB)
+Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 112MB peak: 117MB)
 
 Adding property syn_allow_retiming, value 1, to instance GPMI_0.xwe_xzcs2_syn_0.code_en
 Adding property syn_allow_retiming, value 1, to instance scalestate_0.timecount[21:0]
@@ -31,9 +31,9 @@ Adding property syn_allow_retiming, value 1, to port top_code_0.noise_start
 Adding property syn_allow_retiming, value 1, to port top_code_0.scale_start
 Adding property syn_allow_retiming, value 1, to port top_code_0.pluse_str
 Adding property syn_allow_retiming, value 1, to port top_code_0.state_1ms_start
-@N: BN362 :"d:\fpga\2d_nmr_ec_fpga_150205\hdl\scanstate.v":127:0:127:5|Removing sequential instance resetout (in view: work.scanstate(verilog)) of type view:PrimLib.sdffre(prim) because it does not drive other instances.
+@N: BN362 :"e:\git_repository\mdemrt_code\event_board\libero_v11.9\2d_nmr_ec_fpga_150205\hdl\scanstate.v":127:0:127:5|Removing sequential instance resetout (in view: work.scanstate(verilog)) of type view:PrimLib.sdffre(prim) because it does not drive other instances.
 
-Finished netlist restructuring (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 119MB peak: 121MB)
+Finished netlist restructuring (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 120MB peak: 122MB)
 
 
 
@@ -53,9 +53,9 @@ ddsclkout                                                   40.0 MHz      25.000
 =====================================================================================================================
 
 Finished Pre Mapping Phase.
-@N: BN225 |Writing default property annotation file D:\FPGA\2D_NMR_EC_FPGA_150205\synthesis\NMR_TOP.sap.
+@N: BN225 |Writing default property annotation file E:\git_repository\MDEMRT_Code\event_board\Libero_v11.9\2D_NMR_EC_FPGA_150205\synthesis\NMR_TOP.sap.
 
-Starting constraint checker (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 118MB peak: 121MB)
+Starting constraint checker (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 119MB peak: 122MB)
 
 Encoding state machine CS[9:0] (in view: work.plusestate(verilog))
 original code -> new code
@@ -237,15 +237,15 @@ original code -> new code
    100000000000000000000 -> 1000000000000000000001
 None
 None
-@W: MF511 |Found issues with constraints. Please check constraint checker report "D:\FPGA\2D_NMR_EC_FPGA_150205\synthesis\NMR_TOP_cck.rpt" .
+@W: MF511 |Found issues with constraints. Please check constraint checker report "E:\git_repository\MDEMRT_Code\event_board\Libero_v11.9\2D_NMR_EC_FPGA_150205\synthesis\NMR_TOP_cck.rpt" .
 
-Finished constraint checker (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 123MB peak: 125MB)
+Finished constraint checker (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 124MB peak: 126MB)
 
 Pre-mapping successful!
 
-At Mapper Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:01s; Memory used current: 35MB peak: 125MB)
+At Mapper Exit (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 36MB peak: 126MB)
 
 Process took 0h:00m:01s realtime, 0h:00m:01s cputime
-# Mon Jun 29 11:37:49 2020
+# Wed Jun 02 17:34:24 2021
 
 ###########################################################]

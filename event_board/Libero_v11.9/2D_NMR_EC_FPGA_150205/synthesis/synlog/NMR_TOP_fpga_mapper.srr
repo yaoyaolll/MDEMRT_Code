@@ -1,34 +1,34 @@
-# Mon Jun 29 11:37:49 2020
+# Wed Jun 02 17:34:24 2021
 
 Synopsys Microsemi Technology Mapper, Version mapact, Build 2172R, Built Oct 30 2017 10:54:39
 Copyright (C) 1994-2017 Synopsys, Inc. This Synopsys software and all associated documentation are proprietary to Synopsys, Inc. and may only be used pursuant to the terms and conditions of a written license agreement with Synopsys, Inc. All other use, reproduction, modification, or distribution of the Synopsys software or the associated documentation is strictly prohibited.
 Product Version L-2016.09M-SP1-5
 
-Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 99MB peak: 99MB)
+Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 99MB peak: 100MB)
 
 @N: MF248 |Running in 64-bit mode.
 @N: MF667 |Clock conversion disabled. (Command "set_option -fix_gated_and_generated_clocks 0" in the project file.)
 
-Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 99MB peak: 100MB)
+Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 100MB peak: 101MB)
 
 
-Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 99MB peak: 100MB)
+Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 100MB peak: 101MB)
 
 
 
-Starting Optimization and Mapping (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 114MB peak: 115MB)
+Starting Optimization and Mapping (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 115MB peak: 116MB)
 
 
 Available hyper_sources - for debug and ip models
 	None Found
 
-@W: BN132 :"d:\fpga\2d_nmr_ec_fpga_150205\hdl\plusestate.v":144:0:144:5|Removing sequential instance plusestate_0.pluse_start because it is equivalent to instance plusestate_0.off_test. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: BN132 :"d:\fpga\2d_nmr_ec_fpga_150205\hdl\plusestate.v":144:0:144:5|Removing sequential instance plusestate_0.dump_start because it is equivalent to instance plusestate_0.soft_d. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: BN132 :"d:\fpga\2d_nmr_ec_fpga_150205\hdl\plusestate.v":144:0:144:5|Removing sequential instance plusestate_0.dumpoff_ctr because it is equivalent to instance plusestate_0.tetw_pluse. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: BN132 :"d:\fpga\2d_nmr_ec_fpga_150205\hdl\scanstate.v":127:0:127:5|Removing sequential instance scanstate_0.dumpon_ctr because it is equivalent to instance scanstate_0.dds_conf. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: BN132 :"d:\fpga\2d_nmr_ec_fpga_150205\hdl\scalestate.v":384:0:384:5|Removing sequential instance scalestate_0.state_over_n because it is equivalent to instance scalestate_0.tetw_pluse. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"e:\git_repository\mdemrt_code\event_board\libero_v11.9\2d_nmr_ec_fpga_150205\hdl\plusestate.v":144:0:144:5|Removing sequential instance plusestate_0.pluse_start because it is equivalent to instance plusestate_0.off_test. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"e:\git_repository\mdemrt_code\event_board\libero_v11.9\2d_nmr_ec_fpga_150205\hdl\plusestate.v":144:0:144:5|Removing sequential instance plusestate_0.dump_start because it is equivalent to instance plusestate_0.soft_d. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"e:\git_repository\mdemrt_code\event_board\libero_v11.9\2d_nmr_ec_fpga_150205\hdl\plusestate.v":144:0:144:5|Removing sequential instance plusestate_0.dumpoff_ctr because it is equivalent to instance plusestate_0.tetw_pluse. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"e:\git_repository\mdemrt_code\event_board\libero_v11.9\2d_nmr_ec_fpga_150205\hdl\scanstate.v":127:0:127:5|Removing sequential instance scanstate_0.dumpon_ctr because it is equivalent to instance scanstate_0.dds_conf. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"e:\git_repository\mdemrt_code\event_board\libero_v11.9\2d_nmr_ec_fpga_150205\hdl\scalestate.v":384:0:384:5|Removing sequential instance scalestate_0.state_over_n because it is equivalent to instance scalestate_0.tetw_pluse. To keep the instance, apply constraint syn_preserve=1 on the instance.
 
-Finished RTL optimizations (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 117MB peak: 120MB)
+Finished RTL optimizations (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 118MB peak: 121MB)
 
 Encoding state machine CS[9:0] (in view: work.plusestate(verilog))
 original code -> new code
@@ -49,9 +49,9 @@ original code -> new code
    0010 -> 00101
    0100 -> 01001
    1000 -> 10001
-@N: MO231 :"d:\fpga\2d_nmr_ec_fpga_150205\hdl\bri_timer.v":35:0:35:5|Found counter in view:work.bri_timer(verilog) instance count[7:0] 
-@N: MF179 :"d:\fpga\2d_nmr_ec_fpga_150205\hdl\bri_coder.v":37:13:37:30|Found 8 by 8 bit less-than operator ('<') half (in view: work.bri_coder(verilog))
-@N: MO231 :"d:\fpga\2d_nmr_ec_fpga_150205\hdl\qq_timer.v":22:0:22:5|Found counter in view:work.qq_timer(verilog) instance count[4:0] 
+@N: MO231 :"e:\git_repository\mdemrt_code\event_board\libero_v11.9\2d_nmr_ec_fpga_150205\hdl\bri_timer.v":35:0:35:5|Found counter in view:work.bri_timer(verilog) instance count[7:0] 
+@N: MF179 :"e:\git_repository\mdemrt_code\event_board\libero_v11.9\2d_nmr_ec_fpga_150205\hdl\bri_coder.v":37:13:37:30|Found 8 by 8 bit less-than operator ('<') half (in view: work.bri_coder(verilog))
+@N: MO231 :"e:\git_repository\mdemrt_code\event_board\libero_v11.9\2d_nmr_ec_fpga_150205\hdl\qq_timer.v":22:0:22:5|Found counter in view:work.qq_timer(verilog) instance count[4:0] 
 Encoding state machine cs[14:0] (in view: work.bri_state(verilog))
 original code -> new code
    00000000000000 -> 000000000000001
@@ -69,7 +69,7 @@ original code -> new code
    00100000000000 -> 001000000000000
    01000000000000 -> 010000000000000
    10000000000000 -> 100000000000000
-@N: MO231 :"d:\fpga\2d_nmr_ec_fpga_150205\hdl\dds_timer.v":22:0:22:5|Found counter in view:work.dds_timer(verilog) instance count[7:0] 
+@N: MO231 :"e:\git_repository\mdemrt_code\event_board\libero_v11.9\2d_nmr_ec_fpga_150205\hdl\dds_timer.v":22:0:22:5|Found counter in view:work.dds_timer(verilog) instance count[7:0] 
 Encoding state machine cs[8:0] (in view: work.dds_state(verilog))
 original code -> new code
    00000000 -> 000000000
@@ -86,7 +86,7 @@ original code -> new code
    00 -> 00
    01 -> 01
    10 -> 10
-@N: MO231 :"d:\fpga\2d_nmr_ec_fpga_150205\hdl\off_on_timer.v":23:0:23:5|Found counter in view:work.off_on_timer(verilog) instance count[4:0] 
+@N: MO231 :"e:\git_repository\mdemrt_code\event_board\libero_v11.9\2d_nmr_ec_fpga_150205\hdl\off_on_timer.v":23:0:23:5|Found counter in view:work.off_on_timer(verilog) instance count[4:0] 
 Encoding state machine cs[15:0] (in view: work.sd_sacq_state(verilog))
 original code -> new code
    000000000000000 -> 0000000000000000
@@ -105,8 +105,8 @@ original code -> new code
    001000000000000 -> 0010000000000001
    010000000000000 -> 0100000000000001
    100000000000000 -> 1000000000000001
-@N: MF238 :"d:\fpga\2d_nmr_ec_fpga_150205\hdl\timer.v":62:39:62:54|Found 22-bit incrementor, 'un2_timedata[21:0]'
-@N: MO231 :"d:\fpga\2d_nmr_ec_fpga_150205\hdl\dump_sustain_timer.v":44:0:44:5|Found counter in view:work.dump_sustain_timer(verilog) instance count[3:0] 
+@N: MF238 :"e:\git_repository\mdemrt_code\event_board\libero_v11.9\2d_nmr_ec_fpga_150205\hdl\timer.v":62:39:62:54|Found 22-bit incrementor, 'un2_timedata[21:0]'
+@N: MO231 :"e:\git_repository\mdemrt_code\event_board\libero_v11.9\2d_nmr_ec_fpga_150205\hdl\dump_sustain_timer.v":44:0:44:5|Found counter in view:work.dump_sustain_timer(verilog) instance count[3:0] 
 Encoding state machine CS[7:0] (in view: work.scanstate(verilog))
 original code -> new code
    00000001 -> 00000000
@@ -139,7 +139,7 @@ original code -> new code
    00100000 -> 00100001
    01000000 -> 01000001
    10000000 -> 10000001
-@N: MF238 :"d:\fpga\2d_nmr_ec_fpga_150205\hdl\bridge_div.v":57:15:57:16|Found 6-bit incrementor, 'count_5[5:0]'
+@N: MF238 :"e:\git_repository\mdemrt_code\event_board\libero_v11.9\2d_nmr_ec_fpga_150205\hdl\bridge_div.v":57:15:57:16|Found 6-bit incrementor, 'count_5[5:0]'
 Encoding state machine cs[12:0] (in view: work.pd_pluse_state(verilog))
 original code -> new code
    0000000000001 -> 0000000000000
@@ -155,7 +155,7 @@ original code -> new code
    0010000000000 -> 0010000000001
    0100000000000 -> 0100000000001
    1000000000000 -> 1000000000001
-@N: MF238 :"d:\fpga\2d_nmr_ec_fpga_150205\hdl\cal_div.v":39:45:39:54|Found 6-bit incrementor, 'un3_count[5:0]'
+@N: MF238 :"e:\git_repository\mdemrt_code\event_board\libero_v11.9\2d_nmr_ec_fpga_150205\hdl\cal_div.v":39:45:39:54|Found 6-bit incrementor, 'un3_count[5:0]'
 Encoding state machine cs[7:0] (in view: work.dump_state(verilog))
 original code -> new code
    0000000 -> 00000000
@@ -166,22 +166,22 @@ original code -> new code
    0010000 -> 00100001
    0100000 -> 01000001
    1000000 -> 10000001
-@N: MO231 :"d:\fpga\2d_nmr_ec_fpga_150205\hdl\dump_timer.v":23:0:23:5|Found counter in view:work.dump_timer(verilog) instance count[11:0] 
-@N: MO231 :"d:\fpga\2d_nmr_ec_fpga_150205\hdl\long_timer.v":48:0:48:5|Found counter in view:work.long_timer(verilog) instance count[15:0] 
+@N: MO231 :"e:\git_repository\mdemrt_code\event_board\libero_v11.9\2d_nmr_ec_fpga_150205\hdl\dump_timer.v":23:0:23:5|Found counter in view:work.dump_timer(verilog) instance count[11:0] 
+@N: MO231 :"e:\git_repository\mdemrt_code\event_board\libero_v11.9\2d_nmr_ec_fpga_150205\hdl\long_timer.v":48:0:48:5|Found counter in view:work.long_timer(verilog) instance count[15:0] 
 @N: MF176 |Default generator successful 
-@N: MO231 :"d:\fpga\2d_nmr_ec_fpga_150205\hdl\signalclkctrl.v":65:0:65:5|Found counter in view:work.signalclkctrl(verilog) instance count[15:0] 
+@N: MO231 :"e:\git_repository\mdemrt_code\event_board\libero_v11.9\2d_nmr_ec_fpga_150205\hdl\signalclkctrl.v":65:0:65:5|Found counter in view:work.signalclkctrl(verilog) instance count[15:0] 
 @N: MF176 |Default generator successful 
-@N: MF179 :"d:\fpga\2d_nmr_ec_fpga_150205\hdl\signalclkctrl.v":88:25:88:47|Found 16 by 16 bit less-than operator ('<') un1_count_1 (in view: work.signalclkctrl(verilog))
-@N: MF238 :"d:\fpga\2d_nmr_ec_fpga_150205\hdl\signalclkctrl.v":77:29:77:39|Found 12-bit incrementor, 'un1_stripnum[12:0]'
+@N: MF179 :"e:\git_repository\mdemrt_code\event_board\libero_v11.9\2d_nmr_ec_fpga_150205\hdl\signalclkctrl.v":88:25:88:47|Found 16 by 16 bit less-than operator ('<') un1_count_1 (in view: work.signalclkctrl(verilog))
+@N: MF238 :"e:\git_repository\mdemrt_code\event_board\libero_v11.9\2d_nmr_ec_fpga_150205\hdl\signalclkctrl.v":77:29:77:39|Found 12-bit incrementor, 'un1_stripnum[12:0]'
 @N: MF176 |Default generator successful 
-@N: MF238 :"d:\fpga\2d_nmr_ec_fpga_150205\hdl\ctrl_addr.v":38:17:38:18|Found 4-bit incrementor, 'addrout_3[3:0]'
-@N: MO231 :"d:\fpga\2d_nmr_ec_fpga_150205\hdl\noise_addr.v":16:0:16:5|Found counter in view:work.noise_addr_1(verilog) instance addr[11:0] 
-@N: MF179 :"d:\fpga\2d_nmr_ec_fpga_150205\hdl\noiseclk.v":63:26:63:40|Found 5 by 5 bit less-than operator ('<') un1_count (in view: work.noiseclk(verilog))
+@N: MF238 :"e:\git_repository\mdemrt_code\event_board\libero_v11.9\2d_nmr_ec_fpga_150205\hdl\ctrl_addr.v":38:17:38:18|Found 4-bit incrementor, 'addrout_3[3:0]'
+@N: MO231 :"e:\git_repository\mdemrt_code\event_board\libero_v11.9\2d_nmr_ec_fpga_150205\hdl\noise_addr.v":16:0:16:5|Found counter in view:work.noise_addr_1(verilog) instance addr[11:0] 
+@N: MF179 :"e:\git_repository\mdemrt_code\event_board\libero_v11.9\2d_nmr_ec_fpga_150205\hdl\noiseclk.v":63:26:63:40|Found 5 by 5 bit less-than operator ('<') un1_count (in view: work.noiseclk(verilog))
 @N: MF176 |Default generator successful 
-@N: MF238 :"d:\fpga\2d_nmr_ec_fpga_150205\hdl\noiseclk.v":61:36:61:45|Found 5-bit incrementor, 'un3_count[4:0]'
-@N: MO231 :"d:\fpga\2d_nmr_ec_fpga_150205\hdl\noiseclkctrl.v":32:0:32:5|Found counter in view:work.noiseclkctrl(verilog) instance count[11:0] 
-@N: MF179 :"d:\fpga\2d_nmr_ec_fpga_150205\hdl\noiseclkctrl.v":42:20:42:33|Found 12 by 12 bit less-than operator ('<') un1_count (in view: work.noiseclkctrl(verilog))
-@N: MO231 :"d:\fpga\2d_nmr_ec_fpga_150205\hdl\noise_addr.v":16:0:16:5|Found counter in view:work.noise_addr_0(verilog) instance addr[11:0] 
+@N: MF238 :"e:\git_repository\mdemrt_code\event_board\libero_v11.9\2d_nmr_ec_fpga_150205\hdl\noiseclk.v":61:36:61:45|Found 5-bit incrementor, 'un3_count[4:0]'
+@N: MO231 :"e:\git_repository\mdemrt_code\event_board\libero_v11.9\2d_nmr_ec_fpga_150205\hdl\noiseclkctrl.v":32:0:32:5|Found counter in view:work.noiseclkctrl(verilog) instance count[11:0] 
+@N: MF179 :"e:\git_repository\mdemrt_code\event_board\libero_v11.9\2d_nmr_ec_fpga_150205\hdl\noiseclkctrl.v":42:20:42:33|Found 12 by 12 bit less-than operator ('<') un1_count (in view: work.noiseclkctrl(verilog))
+@N: MO231 :"e:\git_repository\mdemrt_code\event_board\libero_v11.9\2d_nmr_ec_fpga_150205\hdl\noise_addr.v":16:0:16:5|Found counter in view:work.noise_addr_0(verilog) instance addr[11:0] 
 Encoding state machine CS[21:0] (in view: work.scalestate(verilog))
 original code -> new code
    000000000000000000000 -> 0000000000000000000000
@@ -207,39 +207,39 @@ original code -> new code
    010000000000000000000 -> 0100000000000000000001
    100000000000000000000 -> 1000000000000000000001
 
-Starting factoring (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 126MB peak: 126MB)
+Starting factoring (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:02s; Memory used current: 127MB peak: 127MB)
 
-@W: BN132 :"d:\fpga\2d_nmr_ec_fpga_150205\hdl\qq_state.v":88:0:88:5|Removing sequential instance PLUSE_0.qq_state_0.Q3Q6_Q4Q5 because it is equivalent to instance PLUSE_0.qq_state_0.cs[2]. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: BN132 :"d:\fpga\2d_nmr_ec_fpga_150205\hdl\qq_state.v":88:0:88:5|Removing sequential instance PLUSE_0.qq_state_1.Q3Q6_Q4Q5 because it is equivalent to instance PLUSE_0.qq_state_1.cs[2]. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: BN132 :"d:\fpga\2d_nmr_ec_fpga_150205\hdl\dds_state.v":144:0:144:5|Removing sequential instance DDS_0.dds_state_0.reset_reg because it is equivalent to instance DDS_0.dds_state_0.cs[1]. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: BN132 :"d:\fpga\2d_nmr_ec_fpga_150205\hdl\sd_acq_state.v":172:0:172:5|Removing sequential instance sd_acq_top_0.sd_sacq_state_0.en1 because it is equivalent to instance sd_acq_top_0.sd_sacq_state_0.cs[3]. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: BN132 :"d:\fpga\2d_nmr_ec_fpga_150205\hdl\pd_pluse_state.v":153:0:153:5|Removing sequential instance pd_pluse_top_0.pd_pluse_state_0.en2 because it is equivalent to instance pd_pluse_top_0.pd_pluse_state_0.cs[6]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"e:\git_repository\mdemrt_code\event_board\libero_v11.9\2d_nmr_ec_fpga_150205\hdl\qq_state.v":88:0:88:5|Removing sequential instance PLUSE_0.qq_state_0.Q3Q6_Q4Q5 because it is equivalent to instance PLUSE_0.qq_state_0.cs[2]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"e:\git_repository\mdemrt_code\event_board\libero_v11.9\2d_nmr_ec_fpga_150205\hdl\qq_state.v":88:0:88:5|Removing sequential instance PLUSE_0.qq_state_1.Q3Q6_Q4Q5 because it is equivalent to instance PLUSE_0.qq_state_1.cs[2]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"e:\git_repository\mdemrt_code\event_board\libero_v11.9\2d_nmr_ec_fpga_150205\hdl\dds_state.v":144:0:144:5|Removing sequential instance DDS_0.dds_state_0.reset_reg because it is equivalent to instance DDS_0.dds_state_0.cs[1]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"e:\git_repository\mdemrt_code\event_board\libero_v11.9\2d_nmr_ec_fpga_150205\hdl\sd_acq_state.v":172:0:172:5|Removing sequential instance sd_acq_top_0.sd_sacq_state_0.en1 because it is equivalent to instance sd_acq_top_0.sd_sacq_state_0.cs[3]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"e:\git_repository\mdemrt_code\event_board\libero_v11.9\2d_nmr_ec_fpga_150205\hdl\pd_pluse_state.v":153:0:153:5|Removing sequential instance pd_pluse_top_0.pd_pluse_state_0.en2 because it is equivalent to instance pd_pluse_top_0.pd_pluse_state_0.cs[6]. To keep the instance, apply constraint syn_preserve=1 on the instance.
 
-Finished factoring (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 143MB peak: 144MB)
-
-
-Starting gated-clock and generated-clock conversion (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 138MB peak: 145MB)
+Finished factoring (Real Time elapsed 0h:00m:05s; CPU Time elapsed 0h:00m:03s; Memory used current: 144MB peak: 145MB)
 
 
-Finished gated-clock and generated-clock conversion (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 138MB peak: 145MB)
+Starting gated-clock and generated-clock conversion (Real Time elapsed 0h:00m:05s; CPU Time elapsed 0h:00m:03s; Memory used current: 139MB peak: 146MB)
 
 
-Finished generic timing optimizations - Pass 1 (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:04s; Memory used current: 150MB peak: 179MB)
+Finished gated-clock and generated-clock conversion (Real Time elapsed 0h:00m:05s; CPU Time elapsed 0h:00m:03s; Memory used current: 139MB peak: 146MB)
 
 
-Starting Early Timing Optimization (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:04s; Memory used current: 152MB peak: 179MB)
+Finished generic timing optimizations - Pass 1 (Real Time elapsed 0h:00m:06s; CPU Time elapsed 0h:00m:05s; Memory used current: 151MB peak: 180MB)
 
 
-Finished Early Timing Optimization (Real Time elapsed 0h:00m:05s; CPU Time elapsed 0h:00m:05s; Memory used current: 152MB peak: 179MB)
+Starting Early Timing Optimization (Real Time elapsed 0h:00m:07s; CPU Time elapsed 0h:00m:05s; Memory used current: 153MB peak: 180MB)
 
 
-Finished generic timing optimizations - Pass 2 (Real Time elapsed 0h:00m:05s; CPU Time elapsed 0h:00m:05s; Memory used current: 150MB peak: 179MB)
+Finished Early Timing Optimization (Real Time elapsed 0h:00m:07s; CPU Time elapsed 0h:00m:06s; Memory used current: 153MB peak: 180MB)
 
 
-Finished preparing to map (Real Time elapsed 0h:00m:06s; CPU Time elapsed 0h:00m:06s; Memory used current: 145MB peak: 179MB)
+Finished generic timing optimizations - Pass 2 (Real Time elapsed 0h:00m:07s; CPU Time elapsed 0h:00m:06s; Memory used current: 151MB peak: 180MB)
 
 
-Finished technology mapping (Real Time elapsed 0h:00m:06s; CPU Time elapsed 0h:00m:06s; Memory used current: 164MB peak: 179MB)
+Finished preparing to map (Real Time elapsed 0h:00m:08s; CPU Time elapsed 0h:00m:06s; Memory used current: 146MB peak: 180MB)
+
+
+Finished technology mapping (Real Time elapsed 0h:00m:08s; CPU Time elapsed 0h:00m:07s; Memory used current: 165MB peak: 180MB)
 
 @N: MF322 |Retiming summary: 21 registers retimed to 69 
 
@@ -395,7 +395,7 @@ DDS_0.dds_state_0.para_1_sqmuxa_1_0_a2_0_a2 / Y                        37
 @N: FP130 |Promoting Net ddsclkout_c on CLKBUF  ddsclkout_pad 
 @N: FP130 |Promoting Net s_acq_change_0_s_rst on CLKINT  I_94 
 
-Finished technology timing optimizations and critical path resynthesis (Real Time elapsed 0h:00m:06s; CPU Time elapsed 0h:00m:06s; Memory used current: 164MB peak: 179MB)
+Finished technology timing optimizations and critical path resynthesis (Real Time elapsed 0h:00m:09s; CPU Time elapsed 0h:00m:07s; Memory used current: 165MB peak: 180MB)
 
 Replicating Combinational Instance DDS_0.dds_state_0.para_1_sqmuxa_1_0_a2_0_a2, fanout 37 segments 2
 Replicating Combinational Instance DDS_0.dds_state_0.para_9_i_0_a2_4[22], fanout 38 segments 2
@@ -440,7 +440,7 @@ Added 54 Cells via replication
 	Added 37 Sequential Cells via replication
 	Added 17 Combinational Cells via replication
 
-Finished restoring hierarchy (Real Time elapsed 0h:00m:07s; CPU Time elapsed 0h:00m:07s; Memory used current: 165MB peak: 179MB)
+Finished restoring hierarchy (Real Time elapsed 0h:00m:09s; CPU Time elapsed 0h:00m:07s; Memory used current: 166MB peak: 180MB)
 
 
 
@@ -471,19 +471,19 @@ Clock Tree ID     Driving Element                                               
 ##### END OF CLOCK OPTIMIZATION REPORT ######]
 
 
-Start Writing Netlists (Real Time elapsed 0h:00m:07s; CPU Time elapsed 0h:00m:07s; Memory used current: 152MB peak: 179MB)
+Start Writing Netlists (Real Time elapsed 0h:00m:09s; CPU Time elapsed 0h:00m:08s; Memory used current: 154MB peak: 180MB)
 
-Writing Analyst data base D:\FPGA\2D_NMR_EC_FPGA_150205\synthesis\synwork\NMR_TOP_m.srm
+Writing Analyst data base E:\git_repository\MDEMRT_Code\event_board\Libero_v11.9\2D_NMR_EC_FPGA_150205\synthesis\synwork\NMR_TOP_m.srm
 
-Finished Writing Netlist Databases (Real Time elapsed 0h:00m:07s; CPU Time elapsed 0h:00m:07s; Memory used current: 159MB peak: 179MB)
+Finished Writing Netlist Databases (Real Time elapsed 0h:00m:10s; CPU Time elapsed 0h:00m:08s; Memory used current: 161MB peak: 180MB)
 
 Writing EDIF Netlist and constraint files
 L-2016.09M-SP1-5
 
-Finished Writing EDIF Netlist and constraint files (Real Time elapsed 0h:00m:08s; CPU Time elapsed 0h:00m:08s; Memory used current: 161MB peak: 179MB)
+Finished Writing EDIF Netlist and constraint files (Real Time elapsed 0h:00m:10s; CPU Time elapsed 0h:00m:09s; Memory used current: 162MB peak: 180MB)
 
 
-Start final timing analysis (Real Time elapsed 0h:00m:08s; CPU Time elapsed 0h:00m:08s; Memory used current: 160MB peak: 179MB)
+Start final timing analysis (Real Time elapsed 0h:00m:10s; CPU Time elapsed 0h:00m:09s; Memory used current: 161MB peak: 180MB)
 
 @N: MT615 |Found clock ddsclkout with period 25.00ns 
 @N: MT615 |Found clock Signal_Noise_Acq_0.noise_acq_0.noiseclk_0.clkout with period 50.00ns 
@@ -495,7 +495,7 @@ Start final timing analysis (Real Time elapsed 0h:00m:08s; CPU Time elapsed 0h:0
 
 
 ##### START OF TIMING REPORT #####[
-# Timing Report written on Mon Jun 29 11:37:58 2020
+# Timing Report written on Wed Jun 02 17:34:35 2021
 #
 
 
@@ -506,7 +506,7 @@ Requested Frequency:    1.0 MHz
 Wire load mode:         top
 Wire load model:        proasic3
 Paths requested:        5
-Constraint File(s):    D:\FPGA\2D_NMR_EC_FPGA_150205\constraint\NMR_TOP_syn.sdc
+Constraint File(s):    E:\git_repository\MDEMRT_Code\event_board\Libero_v11.9\2D_NMR_EC_FPGA_150205\constraint\NMR_TOP_syn.sdc
                        
 @N: MT320 |This timing report is an estimate of place and route data. For final timing results, use the FPGA vendor place and route report.
 
@@ -1441,10 +1441,10 @@ Path delay compensated for clock skew. Clock skew is added to clock-to-out value
 Timing exceptions that could not be applied
 None
 
-Finished final timing analysis (Real Time elapsed 0h:00m:08s; CPU Time elapsed 0h:00m:08s; Memory used current: 160MB peak: 179MB)
+Finished final timing analysis (Real Time elapsed 0h:00m:10s; CPU Time elapsed 0h:00m:09s; Memory used current: 161MB peak: 180MB)
 
 
-Finished timing report (Real Time elapsed 0h:00m:08s; CPU Time elapsed 0h:00m:08s; Memory used current: 160MB peak: 179MB)
+Finished timing report (Real Time elapsed 0h:00m:10s; CPU Time elapsed 0h:00m:09s; Memory used current: 161MB peak: 180MB)
 
 --------------------------------------------------------------------------------
 Target Part: A3P1000_FBGA144_-2
@@ -1545,9 +1545,9 @@ Block Rams : 16 of 32 (50%)
 
 Mapper successful!
 
-At Mapper Exit (Real Time elapsed 0h:00m:08s; CPU Time elapsed 0h:00m:08s; Memory used current: 37MB peak: 179MB)
+At Mapper Exit (Real Time elapsed 0h:00m:10s; CPU Time elapsed 0h:00m:09s; Memory used current: 38MB peak: 180MB)
 
-Process took 0h:00m:08s realtime, 0h:00m:08s cputime
-# Mon Jun 29 11:37:58 2020
+Process took 0h:00m:10s realtime, 0h:00m:09s cputime
+# Wed Jun 02 17:34:35 2021
 
 ###########################################################]

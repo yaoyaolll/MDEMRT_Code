@@ -128,7 +128,10 @@ void ChangeTable999(Uint16 ChangeBuffer)
         switch(CaseBuffer)
         {
 			case 0x0094: ChgTablePt = (Uint16 *)(TABLE_START+21);TableChgCnt=1;break;
-			case 0x0095: ChgTablePt = (Uint16 *)(TABLE_START+1);TableChgCnt=1;break;
+			case 0x0095:
+				ChgTablePt = (Uint16 *)(TABLE_START+1);
+				TableChgCnt=1;
+				break;
 			case 0x0096: ChgTablePt = (Uint16 *)(TABLE_START+22);TableChgCnt=1;break;
 			case 0x0097: ChgTablePt = (Uint16 *)(TABLE_START+23);TableChgCnt=1;break;
 			case 0x0098: ChgTablePt = (Uint16 *)(TABLE_START+24);TableChgCnt=1;break;
@@ -184,12 +187,14 @@ void CheckWorkMode(void)
 
 		}
 		WorkModecnt++;
+
 	}
 
 	if (ModeFindFlag	== CLEAR)
 	{
 		*(Uint16 *)0x8001	= 0x0009;//默认扫频模式
 		WorkMode			= 0x0009;
+
 	}
 	return;
 }
@@ -454,7 +459,7 @@ void CheckReadTable(void)
 		*(Uint16 *)0x800B	= 0x0000;
 
 		//3 freqencies PP parameters
-		CheckTablePt	= (Uint16 *)0x8021;    //CheckTablePt = (Uint16 *)0x8021; 参数表公共部分
+		CheckTablePt	= (Uint16 *)0x8021;//CheckTablePt = (Uint16 *)0x8021;   //????F4????
 		ReadTableBuf	= *CheckTablePt;  	   //3频PP模式下的TE
 		PP3FTe1A23DE	= (ReadTableBuf&0xFF00)>>8;
 		PP3FTe1C		= (ReadTableBuf&0x00FF);
@@ -464,38 +469,40 @@ void CheckReadTable(void)
 			PP3FTe1A23DE	= 0x000C;
 			PP3FTe1C		= 0x0006;
 		}
-		CheckTablePt++;						//CheckTablePt = (Uint16 *)0x8022;
+		CheckTablePt++;						//CheckTablePt = (Uint16 *)0x8022;   //????F4????
 		ReadTableBuf	= *CheckTablePt;
-		PP3FNe23DE		= (ReadTableBuf&0xFF00)>>8;        //NE for BVI(2D2E, 3D3E)
-		PP3FNe1C		= ReadTableBuf&0x00FF;             //NE for CBW(1C)
+		PP3FNe23DE		= (ReadTableBuf&0xFF00)>>8;            //NE寄存器(高位)
+		PP3FNe1C		= ReadTableBuf&0x00FF;             //NE???
 		if(PP3FNe23DE<1||PP3FNe23DE>250||PP3FNe1C<1||PP3FNe1C>250)
 		{
 			*CheckTablePt	= 0x1910;
 			PP3FNe23DE	= 0x0019;
 			PP3FNe1C	= 0x0010;
 		}
-		CheckTablePt++;						//CheckTablePt = (Uint16 *)0x8023;
-		PP3FNe1A	= *CheckTablePt;            //NE for T2
+		CheckTablePt++;						//CheckTablePt = (Uint16 *)0x8023;   //????F4????
+		PP3FNe1A	= *CheckTablePt;            //NE???
 		if(PP3FNe1A<1||PP3FNe1A>3000)
 		{
 			*CheckTablePt	= 0x01A0;
 			PP3FNe1A		= 0x01A0;
 		}
-		CheckTablePt++;						//CheckTablePt = (Uint16 *)0x8024;
-		PP3FTw1C	= *CheckTablePt;        //TW for CBW(1C)
+		CheckTablePt++;						//CheckTablePt = (Uint16 *)0x8024;   //????F4????
+		PP3FTw1C	= *CheckTablePt;
 		if(PP3FTw1C!=30&&PP3FTw1C!=20)
 		{
 			*CheckTablePt	= 0x001E;
 			PP3FTw1C		= 0x001E;
 		}
 		CheckTablePt++;						//CheckTablePt = (Uint16 *)0x8025;
-		PP3FNRept1C		= *CheckTablePt;    //NRept for CBW(1C)
+		PP3FNRept1C		= *CheckTablePt;
 		if(PP3FNRept1C<1||PP3FNRept1C>150)
 		{
 			*CheckTablePt	= 0x0024;
 			PP3FNRept1C		= 0x0024;
 		}
 	}
+
+
 	else if (WorkMode==0x0003)//6 freqencies PP parameters
 	{
 			PP6FreqSelLow	= *(Uint16 *)0x800A;         //读取频率选择码
@@ -1101,6 +1108,8 @@ else if (WorkMode==0x0006)//FBW2
 			HRT1T22FFreqSelAry[1] = 8;
 			HRT1T22FFreqSelAry[2] = 5;
 		}
+
+
 		// HRT1T22F parameters
 		CheckTablePt			= (Uint16 *)0x8021;//CheckTablePt = (Uint16 *)0x8021;   //????F4????
 		HRT1T22FMode_TW_A1		= *CheckTablePt;
@@ -1132,7 +1141,7 @@ else if (WorkMode==0x0006)//FBW2
 		}
 		CheckTablePt++;
 		ReadTableBuf	= *CheckTablePt;
-		HRT1T22FMode_TW_B4 = (ReadTableBuf&0xFF00)>>8;    // 取高8位//CheckTablePt = (Uint16 *)0x8025;
+		HRT1T22FMode_TW_B4 = (ReadTableBuf&0xFF00)>>8; // 取高8位//CheckTablePt = (Uint16 *)0x8025;   //????F4????
 		HRT1T22FMode_TW_B5 = ReadTableBuf&0x00FF;		  // 取低8位
 		if (HRT1T22FMode_TW_B4 < 1 || HRT1T22FMode_TW_B4 > 0xF0 || HRT1T22FMode_TW_B5 < 1 || HRT1T22FMode_TW_B6 > 0xF0)
 		{
@@ -1142,7 +1151,7 @@ else if (WorkMode==0x0006)//FBW2
 		}
 		CheckTablePt++;
 		ReadTableBuf	= *CheckTablePt;
-		HRT1T22FMode_TW_B6 = (ReadTableBuf&0xFF00)>>8;    // 取高8位//CheckTablePt = (Uint16 *)0x8026;
+		HRT1T22FMode_TW_B6 = (ReadTableBuf&0xFF00)>>8; // 取高8位//CheckTablePt = (Uint16 *)0x8026;   //????F4????
 		HRT1T22FMode_TW_B7 = ReadTableBuf&0x00FF;		  // 取低8位
 		if (HRT1T22FMode_TW_B6 < 1 || HRT1T22FMode_TW_B6 > 0xF0 || HRT1T22FMode_TW_B7 < 1 || HRT1T22FMode_TW_B7 > 0xF0)
 		{
@@ -1377,8 +1386,9 @@ else if (WorkMode==0x0006)//FBW2
 			P3D6FFreqSelAry[3]= 5;
 		}
 
+
 		//P3D6F parameters
-		CheckTablePt	= (Uint16 *)0x8021;    //CheckTablePt = (Uint16 *)0x8021;
+		CheckTablePt	= (Uint16 *)0x8021;//CheckTablePt = (Uint16 *)0x8021;   //????F4????
 		ReadTableBuf	= *CheckTablePt;  	   // P3D6F模式下的TE
 		P3D6F_TE_1A	= (ReadTableBuf&0xFF00)>>8;
 		P3D6F_TE_2A	= (ReadTableBuf&0x00FF);
@@ -1443,7 +1453,7 @@ else if (WorkMode==0x0006)//FBW2
 		if(P3D6FNe1A<1||P3D6FNe1A>3000)
 		{
 			*CheckTablePt	= 0X03E8;
-			P3D6FNe1A		= 0X03E8;   // 0x3E8 = 1000
+			P3D6FNe1A		= 0X03E8;
 		}
 		CheckTablePt++;   				//CheckTablePt = (Uint16 *)0x8028;
 		P3D6FNe2A		= *CheckTablePt;         //??
@@ -1558,7 +1568,7 @@ else if (WorkMode==0x0006)//FBW2
 			P3D6FNRept1C	= 0x0020;
 			P3D6FNRept2D	= 0x0010;
 		}
-		CheckTablePt++;						//CheckTablePt = (Uint16 *)0x8036;
+		CheckTablePt++;						//CheckTablePt = (Uint16 *)0x8036;   //????F4????
 		ReadTableBuf		= *CheckTablePt;
 		P3D6FNRept3E			= (ReadTableBuf&0x0F00)>>8;
 		P3D6FNRept4F			= (ReadTableBuf&0x00F0)>>4;
@@ -1578,7 +1588,7 @@ else if (WorkMode==0x0006)//FBW2
 		//if (WorkMode==0x0010)
 
 		T2DFreqSel	= *(Uint16 *)0x800A;
-		if (T2DFreqSel<1||T2DFreqSel>6)
+		if (T2DFreqSel<1||T2DFreqSel>8)//ooc
 		{
 			T2DFreqSel	= 6;
 			*(Uint16 *)0x800A	= 6;
@@ -1714,7 +1724,7 @@ else if (WorkMode==0x0006)//FBW2
 		T2DFreqSel		= *(Uint16 *)0x800A;
 		T2DFreqSelAry[1]= (T2DFreqSel&0x00F0)>>4;
 		T2DFreqSelAry[2]= T2DFreqSel&0x000F;
-		if  (T2DFreqSel>0x00FF||T2DFreqSelAry[1]<1||T2DFreqSelAry[1]>6||T2DFreqSelAry[2]<1||T2DFreqSelAry[2]>6)
+		if  (T2DFreqSel>0x00FF||T2DFreqSelAry[1]<1||T2DFreqSelAry[1]>8||T2DFreqSelAry[2]<1||T2DFreqSelAry[2]>8)//ooc
 		{
 			T2DFreqSel		= 0x0063;
 			*(Uint16 *)0x800A	= 0x0063;
@@ -1948,7 +1958,7 @@ else if (WorkMode==0x0006)//FBW2
 		T2DFreqSelAry[1]= (T2DFreqSel&0x0F00)>>8;
 		T2DFreqSelAry[2]= (T2DFreqSel&0x00F0)>>4;
 		T2DFreqSelAry[3]= T2DFreqSel&0x000F;
-		if (T2DFreqSel>0x0FFF||T2DFreqSelAry[1]<1||T2DFreqSelAry[1]>6||T2DFreqSelAry[2]<1||T2DFreqSelAry[2]>6||T2DFreqSelAry[3]<1||T2DFreqSelAry[3]>6)
+		if (T2DFreqSel>0x0FFF||T2DFreqSelAry[1]<1||T2DFreqSelAry[1]>8||T2DFreqSelAry[2]<1||T2DFreqSelAry[2]>8||T2DFreqSelAry[3]<1||T2DFreqSelAry[3]>8)//ooc
 		{
 			T2DFreqSel		= 0x0852;
 			*(Uint16 *)0x800A	= 0x0852;
@@ -2083,7 +2093,7 @@ else if (WorkMode==0x0006)//FBW2
 	else if(WorkMode==0x0040)
 	{
 		T1T2FreqSel	= *(Uint16 *)0x800A;
-		if (T1T2FreqSel<1||T1T2FreqSel>6)
+		if (T1T2FreqSel<1||T1T2FreqSel>8)//ooc
 		{
 			T1T2FreqSel	= 6;
 			*(Uint16 *)0x800A	= 6;
