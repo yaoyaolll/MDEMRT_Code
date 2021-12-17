@@ -6,7 +6,13 @@ Description	Resource	Path	Location	Type
 1.模式采集数据时，电流偏大一般是继电器代码存在问题。
 2.一对正反序列，回波数据基本为水平线可能是没有做反向。
 
-多维事件板RAM程序
+多维事件板FLASH程序
+
+程序修改：主要修改了cmd文件的空间分配，所有函数分配进行了变化，具体参见文件夹下的多维事件板函数分配表。FLASH版本通过PULSE、扫频、上传参数表等功能。
+文件位置：cmd文件
+修改人：刘垚
+时间：20200831
+
 程序修改：B3频EchoStorAddr增加数量有问题，第100行，已删去。
 文件位置：HRT1T22FModeTop.c
 修改人：刘垚
@@ -22,11 +28,6 @@ Description	Resource	Path	Location	Type
 修改人：刘垚
 时间：2020年10月22日
 
-程序修改：3D6F模式多了一个5F采集，已删去
-文件位置：P3D6FModeTop.c
-修改人：刘垚
-时间：2020年11月16日
-
 程序修改：3D6F、PPLOIL模式修复完成
 文件位置：P3D6FModeTop.c、PPLOIL6FModeTop.c
 修改人：刘垚
@@ -41,3 +42,8 @@ Description	Resource	Path	Location	Type
 文件位置：DFT1T2DModeTop.c、T2DModeTop.c
 修改人：刘垚
 时间：2020年11月27日
+
+程序修改：修改频率限制bug
+文件位置：TableHandle.c
+修改人：刘垚
+时间：2021年12月17日

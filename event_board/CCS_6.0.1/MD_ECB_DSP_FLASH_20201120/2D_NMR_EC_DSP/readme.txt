@@ -42,3 +42,8 @@ Description	Resource	Path	Location	Type
 文件位置：DFT1T2DModeTop.c、T2DModeTop.c
 修改人：刘垚
 时间：2020年11月27日
+
+程序修改：修改频率限制bug
+文件位置：TableHandle.c
+修改人：刘垚
+时间：2021年12月17日
