@@ -100,13 +100,13 @@ void DataSdRcvControl(void)
 		CheckOddOrEven=AcqCmdCounter&(0x0001);
 		if(CheckOddOrEven==1)
 		{
-			DatZone1ToZero();
+			//DatZone1ToZero();
 		    RcvBuffer=(Uint16 *)DatRcvZone1Start;
 		    M7DataBuffer=(Uint16 *)DatRcvZone2Start;
 		}
 		else
 		{
-			DatZone2ToZero();
+			//DatZone2ToZero();
 		    RcvBuffer=(Uint16 *)DatRcvZone2Start;
 		    M7DataBuffer=(Uint16 *)DatRcvZone1Start;
 		}
